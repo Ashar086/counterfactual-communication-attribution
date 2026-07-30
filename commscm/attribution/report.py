@@ -1,4 +1,10 @@
-﻿"""Shared attribution report schema and engine protocol."""
+﻿"""
+Shared attribution report schema and engine protocol.
+
+FROZEN (Part I/II → Part III boundary). Do not reshape fields or the
+`score(trace) -> AttributionReport` contract unless a real-agent experiment
+forces it. See `commscm/WEEK4_PREREGISTRATION.md`.
+"""
 
 from __future__ import annotations
 

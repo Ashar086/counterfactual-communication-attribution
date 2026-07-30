@@ -1,3 +1,15 @@
-"""CCAS package — Week 4."""
+"""CCAS package — Part III architecture optimization (interfaces frozen)."""
 
-# Operators and search loop intentionally empty until estimators exist.
+from commscm.ccas.interfaces import (
+    ArchitectureEdit,
+    ArchitectureEditKind,
+    ArchitectureOperator,
+    ArchitectureProposal,
+)
+
+__all__ = [
+    "ArchitectureEdit",
+    "ArchitectureEditKind",
+    "ArchitectureOperator",
+    "ArchitectureProposal",
+]
