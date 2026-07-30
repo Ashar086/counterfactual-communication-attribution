@@ -20,10 +20,10 @@ Not: “Implement CCAS.”
 
 | Phase | Scope | Gate |
 |-------|--------|------|
-| A | `ArchitectureOperator` → ranked `ArchitectureProposal` only (no graph mutation) | — |
-| B | Single architecture edit apply | after A |
-| C | Evaluate **H1** | after B or with A ranking |
-| D | Iterative CCAS loop | **only if H1 succeeds** |
+| A | `ArchitectureOperator` → ranked `ArchitectureProposal` only (no graph mutation) | ✅ PASS (H1) |
+| B | Single architecture edit apply (`edits[0]` only) | ✅ PASS |
+| C | Evaluate **H1** (ranking metrics) | ✅ done with A |
+| D | Iterative CCAS loop | **only if H1 succeeds** — not started |
 
 Phase A candidate edit kinds (ranked, not applied): `prune_edge`, `weaken_edge`, `insert_verifier`.
 
