@@ -4,23 +4,21 @@
 
 **Counterfactual Communication Attribution:** a causal framework that attributes failures to typed information-flow events and uses those attributions to optimize multi-agent communication architectures.
 
-Everything else is supporting machinery:
+## Paper structure
 
-| Piece | Role |
-|-------|------|
-| IF-C-SCM | Formalism (time-indexed event DAG) |
-| CR | Unified Communication Responsibility |
-| Replay engine | Exact + Descendant + COW (Part II) |
-| CCAS | Optimization algorithm driven by CR (Part III) |
-| CausalCommBench | Controlled eval (+ SWE / WebArena / AgentDojo later) |
-
-## Paper structure (frozen outline)
+```
+Problem
+  → Communication Attribution        (Part I)  ✅ Frozen
+  → Efficient Attribution Engine     (Part II) ✅ Frozen
+  → Architecture Optimization        (Part III) ⏳ Week 4
+  → Real-agent Validation            ⏳ External validity
+```
 
 | Part | Content | Status |
 |------|---------|--------|
-| I — Attribution | IF-C-SCM, typed events, unified CR, exact replay oracle | Frozen (v0.2*) |
-| II — Replay Engine | Descendant replay, COW, Replay Complexity Suite, scaling | **Frozen (v0.3-replay-engine)** |
-| III — Architecture Optimization | CCAS | Next (Week 4) |
+| I — Attribution | IF-C-SCM, typed events, unified CR, exact oracle | Frozen (v0.2*) |
+| II — Replay Engine | Descendant, COW, Replay Complexity Suite, scaling | Frozen (`v0.3-replay-engine`) |
+| III — Architecture Optimization | CCAS | Interfaces + hypotheses pre-registered |
 
 ## Permanent locks
 
@@ -28,11 +26,33 @@ Everything else is supporting machinery:
 |-----------|----------|---------|
 | Atomic unit | Typed event \(C_k\) with channel \(\chi\) | No |
 | SCM | Time-indexed event DAG | No |
-| Intervention | Typed soft interventions \(do(m_\chi = m^0_\chi)\) | No |
-| Event “removal” | Null-input soft intervention (not \(\emptyset\)) | Locked as null-input |
-| Responsibility | **One** CR (content-first via typed soft do) | No separate CR_e |
+| Intervention | Typed soft \(do(m_\chi = m^0_\chi)\) | No |
+| Event “removal” | Null-input (not \(\emptyset\)) | Locked |
+| Responsibility | **One** CR | No separate CR_e |
 | Optimization | CCAS | No |
 | Bench stack | CausalCommBench + public agent benches | No |
+
+## Frozen interfaces (Part III boundary)
+
+```
+AttributionEngine.score(trace) -> AttributionReport
+ArchitectureOperator.propose(trace, report) -> ArchitectureProposal
+ArchitectureOperator.apply(architecture_id, proposal) -> architecture_id'
+```
+
+- Schemas: `commscm/attribution/report.py`, `commscm/ccas/interfaces.py`
+- CCAS consumes **AttributionReport only** — no replay-engine leakage
+- Edit kinds: closed set in `ArchitectureEditKind`
+
+**Never reshape these** unless a real-agent experiment forces it.
+
+## Foundation protection rule
+
+Before modifying IF-C-SCM, CR, soft interventions, or replay:
+
+> Did a real-agent experiment force this change?
+
+If **no** → do not touch it.
 
 ## Discipline
 
@@ -45,35 +65,31 @@ Everything else is supporting machinery:
 \Delta Y(k) = Y_{\mathrm{counterfactual}} - Y_{\mathrm{factual}}
 \]
 
-Localization ranks by **ΔY descending** (largest improvement when soft-nulled ⇒ top blame).
+Rank by **ΔY descending**.
 
 ## Week 2 freeze
 
-Tagged: **v0.2-exact-replay** (oracle) · **v0.2.1-week2-close** (cascade + noise closers).
-
-Present as: **"exact replay implementation validated on controlled synthetic traces"** — never as "100% localization" in a paper abstract.
+Tags: **v0.2-exact-replay** · **v0.2.1-week2-close**
 
 ## Week 3 / 3.5 freeze — Replay Engine
 
-Tagged: **v0.3-replay-engine**
+Tag: **v0.3-replay-engine**  
+Guarantees: `commscm/REPLAY_ENGINE_GUARANTEES.md` (G1–G5)  
+Do not optimize replay further unless real-agent work exposes a new bottleneck.
 
-Invariants: see **`commscm/REPLAY_ENGINE_GUARANTEES.md`** (G1–G5).
+## Week 4 — pre-registered science (not “implement CCAS”)
 
-What it proves (synthetic Replay Complexity Suite):
+Document: **`commscm/WEEK4_PREREGISTRATION.md`**
 
-- Descendant structural evals scale with the affected subgraph.
-- COW materialization scales with the affected subgraph (same curve as evals).
-- Under sparse interventions, wall-clock speedup **increases with N** (algorithmic scaling, not a one-size microbenchmark).
-- Under dense interventions (ratio → 1), cost converges to Exact Replay.
+**RQ:** Can communication attribution improve multi-agent architectures more effectively than existing architecture search methods?
 
-**Do not optimize replay further** unless real-agent experiments expose a new bottleneck.
+| ID | Hypothesis |
+|----|------------|
+| H1 | CCAS identifies harmful communication pathways more accurately than reward-only methods |
+| H2 | CCAS achieves equal or better task success with fewer architectural modifications |
+| H3 | Verifier insertion only when \(\mathrm{Utility}(V)>1\) and reduces task loss |
 
-## Week 4 research question (locked framing)
+**Baselines:** GPTSwarm, AgentPrune, G-Designer, MaAS, Static verifier  
+**Ablations:** CCAS, CCAS−CR, CCAS−Verifier, Random edits
 
-**Not:** “Implement CCAS.”
-
-**Yes:**
-
-> Can communication attribution improve multi-agent architectures more effectively than existing architecture search methods?
-
-Everything in CCAS must answer that question. Replay is the foundation; CCAS is the missing Part III.
+Biggest remaining risk: **external validity** (real traces → attribution → better architecture → better outcome).
