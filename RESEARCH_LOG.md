@@ -6,63 +6,40 @@
 |------|--------|
 | I — Attribution | ✅ Frozen (v0.2*) |
 | II — Replay Engine | ✅ Frozen (`v0.3-replay-engine`) |
-| III — CCAS | ⏳ Interfaces + Week 4 hypotheses pre-registered |
+| III — interfaces | ✅ Frozen (`v0.4-pre-ccas`) |
+| III — Phase A / H1 | ✅ Gate **PASS** (proposal-only; no iterative CCAS yet) |
 
-**Foundation rule:** touch IF-C-SCM / CR / replay only if a real-agent experiment forces it.
-
-Guarantees: `commscm/REPLAY_ENGINE_GUARANTEES.md`  
-Week 4 pre-reg: `commscm/WEEK4_PREREGISTRATION.md`  
-Contracts: `AttributionEngine` → `AttributionReport` → `ArchitectureOperator` → `ArchitectureProposal`
+Foundation rule: touch Parts I–II only if a real-agent experiment forces it.
 
 ---
 
-## Week 4 research question (locked)
+## Week 4
 
+### RQ
 > Can communication attribution improve multi-agent architectures more effectively than existing architecture search methods?
 
-### Pre-registered hypotheses
-- **H1:** CCAS identifies harmful communication pathways more accurately than reward-only methods.
-- **H2:** CCAS achieves equal or better task success with fewer architectural modifications.
-- **H3:** Verifier insertion only when Utility(V)>1 and reduces task loss.
+### Phase A / H1 (done)
+Ranked `ArchitectureProposal` only — no graph mutation, no iterative CCAS.
 
-### Locked baselines
-GPTSwarm · AgentPrune · G-Designer · MaAS · Static verifier
+| Method | P@1 | R@3 | nDCG@3 | FP@1 |
+|--------|----:|----:|-------:|-----:|
+| Random | 0.12 | 0.12 | 0.13 | 0.88 |
+| Reward-only (no FAULT_ leakage) | 0.00 | 0.00 | 0.00 | 1.00 |
+| CR-guided | **1.00** | **0.83** | **1.00** | **0.00** |
 
-### Locked ablations
-CCAS · CCAS−CR · CCAS−Verifier · Random edits
+**H1 gate: PASS** — CR-guided strictly beats reward-only and random on pre-registered edge-localization metrics.
 
-### Biggest risk
-External validity — not replay.
+Note: an earlier reward-only variant that inspected `FAULT_` markers tied CR at P@1=1.0 (label leakage). Pre-registration forbids that; baseline must not read fault labels.
+
+### Next (only because H1 passed)
+- Phase B: single architecture edit apply
+- Not yet: iterative CCAS / H2 / H3 / full baselines (GPTSwarm, …)
+
+### Pre-registered metrics
+See `commscm/WEEK4_PREREGISTRATION.md` (H1–H3 metric tables locked).
 
 ---
 
-## Week 3 / 3.5 — Replay engine (FROZEN)
-
-### Algorithmic observation (primary)
-As the total graph grows while the affected subgraph remains sparse, replay cost scales with the affected subgraph rather than the full graph.
-
-| N @ 10% descendants | Speedup |
-|--:|--------:|
-| 100 | 8.6x |
-| 500 | 9.0x |
-| 1000 | 13.0x |
-| 2000 | 17.1x |
-
-Sparse → large gains; dense (ratio→1) → converges to Exact. Both reported.
-
-### Complexity table
-
-| Method | Structural evals | Materialization |
-|--------|------------------|-----------------|
-| Exact Replay | O(N) | O(N) |
-| Descendant (pre-COW) | O(\|affected\|) | O(N) |
-| Descendant (COW) | O(\|affected\|) | O(\|affected\|) |
-
-### Claim form
-> Under sparse interventions (~10% affected descendants), Copy-on-Write replay achieves approximately 10–17x wall-clock speedup (increasing with N) by restricting both structural evaluation and graph materialization to the affected subgraph. As the affected ratio approaches one, replay converges to Exact Replay, as expected.
-
-Do **not** further optimize replay unless real-agent work forces it.
-
-### Artifacts
-- Runner: `python -m commscm.experiments.week3_5_scaling`
-- Local results: `results/week3_5/` (gitignored)
+## Tags
+- `v0.3-replay-engine` — Part II frozen
+- `v0.4-pre-ccas` — Part III interfaces + hypotheses/metrics; **no** CCAS impl at tag time
