@@ -10,8 +10,17 @@ Everything else is supporting machinery:
 |-------|------|
 | IF-C-SCM | Formalism (time-indexed event DAG) |
 | CR | Unified Communication Responsibility |
-| CCAS | Optimization algorithm driven by CR |
+| Replay engine | Exact + Descendant + COW (Part II) |
+| CCAS | Optimization algorithm driven by CR (Part III) |
 | CausalCommBench | Controlled eval (+ SWE / WebArena / AgentDojo later) |
+
+## Paper structure (frozen outline)
+
+| Part | Content | Status |
+|------|---------|--------|
+| I — Attribution | IF-C-SCM, typed events, unified CR, exact replay oracle | Frozen (v0.2*) |
+| II — Replay Engine | Descendant replay, COW, Replay Complexity Suite, scaling | **Frozen (v0.3-replay-engine)** |
+| III — Architecture Optimization | CCAS | Next (Week 4) |
 
 ## Permanent locks
 
@@ -42,14 +51,29 @@ Localization ranks by **ΔY descending** (largest improvement when soft-nulled �
 
 Tagged: **v0.2-exact-replay** (oracle) · **v0.2.1-week2-close** (cascade + noise closers).
 
-What it proves: exact soft-null CR localizes injected faults on small deterministic DAGs
-(single-fault P@1=1; multi-fault Recall@2/nDCG@2=1 under graded Y; cascade root-cause;
-marker faults robust to non-FAULT semantic append-noise).
+Present as: **"exact replay implementation validated on controlled synthetic traces"** — never as "100% localization" in a paper abstract.
 
-What it does **not** prove: stochastic LLMs, long traces, approximate estimators,
-real AutoGen/LangGraph logs, or adversarial semantic paraphrases.
+## Week 3 / 3.5 freeze — Replay Engine
 
-Present Week 2 as: **"exact replay implementation validated on controlled synthetic traces"** —
-never as "100% localization" in a paper abstract.
+Tagged: **v0.3-replay-engine**
 
-Do not revisit Week 2 unless a later experiment exposes a genuine flaw.
+Invariants: see **`commscm/REPLAY_ENGINE_GUARANTEES.md`** (G1–G5).
+
+What it proves (synthetic Replay Complexity Suite):
+
+- Descendant structural evals scale with the affected subgraph.
+- COW materialization scales with the affected subgraph (same curve as evals).
+- Under sparse interventions, wall-clock speedup **increases with N** (algorithmic scaling, not a one-size microbenchmark).
+- Under dense interventions (ratio → 1), cost converges to Exact Replay.
+
+**Do not optimize replay further** unless real-agent experiments expose a new bottleneck.
+
+## Week 4 research question (locked framing)
+
+**Not:** “Implement CCAS.”
+
+**Yes:**
+
+> Can communication attribution improve multi-agent architectures more effectively than existing architecture search methods?
+
+Everything in CCAS must answer that question. Replay is the foundation; CCAS is the missing Part III.
