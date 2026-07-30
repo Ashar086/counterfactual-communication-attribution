@@ -1,6 +1,11 @@
-"""Attribution package."""
+﻿"""Attribution exports."""
 
-from commscm.attribution.exact import ExactAttributionReport, attribute_exact
+from commscm.attribution.engines import (
+    CachedReplayEstimator,
+    DescendantReplayEstimator,
+    ExactReplayOracle,
+)
+from commscm.attribution.report import AttributionEngine, AttributionReport, CRRankRow
 from commscm.attribution.responsibility import (
     CommunicationResponsibility,
     cr_from_estimates,
@@ -8,9 +13,13 @@ from commscm.attribution.responsibility import (
 )
 
 __all__ = [
+    "AttributionEngine",
+    "AttributionReport",
+    "CRRankRow",
+    "CachedReplayEstimator",
     "CommunicationResponsibility",
-    "ExactAttributionReport",
-    "attribute_exact",
+    "DescendantReplayEstimator",
+    "ExactReplayOracle",
     "cr_from_estimates",
     "rank_by_cr",
 ]
