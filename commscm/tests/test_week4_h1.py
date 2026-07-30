@@ -25,11 +25,12 @@ class Week4H1Tests(unittest.TestCase):
             DescendantReplayEngine(fault_marker_outcome, MechanismRegistry())
         ).score(self.trace)
 
-    def test_phase_a_apply_is_noop(self) -> None:
+    def test_phase_b_apply_registers_new_architecture(self) -> None:
         op = CRGuidedOperator()
         prop = op.propose(self.trace, self.report)
-        self.assertEqual(op.apply(self.trace.architecture_id, prop), self.trace.architecture_id)
-        self.assertFalse(prop.meta.get("mutation", True))
+        new_id = op.apply(prop.base_architecture_id, prop)
+        self.assertTrue(prop.meta.get("mutation"))
+        self.assertNotEqual(new_id, prop.base_architecture_id)
 
     def test_cr_proposal_nonempty_ranked_edits(self) -> None:
         prop = CRGuidedOperator().propose(self.trace, self.report)
