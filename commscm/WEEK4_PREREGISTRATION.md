@@ -23,7 +23,9 @@ Not: “Implement CCAS.”
 | A | `ArchitectureOperator` → ranked `ArchitectureProposal` only (no graph mutation) | ✅ PASS (H1) |
 | B | Single architecture edit apply (`edits[0]` only) | ✅ PASS |
 | C | Evaluate **H1** (ranking metrics) | ✅ done with A |
-| D | Iterative CCAS loop | **only if H1 succeeds** — not started |
+| D | Iterative CCAS loop (prune-only H2-lite) | ✅ PASS |
+| — | H3 verifier utility + full baseline bakeoff | pending |
+| — | Real-agent validation | pending |
 
 Phase A candidate edit kinds (ranked, not applied): `prune_edge`, `weaken_edge`, `insert_verifier`.
 

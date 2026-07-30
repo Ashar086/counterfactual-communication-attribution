@@ -43,10 +43,11 @@ def gold_harmful_edges(trace: RunTrace) -> set[tuple[str, str]]:
 
 def sink_fault_outcome(dag: EventDAG) -> float:
     """
-    Phase-B task proxy: success iff the terminal sink(s) have no FAULT_.
+    Task proxy: success iff terminal sink(s) remain attached and FAULT-free.
 
-    Terminal = events with no children at the maximum time_index (task output).
-    Isolated pruned roots that still carry FAULT_ are not counted as task failure.
+    Terminal = no-child events at max time_index.
+    Parentless terminals, or terminals whose parents are all weakened, count as
+    invalid / disconnected architectures (reward 0).
     """
     sinks = [eid for eid in dag.events if not dag.children(eid)]
     if not sinks:
@@ -54,7 +55,14 @@ def sink_fault_outcome(dag: EventDAG) -> float:
     max_t = max(dag.events[s].time_index for s in sinks)
     terminal = [s for s in sinks if dag.events[s].time_index == max_t]
     for eid in terminal:
-        if "FAULT_" in dag.events[eid].message:
+        ev = dag.events[eid]
+        if not ev.parents:
+            return 0.0
+        weakened = set(ev.meta.get("weakened_parents") or [])
+        active = [p for p in ev.parents if p not in weakened]
+        if not active:
+            return 0.0
+        if "FAULT_" in ev.message:
             return 0.0
     return 1.0
 
@@ -75,9 +83,9 @@ class PhaseBOperatorBase:
     def apply(self, architecture_id: str, proposal: ArchitectureProposal) -> str:
         return self.registry.apply_proposal(architecture_id, proposal)
 
-    def ensure_registered(self, trace: RunTrace) -> str:
+    def ensure_registered(self, trace: RunTrace, *, refresh: bool = False) -> str:
         key = architecture_key(trace)
-        if not self.registry.contains(key):
+        if refresh or not self.registry.contains(key):
             self.registry.register(key, trace.dag)
         return key
 
