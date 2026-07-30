@@ -40,10 +40,16 @@ Localization ranks by **ΔY descending** (largest improvement when soft-nulled �
 
 ## Week 2 freeze
 
-Tagged conceptually as **v0.2-exact-replay**.
+Tagged: **v0.2-exact-replay** (oracle) · **v0.2.1-week2-close** (cascade + noise closers).
 
-What it proves: exact soft-null CR localizes injected faults on small deterministic DAGs (single-fault P@1=1; multi-fault Recall@2/nDCG@2=1 under graded Y).
+What it proves: exact soft-null CR localizes injected faults on small deterministic DAGs
+(single-fault P@1=1; multi-fault Recall@2/nDCG@2=1 under graded Y; cascade root-cause;
+marker faults robust to non-FAULT semantic append-noise).
 
-What it does **not** prove: stochastic LLMs, long traces, approximate estimators, real AutoGen/LangGraph logs.
+What it does **not** prove: stochastic LLMs, long traces, approximate estimators,
+real AutoGen/LangGraph logs, or adversarial semantic paraphrases.
+
+Present Week 2 as: **"exact replay implementation validated on controlled synthetic traces"** —
+never as "100% localization" in a paper abstract.
 
 Do not revisit Week 2 unless a later experiment exposes a genuine flaw.
