@@ -4,51 +4,45 @@
 
 | Part | Status |
 |------|--------|
-| I — Attribution | ✅ Frozen (v0.2*) |
+| I — Attribution | ✅ Frozen |
 | II — Replay Engine | ✅ Frozen (`v0.3-replay-engine`) |
-| III — interfaces | ✅ Frozen (`v0.4-pre-ccas`) |
-| III — Phase A / H1 | ✅ PASS |
-| III — Phase B | ✅ PASS |
-| III — Phase D / H2-lite | ✅ PASS (iterative prune loop; no full baselines yet) |
-
-Foundation rule: touch Parts I–II only if a real-agent experiment forces it.
+| III — CCAS (synthetic H1 + H2-lite) | ✅ **Feature-frozen** (`v0.5-ccas-synthetic`) |
+| H3 verifier | ⏸ Deferred — do **not** implement next |
+| IV — External validity | ▶️ **Week 5 active** |
 
 ---
 
-## Week 4
+## Claims (defensible wording)
 
-### RQ
-> Can communication attribution improve multi-agent architectures more effectively than existing architecture search methods?
+### H1
+> CR-guided consistently identifies the causal harmful edge while reward-only does not.
 
-### Phase A / H1
-CR-guided P@1=1.00 vs reward-only 0.00 vs random ~0.12.
+### H2-lite (not full H2)
+> Several edit policies can achieve task repair, but only CR-guided consistently repairs via the true harmful communication pathways.
 
-### Phase B
-Single top-1 edit apply. CR hits gold edge 100% on chain suite.
+### Benchmark note (paper)
+Terminal sink must remain attached; otherwise policies can falsely “repair” by disconnecting the output.
 
-### Phase D / H2-lite (iterative CCAS)
-Loop: attribute → propose → apply first valid `prune_edge` → repeat (budget=4).
-Suite: multi-path fault (both branches must be cut). Terminal sink must stay attached.
+---
 
-| Method | success | success@2 | edits\|ok | goldHit |
-|--------|--------:|----------:|----------:|--------:|
-| Random | 0.97 | 0.67 | 2.38 | 0.50 |
-| Reward-only | 1.00 | 1.00 | 2.00 | 0.00 |
-| CR-guided | **1.00** | **1.00** | **2.00** | **2.00** |
+## Week 5 — Real LangGraph attribution (no editing)
 
-CR matches best success/edit efficiency and is the only method that systematically cuts the gold harmful pathways.
+Plan: `commscm/WEEK5_EXTERNAL_VALIDITY.md`
 
-**H2-lite gate: PASS**
+1. Extract `RunTrace` from LangGraph `AgentState` (`commscm/traces/langgraph_extract.py`)
+2. Score with frozen Descendant engine + `langgraph_reward_outcome` (marker-based; no LLM re-roll in the soft-null loop yet)
+3. Compare CR vs reward-only vs random P@1 against `poisoned_node` → event map
 
-Verifier insertion held for H3. Full GPTSwarm/AgentPrune/G-Designer/MaAS bakeoff still ahead. Real-agent validation still the biggest gap.
+Runner:
+- Offline (default): `python -m commscm.experiments.week5_langgraph_localize`
+- Live LLM: `python -m commscm.experiments.week5_langgraph_localize --live`
 
-### Artifacts
-- `python -m commscm.experiments.week4_h1`
-- `python -m commscm.experiments.week4_phase_b`
-- `python -m commscm.experiments.week4_phase_d`
+### Next after Week 5 gate
+Week 6: single-edit CCAS on real traces (repair). H3 only if still needed.
 
 ---
 
 ## Tags
-- `v0.3-replay-engine` — Part II frozen
-- `v0.4-pre-ccas` — Part III interfaces + pre-reg (no CCAS at tag time)
+- `v0.3-replay-engine` — Part II
+- `v0.4-pre-ccas` — Part III interfaces
+- `v0.5-ccas-synthetic` — CCAS feature freeze after H1 + H2-lite
