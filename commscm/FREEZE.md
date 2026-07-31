@@ -10,15 +10,18 @@
 Problem
   → Communication Attribution        (Part I)  ✅ Frozen
   → Efficient Attribution Engine     (Part II) ✅ Frozen
-  → Architecture Optimization        (Part III) ⏳ Week 4
-  → Real-agent Validation            ⏳ External validity
+  → Architecture Optimization        (Part III) ✅ Feature-frozen (H1 + H2-lite synthetic)
+  → Real-agent Validation            ⏳ Week 5+ (primary blocker)
 ```
 
 | Part | Content | Status |
 |------|---------|--------|
 | I — Attribution | IF-C-SCM, typed events, unified CR, exact oracle | Frozen (v0.2*) |
 | II — Replay Engine | Descendant, COW, Replay Complexity Suite, scaling | Frozen (`v0.3-replay-engine`) |
-| III — Architecture Optimization | CCAS | Interfaces + hypotheses pre-registered |
+| III — Architecture Optimization | CCAS propose / apply / iterative prune | **Feature-frozen** (`v0.5-ccas-synthetic`) |
+| IV — External validity | Real LangGraph → … → public benches | **Week 5 active** |
+
+**Do not implement H3 (verifier) next.** Leave synthetic evaluation; let real-agent results drive the next change.
 
 ## Permanent locks
 
@@ -93,3 +96,13 @@ Document: **`commscm/WEEK4_PREREGISTRATION.md`**
 **Ablations:** CCAS, CCAS−CR, CCAS−Verifier, Random edits
 
 Biggest remaining risk: **external validity** (real traces → attribution → better architecture → better outcome).
+
+## Week 5 — start here (not H3)
+
+Document: **`commscm/WEEK5_EXTERNAL_VALIDITY.md`**
+
+1. Extract real LangGraph traces → CommSCM `RunTrace`
+2. Attribution **only** (no editing)
+3. Measure localization vs gold poison events
+
+H3 verifier insertion is deferred until after real-trace Weeks 5–6.
