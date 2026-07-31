@@ -124,6 +124,7 @@ def _openai_chat(
     user: str,
     model: str,
     temperature: float,
+    seed: int | None = None,
 ) -> LLMResponse:
     from openai import OpenAI
 
@@ -133,14 +134,17 @@ def _openai_chat(
         max_retries=int(os.getenv("OPENAI_MAX_RETRIES", "2")),
     )
     t0 = time.perf_counter()
-    completion = client.chat.completions.create(
-        model=model,
-        temperature=temperature,
-        messages=[
+    kwargs: dict[str, Any] = {
+        "model": model,
+        "temperature": temperature,
+        "messages": [
             {"role": "system", "content": system},
             {"role": "user", "content": user},
         ],
-    )
+    }
+    if seed is not None:
+        kwargs["seed"] = seed
+    completion = client.chat.completions.create(**kwargs)
     latency_ms = round((time.perf_counter() - t0) * 1000, 3)
     content = (completion.choices[0].message.content or "").strip()
     return LLMResponse(content=content, latency_ms=latency_ms, model=model)
@@ -212,8 +216,9 @@ def llm_call(
     *,
     role: str,
     override: str | None = None,
-    temperature: float = 0.0,
+    temperature: float | None = None,
     model: str | None = None,
+    seed: int | None = None,
 ) -> LLMResponse:
     """
     Call an LLM for a pipeline role.
@@ -221,7 +226,15 @@ def llm_call(
     Base agents (planner/coder/reviewer) → gpt-4o-mini by default.
     Meta-Agent → gpt-4o by default.
     Set USE_MOCK_LLM=1 to force mocks.
+
+    Temperature/seed default from LLM_TEMPERATURE / LLM_SEED env when unset
+    (Week-5 live stochasticity sweeps).
     """
+    if temperature is None:
+        temperature = float(os.getenv("LLM_TEMPERATURE", "0.0"))
+    if seed is None and os.getenv("LLM_SEED", "").strip():
+        seed = int(os.environ["LLM_SEED"])
+
     resolved_model = model or (META_MODEL if role == "meta_agent" else BASE_MODEL)
 
     # Synthetic shadow-buffer prompt tags stay deterministic even with a live API.
@@ -246,8 +259,11 @@ def llm_call(
             user=user,
             model=resolved_model,
             temperature=temperature,
+            seed=seed,
         )
     except Exception as exc:  # noqa: BLE001 — fall back so experiments keep running
+        if os.getenv("FAIL_ON_LLM_ERROR", "").strip().lower() in {"1", "true", "yes", "on"}:
+            raise
         fallback = mock_llm_call(
             prompt, role=role, override=override, temperature=temperature
         )

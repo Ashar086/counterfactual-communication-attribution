@@ -1,75 +1,75 @@
 # Week 5 — External validity (attribution on real agent traces)
 
-**Status:** CCAS feature freeze. No H3. No new edit kinds. No algorithm changes unless a real-agent experiment forces them.
-
-**Depends on:** Parts I–II frozen; Part III H1 + H2-lite on synthetic only (`v0.5-ccas-synthetic`).
+**Status:** CCAS feature-frozen. No H3. **Week 5 complete** (offline + live volume + stoch). Week 6 = real repair.
 
 ---
 
-## What is frozen (do not expand)
+## Paper roadmap (updated)
 
-| Item | Status |
-|------|--------|
-| IF-C-SCM / CR / soft interventions | Frozen |
-| Replay engine (Descendant + COW) | Frozen |
-| CCAS propose / single-edit / iterative prune loop | **Feature-frozen** |
-| H3 verifier insertion | **Deferred** |
+```
+Synthetic validation
+  → Offline real-shaped traces     ✅
+  → Live real traces               ✅ (n=102, CR P@1=1.0; stoch stable)
+  → Real repair (single-edit)      Week 6
+  → Benchmark comparison           later (SWE-bench / WebArena / …)
+```
 
----
-
-## Scientific claims (careful wording)
-
-### H1 (synthetic) — keep
-> CR-guided consistently identifies the causal harmful edge while reward-only does not.
-
-Not: “P@1 = 1.0 proves the method.”
-
-### H2-lite (synthetic) — keep, do not overclaim as full H2
-> Several edit policies can achieve task repair, but only CR-guided consistently repairs via the true harmful communication pathways.
-
-Not: “CR is better at architecture optimization in general.”
-
-### Benchmark pathology (paper note)
-The terminal sink must remain attached; otherwise policies can “repair” by disconnecting the output. Document this explicitly.
+Not: Synthetic → Real → Paper.
 
 ---
 
-## Week 5 research question
+## Claims
 
-> On **real** multi-agent traces, does Communication Responsibility localize injected (or labeled) harmful communication events better than reward-only / random ranking?
+### Offline / engineering validation (not paper headline)
+LangGraph-shaped recorded states: CR P@1=1.0 vs reward-only 0.0 — adapter check only.
 
-**Scope this week:**
-1. Extract CommSCM `RunTrace` from real LangGraph runs (workshop pipeline).
-2. Run **attribution only** (no editing).
-3. Measure localization (P@1, MRR, Recall@k) against `poisoned_node` / gold event ids.
+### Live (paper-relevant) — gate PASS
+Live LLM LangGraph executions with injected channel-native poisons; attribution only.
+`results/week5_live_langgraph.json` (n=102, temp=0.0):
 
-**Out of scope this week:** CCAS edits, verifier insertion, SWE-bench/WebArena (Week 6+), AutoGen/CrewAI extractors (next after LangGraph works).
+| Method | P@1 |
+|--------|----:|
+| CR | **1.00** |
+| Reward-only | 0.00 |
+| Random | ≈0.20 |
 
----
+Also: mean confidence gap=1.00; pipeline/extract/attribution OK rates=1.00; no stage failures.
+Per poison mode (n=34 each): CR P@1=1.00.
 
-## Success criteria (pre-registered)
+### Stochasticity (appendix)
+Same task/mode; temps × seeds (12 cells): CR top-1 = C1 on every cell; reward-only P@1=0.
 
-| Metric | Target (LangGraph poisoned suite) |
-|--------|-----------------------------------|
-| P@1 vs gold poisoned event | Report; aim ≥ 0.8 on channel-native poisons |
-| CR vs reward-only / random | CR strictly better P@1 |
-| Algorithm changes | **Zero** unless extractor/outcome mismatch forces a schema-compatible fix |
-
----
-
-## Roadmap (locked)
-
-| Week | Goal |
-|------|------|
-| **5** | Real LangGraph traces → attribution → localization (no editing) |
-| **6** | Single-edit CCAS on real traces → measure repair |
-| **7** | H3 verifier **only if** still needed after Week 6 |
-| later | AutoGen / CrewAI / SWE-bench Verified / WebArena / AgentDojo + full baselines |
+### Attribution Stability (appendix — reviewer metric)
+Per task: K independent live executions → top-1 agreement + mean pairwise Kendall τ.
+`results/week5_attribution_stability.json` (10 tasks × 5 reps, temp=0.3, POISON_PLANNER):
+mean top-1 agreement = **1.00**, mean pairwise Kendall τ = **1.00**.
 
 ---
 
-## Foundation rule (unchanged)
+## Runners
 
-> Did a real-agent experiment force this change?
+```bash
+# Offline adapter check
+python -m commscm.experiments.week5_langgraph_localize
 
-If no → do not touch Parts I–III algorithms.
+# Live volume (default 102 runs)
+python -m commscm.experiments.week5_live_langgraph --n-runs 102
+
+# Stochasticity matrix (same task/mode; vary temp & seed)
+python -m commscm.experiments.week5_live_langgraph --stoch-matrix
+
+# Attribution Stability (K reps × tasks)
+python -m commscm.experiments.week5_live_langgraph --stability --temperature 0.3
+```
+
+---
+
+## Week 6 (preregistered)
+
+See `commscm/WEEK6_PREREGISTRATION.md`.
+
+```
+Live trace → CR → one architecture edit → re-run → measure improvement
+```
+
+Still no verifier (H3 deferred). No replay/attribution changes.

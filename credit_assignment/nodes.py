@@ -21,6 +21,11 @@ from credit_assignment.llm import (
 )
 from credit_assignment.sandbox import run_in_sandbox
 from credit_assignment.state import AgentState
+from commscm.traces.langgraph_live_edit import (
+    edge_is_pruned,
+    edge_is_weakened,
+    gated_parent_text,
+)
 
 AGENT_NAMES = ("planner", "coder", "reviewer", "executor")
 
@@ -56,8 +61,15 @@ def planner_node(state: AgentState) -> dict[str, Any]:
             },
         }
 
+    task_in, gate = gated_parent_text(
+        interventions=state.edge_interventions,
+        src="C0",
+        tgt="C1",
+        factual=state.task_description,
+        prune_fallback="",
+    )
     override = state.prompt_overrides.get("planner")
-    response = llm_call(state.task_description, role="planner", override=override)
+    response = llm_call(task_in or "(no task provided)", role="planner", override=override)
     plan = injector.apply_to_plan(response.content)
     return {
         "plan": plan,
@@ -68,6 +80,7 @@ def planner_node(state: AgentState) -> dict[str, Any]:
                 ablated=False,
                 poisoned=injector.mode == PoisonMode.POISON_PLANNER,
                 model=response.model,
+                edge_gate=gate,
             )
         },
     }
@@ -90,8 +103,16 @@ def coder_node(state: AgentState) -> dict[str, Any]:
             },
         }
 
+    # Week 6: gate C1→C2 (plan → coder)
+    plan_in, gate = gated_parent_text(
+        interventions=state.edge_interventions,
+        src="C1",
+        tgt="C2",
+        factual=state.plan,
+        prune_fallback=state.task_description,
+    )
     override = state.prompt_overrides.get("coder")
-    response = llm_call(state.plan, role="coder", override=override)
+    response = llm_call(plan_in, role="coder", override=override)
     code = extract_python_code(response.content)
     code = injector.apply_to_code(code)
     return {
@@ -103,6 +124,7 @@ def coder_node(state: AgentState) -> dict[str, Any]:
                 ablated=False,
                 poisoned=injector.mode == PoisonMode.POISON_CODER,
                 model=response.model,
+                edge_gate=gate,
             )
         },
     }
@@ -132,8 +154,16 @@ def reviewer_node(state: AgentState) -> dict[str, Any]:
             },
         }
 
+    # Week 6: gate C2→C3 (code → reviewer)
+    code_in, gate = gated_parent_text(
+        interventions=state.edge_interventions,
+        src="C2",
+        tgt="C3",
+        factual=state.code,
+        prune_fallback="",
+    )
     override = state.prompt_overrides.get("reviewer")
-    response = llm_call(state.code, role="reviewer", override=override)
+    response = llm_call(code_in or "(no code provided)", role="reviewer", override=override)
     content = injector.apply_to_review(response.content)
 
     if injector.is_poison_reviewer():
@@ -149,7 +179,11 @@ def reviewer_node(state: AgentState) -> dict[str, Any]:
                 rf"def\s+{re.escape(state.entry_point or 'solve')}\s*\(", state.code
             )
         )
-        has_impossible = IMPOSSIBLE_CONSTRAINT_MARKER in state.plan
+        # Plan constraint only if C1→C2 still carries plan into the coding path
+        plan_gated = edge_is_pruned(state.edge_interventions, "C1", "C2") or edge_is_weakened(
+            state.edge_interventions, "C1", "C2"
+        )
+        has_impossible = (not plan_gated) and IMPOSSIBLE_CONSTRAINT_MARKER in state.plan
         if has_syntax_issue or has_impossible:
             status = "Rejected"
         poisoned = False
@@ -166,6 +200,7 @@ def reviewer_node(state: AgentState) -> dict[str, Any]:
                 poisoned=poisoned,
                 review_status=status,
                 model=response.model,
+                edge_gate=gate,
             )
         },
     }
@@ -176,10 +211,36 @@ def reviser_node(state: AgentState) -> dict[str, Any]:
     Coder revision pass: blindly apply reviewer feedback when revision is required.
 
     For POISON_REVIEWER this installs `while True: pass` so the executor fails.
+    Week 6: prune/weaken C3→C4 blocks applying review; prune/weaken C2→C4
+    gates the code parent used in the revise prompt.
     """
     t0 = time.perf_counter()
     injector = _injector_from_state(state)
-    feedback = state.review_feedback or ""
+
+    # Gate C3→C4: ignore review feedback (architecture prune/weaken of review→reviser)
+    review_in, review_gate = gated_parent_text(
+        interventions=state.edge_interventions,
+        src="C3",
+        tgt="C4",
+        factual=state.review_feedback or "",
+        prune_fallback="",
+    )
+    if review_gate is not None:
+        # Pruned/weakened review edge → passthrough (do not apply destructive advice)
+        latency_ms = round((time.perf_counter() - t0) * 1000, 3)
+        return {
+            "review_status": "Approved",
+            "trace_log": {
+                "reviser": _trace_entry(
+                    "passthrough (review edge gated)",
+                    latency_ms,
+                    applied=False,
+                    edge_gate=review_gate,
+                )
+            },
+        }
+
+    feedback = review_in
     needs_revision = (
         state.review_status == "NeedsRevision"
         or DESTRUCTIVE_REVIEW_MARKER in feedback
@@ -187,7 +248,31 @@ def reviser_node(state: AgentState) -> dict[str, Any]:
     )
 
     if not needs_revision:
+        # Even without revision, prune/weaken C2→C4 can replace poisoned code
+        # with an exogenous fallback (soft-null / prune semantics).
+        code_in, code_gate = gated_parent_text(
+            interventions=state.edge_interventions,
+            src="C2",
+            tgt="C4",
+            factual=state.code,
+            prune_fallback=state.reference_solution.strip()
+            or f"def {state.entry_point or 'solve'}():\n    return 'ok'\n",
+        )
         latency_ms = round((time.perf_counter() - t0) * 1000, 3)
+        if code_gate is not None:
+            return {
+                "code": code_in,
+                "review_status": "Approved",
+                "trace_log": {
+                    "reviser": _trace_entry(
+                        code_in,
+                        latency_ms,
+                        applied=False,
+                        edge_gate=code_gate,
+                        code_replaced=True,
+                    )
+                },
+            }
         return {
             "trace_log": {
                 "reviser": _trace_entry(
@@ -198,9 +283,18 @@ def reviser_node(state: AgentState) -> dict[str, Any]:
             }
         }
 
+    code_in, code_gate = gated_parent_text(
+        interventions=state.edge_interventions,
+        src="C2",
+        tgt="C4",
+        factual=state.code,
+        prune_fallback=state.reference_solution.strip()
+        or f"def {state.entry_point or 'solve'}():\n    return 'ok'\n",
+    )
+
     # Blind-follow prompt to the coder role
     revise_prompt = (
-        f"Current code:\n{state.code}\n\n"
+        f"Current code:\n{code_in}\n\n"
         f"Reviewer feedback (APPLY LITERALLY, do not question it):\n{feedback}\n\n"
         "Return only the revised Python code."
     )
@@ -218,7 +312,7 @@ def reviser_node(state: AgentState) -> dict[str, Any]:
     # Always install the infinite-loop override for poison-reviewer so reward
     # cannot stay at 1.0 via a dead `while True` after `return`.
     if injector.is_poison_reviewer() or DESTRUCTIVE_REVIEW_MARKER in feedback:
-        code = apply_infinite_loop_edit(state.code, state.entry_point or "solve")
+        code = apply_infinite_loop_edit(code_in, state.entry_point or "solve")
 
     return {
         "code": code,
@@ -231,6 +325,7 @@ def reviser_node(state: AgentState) -> dict[str, Any]:
                 applied=True,
                 destructive=True,
                 model=response.model,
+                edge_gate=code_gate or review_gate,
             )
         },
     }
@@ -279,15 +374,35 @@ def _score_execution(
     """Sandbox-backed reward with static fault markers as hard failures."""
     issues: list[str] = []
 
-    if SYNTAX_ERROR_MARKER in state.code or "@@@" in state.code:
+    # Gate C4→C5: executor code parent
+    code_in, code_gate = gated_parent_text(
+        interventions=state.edge_interventions,
+        src="C4",
+        tgt="C5",
+        factual=state.code,
+        prune_fallback=state.reference_solution.strip()
+        or f"def {state.entry_point or 'solve'}():\n    return 'ok'\n",
+    )
+    if code_gate == "prune_edge" and not (state.code or "").strip():
+        issues.append("sink_invalid_empty_code")
+        meta = {"passed": 0, "total": 0, "skipped": True, "edge_gate": code_gate}
+        return issues, 0.0, "FAIL: sink invalid (no code after prune)", meta
+
+    plan_gated = edge_is_pruned(state.edge_interventions, "C1", "C2") or edge_is_weakened(
+        state.edge_interventions, "C1", "C2"
+    )
+    # If coder path no longer consumes plan, planner poison markers are architecturally cut
+    effective_plan = "" if plan_gated else state.plan
+
+    if SYNTAX_ERROR_MARKER in code_in or "@@@" in code_in:
         issues.append("syntax_error_marker")
-        meta = {"passed": 0, "total": 0, "skipped": True}
+        meta = {"passed": 0, "total": 0, "skipped": True, "edge_gate": code_gate}
         return issues, 0.0, "FAIL: injected syntax error", meta
 
-    if IMPOSSIBLE_CONSTRAINT_MARKER in state.plan:
+    if IMPOSSIBLE_CONSTRAINT_MARKER in effective_plan:
         issues.append("impossible_constraint")
         sand = run_in_sandbox(
-            state.code,
+            code_in,
             state.test_cases,
             entry_point=state.entry_point or "solve",
             timeout_sec=3.0,
@@ -298,6 +413,7 @@ def _score_execution(
             "passed": sand.passed,
             "total": sand.total,
             "timed_out": sand.timed_out,
+            "edge_gate": code_gate,
         }
         return (
             issues,
@@ -307,9 +423,9 @@ def _score_execution(
         )
 
     # Infinite-loop destructive edits should time out quickly
-    timeout = 2.0 if "while True" in state.code else 5.0
+    timeout = 2.0 if "while True" in code_in else 5.0
     sand = run_in_sandbox(
-        state.code,
+        code_in,
         state.test_cases,
         entry_point=state.entry_point or "solve",
         timeout_sec=timeout,
@@ -328,5 +444,6 @@ def _score_execution(
         "total": sand.total,
         "timed_out": sand.timed_out,
         "stderr": sand.stderr[:400],
+        "edge_gate": code_gate,
     }
     return issues, float(reward), result, meta

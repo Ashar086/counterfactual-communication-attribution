@@ -54,9 +54,13 @@ def run_pipeline(
     entry_point: str = "solve",
     test_cases: list[dict[str, Any]] | None = None,
     reference_solution: str = "",
+    edge_interventions: list[dict[str, str]] | None = None,
 ) -> AgentState:
     """
     Execute one full pipeline run and return a validated AgentState.
+
+    edge_interventions: optional Week 6 live prune/weaken gates
+    (list of {source_event_id, target_event_id, kind}).
     """
     injector = fault_injector or FaultInjector(mode=PoisonMode.NONE)
     initial: dict[str, Any] = {
@@ -76,6 +80,7 @@ def run_pipeline(
         "entry_point": entry_point,
         "test_cases": test_cases or [],
         "reference_solution": reference_solution,
+        "edge_interventions": list(edge_interventions or []),
     }
     raw = BASE_GRAPH.invoke(initial)
     if isinstance(raw, AgentState):
