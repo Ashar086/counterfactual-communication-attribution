@@ -36,5 +36,7 @@ class AgentState(BaseModel):
     test_cases: list[dict[str, Any]] = Field(default_factory=list)
     reference_solution: str = ""
     review_feedback: str = ""
+    # Week 6 Part IV: live prune/weaken of CommSCM event edges (adapter only)
+    edge_interventions: list[dict[str, str]] = Field(default_factory=list)
 
     model_config = {"extra": "forbid"}

@@ -11,7 +11,8 @@ Problem
   → Communication Attribution        (Part I)  ✅ Frozen
   → Efficient Attribution Engine     (Part II) ✅ Frozen
   → Architecture Optimization        (Part III) ✅ Feature-frozen (H1 + H2-lite synthetic)
-  → Real-agent Validation            ⏳ Week 5+ (primary blocker)
+  → Real-agent Validation            ✅ Week 5–6 (`v0.6-live-repair`); next = breadth
+
 ```
 
 | Part | Content | Status |
@@ -19,7 +20,7 @@ Problem
 | I — Attribution | IF-C-SCM, typed events, unified CR, exact oracle | Frozen (v0.2*) |
 | II — Replay Engine | Descendant, COW, Replay Complexity Suite, scaling | Frozen (`v0.3-replay-engine`) |
 | III — Architecture Optimization | CCAS propose / apply / iterative prune | **Feature-frozen** (`v0.5-ccas-synthetic`) |
-| IV — External validity | Real LangGraph → … → public benches | **Week 5 active** |
+| IV — External validity | Week 5 live ✅ + Week 6 single-edit repair ✅ | **Frozen** `v0.6-live-repair` |
 
 **Do not implement H3 (verifier) next.** Leave synthetic evaluation; let real-agent results drive the next change.
 
