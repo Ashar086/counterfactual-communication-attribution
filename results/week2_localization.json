@@ -1,0 +1,408 @@
+{
+  "metrics": {
+    "n": 4,
+    "precision_at_1": 1.0,
+    "recall_at_k": {
+      "1": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "mrr": 1.0,
+    "mean_replay_ms": 0.3290312500000001,
+    "mean_recomputed_events": 2.875
+  },
+  "cases": [
+    {
+      "trace": "T1_text",
+      "fault_type": "text_ambiguity",
+      "true_event": "C1",
+      "predicted_top1": "C1",
+      "p_at_1": true,
+      "total_runtime_ms": 5.062,
+      "ranking": [
+        {
+          "rank": 1,
+          "event_id": "C1",
+          "channel": "text",
+          "cr": -1.0,
+          "delta_y": 1.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 1.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.595
+        },
+        {
+          "rank": 2,
+          "event_id": "C0",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 1,
+          "runtime_ms": 0.598
+        },
+        {
+          "rank": 3,
+          "event_id": "C2",
+          "channel": "tool",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.59
+        },
+        {
+          "rank": 4,
+          "event_id": "C3",
+          "channel": "memory",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.616
+        },
+        {
+          "rank": 5,
+          "event_id": "C4",
+          "channel": "retrieval",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.704
+        },
+        {
+          "rank": 6,
+          "event_id": "C5",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 3,
+          "runtime_ms": 0.426
+        },
+        {
+          "rank": 7,
+          "event_id": "C6",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 2,
+          "runtime_ms": 0.236
+        },
+        {
+          "rank": 8,
+          "event_id": "C7",
+          "channel": "tool",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 1,
+          "runtime_ms": 0.237
+        }
+      ]
+    },
+    {
+      "trace": "T2_tool",
+      "fault_type": "missing_tool_output",
+      "true_event": "C2",
+      "predicted_top1": "C2",
+      "p_at_1": true,
+      "total_runtime_ms": 2.475,
+      "ranking": [
+        {
+          "rank": 1,
+          "event_id": "C2",
+          "channel": "tool",
+          "cr": -1.0,
+          "delta_y": 1.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 1.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.283
+        },
+        {
+          "rank": 2,
+          "event_id": "C0",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 1,
+          "runtime_ms": 0.253
+        },
+        {
+          "rank": 3,
+          "event_id": "C1",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.246
+        },
+        {
+          "rank": 4,
+          "event_id": "C3",
+          "channel": "memory",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.237
+        },
+        {
+          "rank": 5,
+          "event_id": "C4",
+          "channel": "retrieval",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.229
+        },
+        {
+          "rank": 6,
+          "event_id": "C5",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 3,
+          "runtime_ms": 0.23
+        },
+        {
+          "rank": 7,
+          "event_id": "C6",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 2,
+          "runtime_ms": 0.219
+        },
+        {
+          "rank": 8,
+          "event_id": "C7",
+          "channel": "tool",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 1,
+          "runtime_ms": 0.211
+        }
+      ]
+    },
+    {
+      "trace": "T3_memory",
+      "fault_type": "corrupted_memory_write",
+      "true_event": "C3",
+      "predicted_top1": "C3",
+      "p_at_1": true,
+      "total_runtime_ms": 3.371,
+      "ranking": [
+        {
+          "rank": 1,
+          "event_id": "C3",
+          "channel": "memory",
+          "cr": -1.0,
+          "delta_y": 1.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 1.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.667
+        },
+        {
+          "rank": 2,
+          "event_id": "C0",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 1,
+          "runtime_ms": 0.253
+        },
+        {
+          "rank": 3,
+          "event_id": "C1",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.241
+        },
+        {
+          "rank": 4,
+          "event_id": "C2",
+          "channel": "tool",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.233
+        },
+        {
+          "rank": 5,
+          "event_id": "C4",
+          "channel": "retrieval",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.623
+        },
+        {
+          "rank": 6,
+          "event_id": "C5",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 3,
+          "runtime_ms": 0.355
+        },
+        {
+          "rank": 7,
+          "event_id": "C6",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 2,
+          "runtime_ms": 0.223
+        },
+        {
+          "rank": 8,
+          "event_id": "C7",
+          "channel": "tool",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 1,
+          "runtime_ms": 0.217
+        }
+      ]
+    },
+    {
+      "trace": "T4_retrieval",
+      "fault_type": "incorrect_retrieval",
+      "true_event": "C4",
+      "predicted_top1": "C4",
+      "p_at_1": true,
+      "total_runtime_ms": 2.324,
+      "ranking": [
+        {
+          "rank": 1,
+          "event_id": "C4",
+          "channel": "retrieval",
+          "cr": -1.0,
+          "delta_y": 1.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 1.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.225
+        },
+        {
+          "rank": 2,
+          "event_id": "C0",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 1,
+          "runtime_ms": 0.207
+        },
+        {
+          "rank": 3,
+          "event_id": "C1",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.258
+        },
+        {
+          "rank": 4,
+          "event_id": "C2",
+          "channel": "tool",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.229
+        },
+        {
+          "rank": 5,
+          "event_id": "C3",
+          "channel": "memory",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.24
+        },
+        {
+          "rank": 6,
+          "event_id": "C5",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 3,
+          "runtime_ms": 0.22
+        },
+        {
+          "rank": 7,
+          "event_id": "C6",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 2,
+          "runtime_ms": 0.21
+        },
+        {
+          "rank": 8,
+          "event_id": "C7",
+          "channel": "tool",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 1,
+          "runtime_ms": 0.218
+        }
+      ]
+    }
+  ]
+}

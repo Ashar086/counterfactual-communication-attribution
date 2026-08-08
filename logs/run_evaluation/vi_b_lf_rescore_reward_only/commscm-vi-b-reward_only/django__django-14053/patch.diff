@@ -1,0 +1,11 @@
+--- a/django/contrib/staticfiles/storage.py
++++ b/django/contrib/staticfiles/storage.py
+@@ -123,6 +123,7 @@
+         for file in files:
+             # Process the file...
+             yield processed_file
++            processed_files.add(original_file)  # Track processed files
+             
+             # Check if the file has already been yielded
+             if original_file in processed_files:
+                 continue

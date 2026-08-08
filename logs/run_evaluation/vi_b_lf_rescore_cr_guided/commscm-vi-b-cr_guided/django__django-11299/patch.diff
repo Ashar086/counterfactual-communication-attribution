@@ -1,0 +1,14 @@
+--- a/original_file.py
++++ b/fixed_file.py
+@@ -1,10 +1,10 @@
+ class TestConstraint(models.Model):
+     field_1 = models.IntegerField(blank=True, null=True)
+     flag = models.BooleanField(blank=False, null=False)
+     class Meta:
+         constraints = [
+-            models.CheckConstraint(check=models.Q(flag__exact=True, field_1__isnull=False) |
+-                                             models.Q(flag__exact=False,),
++            models.CheckConstraint(check=models.Q(flag=True, field_1__isnull=False) |
++                                             models.Q(flag=False),
+                                     name='field_1_has_value_if_flag_set'),
+         ]

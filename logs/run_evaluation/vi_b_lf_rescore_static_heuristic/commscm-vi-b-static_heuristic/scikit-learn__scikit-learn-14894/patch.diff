@@ -1,0 +1,14 @@
+--- a//usr/local/lib/python3.5/dist-packages/sklearn/svm/base.py
++++ b//usr/local/lib/python3.5/dist-packages/sklearn/svm/base.py
+@@ -299,7 +299,10 @@
+         dual_coef_indices = self.dual_coef_.indices
+         n_class = self.n_classes_
+ 
+-        self.dual_coef_ = sp.csr_matrix(dual_coef / (dual_coef_indices.size / n_class))
++        if dual_coef_indices.size == 0:
++            self.dual_coef_ = sp.csr_matrix([])
++        else:
++            self.dual_coef_ = sp.csr_matrix(dual_coef / (dual_coef_indices.size / n_class))
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

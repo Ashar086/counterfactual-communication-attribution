@@ -1,0 +1,40 @@
+2026-08-05 09:15:40,519 - INFO - Creating container for pytest-dev__pytest-5262...
+2026-08-05 09:15:40,622 - INFO - Container for pytest-dev__pytest-5262 created: 52bfbdf50f198c237193d644a13f328376bf584a5cf7a0b231941b840fe04f1a
+2026-08-05 09:15:40,947 - INFO - Container for pytest-dev__pytest-5262 started: 52bfbdf50f198c237193d644a13f328376bf584a5cf7a0b231941b840fe04f1a
+2026-08-05 09:15:40,949 - INFO - Intermediate patch for pytest-dev__pytest-5262 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\pytest-dev__pytest-5262\patch.diff, now applying to container...
+2026-08-05 09:15:41,206 - INFO - Failed to apply patch to container: git apply --verbose
+2026-08-05 09:15:41,329 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2026-08-05 09:15:41,447 - INFO - >>>>> Applied Patch:
+patching file src/_pytest/capture.py
+
+2026-08-05 09:15:41,818 - INFO - Git diff before:
+diff --git a/src/_pytest/capture.py b/src/_pytest/capture.py
+index 25eab7fd..56017113 100644
+--- a/src/_pytest/capture.py
++++ b/src/_pytest/capture.py
+@@ -447,6 +447,10 @@ class EncodedFile(object):
+         """Ensure that file.name is a string."""
+         return repr(self.buffer)
+ 
++    @property
++    def mode(self):
++        return self.buffer.mode.replace("b", "")
++
+     def __getattr__(self, name):
+         return getattr(object.__getattribute__(self, "buffer"), name)
+2026-08-05 09:15:41,820 - INFO - Eval script for pytest-dev__pytest-5262 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\pytest-dev__pytest-5262\eval.sh; copying to container...
+2026-08-05 09:16:24,049 - INFO - Test runtime: 42.06 seconds
+2026-08-05 09:16:24,054 - ERROR - Error in evaluating model for pytest-dev__pytest-5262: 'charmap' codec can't encode character '\ufffd' in position 70372: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Temp\SWE-bench-src\swebench\harness\run_evaluation.py", line 213, in run_instance
+    f.write(test_output)
+    ~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\ufffd' in position 70372: character maps to <undefined>
+
+Check (logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\pytest-dev__pytest-5262\run_instance.log) for more information.
+2026-08-05 09:16:24,054 - INFO - Attempting to stop container sweb.eval.pytest-dev__pytest-5262.oracle_gold_full_n100_lf...
+2026-08-05 09:16:39,663 - INFO - Attempting to remove container sweb.eval.pytest-dev__pytest-5262.oracle_gold_full_n100_lf...
+2026-08-05 09:16:39,848 - INFO - Container sweb.eval.pytest-dev__pytest-5262.oracle_gold_full_n100_lf removed.

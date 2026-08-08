@@ -1,10 +1,23 @@
+# Secrets / environment
 .env
 .venv/
 venv/
+
+# Python caches
 __pycache__/
 *.pyc
 .pytest_cache/
 .mypy_cache/
-results/
-*.jsonl
+
+# OS
 .DS_Store
+
+# Paper / manuscript / venue (excluded from code repo by request)
+paper/
+commscm/PAPER_OUTLINE.md
+commscm_overleaf.zip
+*.tex
+*.aux
+*.bbl
+*.blg
+*.synctex.gz

@@ -1,0 +1,13 @@
+--- a/django/db/models/query.py
++++ b/django/db/models/query.py
+@@ -565,7 +565,8 @@
+         # ... existing code ...
+ 
+-        return None
++        from collections import namedtuple
++        UpdateResult = namedtuple('UpdateResult', ['matched'])
++        return UpdateResult(matched=total_matched)
+
++    # Ensure the function is properly defined
++    def solve():
++        pass

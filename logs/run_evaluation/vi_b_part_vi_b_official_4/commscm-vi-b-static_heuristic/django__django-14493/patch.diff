@@ -1,0 +1,11 @@
+--- django/contrib/staticfiles/storage.py
++++ django/contrib/staticfiles/storage.py
+@@ -246,6 +246,7 @@
+         substitutions = {}
+         for pattern in self.patterns:
++            substitutions = {}  # Initialize substitutions
+             for match in pattern.finditer(content):
+                 for name, replacement in self.replacements.items():
+                     substitutions[name] = replacement(match)
+-                content = pattern.sub(replacement, content)
++                content = pattern.sub(lambda m: substitutions.get(m.group(0), m.group(0)), content)

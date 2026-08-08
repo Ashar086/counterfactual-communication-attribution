@@ -1,0 +1,75 @@
+{
+  "oracle_gold_resolve_at_1": 0.89,
+  "oracle_gold_counts": {
+    "resolved": 89,
+    "unresolved": 2,
+    "error": 9,
+    "missing": 0,
+    "scored": 100
+  },
+  "vi_b_by_method": {
+    "cr_guided": {
+      "resolve_at_1_mean": 0.02,
+      "counts": {
+        "resolved": 2,
+        "unresolved": 6,
+        "error": 92,
+        "missing": 0,
+        "scored": 100
+      }
+    },
+    "reward_only": {
+      "resolve_at_1_mean": 0.04,
+      "counts": {
+        "resolved": 4,
+        "unresolved": 15,
+        "error": 81,
+        "missing": 0,
+        "scored": 100
+      }
+    },
+    "random": {
+      "resolve_at_1_mean": 0.03,
+      "counts": {
+        "resolved": 3,
+        "unresolved": 16,
+        "error": 81,
+        "missing": 0,
+        "scored": 100
+      }
+    },
+    "static_heuristic": {
+      "resolve_at_1_mean": 0.03,
+      "counts": {
+        "resolved": 3,
+        "unresolved": 16,
+        "error": 81,
+        "missing": 0,
+        "scored": 100
+      }
+    }
+  },
+  "cr_guided_failure_taxonomy": {
+    "wrong_path": 34,
+    "malformed_diff": 17,
+    "hunk_mismatch": 41,
+    "other_apply": 0,
+    "resolved": 2,
+    "applied_tests_fail": 6,
+    "missing": 0
+  },
+  "cr_guided_category_counts_raw": {
+    "applied_tests_fail": 6,
+    "wrong_context_hunk_mismatch": 41,
+    "wrong_file_path": 34,
+    "invalid_unified_diff_syntax": 17,
+    "resolved": 2
+  },
+  "elapsed_s": 59685.8,
+  "artifacts": {
+    "oracle": "results\\oracle_gold_patch_full_lf.json",
+    "vi_b_summary": "results\\part_vi_b_lf_rescore_summary.json",
+    "cr_taxonomy": "results\\part_vi_b_lf_cr_guided_failure_taxonomy.json",
+    "checkpoint": "results\\overnight_lf_campaign_checkpoint.json"
+  }
+}

@@ -1,0 +1,14 @@
+--- a/astropy/units/quantity.py
++++ b/astropy/units/quantity.py
+@@ -617,7 +617,7 @@
+         for inp in inputs:
+             if isinstance(inp, np.ndarray):
+                 result = inp.__array_ufunc__(function, method, *inputs, **kwargs)
+-                if result is not NotImplemented:
++                if result is not NotImplemented and not isinstance(result, ValueError):
+                     return DuckArray(result)
+ 
+         return NotImplemented
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

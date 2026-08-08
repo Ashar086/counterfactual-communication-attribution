@@ -1,0 +1,135 @@
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\langchain_core\_api\deprecation.py:25: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1.fields import FieldInfo as FieldInfoV1
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.2) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-08-04 23:38:22,486 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 23:38:22,532 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-04 23:38:22,796 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 23:38:23,557 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 23:38:23,840 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-08-04 23:38:24,107 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-04 23:38:24,570 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-04 23:38:24,842 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-08-04 23:38:25,105 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-08-04 23:38:25,381 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-08-04 23:38:26,142 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 23:38:26,180 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-04 23:38:26,436 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 23:38:26,674 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 23:38:26,944 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-04 23:38:27,228 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-04 23:38:27,498 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Found 2 existing instance images. Will reuse them.
+Running 10 instances...
+
+Evaluation:   0%|          | 0/10 [00:00<?, ?it/s, error=0, \u2713=0, \u2716=0]
+Evaluation:   0%|          | 0/10 [00:17<?, ?it/s, \u2713=0, \u2716=0, error=1]
+Evaluation:  10%|#         | 1/10 [00:17<02:35, 17.32s/it, \u2713=0, \u2716=0, error=1]
+Evaluation:  10%|#         | 1/10 [00:32<02:35, 17.32s/it, \u2713=0, \u2716=0, error=2]
+Evaluation:  20%|##        | 2/10 [00:32<02:09, 16.21s/it, \u2713=0, \u2716=0, error=2]
+Evaluation:  20%|##        | 2/10 [02:41<02:09, 16.21s/it, \u2713=0, \u2716=0, error=3]
+Evaluation:  30%|###       | 3/10 [02:41<07:54, 67.82s/it, \u2713=0, \u2716=0, error=3]
+Evaluation:  30%|###       | 3/10 [03:06<07:54, 67.82s/it, \u2713=0, \u2716=0, error=4]
+Evaluation:  40%|####      | 4/10 [03:06<05:04, 50.68s/it, \u2713=0, \u2716=0, error=4]
+Evaluation:  40%|####      | 4/10 [12:30<05:04, 50.68s/it, \u2713=0, \u2716=0, error=5]
+Evaluation:  50%|#####     | 5/10 [12:30<19:38, 235.68s/it, \u2713=0, \u2716=0, error=5]
+Evaluation:  50%|#####     | 5/10 [18:07<19:38, 235.68s/it, \u2713=0, \u2716=0, error=6]
+Evaluation:  60%|######    | 6/10 [18:07<18:01, 270.25s/it, \u2713=0, \u2716=0, error=6]
+Evaluation:  60%|######    | 6/10 [25:18<18:01, 270.25s/it, \u2713=0, \u2716=0, error=7]
+Evaluation:  70%|#######   | 7/10 [25:18<16:08, 322.67s/it, \u2713=0, \u2716=0, error=7]
+Evaluation:  70%|#######   | 7/10 [30:33<16:08, 322.67s/it, \u2713=0, \u2716=0, error=8]
+Evaluation:  80%|########  | 8/10 [30:33<10:40, 320.48s/it, \u2713=0, \u2716=0, error=8]
+Evaluation:  80%|########  | 8/10 [30:52<10:40, 320.48s/it, \u2713=0, \u2716=0, error=9]
+Evaluation:  90%|######### | 9/10 [30:52<03:46, 226.14s/it, \u2713=0, \u2716=0, error=9]
+Evaluation:  90%|######### | 9/10 [35:22<03:46, 226.14s/it, \u2713=0, \u2716=0, error=10]
+Evaluation: 100%|##########| 10/10 [35:22<00:00, 239.55s/it, \u2713=0, \u2716=0, error=10]
+Evaluation: 100%|##########| 10/10 [35:22<00:00, 212.21s/it, \u2713=0, \u2716=0, error=10]
+django__django-11239: >>>>> Patch Apply Failed:
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/django/dbshell.py
+|+++ b/django/dbshell.py
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 13:              'psql',
+
+
+Check (logs\run_evaluation\cr_guided_sample_n10_s7_lf\commscm-vi-b-cr_guided\django__django-11239\run_instance.log) for more information.
+Error building image django__django-14434: 404 Client Error for http+docker://localnpipe/v1.54/images/swebench/sweb.eval.x86_64.django_1776_django-14434:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.django_1776_django-14434:latest")
+Check (logs\run_evaluation\cr_guided_sample_n10_s7_lf\commscm-vi-b-cr_guided\django__django-14434\run_instance.log) for more information.
+Error building image django__django-15987: 404 Client Error for http+docker://localnpipe/v1.54/images/swebench/sweb.eval.x86_64.django_1776_django-15987:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.django_1776_django-15987:latest")
+Check (logs\run_evaluation\cr_guided_sample_n10_s7_lf\commscm-vi-b-cr_guided\django__django-15987\run_instance.log) for more information.
+astropy__astropy-13977: >>>>> Patch Apply Failed:
+patching file astropy/units/quantity.py
+Hunk #1 FAILED at 617.
+1 out of 1 hunk FAILED -- saving rejects to file astropy/units/quantity.py.rej
+
+Check (logs\run_evaluation\cr_guided_sample_n10_s7_lf\commscm-vi-b-cr_guided\astropy__astropy-13977\run_instance.log) for more information.
+pylint-dev__pylint-4551: >>>>> Patch Apply Failed:
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/pyreverse.py
+|+++ b/pyreverse.py
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 24: +            function_signature += ")"
+
+
+Check (logs\run_evaluation\cr_guided_sample_n10_s7_lf\commscm-vi-b-cr_guided\pylint-dev__pylint-4551\run_instance.log) for more information.
+sphinx-doc__sphinx-10449: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\cr_guided_sample_n10_s7_lf\commscm-vi-b-cr_guided\sphinx-doc__sphinx-10449\run_instance.log) for more information.
+sphinx-doc__sphinx-7910: >>>>> Patch Apply Failed:
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/sphinx/ext/napoleon.py
+|+++ b/sphinx/ext/napoleon.py
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\cr_guided_sample_n10_s7_lf\commscm-vi-b-cr_guided\sphinx-doc__sphinx-7910\run_instance.log) for more information.
+sympy__sympy-17655: >>>>> Patch Apply Failed:
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/fix.py
+|+++ b/fix.py
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\cr_guided_sample_n10_s7_lf\commscm-vi-b-cr_guided\sympy__sympy-17655\run_instance.log) for more information.
+sympy__sympy-13974: >>>>> Patch Apply Failed:
+patching file sympy/physics/quantum/tensorproduct.py
+patch: **** malformed patch at line 19:      return expr
+
+
+Check (logs\run_evaluation\cr_guided_sample_n10_s7_lf\commscm-vi-b-cr_guided\sympy__sympy-13974\run_instance.log) for more information.
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 10
+Instances submitted: 10
+Instances completed: 0
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 0
+Instances with empty patches: 0
+Instances with errors: 10
+Unstopped containers: 0
+Unremoved images: 2
+Report written to commscm-vi-b-cr_guided.cr_guided_sample_n10_s7_lf.json

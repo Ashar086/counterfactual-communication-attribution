@@ -1,0 +1,24 @@
+--- a/django/forms/forms.py
++++ b/django/forms/forms.py
+@@ -1234,7 +1234,7 @@
+         for name, field in self.fields.items():
+             if field.disabled:
+                 continue
+-            value = self.cleaned_data.get(name, field.initial)
++            value = self[name].initial
+             if value != field.initial:
+                 changed_data.append(name)
+ 
+@@ -1250,6 +1250,12 @@
+         return changed_data
+ 
+ class BoundField:
++    def did_change(self):
++        return self.form.cleaned_data[self.name] != self.initial
++
++    @property
++    def initial(self):
++        return self.field.initial
+ 
+     def __init__(self, form, field, name):
+         self.form = form

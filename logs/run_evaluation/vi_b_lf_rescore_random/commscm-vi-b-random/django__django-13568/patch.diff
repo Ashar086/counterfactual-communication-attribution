@@ -1,0 +1,17 @@
+--- a/django/contrib/auth/checks.py
++++ b/django/contrib/auth/checks.py
+@@ -1,6 +1,7 @@
+ from django.core import checks
++from django.db.models import UniqueConstraint
+ from django.contrib.auth import get_user_model
+ 
+ def check_user_model(app_configs, **kwargs):
+     errors = []
++    user_model = get_user_model()
++    for model in user_model._meta.constraints:
++        if isinstance(model, UniqueConstraint) and model.fields == [user_model.USERNAME_FIELD]:
++            return errors  # Skip check if USERNAME_FIELD has a UniqueConstraint
++
+     if user_model.USERNAME_FIELD not in user_model._meta.get_fields():
+         errors.append(
+             checks.Error(

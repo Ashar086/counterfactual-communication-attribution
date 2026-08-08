@@ -1,0 +1,32 @@
+{
+  "returncode": 0,
+  "stdout_tail": "Running 1 instances...\nsympy__sympy-20916: >>>>> Patch Apply Failed:\n(Stripping trailing CRs from patch; use --binary to disable.)\ncan't find file to patch at input line 3\nPerhaps you used the wrong -p or --strip option?\nThe text leading up to this was:\n--------------------------\n|--- sympy/printing/conventions.py\n\n|+++ sympy/printing/conventions.py\n\n--------------------------\nNo file to patch.  Skipping patch.\n1 out of 1 hunk ignored\n\nCheck (logs\\run_evaluation\\vi_b_part_vi_b_official_15\\commscm-vi-b-static_heuristic\\sympy__sympy-20916\\run_instance.log) for more information.\nAll instances run.\nCleaning cached images...\nRemoved 0 images.\nTotal instances: 1\nInstances submitted: 1\nInstances completed: 0\nInstances incomplete: 0\nInstances resolved: 0\nInstances unresolved: 0\nInstances with empty patches: 0\nInstances with errors: 1\nUnstopped containers: 0\nUnremoved images: 0\nReport written to commscm-vi-b-static_heuristic.vi_b_part_vi_b_official_15.json\n",
+  "stderr_tail": ".modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour\n2026-08-02 15:01:21,099 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md \"HTTP/1.1 307 Temporary Redirect\"\n2026-08-02 15:01:21,162 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md \"HTTP/1.1 200 OK\"\n2026-08-02 15:01:21,445 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py \"HTTP/1.1 404 Not Found\"\n2026-08-02 15:01:22,165 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py \"HTTP/1.1 404 Not Found\"\n2026-08-02 15:01:22,493 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a \"HTTP/1.1 200 OK\"\n2026-08-02 15:01:22,775 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml \"HTTP/1.1 404 Not Found\"\n2026-08-02 15:01:23,321 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified \"HTTP/1.1 200 OK\"\n2026-08-02 15:01:23,653 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false \"HTTP/1.1 200 OK\"\n2026-08-02 15:01:23,930 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false \"HTTP/1.1 200 OK\"\n2026-08-02 15:01:24,221 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json \"HTTP/1.1 404 Not Found\"\n2026-08-02 15:01:25,073 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md \"HTTP/1.1 307 Temporary Redirect\"\n2026-08-02 15:01:25,131 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md \"HTTP/1.1 200 OK\"\n2026-08-02 15:01:25,411 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py \"HTTP/1.1 404 Not Found\"\n2026-08-02 15:01:25,641 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py \"HTTP/1.1 404 Not Found\"\n2026-08-02 15:01:25,930 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml \"HTTP/1.1 404 Not Found\"\n2026-08-02 15:01:26,211 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified \"HTTP/1.1 200 OK\"\n2026-08-02 15:01:26,498 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json \"HTTP/1.1 404 Not Found\"\n\nEvaluation:   0%|          | 0/1 [00:00<?, ?it/s, error=0, \\u2713=0, \\u2716=0]\nEvaluation:   0%|          | 0/1 [13:45<?, ?it/s, \\u2713=0, \\u2716=0, error=1]\nEvaluation: 100%|##########| 1/1 [13:45<00:00, 825.65s/it, \\u2713=0, \\u2716=0, error=1]\nEvaluation: 100%|##########| 1/1 [13:45<00:00, 825.65s/it, \\u2713=0, \\u2716=0, error=1]\n",
+  "run_id": "vi_b_part_vi_b_official_15",
+  "predictions_path": "results\\part_vi_b_predictions\\vi_b_part_vi_b_official_15.jsonl",
+  "artifact_candidates": [
+    "commscm-vi-b-static_heuristic.vi_b_part_vi_b_official_15.json",
+    "logs\\run_evaluation\\vi_b_part_vi_b_official_15"
+  ],
+  "report": {
+    "total_instances": 1,
+    "submitted_instances": 1,
+    "completed_instances": 0,
+    "resolved_instances": 0,
+    "unresolved_instances": 0,
+    "empty_patch_instances": 0,
+    "error_instances": 1,
+    "completed_ids": [],
+    "incomplete_ids": [],
+    "empty_patch_ids": [],
+    "submitted_ids": [
+      "sympy__sympy-20916"
+    ],
+    "resolved_ids": [],
+    "unresolved_ids": [],
+    "error_ids": [
+      "sympy__sympy-20916"
+    ],
+    "schema_version": 2
+  }
+}

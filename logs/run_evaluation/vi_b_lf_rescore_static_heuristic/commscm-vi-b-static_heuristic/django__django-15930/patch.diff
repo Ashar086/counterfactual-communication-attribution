@@ -1,0 +1,10 @@
+--- a/path/to/your/file.py
++++ b/path/to/your/file.py
+@@ -1,6 +1,6 @@
+ User.objects.annotate(
+     _a=Case(
+-        When(~Q(pk__in=[]), then=Value(True)),
++        When(Q(pk__in=Subquery(User.objects.values_list('pk', flat=True))), then=Value(True)),  # Adjusted to handle all records
+         default=Value(False),
+         output_field=BooleanField(),
+     )

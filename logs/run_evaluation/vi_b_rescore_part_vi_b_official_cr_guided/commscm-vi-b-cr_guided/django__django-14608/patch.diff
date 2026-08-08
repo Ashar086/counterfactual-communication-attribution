@@ -1,0 +1,9 @@
+--- a/django/forms/formsets.py
++++ b/django/forms/formsets.py
+@@ -123,6 +123,7 @@
+         if self.errors:
+             for error in self.errors:
+                 if error:
++                    error.append({'css_class': 'nonform'})
+                     # Existing logic for handling field errors
+                     ...

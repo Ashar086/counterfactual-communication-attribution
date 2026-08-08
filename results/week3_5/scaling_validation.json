@@ -1,0 +1,641 @@
+{
+  "experiment": "week3_5_scaling_validation",
+  "suite": "Replay Complexity Suite: a synthetic benchmark generator that independently controls trace length, branching factor, descendant ratio, and shared subgraph density to isolate replay complexity.",
+  "structural_cost_iters": 3000,
+  "outcome_cost_iters": 40,
+  "repeats": 3,
+  "n_scaling_fixed_10pct": [
+    {
+      "n_events": 100,
+      "branching_factor": 2,
+      "descendant_ratio_target": 0.1,
+      "descendant_ratio_actual": 0.101,
+      "shared_subgraph_frac": 0.25,
+      "n_descendants": 10,
+      "affected_nodes": 11,
+      "oracle_total_ms_median": 109.687,
+      "descendant_total_ms_median": 12.827,
+      "oracle_total_ms_all": [
+        109.687,
+        100.463,
+        110.464
+      ],
+      "descendant_total_ms_all": [
+        17.618,
+        6.919,
+        12.827
+      ],
+      "oracle_structural_ms_median": 99.231,
+      "descendant_structural_ms_median": 11.455,
+      "oracle_materialization_ms_median": 3.236,
+      "descendant_materialization_ms_median": 0.511,
+      "oracle_structural_evals": 98,
+      "descendant_structural_evals": 10,
+      "oracle_materialized_nodes": 100,
+      "descendant_materialized_nodes": 11,
+      "speedup_median": 8.551,
+      "agreement": true
+    },
+    {
+      "n_events": 250,
+      "branching_factor": 2,
+      "descendant_ratio_target": 0.1,
+      "descendant_ratio_actual": 0.1004,
+      "shared_subgraph_frac": 0.25,
+      "n_descendants": 25,
+      "affected_nodes": 26,
+      "oracle_total_ms_median": 308.543,
+      "descendant_total_ms_median": 34.883,
+      "oracle_total_ms_all": [
+        359.908,
+        266.996,
+        308.543
+      ],
+      "descendant_total_ms_all": [
+        34.883,
+        34.166,
+        36.023
+      ],
+      "oracle_structural_ms_median": 232.741,
+      "descendant_structural_ms_median": 29.344,
+      "oracle_materialization_ms_median": 9.452,
+      "descendant_materialization_ms_median": 1.041,
+      "oracle_structural_evals": 248,
+      "descendant_structural_evals": 25,
+      "oracle_materialized_nodes": 250,
+      "descendant_materialized_nodes": 26,
+      "speedup_median": 8.845,
+      "agreement": true
+    },
+    {
+      "n_events": 500,
+      "branching_factor": 2,
+      "descendant_ratio_target": 0.1,
+      "descendant_ratio_actual": 0.1002,
+      "shared_subgraph_frac": 0.25,
+      "n_descendants": 50,
+      "affected_nodes": 51,
+      "oracle_total_ms_median": 858.144,
+      "descendant_total_ms_median": 95.175,
+      "oracle_total_ms_all": [
+        735.542,
+        1006.044,
+        858.144
+      ],
+      "descendant_total_ms_all": [
+        95.175,
+        97.438,
+        64.049
+      ],
+      "oracle_structural_ms_median": 651.112,
+      "descendant_structural_ms_median": 76.132,
+      "oracle_materialization_ms_median": 26.738,
+      "descendant_materialization_ms_median": 3.02,
+      "oracle_structural_evals": 498,
+      "descendant_structural_evals": 50,
+      "oracle_materialized_nodes": 500,
+      "descendant_materialized_nodes": 51,
+      "speedup_median": 9.016,
+      "agreement": true
+    },
+    {
+      "n_events": 1000,
+      "branching_factor": 2,
+      "descendant_ratio_target": 0.1,
+      "descendant_ratio_actual": 0.1001,
+      "shared_subgraph_frac": 0.25,
+      "n_descendants": 100,
+      "affected_nodes": 101,
+      "oracle_total_ms_median": 2201.083,
+      "descendant_total_ms_median": 169.703,
+      "oracle_total_ms_all": [
+        2270.181,
+        2036.202,
+        2201.083
+      ],
+      "descendant_total_ms_all": [
+        168.588,
+        202.277,
+        169.703
+      ],
+      "oracle_structural_ms_median": 1395.86,
+      "descendant_structural_ms_median": 117.847,
+      "oracle_materialization_ms_median": 52.291,
+      "descendant_materialization_ms_median": 4.543,
+      "oracle_structural_evals": 998,
+      "descendant_structural_evals": 100,
+      "oracle_materialized_nodes": 1000,
+      "descendant_materialized_nodes": 101,
+      "speedup_median": 12.97,
+      "agreement": true
+    },
+    {
+      "n_events": 2000,
+      "branching_factor": 2,
+      "descendant_ratio_target": 0.1,
+      "descendant_ratio_actual": 0.1001,
+      "shared_subgraph_frac": 0.25,
+      "n_descendants": 200,
+      "affected_nodes": 201,
+      "oracle_total_ms_median": 8284.305,
+      "descendant_total_ms_median": 484.092,
+      "oracle_total_ms_all": [
+        8284.305,
+        8750.454,
+        5209.817
+      ],
+      "descendant_total_ms_all": [
+        857.449,
+        484.092,
+        355.385
+      ],
+      "oracle_structural_ms_median": 3421.708,
+      "descendant_structural_ms_median": 266.977,
+      "oracle_materialization_ms_median": 134.132,
+      "descendant_materialization_ms_median": 9.477,
+      "oracle_structural_evals": 1998,
+      "descendant_structural_evals": 200,
+      "oracle_materialized_nodes": 2000,
+      "descendant_materialized_nodes": 201,
+      "speedup_median": 17.113,
+      "agreement": true
+    }
+  ],
+  "descendant_ratio_sweep": [
+    {
+      "n_events": 500,
+      "branching_factor": 2,
+      "descendant_ratio_target": 0.1,
+      "descendant_ratio_actual": 0.1002,
+      "shared_subgraph_frac": 0.25,
+      "n_descendants": 50,
+      "affected_nodes": 51,
+      "oracle_total_ms_median": 1258.518,
+      "descendant_total_ms_median": 128.617,
+      "oracle_total_ms_all": [
+        694.795,
+        1258.518,
+        1444.28
+      ],
+      "descendant_total_ms_all": [
+        101.138,
+        155.518,
+        128.617
+      ],
+      "oracle_structural_ms_median": 884.887,
+      "descendant_structural_ms_median": 100.078,
+      "oracle_materialization_ms_median": 32.416,
+      "descendant_materialization_ms_median": 3.091,
+      "oracle_structural_evals": 498,
+      "descendant_structural_evals": 50,
+      "oracle_materialized_nodes": 500,
+      "descendant_materialized_nodes": 51,
+      "speedup_median": 9.785,
+      "agreement": true
+    },
+    {
+      "n_events": 500,
+      "branching_factor": 2,
+      "descendant_ratio_target": 0.2,
+      "descendant_ratio_actual": 0.2004,
+      "shared_subgraph_frac": 0.25,
+      "n_descendants": 100,
+      "affected_nodes": 101,
+      "oracle_total_ms_median": 678.526,
+      "descendant_total_ms_median": 115.039,
+      "oracle_total_ms_all": [
+        678.526,
+        499.811,
+        730.621
+      ],
+      "descendant_total_ms_all": [
+        72.903,
+        115.039,
+        208.85
+      ],
+      "oracle_structural_ms_median": 513.429,
+      "descendant_structural_ms_median": 91.232,
+      "oracle_materialization_ms_median": 14.648,
+      "descendant_materialization_ms_median": 2.614,
+      "oracle_structural_evals": 498,
+      "descendant_structural_evals": 100,
+      "oracle_materialized_nodes": 500,
+      "descendant_materialized_nodes": 101,
+      "speedup_median": 5.898,
+      "agreement": true
+    },
+    {
+      "n_events": 500,
+      "branching_factor": 2,
+      "descendant_ratio_target": 0.4,
+      "descendant_ratio_actual": 0.4008,
+      "shared_subgraph_frac": 0.25,
+      "n_descendants": 200,
+      "affected_nodes": 201,
+      "oracle_total_ms_median": 1035.361,
+      "descendant_total_ms_median": 415.763,
+      "oracle_total_ms_all": [
+        1035.361,
+        704.618,
+        1266.61
+      ],
+      "descendant_total_ms_all": [
+        415.763,
+        220.121,
+        518.524
+      ],
+      "oracle_structural_ms_median": 789.819,
+      "descendant_structural_ms_median": 355.894,
+      "oracle_materialization_ms_median": 38.805,
+      "descendant_materialization_ms_median": 11.898,
+      "oracle_structural_evals": 498,
+      "descendant_structural_evals": 200,
+      "oracle_materialized_nodes": 500,
+      "descendant_materialized_nodes": 201,
+      "speedup_median": 2.49,
+      "agreement": true
+    },
+    {
+      "n_events": 500,
+      "branching_factor": 2,
+      "descendant_ratio_target": 0.6,
+      "descendant_ratio_actual": 0.5992,
+      "shared_subgraph_frac": 0.25,
+      "n_descendants": 299,
+      "affected_nodes": 300,
+      "oracle_total_ms_median": 1037.655,
+      "descendant_total_ms_median": 585.945,
+      "oracle_total_ms_all": [
+        1037.655,
+        863.687,
+        1616.243
+      ],
+      "descendant_total_ms_all": [
+        674.652,
+        523.293,
+        585.945
+      ],
+      "oracle_structural_ms_median": 720.127,
+      "descendant_structural_ms_median": 461.524,
+      "oracle_materialization_ms_median": 34.878,
+      "descendant_materialization_ms_median": 27.269,
+      "oracle_structural_evals": 498,
+      "descendant_structural_evals": 299,
+      "oracle_materialized_nodes": 500,
+      "descendant_materialized_nodes": 300,
+      "speedup_median": 1.771,
+      "agreement": true
+    },
+    {
+      "n_events": 500,
+      "branching_factor": 2,
+      "descendant_ratio_target": 0.8,
+      "descendant_ratio_actual": 0.7996,
+      "shared_subgraph_frac": 0.25,
+      "n_descendants": 399,
+      "affected_nodes": 400,
+      "oracle_total_ms_median": 1647.461,
+      "descendant_total_ms_median": 884.139,
+      "oracle_total_ms_all": [
+        1832.292,
+        1136.405,
+        1647.461
+      ],
+      "descendant_total_ms_all": [
+        1028.429,
+        834.799,
+        884.139
+      ],
+      "oracle_structural_ms_median": 1003.875,
+      "descendant_structural_ms_median": 605.124,
+      "oracle_materialization_ms_median": 37.168,
+      "descendant_materialization_ms_median": 20.582,
+      "oracle_structural_evals": 498,
+      "descendant_structural_evals": 399,
+      "oracle_materialized_nodes": 500,
+      "descendant_materialized_nodes": 400,
+      "speedup_median": 1.863,
+      "agreement": true
+    },
+    {
+      "n_events": 500,
+      "branching_factor": 2,
+      "descendant_ratio_target": 1.0,
+      "descendant_ratio_actual": 1.0,
+      "shared_subgraph_frac": 0.25,
+      "n_descendants": 499,
+      "affected_nodes": 500,
+      "oracle_total_ms_median": 2549.951,
+      "descendant_total_ms_median": 1801.715,
+      "oracle_total_ms_all": [
+        2196.402,
+        2635.518,
+        2549.951
+      ],
+      "descendant_total_ms_all": [
+        2078.572,
+        1801.715,
+        1542.862
+      ],
+      "oracle_structural_ms_median": 1153.463,
+      "descendant_structural_ms_median": 1116.717,
+      "oracle_materialization_ms_median": 39.915,
+      "descendant_materialization_ms_median": 25.672,
+      "oracle_structural_evals": 499,
+      "descendant_structural_evals": 499,
+      "oracle_materialized_nodes": 500,
+      "descendant_materialized_nodes": 500,
+      "speedup_median": 1.415,
+      "agreement": true
+    }
+  ],
+  "branching_sweep": [
+    {
+      "n_events": 500,
+      "branching_factor": 1,
+      "descendant_ratio_target": 0.1,
+      "descendant_ratio_actual": 0.1002,
+      "shared_subgraph_frac": 0.25,
+      "n_descendants": 50,
+      "affected_nodes": 51,
+      "oracle_total_ms_median": 1210.059,
+      "descendant_total_ms_median": 94.056,
+      "oracle_total_ms_all": [
+        845.904,
+        1358.629,
+        1210.059
+      ],
+      "descendant_total_ms_all": [
+        123.586,
+        74.436,
+        94.056
+      ],
+      "oracle_structural_ms_median": 905.429,
+      "descendant_structural_ms_median": 74.655,
+      "oracle_materialization_ms_median": 34.506,
+      "descendant_materialization_ms_median": 2.883,
+      "oracle_structural_evals": 498,
+      "descendant_structural_evals": 50,
+      "oracle_materialized_nodes": 500,
+      "descendant_materialized_nodes": 51,
+      "speedup_median": 12.865,
+      "agreement": true
+    },
+    {
+      "n_events": 500,
+      "branching_factor": 2,
+      "descendant_ratio_target": 0.1,
+      "descendant_ratio_actual": 0.1002,
+      "shared_subgraph_frac": 0.25,
+      "n_descendants": 50,
+      "affected_nodes": 51,
+      "oracle_total_ms_median": 1167.048,
+      "descendant_total_ms_median": 81.588,
+      "oracle_total_ms_all": [
+        1167.048,
+        861.384,
+        1271.155
+      ],
+      "descendant_total_ms_all": [
+        189.208,
+        81.588,
+        70.378
+      ],
+      "oracle_structural_ms_median": 764.388,
+      "descendant_structural_ms_median": 65.327,
+      "oracle_materialization_ms_median": 28.408,
+      "descendant_materialization_ms_median": 2.776,
+      "oracle_structural_evals": 498,
+      "descendant_structural_evals": 50,
+      "oracle_materialized_nodes": 500,
+      "descendant_materialized_nodes": 51,
+      "speedup_median": 14.304,
+      "agreement": true
+    },
+    {
+      "n_events": 500,
+      "branching_factor": 4,
+      "descendant_ratio_target": 0.1,
+      "descendant_ratio_actual": 0.1002,
+      "shared_subgraph_frac": 0.25,
+      "n_descendants": 50,
+      "affected_nodes": 51,
+      "oracle_total_ms_median": 1159.232,
+      "descendant_total_ms_median": 117.679,
+      "oracle_total_ms_all": [
+        898.522,
+        1159.232,
+        1294.26
+      ],
+      "descendant_total_ms_all": [
+        76.584,
+        129.029,
+        117.679
+      ],
+      "oracle_structural_ms_median": 915.076,
+      "descendant_structural_ms_median": 98.331,
+      "oracle_materialization_ms_median": 32.497,
+      "descendant_materialization_ms_median": 3.551,
+      "oracle_structural_evals": 498,
+      "descendant_structural_evals": 50,
+      "oracle_materialized_nodes": 500,
+      "descendant_materialized_nodes": 51,
+      "speedup_median": 9.851,
+      "agreement": true
+    },
+    {
+      "n_events": 500,
+      "branching_factor": 8,
+      "descendant_ratio_target": 0.1,
+      "descendant_ratio_actual": 0.1002,
+      "shared_subgraph_frac": 0.25,
+      "n_descendants": 50,
+      "affected_nodes": 51,
+      "oracle_total_ms_median": 1400.184,
+      "descendant_total_ms_median": 99.952,
+      "oracle_total_ms_all": [
+        1400.184,
+        1497.036,
+        1282.159
+      ],
+      "descendant_total_ms_all": [
+        99.952,
+        123.357,
+        89.981
+      ],
+      "oracle_structural_ms_median": 948.592,
+      "descendant_structural_ms_median": 80.439,
+      "oracle_materialization_ms_median": 38.735,
+      "descendant_materialization_ms_median": 2.882,
+      "oracle_structural_evals": 498,
+      "descendant_structural_evals": 50,
+      "oracle_materialized_nodes": 500,
+      "descendant_materialized_nodes": 51,
+      "speedup_median": 14.009,
+      "agreement": true
+    }
+  ],
+  "shared_subgraph_sweep": [
+    {
+      "n_events": 500,
+      "branching_factor": 2,
+      "descendant_ratio_target": 0.1,
+      "descendant_ratio_actual": 0.1002,
+      "shared_subgraph_frac": 0.0,
+      "n_descendants": 50,
+      "affected_nodes": 51,
+      "oracle_total_ms_median": 994.959,
+      "descendant_total_ms_median": 89.204,
+      "oracle_total_ms_all": [
+        870.426,
+        1165.833,
+        994.959
+      ],
+      "descendant_total_ms_all": [
+        89.204,
+        79.307,
+        121.923
+      ],
+      "oracle_structural_ms_median": 744.396,
+      "descendant_structural_ms_median": 68.748,
+      "oracle_materialization_ms_median": 26.588,
+      "descendant_materialization_ms_median": 2.442,
+      "oracle_structural_evals": 498,
+      "descendant_structural_evals": 50,
+      "oracle_materialized_nodes": 500,
+      "descendant_materialized_nodes": 51,
+      "speedup_median": 11.154,
+      "agreement": true
+    },
+    {
+      "n_events": 500,
+      "branching_factor": 2,
+      "descendant_ratio_target": 0.1,
+      "descendant_ratio_actual": 0.1002,
+      "shared_subgraph_frac": 0.25,
+      "n_descendants": 50,
+      "affected_nodes": 51,
+      "oracle_total_ms_median": 1346.216,
+      "descendant_total_ms_median": 121.302,
+      "oracle_total_ms_all": [
+        1467.901,
+        856.252,
+        1346.216
+      ],
+      "descendant_total_ms_all": [
+        167.63,
+        49.885,
+        121.302
+      ],
+      "oracle_structural_ms_median": 1035.709,
+      "descendant_structural_ms_median": 85.634,
+      "oracle_materialization_ms_median": 40.963,
+      "descendant_materialization_ms_median": 2.693,
+      "oracle_structural_evals": 498,
+      "descendant_structural_evals": 50,
+      "oracle_materialized_nodes": 500,
+      "descendant_materialized_nodes": 51,
+      "speedup_median": 11.098,
+      "agreement": true
+    },
+    {
+      "n_events": 500,
+      "branching_factor": 2,
+      "descendant_ratio_target": 0.1,
+      "descendant_ratio_actual": 0.1002,
+      "shared_subgraph_frac": 0.5,
+      "n_descendants": 50,
+      "affected_nodes": 51,
+      "oracle_total_ms_median": 1368.372,
+      "descendant_total_ms_median": 109.729,
+      "oracle_total_ms_all": [
+        1553.709,
+        1368.372,
+        1174.068
+      ],
+      "descendant_total_ms_all": [
+        109.729,
+        172.835,
+        63.208
+      ],
+      "oracle_structural_ms_median": 912.509,
+      "descendant_structural_ms_median": 90.654,
+      "oracle_materialization_ms_median": 38.239,
+      "descendant_materialization_ms_median": 3.686,
+      "oracle_structural_evals": 498,
+      "descendant_structural_evals": 50,
+      "oracle_materialized_nodes": 500,
+      "descendant_materialized_nodes": 51,
+      "speedup_median": 12.47,
+      "agreement": true
+    },
+    {
+      "n_events": 500,
+      "branching_factor": 2,
+      "descendant_ratio_target": 0.1,
+      "descendant_ratio_actual": 0.1002,
+      "shared_subgraph_frac": 0.75,
+      "n_descendants": 50,
+      "affected_nodes": 51,
+      "oracle_total_ms_median": 1035.192,
+      "descendant_total_ms_median": 146.437,
+      "oracle_total_ms_all": [
+        1259.855,
+        1014.775,
+        1035.192
+      ],
+      "descendant_total_ms_all": [
+        182.937,
+        146.437,
+        71.515
+      ],
+      "oracle_structural_ms_median": 756.115,
+      "descendant_structural_ms_median": 118.169,
+      "oracle_materialization_ms_median": 29.364,
+      "descendant_materialization_ms_median": 4.364,
+      "oracle_structural_evals": 498,
+      "descendant_structural_evals": 50,
+      "oracle_materialized_nodes": 500,
+      "descendant_materialized_nodes": 51,
+      "speedup_median": 7.069,
+      "agreement": true
+    }
+  ],
+  "summary": {
+    "scaling_law": {
+      "statement": "At fixed 10% descendant ratio, Exact Replay wall-clock grows roughly with N; COW Descendant grows with the affected subgraph (|affected|\u22480.1N), not full N.",
+      "n_range": [
+        100,
+        2000
+      ],
+      "n_fold": 20.0,
+      "affected_fold": 18.273,
+      "oracle_runtime_fold": 75.527,
+      "cow_runtime_fold": 37.74,
+      "cow_evals_track_affected": true,
+      "cow_materialization_tracks_affected": true
+    },
+    "when_expensive": {
+      "exact_replay": "Costly whenever N is large and structural evaluations are expensive (LLM/tool-like), because both evals and materialization are O(N).",
+      "dense_interventions": "As descendant ratio \u2192 1 (here 1.0), COW converges to Exact Replay cost; optimizations matter less."
+    },
+    "when_optimizations_matter": {
+      "sparse_interventions": "At \u224810% affected (ratio=0.1002, N=500), median wall-clock speedup \u22489.785\u00d7 by restricting both structural evaluation and materialization to the affected subgraph.",
+      "claim_template": "Under sparse interventions (\u224810% affected descendants), Copy-on-Write replay achieves approximately 9.785\u00d7 wall-clock speedup by restricting both structural evaluation and graph materialization to the affected subgraph. As the affected ratio approaches one, replay converges to Exact Replay, as expected."
+    },
+    "complexity_table": {
+      "Exact Replay": {
+        "structural_evals": "O(N)",
+        "materialization": "O(N)"
+      },
+      "Descendant (pre-COW)": {
+        "structural_evals": "O(|affected|)",
+        "materialization": "O(N)"
+      },
+      "Descendant (COW)": {
+        "structural_evals": "O(|affected|)",
+        "materialization": "O(|affected|)"
+      }
+    }
+  }
+}

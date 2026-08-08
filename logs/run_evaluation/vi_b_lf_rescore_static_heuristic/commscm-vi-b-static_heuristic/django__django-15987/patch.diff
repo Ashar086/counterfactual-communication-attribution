@@ -1,0 +1,10 @@
+--- a/django/core/management/commands/loaddata.py
++++ b/django/core/management/commands/loaddata.py
+@@ -123,7 +123,7 @@
+         # Normalize the paths to avoid duplicates
+         normalized_dirs = set()
+         for dir in self.fixture_dirs:
+-            normalized_dirs.add(os.path.normpath(dir))
++            normalized_dirs.add(os.path.normpath(str(dir)))
+ 
+         self.fixture_dirs = list(normalized_dirs)

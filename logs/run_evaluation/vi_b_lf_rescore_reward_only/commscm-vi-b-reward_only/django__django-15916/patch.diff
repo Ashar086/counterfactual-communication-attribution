@@ -1,0 +1,10 @@
+--- a/django/forms/models.py
++++ b/django/forms/models.py
+@@ -123,7 +123,7 @@
+     # Create the form class
+     form_class = type(
+         form.__name__, (form,), {
+-            'Meta': type('Meta', (form.Meta,), {'model': model}),
++            'Meta': type('Meta', (form.Meta,), {'model': model, 'formfield_callback': getattr(form.Meta, 'formfield_callback', None)}),
+         }
+     )

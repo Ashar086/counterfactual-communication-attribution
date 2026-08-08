@@ -1,0 +1,13 @@
+--- a/django/db/models/query.py
++++ b/django/db/models/query.py
+@@ -670,7 +670,7 @@
+                 if isinstance(attr, (Expression, str)):
+                     # Handle expressions and string attributes
+                     ...
+-                elif not isinstance(attr, (Expression, str)):
++                elif not isinstance(attr, (Expression, F)):
+                     # Handle other types
+                     ...
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

@@ -1,0 +1,28 @@
+--- a/pyreverse.py
++++ b/pyreverse.py
+@@ -123,6 +123,7 @@
+ 
+ def parse_type_hints(node):
+     """Parse type hints from function definitions."""
++    import typing
+     hints = {}
+     for arg in node.args.args:
+         if arg.annotation:
+@@ -130,6 +131,12 @@
+     return hints
+ 
+ def generate_uml(class_def):
+     """Generate UML from class definitions."""
++    type_hints = parse_type_hints(class_def)
++    uml_output = []
++    
++    # Example of integrating type hints into UML generation
++    for attr in class_def.body:
++        if isinstance(attr, ast.FunctionDef):
++            function_signature = f"{attr.name}("
++            function_signature += ", ".join(f"{arg.arg}: {type_hints.get(arg.arg, 'Any')}" for arg in attr.args.args)
++            function_signature += ")"
++            uml_output.append(function_signature)
++    
++    # Continue with existing UML generation logic...
++    return uml_output

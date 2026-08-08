@@ -1,0 +1,87 @@
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.2) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-08-04 07:31:51,886 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 07:31:51,940 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-04 07:31:52,232 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 07:31:52,976 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 07:31:53,290 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-08-04 07:31:53,570 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-04 07:31:54,038 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-04 07:31:54,316 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-08-04 07:31:54,587 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-08-04 07:31:54,900 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-08-04 07:31:57,059 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 07:31:57,106 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-04 07:31:57,377 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 07:31:57,606 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 07:31:57,883 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-04 07:31:58,159 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-04 07:31:58,433 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Running 6 instances...
+
+Evaluation:   0%|          | 0/6 [00:00<?, ?it/s, error=0, \u2713=0, \u2716=0]
+Evaluation:   0%|          | 0/6 [07:05<?, ?it/s, \u2713=0, \u2716=0, error=1]
+Evaluation:  17%|#6        | 1/6 [07:05<35:29, 425.81s/it, \u2713=0, \u2716=0, error=1]
+Evaluation:  17%|#6        | 1/6 [07:22<35:29, 425.81s/it, \u2713=0, \u2716=0, error=2]
+Evaluation:  33%|###3      | 2/6 [07:22<12:21, 185.43s/it, \u2713=0, \u2716=0, error=2]
+Evaluation:  33%|###3      | 2/6 [07:29<12:21, 185.43s/it, \u2713=0, \u2716=0, error=3]
+Evaluation:  50%|#####     | 3/6 [07:29<05:11, 103.97s/it, \u2713=0, \u2716=0, error=3]
+Evaluation:  50%|#####     | 3/6 [07:46<05:11, 103.97s/it, \u2713=0, \u2716=0, error=4]
+Evaluation:  67%|######6   | 4/6 [07:46<02:19, 69.51s/it, \u2713=0, \u2716=0, error=4] 
+Evaluation:  67%|######6   | 4/6 [12:13<02:19, 69.51s/it, \u2713=0, \u2716=1, error=4]
+Evaluation:  83%|########3 | 5/6 [12:13<02:20, 140.83s/it, \u2713=0, \u2716=1, error=4]
+Evaluation:  83%|########3 | 5/6 [12:17<02:20, 140.83s/it, \u2713=0, \u2716=2, error=4]
+Evaluation: 100%|##########| 6/6 [12:17<00:00, 94.05s/it, \u2713=0, \u2716=2, error=4] 
+Evaluation: 100%|##########| 6/6 [12:17<00:00, 122.87s/it, \u2713=0, \u2716=2, error=4]
+sympy__sympy-13974: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patch: **** malformed patch at line 19:      return expr
+
+patching file sympy/physics/quantum/tensorproduct.py
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_cr_guided\commscm-vi-b-cr_guided\sympy__sympy-13974\run_instance.log) for more information.
+sympy__sympy-14248: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file sympy/matrices/matrices.py
+Hunk #1 FAILED at 1234.
+1 out of 1 hunk FAILED -- saving rejects to file sympy/matrices/matrices.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_cr_guided\commscm-vi-b-cr_guided\sympy__sympy-14248\run_instance.log) for more information.
+sympy__sympy-15976: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_cr_guided\commscm-vi-b-cr_guided\sympy__sympy-15976\run_instance.log) for more information.
+sympy__sympy-17655: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/fix.py
+
+|+++ b/fix.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_cr_guided\commscm-vi-b-cr_guided\sympy__sympy-17655\run_instance.log) for more information.
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 6
+Instances submitted: 6
+Instances completed: 2
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 2
+Instances with empty patches: 0
+Instances with errors: 4
+Unstopped containers: 0
+Unremoved images: 0
+Report written to commscm-vi-b-cr_guided.vi_b_rescore_part_vi_b_official_cr_guided.json

@@ -1,0 +1,54 @@
+2026-08-05 18:00:20,129 - INFO - Creating container for astropy__astropy-13453...
+2026-08-05 18:00:20,569 - INFO - Container for astropy__astropy-13453 created: c164c2c752b91060383638931cfb5d7689292500c1876949edc966ded2f1b930
+2026-08-05 18:00:21,247 - INFO - Container for astropy__astropy-13453 started: c164c2c752b91060383638931cfb5d7689292500c1876949edc966ded2f1b930
+2026-08-05 18:00:21,250 - INFO - Intermediate patch for astropy__astropy-13453 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\astropy__astropy-13453\patch.diff, now applying to container...
+2026-08-05 18:00:21,691 - INFO - Failed to apply patch to container: git apply --verbose
+2026-08-05 18:00:21,835 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2026-08-05 18:00:22,048 - INFO - >>>>> Applied Patch:
+patching file astropy/io/ascii/html.py
+
+2026-08-05 18:00:24,352 - INFO - Git diff before:
+diff --git a/astropy/io/ascii/html.py b/astropy/io/ascii/html.py
+index 266cf229c..c5a110514 100644
+--- a/astropy/io/ascii/html.py
++++ b/astropy/io/ascii/html.py
+@@ -349,11 +349,13 @@ class HTML(core.BaseReader):
+         cols = list(table.columns.values())
+ 
+         self.data.header.cols = cols
++        self.data.cols = cols
+ 
+         if isinstance(self.data.fill_values, tuple):
+             self.data.fill_values = [self.data.fill_values]
+ 
+         self.data._set_fill_values(cols)
++        self.data._set_col_formats()
+ 
+         lines = []
+2026-08-05 18:00:24,354 - INFO - Eval script for astropy__astropy-13453 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\astropy__astropy-13453\eval.sh; copying to container...
+2026-08-05 18:04:21,208 - INFO - Test runtime: 236.47 seconds
+2026-08-05 18:04:21,218 - INFO - Test output for astropy__astropy-13453 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\astropy__astropy-13453\test_output.txt
+2026-08-05 18:04:21,474 - INFO - Git diff after:
+diff --git a/astropy/io/ascii/html.py b/astropy/io/ascii/html.py
+index 266cf229c..c5a110514 100644
+--- a/astropy/io/ascii/html.py
++++ b/astropy/io/ascii/html.py
+@@ -349,11 +349,13 @@ class HTML(core.BaseReader):
+         cols = list(table.columns.values())
+ 
+         self.data.header.cols = cols
++        self.data.cols = cols
+ 
+         if isinstance(self.data.fill_values, tuple):
+             self.data.fill_values = [self.data.fill_values]
+ 
+         self.data._set_fill_values(cols)
++        self.data._set_col_formats()
+ 
+         lines = []
+2026-08-05 18:04:21,474 - INFO - Grading answer for astropy__astropy-13453...
+2026-08-05 18:04:21,535 - INFO - report: {'astropy__astropy-13453': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': True, 'tests_status': {'FAIL_TO_PASS': {'success': ['astropy/io/ascii/tests/test_html.py::test_write_table_formatted_columns'], 'failure': []}, 'PASS_TO_PASS': {'success': ['astropy/io/ascii/tests/test_html.py::test_listwriter', 'astropy/io/ascii/tests/test_html.py::test_htmlinputter_no_bs4', 'astropy/io/ascii/tests/test_html.py::test_multicolumn_write', 'astropy/io/ascii/tests/test_html.py::test_write_no_multicols', 'astropy/io/ascii/tests/test_html.py::test_write_table_html_fill_values', 'astropy/io/ascii/tests/test_html.py::test_write_table_html_fill_values_optional_columns', 'astropy/io/ascii/tests/test_html.py::test_write_table_html_fill_values_masked', 'astropy/io/ascii/tests/test_html.py::test_multicolumn_table_html_fill_values', 'astropy/io/ascii/tests/test_html.py::test_multi_column_write_table_html_fill_values_masked'], 'failure': []}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for astropy__astropy-13453: resolved: True
+2026-08-05 18:04:21,540 - INFO - Attempting to stop container sweb.eval.astropy__astropy-13453.oracle_gold_full_n100_lf...
+2026-08-05 18:04:37,327 - INFO - Attempting to remove container sweb.eval.astropy__astropy-13453.oracle_gold_full_n100_lf...
+2026-08-05 18:04:37,537 - INFO - Container sweb.eval.astropy__astropy-13453.oracle_gold_full_n100_lf removed.

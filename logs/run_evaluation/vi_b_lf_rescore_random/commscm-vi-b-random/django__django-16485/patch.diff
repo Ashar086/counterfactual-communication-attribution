@@ -1,0 +1,10 @@
+--- a/django/template/defaultfilters.py
++++ b/django/template/defaultfilters.py
+@@ -1234,7 +1234,7 @@
+ 
+ def floatformat(value, decimal_pos=None):
+     if decimal_pos is None:
+-        decimal_pos = 2
++        decimal_pos = 2 if isinstance(value, (int, float)) and value != 0 else 0
+     try:
+         # existing logic...

@@ -1,0 +1,97 @@
+/eval.sh: line 2: set: pipefail: invalid option name
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 3: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ cd $'/testbed\r'
+/eval.sh: line 5: cd: $'/testbed\r': No such file or directory
++ git config --global --add safe.directory $'/testbed\r'
++ cd $'/testbed\r'
+/eval.sh: line 7: cd: $'/testbed\r': No such file or directory
++ git $'status\r'
+git: 'status' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
++ git $'show\r'
+git: 'show' is not a git command. See 'git --help'.
+
+The most similar command is
+	show
++ git -c core.fileMode=false diff $'884b4c27f506b3c29d58509fc83a35c30ea10d94\r'
+fatal: ambiguous argument '884b4c27f506b3c29d58509fc83a35c30ea10d94?': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 11: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ python -m pip install -e $'.\r'
+ERROR: . is not a valid editable requirement. It should either be a path to a local project or a VCS URL (beginning with bzr+http, bzr+https, bzr+ssh, bzr+sftp, bzr+ftp, bzr+lp, bzr+file, git+http, git+https, git+ssh, git+git, git+file, hg+file, hg+http, hg+https, hg+ssh, hg+static-http, svn+ssh, svn+http, svn+https, svn+svn, svn+file).
++ git checkout 884b4c27f506b3c29d58509fc83a35c30ea10d94 tests/custom_lookups/tests.py tests/model_fields/test_jsonfield.py $'tests/schema/tests.py\r'
+error: pathspec 'tests/schema/tests.py?' did not match any file(s) known to git
++ git apply -v -
+Checking patch tests/custom_lookups/tests.py...
+error: while searching for:
+        with register_lookup(models.ForeignObject, Exactly):?
+            # getting the lookups again should re-cache?
+            self.assertIn("exactly", field.get_lookups())?
+?
+?
+class BilateralTransformTests(TestCase):?
+
+error: patch failed: tests/custom_lookups/tests.py:323
+error: tests/custom_lookups/tests.py: patch does not apply
+Checking patch tests/model_fields/test_jsonfield.py...
+error: while searching for:
+        transform = field.get_transform("my_transform")?
+        self.assertIs(transform, MyTransform)?
+        models.JSONField._unregister_lookup(MyTransform)?
+        models.JSONField._clear_cached_lookups()?
+        transform = field.get_transform("my_transform")?
+        self.assertIsInstance(transform, KeyTransformFactory)?
+?
+
+error: patch failed: tests/model_fields/test_jsonfield.py:88
+error: tests/model_fields/test_jsonfield.py: patch does not apply
+Checking patch tests/schema/tests.py...
+error: while searching for:
+            with connection.schema_editor() as editor:?
+                editor.add_constraint(Author, constraint)?
+                sql = constraint.create_sql(Author, editor)?
+        table = Author._meta.db_table?
+        constraints = self.get_constraints(table)?
+        self.assertIn(constraint.name, constraints)?
+        self.assertIs(constraints[constraint.name]["unique"], True)?
+        # SQL contains columns.?
+        self.assertIs(sql.references_column(table, "name"), True)?
+        self.assertIs(sql.references_column(table, "weight"), True)?
+        # Remove constraint.?
+        with connection.schema_editor() as editor:?
+            editor.remove_constraint(Author, constraint)?
+        self.assertNotIn(constraint.name, self.get_constraints(table))?
+?
+    @skipUnlessDBFeature("supports_expression_indexes")?
+
+error: patch failed: tests/schema/tests.py:2770
+error: tests/schema/tests.py: patch does not apply
++ : '>>>>> Start Test Output'
++ ./tests/runtests.py --verbosity 2 --settings=test_sqlite --parallel 1 custom_lookups.tests model_fields.test_jsonfield $'schema.tests\r'
+Traceback (most recent call last):
+  File "/testbed/./tests/runtests.py", line 18, in <module>
+    import django
+ModuleNotFoundError: No module named 'django'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/testbed/./tests/runtests.py", line 20, in <module>
+    raise RuntimeError(
+RuntimeError: Django module not found, reference tests/README.rst for instructions.
++ : '>>>>> End Test Output'
++ git checkout 884b4c27f506b3c29d58509fc83a35c30ea10d94 tests/custom_lookups/tests.py tests/model_fields/test_jsonfield.py $'tests/schema/tests.py\r'
+error: pathspec 'tests/schema/tests.py?' did not match any file(s) known to git

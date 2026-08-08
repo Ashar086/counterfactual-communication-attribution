@@ -1,0 +1,17 @@
+--- a/path/to/your/file.py
++++ b/path/to/your/file.py
+@@ -1,5 +1,7 @@
+ from django.db.models import Case, When, Value, BooleanField
+ from django.db.models import Q
+ 
++def get_annotation_condition(pk_list):
++    return Q(pk__in=pk_list) if pk_list else Q(pk__isnull=False)
+ 
+ user_queryset = User.objects.annotate(
+-    _a=Case(
+-        When(~Q(pk__in=[]), then=Value(True)),
++    _a=Case(
++        When(get_annotation_condition([]), then=Value(True)),
+         default=Value(False),
+         output_field=BooleanField(),
+     )

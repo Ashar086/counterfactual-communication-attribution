@@ -1,0 +1,62 @@
+/eval.sh: line 2: set: pipefail: invalid option name
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 3: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ cd $'/testbed\r'
+/eval.sh: line 5: cd: $'/testbed\r': No such file or directory
++ git config --global --add safe.directory $'/testbed\r'
++ cd $'/testbed\r'
+/eval.sh: line 7: cd: $'/testbed\r': No such file or directory
++ git $'status\r'
+git: 'status' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
++ git $'show\r'
+git: 'show' is not a git command. See 'git --help'.
+
+The most similar command is
+	show
++ git -c core.fileMode=false diff $'19cc80471739bcb67b7e8099246b391c355023ee\r'
+fatal: ambiguous argument '19cc80471739bcb67b7e8099246b391c355023ee?': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 11: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ python -m pip install -e '.[test]' $'--verbose\r'
+
+Usage:   
+  /opt/miniconda3/bin/python -m pip install [options] <requirement specifier> [package-index-options] ...
+  /opt/miniconda3/bin/python -m pip install [options] -r <requirements file> [package-index-options] ...
+  /opt/miniconda3/bin/python -m pip install [options] [-e] <vcs project url> ...
+  /opt/miniconda3/bin/python -m pip install [options] [-e] <local project path> ...
+  /opt/miniconda3/bin/python -m pip install [options] <archive url/path> ...
+
+no such option: --verbose
++ git checkout 19cc80471739bcb67b7e8099246b391c355023ee $'astropy/io/ascii/tests/test_html.py\r'
+error: pathspec 'astropy/io/ascii/tests/test_html.py?' did not match any file(s) known to git
++ git apply -v -
+Checking patch astropy/io/ascii/tests/test_html.py...
+error: while searching for:
+    assert buffer_output.getvalue() == buffer_expected.getvalue()?
+?
+?
+@pytest.mark.skipif('not HAS_BS4')?
+def test_read_html_unicode():?
+    """?
+
+error: patch failed: astropy/io/ascii/tests/test_html.py:717
+error: astropy/io/ascii/tests/test_html.py: patch does not apply
++ : '>>>>> Start Test Output'
++ pytest -rA $'astropy/io/ascii/tests/test_html.py\r'
+/eval.sh: line 72: pytest: command not found
++ : '>>>>> End Test Output'
++ git checkout 19cc80471739bcb67b7e8099246b391c355023ee $'astropy/io/ascii/tests/test_html.py\r'
+error: pathspec 'astropy/io/ascii/tests/test_html.py?' did not match any file(s) known to git

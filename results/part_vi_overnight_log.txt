@@ -1,0 +1,6 @@
+[2026-07-31T19:16:24.089376+00:00] Part VI overnight runner starting (Stages 2–4)
+[2026-07-31T19:16:24.092302+00:00] START stage2: commscm.experiments.part_vi_stage2_swebench_attr --n-runs 24 --n-instances 8 --stability-reps 3
+[2026-07-31T19:26:27.906491+00:00] END stage2 exit=0 elapsed_s=603.8
+[2026-07-31T19:26:27.908249+00:00] START stage3: commscm.experiments.part_vi_stage3_swebench_repair --n-runs 18 --n-instances 6
+[2026-07-31T19:36:02.771482+00:00] END stage3 exit=0 elapsed_s=574.9
+[2026-07-31T19:36:02.773073+00:00] START stage4: commscm.experiments.part_vi_stage4_swebench_baselines --n-runs 36 --n-instances 6

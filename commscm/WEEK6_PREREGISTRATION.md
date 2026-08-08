@@ -143,6 +143,14 @@ An early pilot confounded them (CR only saw planner poison); archived at
 
 ---
 
-## After Week 6 (not now)
+## After Week 6 — scientific validation phase
 
-Second framework or public bench; baselines (GPTSwarm, AgentPrune, G-Designer, MaAS); harder fault taxonomy.
+Project phase: **not** algorithm development. See `FREEZE.md`.
+
+| Part | Work |
+|------|------|
+| V | **Framework Invariance** (AutoGen first) — `PART_V_FRAMEWORK_INVARIANCE.md` |
+| VI | SWE-bench Verified–Shaped Pilot → VI.B official Verified → VI.C WebArena |
+| VII | Paper |
+
+Out of scope until breadth is done: new attribution defs, replay mods (unless reproducible defect), verifiers, surrogates, new CCAS operators. Log threats in `THREATS_TO_VALIDITY.md` before fixing.

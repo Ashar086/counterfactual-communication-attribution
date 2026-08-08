@@ -1,0 +1,12 @@
+--- a/django/db/models/query.py
++++ b/django/db/models/query.py
+@@ -677,7 +677,10 @@
+         if not self.model._meta.get_field(field_name).unique:
+             raise ValueError("in_bulk()'s field_name must be a unique field but %r isn't." % field_name)
+ 
++        unique_fields = {f.name for f in self.model._meta.constraints if isinstance(f, models.UniqueConstraint)}
++        if field_name not in unique_fields:
++            raise ValueError("in_bulk()'s field_name must be a unique field but %r isn't." % field_name)
+ 
+-        # Existing logic...
++        # Existing logic continues...

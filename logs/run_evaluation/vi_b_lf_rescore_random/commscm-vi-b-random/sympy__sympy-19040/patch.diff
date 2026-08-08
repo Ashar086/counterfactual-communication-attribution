@@ -1,0 +1,12 @@
+--- a/sympy/polys/factortools.py
++++ b/sympy/polys/factortools.py
+@@ -1147,7 +1147,7 @@
+         # existing logic...
+         if extension:
+             # Correct the logic to include the factor of y-1
+-            return [factor1]
++            return [factor1, factor2]  # Ensure both factors are returned
+         # existing logic...
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

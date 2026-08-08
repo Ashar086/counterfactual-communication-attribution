@@ -1,0 +1,18 @@
+--- a/django/db/migrations/autodetector.py
++++ b/django/db/migrations/autodetector.py
+@@ -123,6 +123,7 @@
+ 
+     def check_dependencies(self, changes):
+         # Existing dependency checks...
++        self.adjust_field_removal_order(changes)
+ 
+     def adjust_field_removal_order(self, changes):
+         # Logic to adjust the order of field removals and model creations
+         for i, change in enumerate(changes):
+             if isinstance(change, CreateModel) and change.name == 'Book':
+                 # Ensure RemoveField for Readable.title comes before CreateModel for Book
+                 for j in range(i):
+                     if isinstance(changes[j], RemoveField) and changes[j].field_name == 'title' and changes[j].model_name == 'Readable':
+                         # Swap the changes if necessary
+                         changes[i], changes[j] = changes[j], changes[i]
+                         break

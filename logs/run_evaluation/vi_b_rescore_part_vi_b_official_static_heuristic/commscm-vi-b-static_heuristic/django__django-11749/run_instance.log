@@ -1,0 +1,83 @@
+2026-08-04 14:59:25,337 - ERROR - Error in evaluating model for django__django-11749: Error occurred while pulling image sweb.base.py.x86_64:latest: 500 Server Error for http+docker://localnpipe/v1.54/images/create?tag=latest&fromImage=swebench%2Fsweb.eval.x86_64.django_1776_django-11749: Internal Server Error ("failed to resolve reference "docker.io/swebench/sweb.eval.x86_64.django_1776_django-11749:latest": failed to do request: Head "https://registry-1.docker.io/v2/swebench/sweb.eval.x86_64.django_1776_django-11749/manifests/latest": dialing registry-1.docker.io:443 container via direct connection because Docker Desktop has no HTTPS proxy: connecting to registry-1.docker.io:443: dial tcp: lookup registry-1.docker.io: no such host")
+Traceback (most recent call last):
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\docker\api\client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http+docker://localnpipe/v1.54/images/swebench/sweb.eval.x86_64.django_1776_django-11749:latest/json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Temp\SWE-bench-src\swebench\harness\docker_build.py", line 496, in build_container
+    client.images.get(test_spec.instance_image_key)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\docker\models\images.py", line 333, in get
+    return self.prepare_model(self.client.api.inspect_image(name))
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\docker\utils\decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\docker\api\image.py", line 251, in inspect_image
+    return self._result(
+           ~~~~~~~~~~~~^
+        self._get(self._url("/images/{0}/json", image)), True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\docker\api\client.py", line 281, in _result
+    self._raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\docker\api\client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\docker\errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.ImageNotFound: 404 Client Error for http+docker://localnpipe/v1.54/images/swebench/sweb.eval.x86_64.django_1776_django-11749:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.django_1776_django-11749:latest")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\docker\api\client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http+docker://localnpipe/v1.54/images/create?tag=latest&fromImage=swebench%2Fsweb.eval.x86_64.django_1776_django-11749
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Temp\SWE-bench-src\swebench\harness\docker_build.py", line 499, in build_container
+    client.images.pull(test_spec.instance_image_key)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\docker\models\images.py", line 464, in pull
+    pull_log = self.client.api.pull(
+        repository, tag=tag, stream=True, all_tags=all_tags, **kwargs
+    )
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\docker\api\image.py", line 429, in pull
+    self._raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\docker\api\client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\docker\errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 500 Server Error for http+docker://localnpipe/v1.54/images/create?tag=latest&fromImage=swebench%2Fsweb.eval.x86_64.django_1776_django-11749: Internal Server Error ("failed to resolve reference "docker.io/swebench/sweb.eval.x86_64.django_1776_django-11749:latest": failed to do request: Head "https://registry-1.docker.io/v2/swebench/sweb.eval.x86_64.django_1776_django-11749/manifests/latest": dialing registry-1.docker.io:443 container via direct connection because Docker Desktop has no HTTPS proxy: connecting to registry-1.docker.io:443: dial tcp: lookup registry-1.docker.io: no such host")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Temp\SWE-bench-src\swebench\harness\run_evaluation.py", line 152, in run_instance
+    container = build_container(
+        test_spec, client, run_id, logger, rm_image, force_rebuild
+    )
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Temp\SWE-bench-src\swebench\harness\docker_build.py", line 503, in build_container
+    raise Exception(
+        f"Error occurred while pulling image {test_spec.base_image_key}: {str(e)}"
+    )
+Exception: Error occurred while pulling image sweb.base.py.x86_64:latest: 500 Server Error for http+docker://localnpipe/v1.54/images/create?tag=latest&fromImage=swebench%2Fsweb.eval.x86_64.django_1776_django-11749: Internal Server Error ("failed to resolve reference "docker.io/swebench/sweb.eval.x86_64.django_1776_django-11749:latest": failed to do request: Head "https://registry-1.docker.io/v2/swebench/sweb.eval.x86_64.django_1776_django-11749/manifests/latest": dialing registry-1.docker.io:443 container via direct connection because Docker Desktop has no HTTPS proxy: connecting to registry-1.docker.io:443: dial tcp: lookup registry-1.docker.io: no such host")
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_static_heuristic\commscm-vi-b-static_heuristic\django__django-11749\run_instance.log) for more information.
+2026-08-04 14:59:25,338 - INFO - Attempting to remove image swebench/sweb.eval.x86_64.django_1776_django-11749:latest...
+2026-08-04 14:59:25,352 - INFO - Image swebench/sweb.eval.x86_64.django_1776_django-11749:latest not found, removing has no effect.

@@ -1,0 +1,13 @@
+--- a/requests/auth.py
++++ b/requests/auth.py
+@@ -123,7 +123,7 @@
+         if self.qop:
+             qop_options = ', '.join(self.qop)
+             auth_header += f', qop="{qop_options}"'
+         else:
+-            auth_header += ', qop=' + self.qop
++            auth_header += ', qop="' + self.qop + '"'
+ 
+         return auth_header
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

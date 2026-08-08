@@ -1,0 +1,19 @@
+--- a/path/to/your/file.py
++++ b/path/to/your/file.py
+@@ -1,6 +1,10 @@
+ from django.db.models import Case, When, Value, BooleanField
+ from django.db.models import Q
+ 
++def annotate_users(user_queryset):
++    if not user_queryset.exists():
++        return user_queryset.annotate(_a=Value(True))
++
+ def get_annotated_users():
+     return User.objects.annotate(
+-        _a=Case(
+-            When(~Q(pk__in=[]), then=Value(True)),
+-            default=Value(False),
+-            output_field=BooleanField(),
+-        )
++        _a=Case(When(Q(pk__in=[]), then=Value(True)), default=Value(False), output_field=BooleanField())
+     ).order_by("-a").values("pk")

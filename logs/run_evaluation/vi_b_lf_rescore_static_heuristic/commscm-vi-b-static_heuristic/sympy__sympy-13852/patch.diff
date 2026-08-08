@@ -1,0 +1,26 @@
+--- a/sympy/functions/elementary/analytic.py
++++ b/sympy/functions/elementary/analytic.py
+@@ -1234,6 +1234,12 @@
+     return result
+ 
++def polylog_eval(n, z):
++    if n == 2 and z == Rational(1, 2):
++        return -log(2)**2/2 + pi**2/12
++    return None
++
++
+ def polylog(n, z):
+     """Return the polylogarithm function."""
+     if n == 1:
+@@ -1240,6 +1246
+         return -log(1 - z)
+ 
+     # Add evaluation for specific cases
++    eval_result = polylog_eval(n, z)
++    if eval_result is not None:
++        return eval_result
++
+     # Existing implementation...
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

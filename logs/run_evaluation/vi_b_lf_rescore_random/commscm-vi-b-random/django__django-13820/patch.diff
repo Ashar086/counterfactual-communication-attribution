@@ -1,0 +1,13 @@
+--- a/django/db/migrations/loader.py
++++ b/django/db/migrations/loader.py
+@@ -123,7 +123,7 @@
+         for app in self.app_store:
+             m = import_module(app)
+             # Skip if the module has no __file__ and is not a namespace package
+-            if getattr(m, '__file__, None) is None:
++            if getattr(m, '__file__', None) is None and not isinstance(m.__path__, list):
+                 continue
+             # Load migrations...
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

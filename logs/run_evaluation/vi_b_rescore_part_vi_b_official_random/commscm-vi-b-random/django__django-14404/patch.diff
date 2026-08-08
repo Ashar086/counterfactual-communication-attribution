@@ -1,0 +1,6 @@
+--- a/django/views/defaults.py
++++ b/django/views/defaults.py
+@@ -123,7 +123,7 @@
+ def catch_all_view(request, *args, **kwargs):
+     # Redirect to the appropriate URL
+     return HttpResponseRedirect('%s/' % request.path)

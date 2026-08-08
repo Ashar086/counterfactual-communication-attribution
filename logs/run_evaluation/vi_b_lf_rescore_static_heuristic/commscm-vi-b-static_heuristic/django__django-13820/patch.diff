@@ -1,0 +1,13 @@
+--- a/django/db/migrations/loader.py
++++ b/django/db/migrations/loader.py
+@@ -123,7 +123,7 @@
+         if getattr(m, '__file__', None) is False:
+             return False
+         # Check if m.__path__ is a list to exclude namespace packages
+-        if getattr(m, '__file__', None) is None:
++        if getattr(m, '__file__', None) is None and not isinstance(m.__path__, list):
+             return False
+         return True
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

@@ -1,0 +1,48 @@
+2026-08-04 12:43:01,639 - INFO - Creating container for django__django-13023...
+2026-08-04 12:43:02,943 - INFO - Container for django__django-13023 created: 3e62f5c3f27459330020a9b9af9a0c99b7e033dac4707d605b95a660242d32ff
+2026-08-04 12:43:03,718 - INFO - Container for django__django-13023 started: 3e62f5c3f27459330020a9b9af9a0c99b7e033dac4707d605b95a660242d32ff
+2026-08-04 12:43:03,720 - INFO - Intermediate patch for django__django-13023 written to logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-13023\patch.diff, now applying to container...
+2026-08-04 12:43:05,259 - INFO - Failed to apply patch to container: git apply --verbose
+2026-08-04 12:43:05,431 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2026-08-04 12:43:05,668 - INFO - >>>>> Applied Patch:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/fields/__init__.py
+Hunk #1 succeeded at 1230 with fuzz 4.
+
+2026-08-04 12:43:09,009 - INFO - Git diff before:
+diff --git a/django/db/models/fields/__init__.py b/django/db/models/fields/__init__.py
+index 0fd69059ee..a6e6ccd4fd 100644
+--- a/django/db/models/fields/__init__.py
++++ b/django/db/models/fields/__init__.py
+@@ -1231,6 +1231,10 @@ class DateField(DateTimeCheckMixin, Field):
+             'form_class': forms.DateField,
+             **kwargs,
+         })
++        if isinstance(value, dict):
++            raise ValidationError(
++                f"Invalid input type: {type(value).__name__}. A dictionary is not a valid input for a DecimalField."
++            )
+ 
+ 
+ class DateTimeField(DateField):
+2026-08-04 12:43:09,011 - INFO - Eval script for django__django-13023 written to logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-13023\eval.sh; copying to container...
+2026-08-04 12:43:15,857 - ERROR - Error in evaluating model for django__django-13023: 'utf-8' codec can't decode byte 0x93 in position 2363: invalid start byte
+Traceback (most recent call last):
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Temp\SWE-bench-src\swebench\harness\run_evaluation.py", line 206, in run_instance
+    test_output, timed_out, total_runtime = exec_run_with_timeout(
+                                            ~~~~~~~~~~~~~~~~~~~~~^
+        container, "/bin/bash /eval.sh", timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Temp\SWE-bench-src\swebench\harness\docker_utils.py", line 217, in exec_run_with_timeout
+    return exec_result.decode(), timed_out, end_time - start_time
+           ~~~~~~~~~~~~~~~~~~^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x93 in position 2363: invalid start byte
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-13023\run_instance.log) for more information.
+2026-08-04 12:43:15,857 - INFO - Attempting to stop container sweb.eval.django__django-13023.vi_b_rescore_part_vi_b_official_random...
+2026-08-04 12:43:31,624 - INFO - Attempting to remove container sweb.eval.django__django-13023.vi_b_rescore_part_vi_b_official_random...
+2026-08-04 12:43:32,224 - INFO - Container sweb.eval.django__django-13023.vi_b_rescore_part_vi_b_official_random removed.
+2026-08-04 12:43:32,224 - INFO - Attempting to remove image swebench/sweb.eval.x86_64.django_1776_django-13023:latest...
+2026-08-04 12:43:33,102 - INFO - Image swebench/sweb.eval.x86_64.django_1776_django-13023:latest removed.

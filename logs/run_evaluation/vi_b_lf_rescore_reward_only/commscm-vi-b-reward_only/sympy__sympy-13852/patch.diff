@@ -1,0 +1,12 @@
+--- a/sympy/functions/elementary/analytic.py
++++ b/sympy/functions/elementary/analytic.py
+@@ -1234,7 +1234,7 @@
+         if n == 1:
+             return -log(1 - z)  # Corrected to avoid exp_polar
+         # Existing logic for other cases
+-        return polylog(n, z)
++        return polylog(n, z)
+ 
+     # Add evaluation for polylog(2, Rational(1, 2))
+     if n == 2 and z == Rational(1, 2):
+         return -log(2)**2/2 + pi**2/12

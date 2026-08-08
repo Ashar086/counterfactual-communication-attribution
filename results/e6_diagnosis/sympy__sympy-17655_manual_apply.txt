@@ -1,0 +1,3 @@
+Checking patch sympy/geometry/point.py...
+Applied patch sympy/geometry/point.py cleanly.
+EXIT:0

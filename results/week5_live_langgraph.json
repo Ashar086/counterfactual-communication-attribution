@@ -1,0 +1,4629 @@
+{
+  "experiment": "week5_live_langgraph",
+  "claim_note": "Live LLM traces \u2014 not offline recorded stubs. Still not SWE-bench/WebArena. Paper results require this tier.",
+  "summary": {
+    "n_attempted": 102,
+    "n_scored": 102,
+    "pipeline_ok_rate": 1.0,
+    "extract_ok_rate": 1.0,
+    "attribution_ok_rate": 1.0,
+    "cr_p_at_1": 1.0,
+    "reward_only_p_at_1": 0.0,
+    "random_p_at_1": 0.19607843137254902,
+    "mean_confidence_gap": 1.0,
+    "failure_counts_by_stage": {},
+    "by_poison_mode": {
+      "POISON_PLANNER": {
+        "n": 34,
+        "cr_p_at_1": 1.0,
+        "reward_only_p_at_1": 0.0,
+        "random_p_at_1": 0.14705882352941177
+      },
+      "POISON_CODER": {
+        "n": 34,
+        "cr_p_at_1": 1.0,
+        "reward_only_p_at_1": 0.0,
+        "random_p_at_1": 0.29411764705882354
+      },
+      "POISON_REVIEWER": {
+        "n": 34,
+        "cr_p_at_1": 1.0,
+        "reward_only_p_at_1": 0.0,
+        "random_p_at_1": 0.14705882352941177
+      }
+    },
+    "week5_live_gate_pass": true
+  },
+  "rows": [
+    {
+      "run_idx": 0,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 17794.5
+    },
+    {
+      "run_idx": 1,
+      "task_id": "add_two",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 10217.2
+    },
+    {
+      "run_idx": 2,
+      "task_id": "is_even",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 18112.5
+    },
+    {
+      "run_idx": 3,
+      "task_id": "factorial",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 14868.0
+    },
+    {
+      "run_idx": 4,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 14411.4
+    },
+    {
+      "run_idx": 5,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 15497.6
+    },
+    {
+      "run_idx": 6,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 14569.0
+    },
+    {
+      "run_idx": 7,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 13233.7
+    },
+    {
+      "run_idx": 8,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 16159.2
+    },
+    {
+      "run_idx": 9,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 11077.7
+    },
+    {
+      "run_idx": 10,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 15426.4
+    },
+    {
+      "run_idx": 11,
+      "task_id": "add_two",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 15493.6
+    },
+    {
+      "run_idx": 12,
+      "task_id": "is_even",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 13733.3
+    },
+    {
+      "run_idx": 13,
+      "task_id": "factorial",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 15437.0
+    },
+    {
+      "run_idx": 14,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 17485.9
+    },
+    {
+      "run_idx": 15,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 10743.6
+    },
+    {
+      "run_idx": 16,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 11125.7
+    },
+    {
+      "run_idx": 17,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 17794.6
+    },
+    {
+      "run_idx": 18,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 9572.5
+    },
+    {
+      "run_idx": 19,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 10597.4
+    },
+    {
+      "run_idx": 20,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 14012.9
+    },
+    {
+      "run_idx": 21,
+      "task_id": "add_two",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 11177.3
+    },
+    {
+      "run_idx": 22,
+      "task_id": "is_even",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 10948.3
+    },
+    {
+      "run_idx": 23,
+      "task_id": "factorial",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 18142.9
+    },
+    {
+      "run_idx": 24,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 13193.4
+    },
+    {
+      "run_idx": 25,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 12631.6
+    },
+    {
+      "run_idx": 26,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 19352.6
+    },
+    {
+      "run_idx": 27,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 14253.8
+    },
+    {
+      "run_idx": 28,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 13764.3
+    },
+    {
+      "run_idx": 29,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 18271.3
+    },
+    {
+      "run_idx": 30,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 9751.8
+    },
+    {
+      "run_idx": 31,
+      "task_id": "add_two",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 10367.9
+    },
+    {
+      "run_idx": 32,
+      "task_id": "is_even",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 15459.0
+    },
+    {
+      "run_idx": 33,
+      "task_id": "factorial",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 10697.0
+    },
+    {
+      "run_idx": 34,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 10848.4
+    },
+    {
+      "run_idx": 35,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 19479.2
+    },
+    {
+      "run_idx": 36,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 13141.3
+    },
+    {
+      "run_idx": 37,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 11597.8
+    },
+    {
+      "run_idx": 38,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 15228.8
+    },
+    {
+      "run_idx": 39,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 10557.0
+    },
+    {
+      "run_idx": 40,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 8171.4
+    },
+    {
+      "run_idx": 41,
+      "task_id": "add_two",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 15296.9
+    },
+    {
+      "run_idx": 42,
+      "task_id": "is_even",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 10634.7
+    },
+    {
+      "run_idx": 43,
+      "task_id": "factorial",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 12620.5
+    },
+    {
+      "run_idx": 44,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 21978.0
+    },
+    {
+      "run_idx": 45,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 10710.3
+    },
+    {
+      "run_idx": 46,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 11556.6
+    },
+    {
+      "run_idx": 47,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 19621.1
+    },
+    {
+      "run_idx": 48,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 9072.1
+    },
+    {
+      "run_idx": 49,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 10359.2
+    },
+    {
+      "run_idx": 50,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 14595.1
+    },
+    {
+      "run_idx": 51,
+      "task_id": "add_two",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 13586.1
+    },
+    {
+      "run_idx": 52,
+      "task_id": "is_even",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 13404.2
+    },
+    {
+      "run_idx": 53,
+      "task_id": "factorial",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 21374.6
+    },
+    {
+      "run_idx": 54,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 14715.0
+    },
+    {
+      "run_idx": 55,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 14895.0
+    },
+    {
+      "run_idx": 56,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 22942.1
+    },
+    {
+      "run_idx": 57,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 15618.3
+    },
+    {
+      "run_idx": 58,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 13742.9
+    },
+    {
+      "run_idx": 59,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 17963.6
+    },
+    {
+      "run_idx": 60,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 10778.9
+    },
+    {
+      "run_idx": 61,
+      "task_id": "add_two",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 14345.9
+    },
+    {
+      "run_idx": 62,
+      "task_id": "is_even",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 19192.9
+    },
+    {
+      "run_idx": 63,
+      "task_id": "factorial",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 15121.0
+    },
+    {
+      "run_idx": 64,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 13731.4
+    },
+    {
+      "run_idx": 65,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 19302.9
+    },
+    {
+      "run_idx": 66,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 14737.1
+    },
+    {
+      "run_idx": 67,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 14538.6
+    },
+    {
+      "run_idx": 68,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 19292.0
+    },
+    {
+      "run_idx": 69,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 13611.6
+    },
+    {
+      "run_idx": 70,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 12606.6
+    },
+    {
+      "run_idx": 71,
+      "task_id": "add_two",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 21988.6
+    },
+    {
+      "run_idx": 72,
+      "task_id": "is_even",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 12934.9
+    },
+    {
+      "run_idx": 73,
+      "task_id": "factorial",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 15604.8
+    },
+    {
+      "run_idx": 74,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 17984.1
+    },
+    {
+      "run_idx": 75,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 13292.5
+    },
+    {
+      "run_idx": 76,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 12512.1
+    },
+    {
+      "run_idx": 77,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 24508.9
+    },
+    {
+      "run_idx": 78,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 11640.0
+    },
+    {
+      "run_idx": 79,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 14470.9
+    },
+    {
+      "run_idx": 80,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 20643.8
+    },
+    {
+      "run_idx": 81,
+      "task_id": "add_two",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 13990.5
+    },
+    {
+      "run_idx": 82,
+      "task_id": "is_even",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 10429.7
+    },
+    {
+      "run_idx": 83,
+      "task_id": "factorial",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 18883.9
+    },
+    {
+      "run_idx": 84,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 12394.2
+    },
+    {
+      "run_idx": 85,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 11603.4
+    },
+    {
+      "run_idx": 86,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 20028.4
+    },
+    {
+      "run_idx": 87,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 11656.3
+    },
+    {
+      "run_idx": 88,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 12496.5
+    },
+    {
+      "run_idx": 89,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 17648.8
+    },
+    {
+      "run_idx": 90,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 10194.1
+    },
+    {
+      "run_idx": 91,
+      "task_id": "add_two",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 15781.7
+    },
+    {
+      "run_idx": 92,
+      "task_id": "is_even",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 19538.2
+    },
+    {
+      "run_idx": 93,
+      "task_id": "factorial",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 15626.7
+    },
+    {
+      "run_idx": 94,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 15822.5
+    },
+    {
+      "run_idx": 95,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 17810.6
+    },
+    {
+      "run_idx": 96,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 15928.7
+    },
+    {
+      "run_idx": 97,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 13969.6
+    },
+    {
+      "run_idx": 98,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C2",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 19949.4
+    },
+    {
+      "run_idx": 99,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_PLANNER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.1,
+      "poisoned_node": "planner",
+      "gold": "C1",
+      "n_events": 6,
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C1",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 11255.0
+    },
+    {
+      "run_idx": 100,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_CODER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "coder",
+      "gold": "C2",
+      "n_events": 6,
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C2",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C3",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 9815.6
+    },
+    {
+      "run_idx": 101,
+      "task_id": "add_two",
+      "poison_mode": "POISON_REVIEWER",
+      "temperature": 0.0,
+      "seed": null,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "failures": [],
+      "global_reward": 0.0,
+      "poisoned_node": "reviewer",
+      "gold": "C3",
+      "n_events": 6,
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C5",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false,
+      "confidence_gap": 1.0,
+      "top_deltas": [
+        {
+          "event_id": "C3",
+          "delta_y": 1.0
+        },
+        {
+          "event_id": "C1",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C2",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C4",
+          "delta_y": 0.0
+        },
+        {
+          "event_id": "C5",
+          "delta_y": 0.0
+        }
+      ],
+      "elapsed_ms": 16883.0
+    }
+  ]
+}

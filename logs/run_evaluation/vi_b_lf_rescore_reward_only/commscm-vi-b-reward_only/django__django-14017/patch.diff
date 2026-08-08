@@ -1,0 +1,12 @@
+diff --git a/django/db/models/expressions.py b/django/db/models/expressions.py
+index 1234567..89abcdef 100644
+--- a/django/db/models/expressions.py
++++ b/django/db/models/expressions.py
+@@ -1000,6 +1000,12 @@ class Exists(CombinedExpression):
+     # existing methods...
+
++    def __rand__(self, other):
++        if isinstance(other, Q):
++            return other._combine(self, Q.AND)
++        return NotImplemented
++

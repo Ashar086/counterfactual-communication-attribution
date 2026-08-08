@@ -1,0 +1,15 @@
+--- a/django/db/models/sql/query.py
++++ b/django/db/models/sql/query.py
+@@ -851,6 +851,7 @@
+         # Create a mapping of old aliases to new aliases.
+         change_map = {}
+         for old_alias, new_alias in zip(lhs.alias_map.keys(), rhs.alias_map.values()):
++            new_alias = self.bump_prefix(new_alias)  # Ensure new_alias is unique
+             change_map[old_alias] = new_alias
+         assert not set(change_map.keys()) & set(change_map.values()), (
+             "The change_map keys and values intersect, which means an alias might be changed twice."
+         )
+ 
++    def bump_prefix(self, alias):
++        """Generate a new alias by adding a prefix to ensure uniqueness."""
++        return f"new_{alias}"  # Example implementation, adjust as needed.

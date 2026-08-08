@@ -1,0 +1,11 @@
+--- a/pytest/capture.py
++++ b/pytest/capture.py
+@@ -123,7 +123,7 @@
+         # Capture the output
+         self._output = self._get_output()
+         # Convert to text
+-        self._output = self._output.replace('\n', '\n')
++        self._output = self._output.replace('\n', '\n').replace('\r', '\r')
+ 
+     def readouterr(self):
+         return self._output, self._error

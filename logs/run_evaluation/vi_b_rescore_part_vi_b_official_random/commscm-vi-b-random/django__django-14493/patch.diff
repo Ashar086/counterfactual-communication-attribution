@@ -1,0 +1,12 @@
+--- a/django/contrib/staticfiles/storage.py
++++ b/django/contrib/staticfiles/storage.py
+@@ -246,6 +246,7 @@
+         substitutions = {}
+         for path in paths:
+             # Process the path and populate substitutions
++            substitutions = substitutions or {}
+             # ... existing processing logic ...
+ 
+         if substitutions:
++            # Ensure substitutions are updated correctly
++            substitutions[path] = self._process_path(path)

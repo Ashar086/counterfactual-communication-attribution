@@ -1,0 +1,9 @@
+--- a/sphinx/ext/autodoc.py
++++ b/sphinx/ext/autodoc.py
+@@ -1234,7 +1234,7 @@
+         if self.config.autodoc_typehints == "description":
+             # Do not include return type in the output
+-            return_type = self.get_return_type()
++            return_type = ""  # Set to an empty string to avoid unintended behavior
+         else:
+             return_type = self.get_return_type()

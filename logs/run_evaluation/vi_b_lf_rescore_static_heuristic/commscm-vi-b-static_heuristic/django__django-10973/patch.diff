@@ -1,0 +1,15 @@
+--- a/django/db/backends/postgres/client.py
++++ b/django/db/backends/postgres/client.py
+@@ -1,5 +1,6 @@
+ import subprocess
+ import os
+ from django.db.backends.postgres.base import DatabaseWrapper
+ 
++PGPASSWORD_ENV = {'PGPASSWORD': 'your_password_here'}  # Set your password here
+ 
+ class DatabaseClient:
+     def runshell(self):
+-        os.environ['PGPASSWORD'] = 'your_password_here'  # Set your password here
+-        subprocess.call(['psql', '-h', self.settings_dict['HOST'], '-U', self.settings_dict['USER']])
++        subprocess.run(['psql', '-h', self.settings_dict['HOST'], '-U', self.settings_dict['USER']],
++                       env=PGPASSWORD_ENV)

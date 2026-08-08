@@ -1,0 +1,11 @@
+--- a/sympy/concrete/products.py
++++ b/sympy/concrete/products.py
+@@ -283,7 +283,7 @@
+         # This is incorrect for products of sums
+         # e.g. Product(k**(S(2)/3) + 1, [k, 0, n-1]).doit() returns 1
+         # instead of the expected result.
+-        return self._product_of_sums()
++        return self._q_pochhammer_product()  # Ensure this method correctly computes the product
+ 
+     def _product_of_sums(self):
+         # Implementation of the product of sums

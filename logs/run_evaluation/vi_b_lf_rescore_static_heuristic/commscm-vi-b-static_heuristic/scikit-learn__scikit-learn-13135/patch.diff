@@ -1,0 +1,12 @@
+--- a/sklearn/preprocessing/_discretization.py
++++ b/sklearn/preprocessing/_discretization.py
+@@ -252,6 +252,7 @@
+         bin_edges = np.concatenate(([X_min], bin_edges, [X_max]))
+         # Ensure bin_edges are sorted
+         bin_edges = np.sort(bin_edges)
++        bin_edges = np.unique(bin_edges)  # Ensure unique edges
+         self.bin_edges_ = bin_edges.reshape(1, -1)
+ 
+         # Transform the data
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

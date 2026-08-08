@@ -1,0 +1,10 @@
+--- a/sphinx/ext/autodoc/__init__.py
++++ b/sphinx/ext/autodoc/__init__.py
+@@ -1234,7 +1234,7 @@
+ 
+     if self.options.autodoc_typehints == 'description':
+         # Use the type alias if available
+-        type_str = self.options.autodoc_type_aliases.get(type_str, type_str)
++        type_str = self.options.autodoc_type_aliases.get(type_str, type_str) if type_str in self.options.autodoc_type_aliases else type_str
+     
+     return type_str

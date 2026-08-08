@@ -1,0 +1,12 @@
+--- a/django/forms/formsets.py
++++ b/django/forms/formsets.py
+@@ -123,6 +123,7 @@
+         if self.errors:
+             for error in self.errors:
+                 if error:
++                    error_list.append('<div class="nonform">%s</div>' % escape(error))
+                     break
+         return error_list
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

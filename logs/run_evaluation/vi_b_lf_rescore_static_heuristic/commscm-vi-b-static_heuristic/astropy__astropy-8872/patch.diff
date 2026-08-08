@@ -1,0 +1,11 @@
+--- a/astropy/units/quantity.py
++++ b/astropy/units/quantity.py
+@@ -296,7 +296,7 @@
+         # Check if we can cast to float32
+         if np.can_cast(np.float32, value.dtype):
+             value = value.astype(np.float32)
+-        elif np.can_cast(np.float64, value.dtype):
++        elif np.can_cast(np.float64, value.dtype) or np.can_cast(np.float16, value.dtype):
+             value = value.astype(np.float64)
+         else:
+             raise TypeError(f"Cannot cast {value.dtype} to a valid quantity type.")

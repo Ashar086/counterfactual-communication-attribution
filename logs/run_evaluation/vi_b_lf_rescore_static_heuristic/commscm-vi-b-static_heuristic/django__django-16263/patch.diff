@@ -1,0 +1,11 @@
+--- a/django/db/models/sql/query.py
++++ b/django/db/models/sql/query.py
+@@ -404,6 +404,9 @@
+         # If we're counting, we can ignore annotations that are not used.
+         if self.is_count_query():
+             self.annotations = {
++                key: value
++                for key, value in self.annotations.items()
++                if key in self._used_annotations
+             }
+             self.group_by = []  # Clear group by for count queries

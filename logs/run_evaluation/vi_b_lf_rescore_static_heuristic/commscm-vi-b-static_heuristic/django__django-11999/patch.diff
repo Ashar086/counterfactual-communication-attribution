@@ -1,0 +1,19 @@
+--- a/original.py
++++ b/fixed.py
+@@ -1,6 +1,6 @@
+ from django.db import models
+ from django.utils.translation import ugettext_lazy as _
+ 
+-class FooBar(models.Model):
++class FooBar(models.Model): 
+     foo_bar = models.CharField(_("foo"), choices=[(1, 'foo'), (2, 'bar')])
+ 
+     def __str__(self):
+         return self.get_foo_bar_display()
+ 
+-    def get_foo_bar_display(self):
++    def get_foo_bar_display(self): 
+         return "something"
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

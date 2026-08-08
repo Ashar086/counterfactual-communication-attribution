@@ -1,0 +1,17 @@
+--- a/sklearn/multioutput.py
++++ b/sklearn/multioutput.py
+@@ -123,6 +123,7 @@
+ 
+     def fit(self, X, y):
+         self.estimators_ = []
++        self.classes_ = []
+         for i in range(self.n_outputs_):
+             estimator = clone(self.estimator)
+             estimator.fit(X, y[:, i])
+@@ -130,6 +131,8 @@
+         return self
++        
++        self.classes_ = [estimator.classes_ for estimator in self.estimators_]
+ 
+     def predict(self, X):
+         check_is_fitted(self)

@@ -1,0 +1,22 @@
+--- a/django/dbshell.py
++++ b/django/dbshell.py
+@@ -50,6 +50,9 @@
+ 
+     if connection.settings_dict['ENGINE'] == 'django.db.backends.postgresql':
+         options = connection.settings_dict['OPTIONS']
++        sslmode = options.get('sslmode', 'prefer')
++        sslrootcert = options.get('sslrootcert')
++        sslcert = options.get('sslcert')
++        sslkey = options.get('sslkey')
+ 
+         command = [
+             'psql',
+             '-h', connection.settings_dict['HOST'],
+             '-p', str(connection.settings_dict['PORT']),
+             '-U', connection.settings_dict['USER'],
+             '-d', connection.settings_dict['NAME'],
+             '--set', f'PGSSLMODE={sslmode}',
++            *([f'--set=PGSSLROOTCERT={sslrootcert}'] if sslrootcert else []),
++            *([f'--set=PGSSLCERT={sslcert}'] if sslcert else []),
++            *([f'--set=PGSSLKEY={sslkey}'] if sslkey else []),
+         ]

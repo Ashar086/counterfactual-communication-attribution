@@ -1,0 +1,232 @@
+{
+  "experiment": "week4_phase_b_single_edit",
+  "phase": "B",
+  "suite": "chain_fault",
+  "iterative_ccas": false,
+  "outcome": "sink_fault_outcome",
+  "n": 40,
+  "summary": {
+    "random": {
+      "method": "random",
+      "n": 40,
+      "success_before": 0.0,
+      "success_after": 1.0,
+      "mean_delta_y": 1.0,
+      "frac_repaired": 1.0,
+      "frac_hit_gold_edge": 0.05,
+      "frac_local_clean": 1.0,
+      "edit_kind_counts": {
+        "prune_edge": 40
+      }
+    },
+    "reward_only": {
+      "method": "reward_only",
+      "n": 40,
+      "success_before": 0.0,
+      "success_after": 1.0,
+      "mean_delta_y": 1.0,
+      "frac_repaired": 1.0,
+      "frac_hit_gold_edge": 0.0,
+      "frac_local_clean": 1.0,
+      "edit_kind_counts": {
+        "prune_edge": 40
+      }
+    },
+    "cr_guided": {
+      "method": "cr_guided",
+      "n": 40,
+      "success_before": 0.0,
+      "success_after": 1.0,
+      "mean_delta_y": 1.0,
+      "frac_repaired": 1.0,
+      "frac_hit_gold_edge": 1.0,
+      "frac_local_clean": 1.0,
+      "edit_kind_counts": {
+        "prune_edge": 40
+      }
+    }
+  },
+  "examples": {
+    "random": [
+      {
+        "run_id": "chain_fault_12_s0",
+        "edit": {
+          "kind": "prune_edge",
+          "source_event_id": "E10",
+          "target_event_id": "E11",
+          "channel": null,
+          "params": {
+            "edge_score": 11.0
+          }
+        },
+        "y_before": 0.0,
+        "y_after": 1.0,
+        "improved": true,
+        "repaired": true,
+        "local_clean": true,
+        "hit_gold_edge": false,
+        "new_architecture_id": "chain_v0_12::chain_fault_12_s0__prune_edge__E10_E11"
+      },
+      {
+        "run_id": "chain_fault_12_s1",
+        "edit": {
+          "kind": "prune_edge",
+          "source_event_id": "E10",
+          "target_event_id": "E11",
+          "channel": null,
+          "params": {
+            "edge_score": 11.0
+          }
+        },
+        "y_before": 0.0,
+        "y_after": 1.0,
+        "improved": true,
+        "repaired": true,
+        "local_clean": true,
+        "hit_gold_edge": false,
+        "new_architecture_id": "chain_v0_12::chain_fault_12_s1__prune_edge__E10_E11"
+      },
+      {
+        "run_id": "chain_fault_12_s2",
+        "edit": {
+          "kind": "prune_edge",
+          "source_event_id": "E9",
+          "target_event_id": "E10",
+          "channel": null,
+          "params": {
+            "edge_score": 11.0
+          }
+        },
+        "y_before": 0.0,
+        "y_after": 1.0,
+        "improved": true,
+        "repaired": true,
+        "local_clean": true,
+        "hit_gold_edge": false,
+        "new_architecture_id": "chain_v0_12::chain_fault_12_s2__prune_edge__E9_E10"
+      }
+    ],
+    "reward_only": [
+      {
+        "run_id": "chain_fault_12_s0",
+        "edit": {
+          "kind": "prune_edge",
+          "source_event_id": "E10",
+          "target_event_id": "E11",
+          "channel": null,
+          "params": {
+            "edge_score": 1.75
+          }
+        },
+        "y_before": 0.0,
+        "y_after": 1.0,
+        "improved": true,
+        "repaired": true,
+        "local_clean": true,
+        "hit_gold_edge": false,
+        "new_architecture_id": "chain_v0_12::chain_fault_12_s0__prune_edge__E10_E11"
+      },
+      {
+        "run_id": "chain_fault_12_s1",
+        "edit": {
+          "kind": "prune_edge",
+          "source_event_id": "E10",
+          "target_event_id": "E11",
+          "channel": null,
+          "params": {
+            "edge_score": 1.75
+          }
+        },
+        "y_before": 0.0,
+        "y_after": 1.0,
+        "improved": true,
+        "repaired": true,
+        "local_clean": true,
+        "hit_gold_edge": false,
+        "new_architecture_id": "chain_v0_12::chain_fault_12_s1__prune_edge__E10_E11"
+      },
+      {
+        "run_id": "chain_fault_12_s2",
+        "edit": {
+          "kind": "prune_edge",
+          "source_event_id": "E10",
+          "target_event_id": "E11",
+          "channel": null,
+          "params": {
+            "edge_score": 1.75
+          }
+        },
+        "y_before": 0.0,
+        "y_after": 1.0,
+        "improved": true,
+        "repaired": true,
+        "local_clean": true,
+        "hit_gold_edge": false,
+        "new_architecture_id": "chain_v0_12::chain_fault_12_s2__prune_edge__E10_E11"
+      }
+    ],
+    "cr_guided": [
+      {
+        "run_id": "chain_fault_12_s0",
+        "edit": {
+          "kind": "prune_edge",
+          "source_event_id": "E0",
+          "target_event_id": "E1",
+          "channel": null,
+          "params": {
+            "edge_score": 1.0
+          }
+        },
+        "y_before": 0.0,
+        "y_after": 1.0,
+        "improved": true,
+        "repaired": true,
+        "local_clean": true,
+        "hit_gold_edge": true,
+        "new_architecture_id": "chain_v0_12::chain_fault_12_s0__prune_edge__E0_E1"
+      },
+      {
+        "run_id": "chain_fault_12_s1",
+        "edit": {
+          "kind": "prune_edge",
+          "source_event_id": "E0",
+          "target_event_id": "E1",
+          "channel": null,
+          "params": {
+            "edge_score": 1.0
+          }
+        },
+        "y_before": 0.0,
+        "y_after": 1.0,
+        "improved": true,
+        "repaired": true,
+        "local_clean": true,
+        "hit_gold_edge": true,
+        "new_architecture_id": "chain_v0_12::chain_fault_12_s1__prune_edge__E0_E1"
+      },
+      {
+        "run_id": "chain_fault_12_s2",
+        "edit": {
+          "kind": "prune_edge",
+          "source_event_id": "E0",
+          "target_event_id": "E1",
+          "channel": null,
+          "params": {
+            "edge_score": 1.0
+          }
+        },
+        "y_before": 0.0,
+        "y_after": 1.0,
+        "improved": true,
+        "repaired": true,
+        "local_clean": true,
+        "hit_gold_edge": true,
+        "new_architecture_id": "chain_v0_12::chain_fault_12_s2__prune_edge__E0_E1"
+      }
+    ]
+  },
+  "verdict": {
+    "phase_b_pass": true,
+    "rule": "CR-guided top-1 edit must hit the gold harmful edge more often than reward-only and random, and repair the terminal sink on >=90% of chain traces. (On a chain, cutting any edge can repair; gold-edge hit is the discriminating metric.)"
+  }
+}

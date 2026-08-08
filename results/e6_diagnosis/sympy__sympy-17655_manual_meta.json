@@ -1,0 +1,25 @@
+{
+  "instance_id": "sympy__sympy-17655",
+  "image": "swebench/sweb.eval.x86_64.sympy_1776_sympy-17655:latest",
+  "apply_exit": 0,
+  "eval_exit": 0,
+  "has_crlf_artifact_in_original_eval": true,
+  "manual_output": "results\\e6_diagnosis\\sympy__sympy-17655_manual_lf_test_output.txt",
+  "contains_ModuleNotFoundError": false,
+  "contains_pipefail_cr": false,
+  "ok_lines": [
+    "test_point ok",
+    "test_point3D ok",
+    "test_Point2D ok",
+    "test_issue_9214 ok",
+    "test_issue_11617 ok",
+    "test_transform ok",
+    "test_concyclic_doctest_bug ok",
+    "test_arguments ok",
+    "test_unit ok",
+    "test_dot ok",
+    "test__normalize_dimension ok",
+    "test_direction_cosine ok                                                    [OK]"
+  ],
+  "fail_lines": []
+}

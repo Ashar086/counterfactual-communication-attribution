@@ -1,0 +1,650 @@
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.2) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-08-04 12:07:45,400 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 12:07:45,453 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-04 12:07:45,725 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 12:07:46,434 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 12:07:46,741 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-08-04 12:07:47,018 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-04 12:07:47,473 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-04 12:07:47,754 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-08-04 12:07:48,041 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-08-04 12:07:48,334 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-08-04 12:07:49,203 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 12:07:49,268 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-04 12:07:49,551 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 12:07:49,783 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 12:07:50,081 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-04 12:07:50,358 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-04 12:07:50,704 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Found 1 existing instance images. Will reuse them.
+Running 100 instances...
+
+Evaluation:   0%|          | 0/100 [00:00<?, ?it/s, error=0, \u2713=0, \u2716=0]
+Evaluation:   0%|          | 0/100 [09:27<?, ?it/s, \u2713=0, \u2716=0, error=1]
+Evaluation:   1%|1         | 1/100 [09:27<15:36:08, 567.36s/it, \u2713=0, \u2716=0, error=1]
+Evaluation:   1%|1         | 1/100 [09:28<15:36:08, 567.36s/it, \u2713=0, \u2716=0, error=2]
+Evaluation:   2%|2         | 2/100 [09:28<6:22:32, 234.21s/it, \u2713=0, \u2716=0, error=2] 
+Evaluation:   2%|2         | 2/100 [09:31<6:22:32, 234.21s/it, \u2713=0, \u2716=0, error=3]
+Evaluation:   3%|3         | 3/100 [09:31<3:27:42, 128.48s/it, \u2713=0, \u2716=0, error=3]
+Evaluation:   3%|3         | 3/100 [10:44<3:27:42, 128.48s/it, \u2713=0, \u2716=1, error=3]
+Evaluation:   4%|4         | 4/100 [10:44<2:50:54, 106.82s/it, \u2713=0, \u2716=1, error=3]
+Evaluation:   4%|4         | 4/100 [20:36<2:50:54, 106.82s/it, \u2713=0, \u2716=1, error=4]
+Evaluation:   5%|5         | 5/100 [20:36<7:26:16, 281.85s/it, \u2713=0, \u2716=1, error=4]
+Evaluation:   5%|5         | 5/100 [20:40<7:26:16, 281.85s/it, \u2713=0, \u2716=1, error=5]
+Evaluation:   6%|6         | 6/100 [20:40<4:53:08, 187.11s/it, \u2713=0, \u2716=1, error=5]
+Evaluation:   6%|6         | 6/100 [20:41<4:53:08, 187.11s/it, \u2713=0, \u2716=1, error=6]
+Evaluation:   7%|7         | 7/100 [20:41<3:15:57, 126.42s/it, \u2713=0, \u2716=1, error=6]
+Evaluation:   7%|7         | 7/100 [20:46<3:15:57, 126.42s/it, \u2713=0, \u2716=1, error=7]
+Evaluation:   8%|8         | 8/100 [20:46<2:14:34, 87.77s/it, \u2713=0, \u2716=1, error=7] 
+Evaluation:   8%|8         | 8/100 [22:57<2:14:34, 87.77s/it, \u2713=0, \u2716=1, error=8]
+Evaluation:   9%|9         | 9/100 [22:57<2:33:23, 101.13s/it, \u2713=0, \u2716=1, error=8]
+Evaluation:   9%|9         | 9/100 [23:11<2:33:23, 101.13s/it, \u2713=0, \u2716=1, error=9]
+Evaluation:  10%|#         | 10/100 [23:11<1:51:36, 74.40s/it, \u2713=0, \u2716=1, error=9]
+Evaluation:  10%|#         | 10/100 [24:02<1:51:36, 74.40s/it, \u2713=0, \u2716=1, error=10]
+Evaluation:  11%|#1        | 11/100 [24:02<1:39:45, 67.25s/it, \u2713=0, \u2716=1, error=10]
+Evaluation:  11%|#1        | 11/100 [24:56<1:39:45, 67.25s/it, \u2713=0, \u2716=1, error=11]
+Evaluation:  12%|#2        | 12/100 [24:56<1:32:43, 63.22s/it, \u2713=0, \u2716=1, error=11]
+Evaluation:  12%|#2        | 12/100 [26:12<1:32:43, 63.22s/it, \u2713=0, \u2716=2, error=11]
+Evaluation:  13%|#3        | 13/100 [26:12<1:37:09, 67.00s/it, \u2713=0, \u2716=2, error=11]
+Evaluation:  13%|#3        | 13/100 [26:42<1:37:09, 67.00s/it, \u2713=0, \u2716=2, error=12]
+Evaluation:  14%|#4        | 14/100 [26:42<1:20:16, 56.00s/it, \u2713=0, \u2716=2, error=12]
+Evaluation:  14%|#4        | 14/100 [27:48<1:20:16, 56.00s/it, \u2713=0, \u2716=2, error=13]
+Evaluation:  15%|#5        | 15/100 [27:48<1:23:24, 58.87s/it, \u2713=0, \u2716=2, error=13]
+Evaluation:  15%|#5        | 15/100 [28:00<1:23:24, 58.87s/it, \u2713=0, \u2716=2, error=14]
+Evaluation:  16%|#6        | 16/100 [28:00<1:02:34, 44.69s/it, \u2713=0, \u2716=2, error=14]
+Evaluation:  16%|#6        | 16/100 [32:17<1:02:34, 44.69s/it, \u2713=0, \u2716=2, error=15]
+Evaluation:  17%|#7        | 17/100 [32:17<2:30:06, 108.51s/it, \u2713=0, \u2716=2, error=15]
+Evaluation:  17%|#7        | 17/100 [35:37<2:30:06, 108.51s/it, \u2713=0, \u2716=3, error=15]
+Evaluation:  18%|#8        | 18/100 [35:37<3:05:55, 136.05s/it, \u2713=0, \u2716=3, error=15]
+Evaluation:  18%|#8        | 18/100 [35:38<3:05:55, 136.05s/it, \u2713=0, \u2716=4, error=15]
+Evaluation:  19%|#9        | 19/100 [35:38<2:08:51, 95.46s/it, \u2713=0, \u2716=4, error=15] 
+Evaluation:  19%|#9        | 19/100 [35:39<2:08:51, 95.46s/it, \u2713=0, \u2716=4, error=16]
+Evaluation:  20%|##        | 20/100 [35:39<1:29:25, 67.07s/it, \u2713=0, \u2716=4, error=16]
+Evaluation:  20%|##        | 20/100 [35:42<1:29:25, 67.07s/it, \u2713=0, \u2716=5, error=16]
+Evaluation:  21%|##1       | 21/100 [35:42<1:02:57, 47.82s/it, \u2713=0, \u2716=5, error=16]
+Evaluation:  21%|##1       | 21/100 [43:42<1:02:57, 47.82s/it, \u2713=0, \u2716=5, error=17]
+Evaluation:  22%|##2       | 22/100 [43:42<3:51:08, 177.80s/it, \u2713=0, \u2716=5, error=17]
+Evaluation:  22%|##2       | 22/100 [43:46<3:51:08, 177.80s/it, \u2713=0, \u2716=5, error=18]
+Evaluation:  23%|##3       | 23/100 [43:46<2:40:57, 125.42s/it, \u2713=0, \u2716=5, error=18]
+Evaluation:  23%|##3       | 23/100 [43:47<2:40:57, 125.42s/it, \u2713=0, \u2716=5, error=19]
+Evaluation:  24%|##4       | 24/100 [43:47<1:51:47, 88.25s/it, \u2713=0, \u2716=5, error=19] 
+Evaluation:  24%|##4       | 24/100 [43:50<1:51:47, 88.25s/it, \u2713=0, \u2716=5, error=20]
+Evaluation:  25%|##5       | 25/100 [43:50<1:18:25, 62.74s/it, \u2713=0, \u2716=5, error=20]
+Evaluation:  25%|##5       | 25/100 [48:26<1:18:25, 62.74s/it, \u2713=0, \u2716=5, error=21]
+Evaluation:  26%|##6       | 26/100 [48:26<2:36:05, 126.55s/it, \u2713=0, \u2716=5, error=21]
+Evaluation:  26%|##6       | 26/100 [48:38<2:36:05, 126.55s/it, \u2713=0, \u2716=5, error=22]
+Evaluation:  27%|##7       | 27/100 [48:38<1:52:02, 92.09s/it, \u2713=0, \u2716=5, error=22] 
+Evaluation:  27%|##7       | 27/100 [51:40<1:52:02, 92.09s/it, \u2713=0, \u2716=6, error=22]
+Evaluation:  28%|##8       | 28/100 [51:40<2:23:06, 119.26s/it, \u2713=0, \u2716=6, error=22]
+Evaluation:  28%|##8       | 28/100 [52:26<2:23:06, 119.26s/it, \u2713=0, \u2716=7, error=22]
+Evaluation:  29%|##9       | 29/100 [52:26<1:54:56, 97.13s/it, \u2713=0, \u2716=7, error=22] 
+Evaluation:  29%|##9       | 29/100 [53:24<1:54:56, 97.13s/it, \u2713=0, \u2716=7, error=23]
+Evaluation:  30%|###       | 30/100 [53:24<1:39:47, 85.53s/it, \u2713=0, \u2716=7, error=23]
+Evaluation:  30%|###       | 30/100 [53:28<1:39:47, 85.53s/it, \u2713=0, \u2716=7, error=24]
+Evaluation:  31%|###1      | 31/100 [53:28<1:10:18, 61.13s/it, \u2713=0, \u2716=7, error=24]
+Evaluation:  31%|###1      | 31/100 [53:31<1:10:18, 61.13s/it, \u2713=0, \u2716=7, error=25]
+Evaluation:  32%|###2      | 32/100 [53:31<49:18, 43.50s/it, \u2713=0, \u2716=7, error=25]  
+Evaluation:  32%|###2      | 32/100 [54:03<49:18, 43.50s/it, \u2713=0, \u2716=7, error=26]
+Evaluation:  33%|###3      | 33/100 [54:03<44:55, 40.24s/it, \u2713=0, \u2716=7, error=26]
+Evaluation:  33%|###3      | 33/100 [55:39<44:55, 40.24s/it, \u2713=0, \u2716=7, error=27]
+Evaluation:  34%|###4      | 34/100 [55:39<1:02:34, 56.89s/it, \u2713=0, \u2716=7, error=27]
+Evaluation:  34%|###4      | 34/100 [56:08<1:02:34, 56.89s/it, \u2713=0, \u2716=8, error=27]
+Evaluation:  35%|###5      | 35/100 [56:08<52:33, 48.51s/it, \u2713=0, \u2716=8, error=27]  
+Evaluation:  35%|###5      | 35/100 [57:09<52:33, 48.51s/it, \u2713=0, \u2716=8, error=28]
+Evaluation:  36%|###6      | 36/100 [57:09<55:42, 52.22s/it, \u2713=0, \u2716=8, error=28]
+Evaluation:  36%|###6      | 36/100 [57:17<55:42, 52.22s/it, \u2713=0, \u2716=9, error=28]
+Evaluation:  37%|###7      | 37/100 [57:17<41:01, 39.07s/it, \u2713=0, \u2716=9, error=28]
+Evaluation:  37%|###7      | 37/100 [59:15<41:01, 39.07s/it, \u2713=0, \u2716=9, error=29]
+Evaluation:  38%|###8      | 38/100 [59:15<1:04:45, 62.66s/it, \u2713=0, \u2716=9, error=29]
+Evaluation:  38%|###8      | 38/100 [59:17<1:04:45, 62.66s/it, \u2713=0, \u2716=10, error=29]
+Evaluation:  39%|###9      | 39/100 [59:17<45:05, 44.34s/it, \u2713=0, \u2716=10, error=29]  
+Evaluation:  39%|###9      | 39/100 [1:06:50<45:05, 44.34s/it, \u2713=0, \u2716=10, error=30]
+Evaluation:  40%|####      | 40/100 [1:06:50<2:47:07, 167.12s/it, \u2713=0, \u2716=10, error=30]
+Evaluation:  40%|####      | 40/100 [1:06:51<2:47:07, 167.12s/it, \u2713=0, \u2716=10, error=31]
+Evaluation:  41%|####1     | 41/100 [1:06:51<1:55:21, 117.32s/it, \u2713=0, \u2716=10, error=31]
+Evaluation:  41%|####1     | 41/100 [1:06:53<1:55:21, 117.32s/it, \u2713=0, \u2716=10, error=32]
+Evaluation:  42%|####2     | 42/100 [1:06:53<1:19:46, 82.53s/it, \u2713=0, \u2716=10, error=32] 
+Evaluation:  42%|####2     | 42/100 [1:06:57<1:19:46, 82.53s/it, \u2713=0, \u2716=11, error=32]
+Evaluation:  43%|####3     | 43/100 [1:06:57<56:10, 59.13s/it, \u2713=0, \u2716=11, error=32]  
+Evaluation:  43%|####3     | 43/100 [1:09:17<56:10, 59.13s/it, \u2713=0, \u2716=11, error=33]
+Evaluation:  44%|####4     | 44/100 [1:09:17<1:17:40, 83.22s/it, \u2713=0, \u2716=11, error=33]
+Evaluation:  44%|####4     | 44/100 [1:10:19<1:17:40, 83.22s/it, \u2713=0, \u2716=11, error=34]
+Evaluation:  45%|####5     | 45/100 [1:10:19<1:10:33, 76.97s/it, \u2713=0, \u2716=11, error=34]
+Evaluation:  45%|####5     | 45/100 [1:10:33<1:10:33, 76.97s/it, \u2713=0, \u2716=11, error=35]
+Evaluation:  46%|####6     | 46/100 [1:10:33<52:11, 57.98s/it, \u2713=0, \u2716=11, error=35]  
+Evaluation:  46%|####6     | 46/100 [1:11:26<52:11, 57.98s/it, \u2713=0, \u2716=12, error=35]
+Evaluation:  47%|####6     | 47/100 [1:11:26<49:58, 56.58s/it, \u2713=0, \u2716=12, error=35]
+Evaluation:  47%|####6     | 47/100 [1:12:55<49:58, 56.58s/it, \u2713=0, \u2716=12, error=36]
+Evaluation:  48%|####8     | 48/100 [1:12:55<57:24, 66.25s/it, \u2713=0, \u2716=12, error=36]
+Evaluation:  48%|####8     | 48/100 [1:14:04<57:24, 66.25s/it, \u2713=0, \u2716=13, error=36]
+Evaluation:  49%|####9     | 49/100 [1:14:04<56:58, 67.03s/it, \u2713=0, \u2716=13, error=36]
+Evaluation:  49%|####9     | 49/100 [1:14:40<56:58, 67.03s/it, \u2713=0, \u2716=13, error=37]
+Evaluation:  50%|#####     | 50/100 [1:14:40<48:16, 57.93s/it, \u2713=0, \u2716=13, error=37]
+Evaluation:  50%|#####     | 50/100 [1:15:47<48:16, 57.93s/it, \u2713=0, \u2716=13, error=38]
+Evaluation:  51%|#####1    | 51/100 [1:15:47<49:19, 60.40s/it, \u2713=0, \u2716=13, error=38]
+Evaluation:  51%|#####1    | 51/100 [1:15:58<49:19, 60.40s/it, \u2713=0, \u2716=13, error=39]
+Evaluation:  52%|#####2    | 52/100 [1:15:58<36:33, 45.69s/it, \u2713=0, \u2716=13, error=39]
+Evaluation:  52%|#####2    | 52/100 [1:16:50<36:33, 45.69s/it, \u2713=0, \u2716=13, error=40]
+Evaluation:  53%|#####3    | 53/100 [1:16:50<37:19, 47.65s/it, \u2713=0, \u2716=13, error=40]
+Evaluation:  53%|#####3    | 53/100 [1:20:35<37:19, 47.65s/it, \u2713=0, \u2716=14, error=40]
+Evaluation:  54%|#####4    | 54/100 [1:20:35<1:17:22, 100.92s/it, \u2713=0, \u2716=14, error=40]
+Evaluation:  54%|#####4    | 54/100 [1:21:36<1:17:22, 100.92s/it, \u2713=0, \u2716=15, error=40]
+Evaluation:  55%|#####5    | 55/100 [1:21:36<1:06:34, 88.76s/it, \u2713=0, \u2716=15, error=40] 
+Evaluation:  55%|#####5    | 55/100 [1:26:24<1:06:34, 88.76s/it, \u2713=0, \u2716=15, error=41]
+Evaluation:  56%|#####6    | 56/100 [1:26:24<1:48:51, 148.44s/it, \u2713=0, \u2716=15, error=41]
+Evaluation:  56%|#####6    | 56/100 [1:26:24<1:48:51, 148.44s/it, \u2713=0, \u2716=15, error=42]
+Evaluation:  57%|#####6    | 57/100 [1:26:24<1:14:38, 104.16s/it, \u2713=0, \u2716=15, error=42]
+Evaluation:  57%|#####6    | 57/100 [1:26:25<1:14:38, 104.16s/it, \u2713=0, \u2716=15, error=43]
+Evaluation:  58%|#####8    | 58/100 [1:26:25<51:14, 73.19s/it, \u2713=0, \u2716=15, error=43]   
+Evaluation:  58%|#####8    | 58/100 [1:26:33<51:14, 73.19s/it, \u2713=0, \u2716=16, error=43]
+Evaluation:  59%|#####8    | 59/100 [1:26:33<36:38, 53.62s/it, \u2713=0, \u2716=16, error=43]
+Evaluation:  59%|#####8    | 59/100 [1:47:43<36:38, 53.62s/it, \u2713=0, \u2716=16, error=44]
+Evaluation:  60%|######    | 60/100 [1:47:43<4:39:02, 418.56s/it, \u2713=0, \u2716=16, error=44]
+Evaluation:  60%|######    | 60/100 [1:48:41<4:39:02, 418.56s/it, \u2713=0, \u2716=16, error=45]
+Evaluation:  61%|######1   | 61/100 [1:48:41<3:21:38, 310.22s/it, \u2713=0, \u2716=16, error=45]
+Evaluation:  61%|######1   | 61/100 [2:07:49<3:21:38, 310.22s/it, \u2713=0, \u2716=16, error=46]
+Evaluation:  62%|######2   | 62/100 [2:07:49<5:55:46, 561.75s/it, \u2713=0, \u2716=16, error=46]
+Evaluation:  62%|######2   | 62/100 [2:19:00<5:55:46, 561.75s/it, \u2713=0, \u2716=16, error=47]
+Evaluation:  63%|######3   | 63/100 [2:19:00<6:06:30, 594.34s/it, \u2713=0, \u2716=16, error=47]
+Evaluation:  63%|######3   | 63/100 [2:22:48<6:06:30, 594.34s/it, \u2713=0, \u2716=16, error=48]
+Evaluation:  64%|######4   | 64/100 [2:22:48<4:50:40, 484.45s/it, \u2713=0, \u2716=16, error=48]
+Evaluation:  64%|######4   | 64/100 [2:38:45<4:50:40, 484.45s/it, \u2713=0, \u2716=16, error=49]
+Evaluation:  65%|######5   | 65/100 [2:38:45<6:05:18, 626.24s/it, \u2713=0, \u2716=16, error=49]
+Evaluation:  65%|######5   | 65/100 [2:43:00<6:05:18, 626.24s/it, \u2713=0, \u2716=16, error=50]
+Evaluation:  66%|######6   | 66/100 [2:43:00<4:51:49, 514.97s/it, \u2713=0, \u2716=16, error=50]
+Evaluation:  66%|######6   | 66/100 [2:50:59<4:51:49, 514.97s/it, \u2713=0, \u2716=16, error=51]
+Evaluation:  67%|######7   | 67/100 [2:50:59<4:37:18, 504.19s/it, \u2713=0, \u2716=16, error=51]
+Evaluation:  67%|######7   | 67/100 [2:50:59<4:37:18, 504.19s/it, \u2713=0, \u2716=16, error=52]
+Evaluation:  68%|######8   | 68/100 [2:50:59<4:28:53, 504.19s/it, \u2713=0, \u2716=16, error=53]
+Evaluation:  69%|######9   | 69/100 [2:50:59<4:20:29, 504.19s/it, \u2713=0, \u2716=16, error=54]
+Evaluation:  70%|#######   | 70/100 [2:50:59<1:50:18, 220.61s/it, \u2713=0, \u2716=16, error=54]
+Evaluation:  70%|#######   | 70/100 [2:50:59<1:50:18, 220.61s/it, \u2713=0, \u2716=16, error=55]
+Evaluation:  71%|#######1  | 71/100 [2:50:59<1:46:37, 220.61s/it, \u2713=0, \u2716=16, error=56]
+Evaluation:  72%|#######2  | 72/100 [2:51:00<1:42:57, 220.61s/it, \u2713=0, \u2716=16, error=57]
+Evaluation:  73%|#######3  | 73/100 [2:51:00<55:03, 122.34s/it, \u2713=0, \u2716=16, error=57]  
+Evaluation:  73%|#######3  | 73/100 [2:51:00<55:03, 122.34s/it, \u2713=0, \u2716=16, error=58]
+Evaluation:  74%|#######4  | 74/100 [2:51:00<53:00, 122.34s/it, \u2713=0, \u2716=16, error=59]
+Evaluation:  75%|#######5  | 75/100 [2:51:04<50:58, 122.34s/it, \u2713=0, \u2716=16, error=60]
+Evaluation:  76%|#######6  | 76/100 [2:51:04<30:08, 75.35s/it, \u2713=0, \u2716=16, error=60] 
+Evaluation:  76%|#######6  | 76/100 [2:51:04<30:08, 75.35s/it, \u2713=0, \u2716=16, error=61]
+Evaluation:  77%|#######7  | 77/100 [2:51:04<28:53, 75.35s/it, \u2713=0, \u2716=16, error=62]
+Evaluation:  78%|#######8  | 78/100 [2:51:04<27:37, 75.35s/it, \u2713=0, \u2716=16, error=63]
+Evaluation:  79%|#######9  | 79/100 [2:51:04<26:22, 75.35s/it, \u2713=0, \u2716=16, error=64]
+Evaluation:  80%|########  | 80/100 [2:51:04<14:26, 43.30s/it, \u2713=0, \u2716=16, error=64]
+Evaluation:  80%|########  | 80/100 [2:51:04<14:26, 43.30s/it, \u2713=0, \u2716=16, error=65]
+Evaluation:  81%|########1 | 81/100 [2:51:04<13:42, 43.30s/it, \u2713=0, \u2716=16, error=66]
+Evaluation:  82%|########2 | 82/100 [2:51:04<12:59, 43.30s/it, \u2713=0, \u2716=16, error=67]
+Evaluation:  83%|########2 | 83/100 [2:51:04<12:16, 43.30s/it, \u2713=0, \u2716=16, error=68]
+Evaluation:  84%|########4 | 84/100 [2:51:04<07:11, 26.95s/it, \u2713=0, \u2716=16, error=68]
+Evaluation:  84%|########4 | 84/100 [2:51:05<07:11, 26.95s/it, \u2713=0, \u2716=16, error=69]
+Evaluation:  85%|########5 | 85/100 [2:51:05<06:44, 26.95s/it, \u2713=0, \u2716=16, error=70]
+Evaluation:  86%|########6 | 86/100 [2:51:05<06:17, 26.95s/it, \u2713=0, \u2716=16, error=71]
+Evaluation:  87%|########7 | 87/100 [2:51:05<05:50, 26.95s/it, \u2713=0, \u2716=16, error=72]
+Evaluation:  88%|########8 | 88/100 [2:51:05<03:30, 17.51s/it, \u2713=0, \u2716=16, error=72]
+Evaluation:  88%|########8 | 88/100 [2:51:05<03:30, 17.51s/it, \u2713=0, \u2716=16, error=73]
+Evaluation:  89%|########9 | 89/100 [2:51:05<03:12, 17.51s/it, \u2713=0, \u2716=16, error=74]
+Evaluation:  90%|######### | 90/100 [2:51:05<02:55, 17.51s/it, \u2713=0, \u2716=16, error=75]
+Evaluation:  91%|#########1| 91/100 [2:51:05<02:37, 17.51s/it, \u2713=0, \u2716=16, error=76]
+Evaluation:  92%|#########2| 92/100 [2:51:05<01:33, 11.68s/it, \u2713=0, \u2716=16, error=76]
+Evaluation:  92%|#########2| 92/100 [2:51:05<01:33, 11.68s/it, \u2713=0, \u2716=16, error=77]
+Evaluation:  93%|#########3| 93/100 [2:51:05<01:21, 11.68s/it, \u2713=0, \u2716=16, error=78]
+Evaluation:  94%|#########3| 94/100 [2:51:05<01:10, 11.68s/it, \u2713=0, \u2716=16, error=79]
+Evaluation:  95%|#########5| 95/100 [2:51:05<00:58, 11.68s/it, \u2713=0, \u2716=16, error=80]
+Evaluation:  96%|#########6| 96/100 [2:51:05<00:31,  7.92s/it, \u2713=0, \u2716=16, error=80]
+Evaluation:  96%|#########6| 96/100 [2:51:05<00:31,  7.92s/it, \u2713=0, \u2716=16, error=81]
+Evaluation:  97%|#########7| 97/100 [2:51:05<00:23,  7.92s/it, \u2713=0, \u2716=16, error=82]
+Evaluation:  98%|#########8| 98/100 [2:51:05<00:15,  7.92s/it, \u2713=0, \u2716=16, error=83]
+Evaluation:  99%|#########9| 99/100 [2:51:05<00:07,  7.92s/it, \u2713=0, \u2716=16, error=84]
+Evaluation: 100%|##########| 100/100 [2:51:05<00:00,  5.43s/it, \u2713=0, \u2716=16, error=84]
+Evaluation: 100%|##########| 100/100 [2:51:05<00:00, 102.66s/it, \u2713=0, \u2716=16, error=84]
+astropy__astropy-14369: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/astropy/table/format/ascii.py
+
+|+++ b/astropy/table/format/ascii.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\astropy__astropy-14369\run_instance.log) for more information.
+astropy__astropy-14096: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/original.py
+
+|+++ b/modified.py
+
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 9:      def prop(self):
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\astropy__astropy-14096\run_instance.log) for more information.
+astropy__astropy-13977: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 13:                      if result is not NotImplemented:
+
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file astropy/units/quantity.py
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\astropy__astropy-13977\run_instance.log) for more information.
+astropy__astropy-8872: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file astropy/units/quantity.py
+Hunk #1 FAILED at 296.
+1 out of 1 hunk FAILED -- saving rejects to file astropy/units/quantity.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\astropy__astropy-8872\run_instance.log) for more information.
+django__django-11163: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/fix.py
+
+|+++ b/fix.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-11163\run_instance.log) for more information.
+django__django-11239: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 13:  
+
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/fix.py
+
+|+++ b/fix.py
+
+--------------------------
+No file to patch.  Skipping patch.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-11239\run_instance.log) for more information.
+django__django-10973: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/django/db/backends/postgres/client.py
+
+|+++ b/django/db/backends/postgres/client.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-10973\run_instance.log) for more information.
+django__django-11551: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/django/admin/contrib/checks.py
+
+|+++ b/django/admin/contrib/checks.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-11551\run_instance.log) for more information.
+django__django-11477: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/urls/resolvers.py
+patch: **** malformed patch at line 8:  
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-11477\run_instance.log) for more information.
+django__django-11299: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/original_file.py
+
+|+++ b/fixed_file.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-11299\run_instance.log) for more information.
+django__django-11749: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 14: +        if any(option in options for option in group):
+
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/fix.py
+
+|+++ b/fix.py
+
+--------------------------
+No file to patch.  Skipping patch.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-11749\run_instance.log) for more information.
+django__django-11999: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/base.py
+Hunk #1 FAILED at 1234.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/models/base.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-11999\run_instance.log) for more information.
+django__django-12273: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/models.py
+
+|+++ b/models.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-12273\run_instance.log) for more information.
+django__django-12193: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/forms/widgets.py
+Hunk #1 FAILED at 524.
+1 out of 1 hunk FAILED -- saving rejects to file django/forms/widgets.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-12193\run_instance.log) for more information.
+django__django-12774: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/query.py
+Hunk #1 FAILED at 677.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/models/query.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-12774\run_instance.log) for more information.
+django__django-13128: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-13128\run_instance.log) for more information.
+django__django-13033: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/sql/compiler.py
+Hunk #1 FAILED at 727.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/models/sql/compiler.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-13033\run_instance.log) for more information.
+django__django-13568: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 11: +    for model in user_model._meta.constraints:
+
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/contrib/auth/checks.py
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-13568\run_instance.log) for more information.
+django__django-13089: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-13089\run_instance.log) for more information.
+django__django-13809: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/fix.py
+
+|+++ b/fix.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-13809\run_instance.log) for more information.
+django__django-14017: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patch: **** malformed patch at line 15:  
+
+patching file django/db/models/expressions.py
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-14017\run_instance.log) for more information.
+django__django-14404: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/views/defaults.py
+patch: **** unexpected end of file in patch
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-14404\run_instance.log) for more information.
+django__django-13794: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/template/defaulttags.py
+patch: **** malformed patch at line 15:          return ''
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-13794\run_instance.log) for more information.
+django__django-13820: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/migrations/loader.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/migrations/loader.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-13820\run_instance.log) for more information.
+django__django-14434: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-14434\run_instance.log) for more information.
+django__django-14559: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/query.py
+patch: **** malformed patch at line 13: +        pass
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-14559\run_instance.log) for more information.
+django__django-14631: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/forms/forms.py
+Hunk #1 FAILED at 1234.
+Hunk #2 succeeded at 505 with fuzz 3 (offset -745 lines).
+1 out of 2 hunks FAILED -- saving rejects to file django/forms/forms.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-14631\run_instance.log) for more information.
+django__django-14792: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-14792\run_instance.log) for more information.
+django__django-15252: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/migrations/recorder.py
+Hunk #1 FAILED at 63.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/migrations/recorder.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-15252\run_instance.log) for more information.
+django__django-15037: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/fix.py
+
+|+++ b/fix.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-15037\run_instance.log) for more information.
+django__django-15103: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/utils/safestring.py
+Hunk #1 FAILED at 100.
+1 out of 1 hunk FAILED -- saving rejects to file django/utils/safestring.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-15103\run_instance.log) for more information.
+django__django-15277: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-15277\run_instance.log) for more information.
+django__django-15368: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/query.py
+Hunk #1 FAILED at 670.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/models/query.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-15368\run_instance.log) for more information.
+django__django-15315: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/fields/__init__.py
+Hunk #1 FAILED at 1234.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/models/fields/__init__.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-15315\run_instance.log) for more information.
+django__django-15851: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/core/management/commands/dbshell.py
+Hunk #1 FAILED at 45.
+1 out of 1 hunk FAILED -- saving rejects to file django/core/management/commands/dbshell.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-15851\run_instance.log) for more information.
+django__django-15930: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/path/to/your/file.py
+
+|+++ b/path/to/your/file.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-15930\run_instance.log) for more information.
+django__django-15916: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-15916\run_instance.log) for more information.
+django__django-15987: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-15987\run_instance.log) for more information.
+django__django-16082: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/expressions.py
+patch: **** malformed patch at line 13: 
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-16082\run_instance.log) for more information.
+django__django-16485: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/template/defaultfilters.py
+Hunk #1 FAILED at 1234.
+1 out of 1 hunk FAILED -- saving rejects to file django/template/defaultfilters.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-16485\run_instance.log) for more information.
+django__django-16901: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/django/db/models/q.py
+
+|+++ b/django/db/models/q.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-16901\run_instance.log) for more information.
+django__django-16938: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/core/serializers/python.py
+Hunk #1 FAILED at 81.
+1 out of 1 hunk FAILED -- saving rejects to file django/core/serializers/python.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-16938\run_instance.log) for more information.
+django__django-7530: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-7530\run_instance.log) for more information.
+django__django-17084: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\django__django-17084\run_instance.log) for more information.
+psf__requests-1766: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file requests/auth.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file requests/auth.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\psf__requests-1766\run_instance.log) for more information.
+pallets__flask-5014: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\pallets__flask-5014\run_instance.log) for more information.
+psf__requests-6028: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\psf__requests-6028\run_instance.log) for more information.
+matplotlib__matplotlib-22871: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\matplotlib__matplotlib-22871\run_instance.log) for more information.
+matplotlib__matplotlib-25332: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/original_code.py
+
+|+++ b/fixed_code.py
+
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 16:  ax2.set_ylabel('acc')
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\matplotlib__matplotlib-25332\run_instance.log) for more information.
+Error building image pydata__xarray-3993: 404 Client Error for http+docker://localnpipe/v1.54/images/swebench/sweb.eval.x86_64.pydata_1776_xarray-3993:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pydata_1776_xarray-3993:latest")
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\pydata__xarray-3993\run_instance.log) for more information.
+Error building image pydata__xarray-6938: 404 Client Error for http+docker://localnpipe/v1.54/images/swebench/sweb.eval.x86_64.pydata_1776_xarray-6938:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pydata_1776_xarray-6938:latest")
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\pydata__xarray-6938\run_instance.log) for more information.
+Error building image pylint-dev__pylint-4551: 404 Client Error for http+docker://localnpipe/v1.54/images/swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-4551:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pylint-dev_1776_pylint-4551:latest")
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\pylint-dev__pylint-4551\run_instance.log) for more information.
+Error building image pydata__xarray-4075: 404 Client Error for http+docker://localnpipe/v1.54/images/swebench/sweb.eval.x86_64.pydata_1776_xarray-4075:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.pydata_1776_xarray-4075:latest")
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\pydata__xarray-4075\run_instance.log) for more information.
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 100
+Instances submitted: 100
+Instances completed: 16
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 16
+Instances with empty patches: 0
+Instances with errors: 84
+Unstopped containers: 0
+Unremoved images: 1
+Report written to commscm-vi-b-random.vi_b_rescore_part_vi_b_official_random.json

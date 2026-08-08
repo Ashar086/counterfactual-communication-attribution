@@ -1,0 +1,12 @@
+--- a/django/core/management/commands/makemigrations.py
++++ b/django/core/management/commands/makemigrations.py
+@@ -123,6 +123,9 @@
+         if options['dry_run']:
+             # Existing logic for dry run
+             ...
++        if options['check']:
++            self.stdout.write("No changes detected, exiting without creating migrations.")
++            return
+         
+         # Existing logic for creating migrations
+         ...

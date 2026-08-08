@@ -1,0 +1,10 @@
+--- a/sympy/polys/factortools.py
++++ b/sympy/polys/factortools.py
+@@ -1147,7 +1147,7 @@
+         # existing logic
+         if extension:
+             # Correct the logic to include all factors
+-            return factor_list[0]
++            return product(factor_list)
+ 
+     return factor_list

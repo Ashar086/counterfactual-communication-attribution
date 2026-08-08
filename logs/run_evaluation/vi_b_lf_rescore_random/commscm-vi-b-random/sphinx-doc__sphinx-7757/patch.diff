@@ -1,0 +1,11 @@
+--- a/sphinx/ext/autodoc.py
++++ b/sphinx/ext/autodoc.py
+@@ -1234,7 +1234,7 @@
+         if param.default is not param.empty:
+             default_value = f"={param.default}"  # Add default value
+         else:
+             default_value = ""
+-        signature += f"{param.name}{default_value}, "
++        signature += f"{param.name}{default_value}" + (", " if i < len(params) - 1 else "")
+ 
+     return signature.rstrip(", ")  # Remove trailing comma

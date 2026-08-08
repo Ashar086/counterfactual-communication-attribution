@@ -1,0 +1,11 @@
+--- a/django/db/models/sql/compiler.py
++++ b/django/db/models/sql/compiler.py
+@@ -1234,7 +1234,7 @@
+                     sql_parts.append('(%s)' % ' AND '.join(sql))
+                 else:
+                     sql_parts.append('(%s)' % ' OR '.join(sql))
+-            else:
++            elif isinstance(q, Q):
+                 sql_parts.append('(%s)' % self.as_sql(q, connection))
+ 
+         return ' AND '.join(sql_parts)

@@ -1,0 +1,50 @@
+2026-08-04 11:28:20,325 - INFO - Creating container for scikit-learn__scikit-learn-14629...
+2026-08-04 11:28:22,405 - INFO - Container for scikit-learn__scikit-learn-14629 created: 941938e6c8456c23a16ada448ca6c86bf5d88153ceecf981fd29d541ae4b9906
+2026-08-04 11:28:23,258 - INFO - Container for scikit-learn__scikit-learn-14629 started: 941938e6c8456c23a16ada448ca6c86bf5d88153ceecf981fd29d541ae4b9906
+2026-08-04 11:28:23,259 - INFO - Intermediate patch for scikit-learn__scikit-learn-14629 written to logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\scikit-learn__scikit-learn-14629\patch.diff, now applying to container...
+2026-08-04 11:28:23,692 - INFO - Failed to apply patch to container: git apply --verbose
+2026-08-04 11:28:23,943 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2026-08-04 11:28:24,146 - INFO - >>>>> Applied Patch:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file sklearn/model_selection/_validation.py
+Hunk #1 succeeded at 543 with fuzz 3 (offset -314 lines).
+
+2026-08-04 11:28:25,039 - INFO - Git diff before:
+diff --git a/sklearn/model_selection/_validation.py b/sklearn/model_selection/_validation.py
+index 95669a212..a6669bf05 100644
+--- a/sklearn/model_selection/_validation.py
++++ b/sklearn/model_selection/_validation.py
+@@ -543,7 +543,7 @@ def _fit_and_score(estimator, X, y, scorer, train, test, verbose,
+                 if return_train_score:
+                     msg += "(train=%.3f," % train_scores[scorer_name]
+                     msg += " test=%.3f)" % test_scores[scorer_name]
+-                else:
++                elif hasattr(estimator, "estimators_"):
+                     msg += "%.3f" % test_scores[scorer_name]
+         else:
+             msg += ", score="
+2026-08-04 11:28:25,041 - INFO - Eval script for scikit-learn__scikit-learn-14629 written to logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\scikit-learn__scikit-learn-14629\eval.sh; copying to container...
+2026-08-04 11:28:31,530 - INFO - Test runtime: 6.09 seconds
+2026-08-04 11:28:31,531 - INFO - Test output for scikit-learn__scikit-learn-14629 written to logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\scikit-learn__scikit-learn-14629\test_output.txt
+2026-08-04 11:28:32,022 - INFO - Git diff after:
+diff --git a/sklearn/model_selection/_validation.py b/sklearn/model_selection/_validation.py
+index 95669a212..a6669bf05 100644
+--- a/sklearn/model_selection/_validation.py
++++ b/sklearn/model_selection/_validation.py
+@@ -543,7 +543,7 @@ def _fit_and_score(estimator, X, y, scorer, train, test, verbose,
+                 if return_train_score:
+                     msg += "(train=%.3f," % train_scores[scorer_name]
+                     msg += " test=%.3f)" % test_scores[scorer_name]
+-                else:
++                elif hasattr(estimator, "estimators_"):
+                     msg += "%.3f" % test_scores[scorer_name]
+         else:
+             msg += ", score="
+2026-08-04 11:28:32,022 - INFO - Grading answer for scikit-learn__scikit-learn-14629...
+2026-08-04 11:28:32,075 - INFO - report: {'scikit-learn__scikit-learn-14629': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': False, 'tests_status': {'FAIL_TO_PASS': {'success': [], 'failure': ['sklearn/tests/test_multioutput.py::test_multi_output_classes_[estimator1]']}, 'PASS_TO_PASS': {'success': [], 'failure': ['sklearn/tests/test_multioutput.py::test_multi_target_regression', 'sklearn/tests/test_multioutput.py::test_multi_target_regression_partial_fit', 'sklearn/tests/test_multioutput.py::test_multi_target_regression_one_target', 'sklearn/tests/test_multioutput.py::test_multi_target_sparse_regression', 'sklearn/tests/test_multioutput.py::test_multi_target_sample_weights_api', 'sklearn/tests/test_multioutput.py::test_multi_target_sample_weight_partial_fit', 'sklearn/tests/test_multioutput.py::test_multi_target_sample_weights', 'sklearn/tests/test_multioutput.py::test_multi_output_classification_partial_fit_parallelism', 'sklearn/tests/test_multioutput.py::test_multi_output_predict_proba', 'sklearn/tests/test_multioutput.py::test_multi_output_classification_partial_fit', 'sklearn/tests/test_multioutput.py::test_multi_output_classification_partial_fit_no_first_classes_exception', 'sklearn/tests/test_multioutput.py::test_multi_output_classification', 'sklearn/tests/test_multioutput.py::test_multiclass_multioutput_estimator', 'sklearn/tests/test_multioutput.py::test_multiclass_multioutput_estimator_predict_proba', 'sklearn/tests/test_multioutput.py::test_multi_output_classification_sample_weights', 'sklearn/tests/test_multioutput.py::test_multi_output_classification_partial_fit_sample_weights', 'sklearn/tests/test_multioutput.py::test_multi_output_exceptions', 'sklearn/tests/test_multioutput.py::test_classifier_chain_fit_and_predict_with_linear_svc', 'sklearn/tests/test_multioutput.py::test_classifier_chain_fit_and_predict_with_sparse_data', 'sklearn/tests/test_multioutput.py::test_classifier_chain_vs_independent_models', 'sklearn/tests/test_multioutput.py::test_base_chain_fit_and_predict', 'sklearn/tests/test_multioutput.py::test_base_chain_fit_and_predict_with_sparse_data_and_cv', 'sklearn/tests/test_multioutput.py::test_base_chain_random_order', 'sklearn/tests/test_multioutput.py::test_base_chain_crossval_fit_and_predict', 'sklearn/tests/test_multioutput.py::test_multi_output_classes_[estimator0]', 'sklearn/tests/test_multioutput.py::test_multi_output_classes_[estimator2]']}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for scikit-learn__scikit-learn-14629: resolved: False
+2026-08-04 11:28:32,078 - INFO - Attempting to stop container sweb.eval.scikit-learn__scikit-learn-14629.vi_b_rescore_part_vi_b_official_reward_only...
+2026-08-04 11:28:48,149 - INFO - Attempting to remove container sweb.eval.scikit-learn__scikit-learn-14629.vi_b_rescore_part_vi_b_official_reward_only...
+2026-08-04 11:28:48,377 - INFO - Container sweb.eval.scikit-learn__scikit-learn-14629.vi_b_rescore_part_vi_b_official_reward_only removed.
+2026-08-04 11:28:48,378 - INFO - Attempting to remove image swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-14629:latest...
+2026-08-04 11:28:54,162 - INFO - Image swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-14629:latest removed.

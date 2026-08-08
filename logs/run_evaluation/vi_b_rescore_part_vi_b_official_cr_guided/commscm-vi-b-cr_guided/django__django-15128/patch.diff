@@ -1,0 +1,12 @@
+--- a/django/db/models/sql/query.py
++++ b/django/db/models/sql/query.py
+@@ -851,6 +851,9 @@
+         # Create a mapping of old aliases to new aliases.
+         change_map = {}
+         for old_alias, new_alias in zip(lhs.alias_map.values(), rhs.alias_map.values()):
++            # Ensure new_alias is unique by bumping its prefix
++            new_alias = self.bump_prefix(new_alias)
++            # Validate that new_alias does not conflict with existing aliases
+             change_map[old_alias] = new_alias
+         assert not set(change_map.keys()) & set(change_map.values()), (
+             "Alias change map cannot have intersecting keys and values."

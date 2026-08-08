@@ -1,0 +1,11 @@
+--- a/build/lib.linux-x86_64-3.9/borg/testsuite/helpers.py
++++ b/build/lib.linux-x86_64-3.9/borg/testsuite/helpers.py
+@@ -1,4 +1,4 @@
+ def test_cafd_includes_carriage_return(capfd):
+-    print('Greetings from DOS', end='\r')
++    print('Greetings from DOS', end='\r', flush=True)
+     out, err = capfd.readouterr()
+     assert out.endswith('\r')
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

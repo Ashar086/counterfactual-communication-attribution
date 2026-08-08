@@ -1,0 +1,15 @@
+--- a/django/core/management/base.py
++++ b/django/core/management/base.py
+@@ -72,6 +72,7 @@
+         return subparsers
+
++    def _copy_error_formatting(self, parser):
++        self.error_formatter = parser.error_formatter
+     
+     def add_subparsers(self, **kwargs):
+         subparsers = super().add_subparsers(**kwargs)
+         for action in subparsers._actions:
+             if isinstance(action, argparse._SubParsersAction):
+                 for subparser in action.choices.values():
+                     self._copy_error_formatting(self)
+         return subparsers

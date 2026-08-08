@@ -1,0 +1,14 @@
+--- a/sphinx/ext/napoleon.py
++++ b/sphinx/ext/napoleon.py
+@@ -1234,7 +1234,7 @@
+ 
+     # Get the class from the method's globals
+     cls_path = qualname.rsplit('.', 1)[0]
+-    cls = obj.__globals__[cls_path]
++    cls = getattr(obj, '__self__', None) or obj.__globals__.get(cls_path)
+ 
+     if cls is None:
+         cls_is_owner = False
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

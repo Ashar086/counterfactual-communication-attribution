@@ -1,0 +1,67 @@
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\langchain_core\_api\deprecation.py:25: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1.fields import FieldInfo as FieldInfoV1
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.2) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Temp\SWE-bench-src\swebench\harness\run_evaluation.py:271: SyntaxWarning: 'return' in a 'finally' block
+  return {
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-08-04 22:20:53,207 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 22:20:53,259 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-04 22:20:53,519 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 22:20:54,202 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 22:20:54,480 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-08-04 22:20:54,746 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-04 22:20:55,670 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-04 22:20:55,958 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-08-04 22:20:56,228 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-08-04 22:20:56,500 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-08-04 22:20:57,175 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 22:20:57,218 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-04 22:20:57,481 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 22:20:57,702 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 22:20:57,974 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-04 22:20:58,434 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-04 22:20:58,708 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Found 2 existing instance images. Will reuse them.
+Running 10 instances...
+
+Evaluation:   0%|          | 0/10 [00:00<?, ?it/s, error=0, \u2713=0, \u2716=0]
+Evaluation:   0%|          | 0/10 [00:41<?, ?it/s, \u2713=1, \u2716=0, error=0]
+Evaluation:  10%|#         | 1/10 [00:41<06:17, 41.92s/it, \u2713=1, \u2716=0, error=0]
+Evaluation:  10%|#         | 1/10 [23:32<06:17, 41.92s/it, \u2713=2, \u2716=0, error=0]
+Evaluation:  20%|##        | 2/10 [23:32<1:49:48, 823.56s/it, \u2713=2, \u2716=0, error=0]
+Evaluation:  20%|##        | 2/10 [24:48<1:49:48, 823.56s/it, \u2713=3, \u2716=0, error=0]
+Evaluation:  30%|###       | 3/10 [24:48<56:15, 482.15s/it, \u2713=3, \u2716=0, error=0]  
+Evaluation:  30%|###       | 3/10 [39:11<56:15, 482.15s/it, \u2713=4, \u2716=0, error=0]
+Evaluation:  40%|####      | 4/10 [39:11<1:03:15, 632.55s/it, \u2713=4, \u2716=0, error=0]
+Evaluation:  40%|####      | 4/10 [39:14<1:03:15, 632.55s/it, \u2713=5, \u2716=0, error=0]
+Evaluation:  50%|#####     | 5/10 [39:14<33:48, 405.64s/it, \u2713=5, \u2716=0, error=0]  
+Evaluation:  50%|#####     | 5/10 [1:00:59<33:48, 405.64s/it, \u2713=6, \u2716=0, error=0]
+Evaluation:  60%|######    | 6/10 [1:00:59<47:24, 711.24s/it, \u2713=6, \u2716=0, error=0]
+Evaluation:  60%|######    | 6/10 [1:03:30<47:24, 711.24s/it, \u2713=7, \u2716=0, error=0]
+Evaluation:  70%|#######   | 7/10 [1:03:30<26:24, 528.12s/it, \u2713=7, \u2716=0, error=0]
+Evaluation:  70%|#######   | 7/10 [1:14:06<26:24, 528.12s/it, \u2713=8, \u2716=0, error=0]
+Evaluation:  80%|########  | 8/10 [1:14:06<18:45, 562.57s/it, \u2713=8, \u2716=0, error=0]
+Evaluation:  80%|########  | 8/10 [1:15:18<18:45, 562.57s/it, \u2713=9, \u2716=0, error=0]
+Evaluation:  90%|######### | 9/10 [1:15:18<06:49, 409.18s/it, \u2713=9, \u2716=0, error=0]
+Evaluation:  90%|######### | 9/10 [1:16:54<06:49, 409.18s/it, \u2713=10, \u2716=0, error=0]
+Evaluation: 100%|##########| 10/10 [1:16:54<00:00, 312.55s/it, \u2713=10, \u2716=0, error=0]
+Evaluation: 100%|##########| 10/10 [1:16:54<00:00, 461.49s/it, \u2713=10, \u2716=0, error=0]
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 10
+Instances submitted: 10
+Instances completed: 10
+Instances incomplete: 0
+Instances resolved: 10
+Instances unresolved: 0
+Instances with empty patches: 0
+Instances with errors: 0
+Unstopped containers: 0
+Unremoved images: 2
+Report written to commscm-oracle-gold.oracle_gold_sample_n10_s7_lf.json

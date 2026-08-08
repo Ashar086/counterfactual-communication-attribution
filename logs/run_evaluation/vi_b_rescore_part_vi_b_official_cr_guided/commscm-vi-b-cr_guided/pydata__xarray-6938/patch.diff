@@ -1,0 +1,11 @@
+--- a/xarray/core/dataset.py
++++ b/xarray/core/dataset.py
+@@ -1234,7 +1234,7 @@
+     def swap_dims(self, dims):
+         """Swap dimensions of this dataset."""
+         # Create a copy of the dataset to avoid modifying the original
+-        new_dataset = self
++        new_dataset = self.copy()
+         # Perform dimension swapping on the new dataset
+         # ... (existing logic for swapping dimensions)
+         return new_dataset

@@ -1,0 +1,22 @@
+--- a/sphinx/builders/linkcheck.py
++++ b/sphinx/builders/linkcheck.py
+@@ -123,6 +123,10 @@
+ 
+     def check_links(self):
+         # Existing link checking logic...
++        if self.config.check_local_links:
++            self.check_local_links()
++
++    def check_local_links(self):
++        # Logic to check for local links
+         for link in self.local_links:
+             if not os.path.exists(link):
+                 self.report_broken_link(link)
+ 
+--- a/sphinx/config.py
++++ b/sphinx/config.py
+@@ -45,6 +45,7 @@
+ 
+ # Add any paths that contain templates here, relative to this directory.
+ templates_path = []
++check_local_links = False  # Enable checking of local links

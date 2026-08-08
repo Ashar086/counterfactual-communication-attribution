@@ -1,0 +1,49 @@
+2026-08-04 23:35:08,329 - INFO - Creating container for sympy__sympy-17655...
+2026-08-04 23:35:08,616 - INFO - Container for sympy__sympy-17655 created: b39257853a7441b8aded9f52f0323b49021e8c1791d3176393ef3d38bb83124e
+2026-08-04 23:35:09,243 - INFO - Container for sympy__sympy-17655 started: b39257853a7441b8aded9f52f0323b49021e8c1791d3176393ef3d38bb83124e
+2026-08-04 23:35:09,245 - INFO - Intermediate patch for sympy__sympy-17655 written to logs\run_evaluation\oracle_gold_sample_n10_s7_lf\commscm-oracle-gold\sympy__sympy-17655\patch.diff, now applying to container...
+2026-08-04 23:35:09,616 - INFO - >>>>> Applied Patch:
+Checking patch sympy/geometry/point.py...
+Applied patch sympy/geometry/point.py cleanly.
+
+2026-08-04 23:35:11,863 - INFO - Git diff before:
+diff --git a/sympy/geometry/point.py b/sympy/geometry/point.py
+index 7c978c47be..ee679a556b 100644
+--- a/sympy/geometry/point.py
++++ b/sympy/geometry/point.py
+@@ -278,6 +278,10 @@ def __mul__(self, factor):
+         coords = [simplify(x*factor) for x in self.args]
+         return Point(coords, evaluate=False)
+ 
++    def __rmul__(self, factor):
++        """Multiply a factor by point's coordinates."""
++        return self.__mul__(factor)
++
+     def __neg__(self):
+         """Negate the point."""
+         coords = [-x for x in self.args]
+2026-08-04 23:35:11,865 - INFO - Eval script for sympy__sympy-17655 written to logs\run_evaluation\oracle_gold_sample_n10_s7_lf\commscm-oracle-gold\sympy__sympy-17655\eval.sh; copying to container...
+2026-08-04 23:36:04,406 - INFO - Test runtime: 52.27 seconds
+2026-08-04 23:36:04,408 - INFO - Test output for sympy__sympy-17655 written to logs\run_evaluation\oracle_gold_sample_n10_s7_lf\commscm-oracle-gold\sympy__sympy-17655\test_output.txt
+2026-08-04 23:36:04,514 - INFO - Git diff after:
+diff --git a/sympy/geometry/point.py b/sympy/geometry/point.py
+index 7c978c47be..ee679a556b 100644
+--- a/sympy/geometry/point.py
++++ b/sympy/geometry/point.py
+@@ -278,6 +278,10 @@ def __mul__(self, factor):
+         coords = [simplify(x*factor) for x in self.args]
+         return Point(coords, evaluate=False)
+ 
++    def __rmul__(self, factor):
++        """Multiply a factor by point's coordinates."""
++        return self.__mul__(factor)
++
+     def __neg__(self):
+         """Negate the point."""
+         coords = [-x for x in self.args]
+2026-08-04 23:36:04,514 - INFO - Grading answer for sympy__sympy-17655...
+2026-08-04 23:36:04,538 - INFO - report: {'sympy__sympy-17655': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': True, 'tests_status': {'FAIL_TO_PASS': {'success': ['test_point', 'test_point3D'], 'failure': []}, 'PASS_TO_PASS': {'success': ['test_Point2D', 'test_issue_9214', 'test_issue_11617', 'test_transform', 'test_concyclic_doctest_bug', 'test_arguments', 'test_unit', 'test_dot', 'test__normalize_dimension'], 'failure': []}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for sympy__sympy-17655: resolved: True
+2026-08-04 23:36:04,540 - INFO - Attempting to stop container sweb.eval.sympy__sympy-17655.oracle_gold_sample_n10_s7_lf...
+2026-08-04 23:36:19,943 - INFO - Attempting to remove container sweb.eval.sympy__sympy-17655.oracle_gold_sample_n10_s7_lf...
+2026-08-04 23:36:20,014 - INFO - Container sweb.eval.sympy__sympy-17655.oracle_gold_sample_n10_s7_lf removed.

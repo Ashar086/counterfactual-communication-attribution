@@ -1,0 +1,27 @@
+--- a/sphinx/linkcheck.py
++++ b/sphinx/linkcheck.py
+@@ -1,5 +1,6 @@
+ 
+ def check_links(app, docname, source):
+     # Existing link checking logic...
++    check_local_links(app, docname)
+
+ def check_local_links(app, docname):
+     # Logic to check local links in the documentation
+     local_links = find_local_links(docname)
+     for link in local_links:
+         if not is_valid_local_link(link):
+             app.warn(f'Broken local link: {link}')
+ 
+ def find_local_links(docname):
+     # Extract local links from the document
+     # This is a placeholder for the actual implementation
+     return []
+
+ def is_valid_local_link(link):
+     # Logic to validate local links
+     # This is a placeholder for the actual implementation
+     return False
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

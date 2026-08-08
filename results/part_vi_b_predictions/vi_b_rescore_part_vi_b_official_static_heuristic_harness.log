@@ -1,0 +1,179 @@
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.2) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+'[Errno 11001] getaddrinfo failed' thrown while requesting HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py
+2026-08-04 14:59:19,672 - huggingface_hub.utils._http - WARNING - '[Errno 11001] getaddrinfo failed' thrown while requesting HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py
+Retrying in 1s [Retry 1/5].
+2026-08-04 14:59:19,672 - huggingface_hub.utils._http - WARNING - Retrying in 1s [Retry 1/5].
+Using the latest cached version of the dataset since princeton-nlp/SWE-bench_Verified couldn't be found on the Hugging Face Hub
+2026-08-04 14:59:20,684 - datasets.load - WARNING - Using the latest cached version of the dataset since princeton-nlp/SWE-bench_Verified couldn't be found on the Hugging Face Hub
+Found the latest cached dataset configuration 'default' at C:\Users\BEST BUY COMPUTERS\.cache\huggingface\datasets\princeton-nlp___swe-bench_verified\default\0.0.0\c104f840cc67f8b6eec6f759ebc8b2693d585d4a (last modified on Sat Aug  1 00:15:28 2026).
+2026-08-04 14:59:20,698 - datasets.packaged_modules.cache.cache - WARNING - Found the latest cached dataset configuration 'default' at C:\Users\BEST BUY COMPUTERS\.cache\huggingface\datasets\princeton-nlp___swe-bench_verified\default\0.0.0\c104f840cc67f8b6eec6f759ebc8b2693d585d4a (last modified on Sat Aug  1 00:15:28 2026).
+'[Errno 11001] getaddrinfo failed' thrown while requesting HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py
+2026-08-04 14:59:22,075 - huggingface_hub.utils._http - WARNING - '[Errno 11001] getaddrinfo failed' thrown while requesting HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py
+Retrying in 1s [Retry 1/5].
+2026-08-04 14:59:22,075 - huggingface_hub.utils._http - WARNING - Retrying in 1s [Retry 1/5].
+Using the latest cached version of the dataset since princeton-nlp/SWE-bench_Verified couldn't be found on the Hugging Face Hub
+2026-08-04 14:59:23,077 - datasets.load - WARNING - Using the latest cached version of the dataset since princeton-nlp/SWE-bench_Verified couldn't be found on the Hugging Face Hub
+Found the latest cached dataset configuration 'default' at C:\Users\BEST BUY COMPUTERS\.cache\huggingface\datasets\princeton-nlp___swe-bench_verified\default\0.0.0\c104f840cc67f8b6eec6f759ebc8b2693d585d4a (last modified on Sat Aug  1 00:15:28 2026).
+2026-08-04 14:59:23,082 - datasets.packaged_modules.cache.cache - WARNING - Found the latest cached dataset configuration 'default' at C:\Users\BEST BUY COMPUTERS\.cache\huggingface\datasets\princeton-nlp___swe-bench_verified\default\0.0.0\c104f840cc67f8b6eec6f759ebc8b2693d585d4a (last modified on Sat Aug  1 00:15:28 2026).
+Found 1 existing instance images. Will reuse them.
+Running 100 instances...
+
+Evaluation:   0%|          | 0/100 [00:00<?, ?it/s, error=0, \u2713=0, \u2716=0]
+Evaluation:   0%|          | 0/100 [00:00<?, ?it/s, \u2713=0, \u2716=0, error=1]
+Evaluation:   1%|1         | 1/100 [00:00<00:22,  4.48it/s, \u2713=0, \u2716=0, error=1]
+Evaluation:   1%|1         | 1/100 [00:00<00:22,  4.48it/s, \u2713=0, \u2716=0, error=2]
+Evaluation:   2%|2         | 2/100 [00:00<00:21,  4.48it/s, \u2713=0, \u2716=0, error=3]
+Evaluation:   3%|3         | 3/100 [00:00<00:21,  4.48it/s, \u2713=0, \u2716=0, error=4]
+Evaluation:   4%|4         | 4/100 [00:00<00:21,  4.48it/s, \u2713=0, \u2716=0, error=5]
+Evaluation:   5%|5         | 5/100 [00:00<00:06, 14.89it/s, \u2713=0, \u2716=0, error=5]
+Evaluation:   5%|5         | 5/100 [00:00<00:06, 14.89it/s, \u2713=0, \u2716=0, error=6]
+Evaluation:   6%|6         | 6/100 [00:00<00:06, 14.89it/s, \u2713=0, \u2716=0, error=7]
+Evaluation:   7%|7         | 7/100 [00:00<00:06, 14.89it/s, \u2713=0, \u2716=0, error=8]
+Evaluation:   8%|8         | 8/100 [00:00<00:06, 14.89it/s, \u2713=0, \u2716=0, error=9]
+Evaluation:   9%|9         | 9/100 [00:00<00:05, 17.97it/s, \u2713=0, \u2716=0, error=9]
+Evaluation:   9%|9         | 9/100 [00:00<00:05, 17.97it/s, \u2713=0, \u2716=0, error=10]
+Evaluation:  10%|#         | 10/100 [00:00<00:05, 17.97it/s, \u2713=0, \u2716=0, error=11]
+Evaluation:  11%|#1        | 11/100 [00:00<00:04, 17.97it/s, \u2713=0, \u2716=0, error=12]
+Evaluation:  12%|#2        | 12/100 [00:00<00:04, 17.97it/s, \u2713=0, \u2716=0, error=13]
+Evaluation:  13%|#3        | 13/100 [00:00<00:04, 19.38it/s, \u2713=0, \u2716=0, error=13]
+Evaluation:  13%|#3        | 13/100 [00:00<00:04, 19.38it/s, \u2713=0, \u2716=0, error=14]
+Evaluation:  14%|#4        | 14/100 [00:00<00:04, 19.38it/s, \u2713=0, \u2716=0, error=15]
+Evaluation:  15%|#5        | 15/100 [00:00<00:04, 19.38it/s, \u2713=0, \u2716=0, error=16]
+Evaluation:  16%|#6        | 16/100 [00:00<00:04, 19.38it/s, \u2713=0, \u2716=0, error=17]
+Evaluation:  17%|#7        | 17/100 [00:00<00:04, 20.58it/s, \u2713=0, \u2716=0, error=17]
+Evaluation:  17%|#7        | 17/100 [00:00<00:04, 20.58it/s, \u2713=0, \u2716=0, error=18]
+Evaluation:  18%|#8        | 18/100 [00:00<00:03, 20.58it/s, \u2713=0, \u2716=0, error=19]
+Evaluation:  19%|#9        | 19/100 [00:00<00:03, 20.58it/s, \u2713=0, \u2716=0, error=20]
+Evaluation:  20%|##        | 20/100 [00:01<00:03, 20.58it/s, \u2713=0, \u2716=0, error=21]
+Evaluation:  21%|##1       | 21/100 [00:01<00:03, 21.18it/s, \u2713=0, \u2716=0, error=21]
+Evaluation:  21%|##1       | 21/100 [00:01<00:03, 21.18it/s, \u2713=0, \u2716=0, error=22]
+Evaluation:  22%|##2       | 22/100 [00:01<00:03, 21.18it/s, \u2713=0, \u2716=0, error=23]
+Evaluation:  23%|##3       | 23/100 [00:01<00:03, 21.18it/s, \u2713=0, \u2716=0, error=24]
+Evaluation:  24%|##4       | 24/100 [00:01<00:03, 21.18it/s, \u2713=0, \u2716=0, error=25]
+Evaluation:  25%|##5       | 25/100 [00:01<00:03, 21.50it/s, \u2713=0, \u2716=0, error=25]
+Evaluation:  25%|##5       | 25/100 [00:01<00:03, 21.50it/s, \u2713=0, \u2716=0, error=26]
+Evaluation:  26%|##6       | 26/100 [00:01<00:03, 21.50it/s, \u2713=0, \u2716=0, error=27]
+Evaluation:  27%|##7       | 27/100 [00:01<00:03, 21.50it/s, \u2713=0, \u2716=0, error=28]
+Evaluation:  28%|##8       | 28/100 [00:01<00:03, 21.50it/s, \u2713=0, \u2716=0, error=29]
+Evaluation:  29%|##9       | 29/100 [00:01<00:03, 22.07it/s, \u2713=0, \u2716=0, error=29]
+Evaluation:  29%|##9       | 29/100 [00:01<00:03, 22.07it/s, \u2713=0, \u2716=0, error=30]
+Evaluation:  30%|###       | 30/100 [00:01<00:03, 22.07it/s, \u2713=0, \u2716=0, error=31]
+Evaluation:  31%|###1      | 31/100 [00:01<00:03, 22.07it/s, \u2713=0, \u2716=0, error=32]
+Evaluation:  32%|###2      | 32/100 [00:01<00:03, 22.07it/s, \u2713=0, \u2716=0, error=33]
+Evaluation:  33%|###3      | 33/100 [00:01<00:02, 22.34it/s, \u2713=0, \u2716=0, error=33]
+Evaluation:  33%|###3      | 33/100 [00:01<00:02, 22.34it/s, \u2713=0, \u2716=0, error=34]
+Evaluation:  34%|###4      | 34/100 [00:01<00:02, 22.34it/s, \u2713=0, \u2716=0, error=35]
+Evaluation:  35%|###5      | 35/100 [00:01<00:02, 22.34it/s, \u2713=0, \u2716=0, error=36]
+Evaluation:  36%|###6      | 36/100 [00:01<00:02, 22.34it/s, \u2713=0, \u2716=0, error=37]
+Evaluation:  37%|###7      | 37/100 [00:01<00:02, 21.44it/s, \u2713=0, \u2716=0, error=37]
+Evaluation:  37%|###7      | 37/100 [00:01<00:02, 21.44it/s, \u2713=0, \u2716=0, error=38]
+Evaluation:  38%|###8      | 38/100 [00:01<00:02, 21.44it/s, \u2713=0, \u2716=0, error=39]
+Evaluation:  39%|###9      | 39/100 [00:02<00:02, 21.44it/s, \u2713=0, \u2716=0, error=40]
+Evaluation:  40%|####      | 40/100 [00:02<00:03, 17.82it/s, \u2713=0, \u2716=0, error=40]
+Evaluation:  40%|####      | 40/100 [00:02<00:03, 17.82it/s, \u2713=0, \u2716=0, error=41]
+Evaluation:  41%|####1     | 41/100 [00:02<00:03, 17.82it/s, \u2713=0, \u2716=0, error=42]
+Evaluation:  42%|####2     | 42/100 [00:02<00:03, 17.82it/s, \u2713=0, \u2716=0, error=43]
+Evaluation:  43%|####3     | 43/100 [00:02<00:03, 17.69it/s, \u2713=0, \u2716=0, error=43]
+Evaluation:  43%|####3     | 43/100 [00:02<00:03, 17.69it/s, \u2713=0, \u2716=0, error=44]
+Evaluation:  44%|####4     | 44/100 [00:02<00:03, 17.69it/s, \u2713=0, \u2716=0, error=45]
+Evaluation:  45%|####5     | 45/100 [00:02<00:03, 16.09it/s, \u2713=0, \u2716=0, error=45]
+Evaluation:  45%|####5     | 45/100 [00:02<00:03, 16.09it/s, \u2713=0, \u2716=0, error=46]
+Evaluation:  46%|####6     | 46/100 [00:02<00:03, 16.09it/s, \u2713=0, \u2716=0, error=47]
+Evaluation:  47%|####6     | 47/100 [00:02<00:03, 14.45it/s, \u2713=0, \u2716=0, error=47]
+Evaluation:  47%|####6     | 47/100 [00:02<00:03, 14.45it/s, \u2713=0, \u2716=0, error=48]
+Evaluation:  48%|####8     | 48/100 [00:02<00:03, 14.45it/s, \u2713=0, \u2716=0, error=49]
+Evaluation:  49%|####9     | 49/100 [00:02<00:03, 13.47it/s, \u2713=0, \u2716=0, error=49]
+Evaluation:  49%|####9     | 49/100 [00:02<00:03, 13.47it/s, \u2713=0, \u2716=0, error=50]
+Evaluation:  50%|#####     | 50/100 [00:03<00:03, 13.47it/s, \u2713=0, \u2716=0, error=51]
+Evaluation:  51%|#####1    | 51/100 [00:03<00:04,  9.97it/s, \u2713=0, \u2716=0, error=51]
+Evaluation:  51%|#####1    | 51/100 [00:03<00:04,  9.97it/s, \u2713=0, \u2716=0, error=52]
+Evaluation:  52%|#####2    | 52/100 [00:03<00:04,  9.97it/s, \u2713=0, \u2716=0, error=53]
+Evaluation:  53%|#####3    | 53/100 [00:03<00:04, 10.34it/s, \u2713=0, \u2716=0, error=53]
+Evaluation:  53%|#####3    | 53/100 [00:03<00:04, 10.34it/s, \u2713=0, \u2716=0, error=54]
+Evaluation:  54%|#####4    | 54/100 [00:03<00:04, 10.34it/s, \u2713=0, \u2716=0, error=55]
+Evaluation:  55%|#####5    | 55/100 [00:03<00:04, 11.01it/s, \u2713=0, \u2716=0, error=55]
+Evaluation:  55%|#####5    | 55/100 [00:03<00:04, 11.01it/s, \u2713=0, \u2716=0, error=56]
+Evaluation:  56%|#####6    | 56/100 [00:03<00:03, 11.01it/s, \u2713=0, \u2716=0, error=57]
+Evaluation:  57%|#####6    | 57/100 [00:03<00:03, 11.45it/s, \u2713=0, \u2716=0, error=57]
+Evaluation:  57%|#####6    | 57/100 [00:03<00:03, 11.45it/s, \u2713=0, \u2716=0, error=58]
+Evaluation:  58%|#####8    | 58/100 [00:03<00:03, 11.45it/s, \u2713=0, \u2716=0, error=59]
+Evaluation:  59%|#####8    | 59/100 [00:03<00:03, 10.37it/s, \u2713=0, \u2716=0, error=59]
+Evaluation:  59%|#####8    | 59/100 [00:03<00:03, 10.37it/s, \u2713=0, \u2716=0, error=60]
+Evaluation:  60%|######    | 60/100 [00:04<00:03, 10.37it/s, \u2713=0, \u2716=0, error=61]
+Evaluation:  61%|######1   | 61/100 [00:04<00:03, 10.02it/s, \u2713=0, \u2716=0, error=61]
+Evaluation:  61%|######1   | 61/100 [00:04<00:03, 10.02it/s, \u2713=0, \u2716=0, error=62]
+Evaluation:  62%|######2   | 62/100 [00:04<00:03, 10.02it/s, \u2713=0, \u2716=0, error=63]
+Evaluation:  63%|######3   | 63/100 [00:04<00:03, 10.02it/s, \u2713=0, \u2716=0, error=64]
+Evaluation:  64%|######4   | 64/100 [00:04<00:03, 11.62it/s, \u2713=0, \u2716=0, error=64]
+Evaluation:  64%|######4   | 64/100 [00:04<00:03, 11.62it/s, \u2713=0, \u2716=0, error=65]
+Evaluation:  65%|######5   | 65/100 [00:04<00:03, 11.62it/s, \u2713=0, \u2716=0, error=66]
+Evaluation:  66%|######6   | 66/100 [00:04<00:02, 11.62it/s, \u2713=0, \u2716=0, error=67]
+Evaluation:  67%|######7   | 67/100 [00:04<00:02, 11.72it/s, \u2713=0, \u2716=0, error=67]
+Evaluation:  67%|######7   | 67/100 [00:04<00:02, 11.72it/s, \u2713=0, \u2716=0, error=68]
+Evaluation:  68%|######8   | 68/100 [00:04<00:02, 11.72it/s, \u2713=0, \u2716=0, error=69]
+Evaluation:  69%|######9   | 69/100 [00:04<00:02, 11.72it/s, \u2713=0, \u2716=0, error=70]
+Evaluation:  70%|#######   | 70/100 [00:04<00:02, 12.31it/s, \u2713=0, \u2716=0, error=70]
+Evaluation:  70%|#######   | 70/100 [00:04<00:02, 12.31it/s, \u2713=0, \u2716=0, error=71]
+Evaluation:  71%|#######1  | 71/100 [00:05<00:02, 12.31it/s, \u2713=0, \u2716=0, error=72]
+Evaluation:  72%|#######2  | 72/100 [00:05<00:02,  9.52it/s, \u2713=0, \u2716=0, error=72]
+Evaluation:  72%|#######2  | 72/100 [00:05<00:02,  9.52it/s, \u2713=0, \u2716=0, error=73]
+Evaluation:  73%|#######3  | 73/100 [00:05<00:02,  9.52it/s, \u2713=0, \u2716=0, error=74]
+Evaluation:  74%|#######4  | 74/100 [00:05<00:03,  8.48it/s, \u2713=0, \u2716=0, error=74]
+Evaluation:  74%|#######4  | 74/100 [00:05<00:03,  8.48it/s, \u2713=0, \u2716=0, error=75]
+Evaluation:  75%|#######5  | 75/100 [00:05<00:02,  8.48it/s, \u2713=0, \u2716=0, error=76]
+Evaluation:  76%|#######6  | 76/100 [00:05<00:02,  9.01it/s, \u2713=0, \u2716=0, error=76]
+Evaluation:  76%|#######6  | 76/100 [00:05<00:02,  9.01it/s, \u2713=0, \u2716=0, error=77]
+Evaluation:  77%|#######7  | 77/100 [00:05<00:02,  9.01it/s, \u2713=0, \u2716=0, error=78]
+Evaluation:  78%|#######8  | 78/100 [00:05<00:02, 10.21it/s, \u2713=0, \u2716=0, error=78]
+Evaluation:  78%|#######8  | 78/100 [00:05<00:02, 10.21it/s, \u2713=0, \u2716=0, error=79]
+Evaluation:  79%|#######9  | 79/100 [00:05<00:02, 10.21it/s, \u2713=0, \u2716=0, error=80]
+Evaluation:  80%|########  | 80/100 [00:05<00:01, 10.21it/s, \u2713=0, \u2716=0, error=81]
+Evaluation:  81%|########1 | 81/100 [00:05<00:01, 11.16it/s, \u2713=0, \u2716=0, error=81]
+Evaluation:  81%|########1 | 81/100 [00:06<00:01, 11.16it/s, \u2713=0, \u2716=0, error=82]
+Evaluation:  82%|########2 | 82/100 [00:06<00:01, 11.16it/s, \u2713=0, \u2716=0, error=83]
+Evaluation:  83%|########2 | 83/100 [00:06<00:01, 11.16it/s, \u2713=0, \u2716=0, error=84]
+Evaluation:  84%|########4 | 84/100 [00:06<00:01, 11.58it/s, \u2713=0, \u2716=0, error=84]
+Evaluation:  84%|########4 | 84/100 [00:06<00:01, 11.58it/s, \u2713=0, \u2716=0, error=85]
+Evaluation:  85%|########5 | 85/100 [00:06<00:01, 11.58it/s, \u2713=0, \u2716=0, error=86]
+Evaluation:  86%|########6 | 86/100 [00:06<00:01, 11.58it/s, \u2713=0, \u2716=0, error=87]
+Evaluation:  87%|########7 | 87/100 [00:06<00:01, 11.19it/s, \u2713=0, \u2716=0, error=87]
+Evaluation:  87%|########7 | 87/100 [00:06<00:01, 11.19it/s, \u2713=0, \u2716=0, error=88]
+Evaluation:  88%|########8 | 88/100 [00:06<00:01, 11.19it/s, \u2713=0, \u2716=0, error=89]
+Evaluation:  89%|########9 | 89/100 [00:06<00:00, 11.19it/s, \u2713=0, \u2716=0, error=90]
+Evaluation:  90%|######### | 90/100 [00:06<00:00, 11.35it/s, \u2713=0, \u2716=0, error=90]
+Evaluation:  90%|######### | 90/100 [00:06<00:00, 11.35it/s, \u2713=0, \u2716=0, error=91]
+Evaluation:  91%|#########1| 91/100 [00:06<00:00, 11.35it/s, \u2713=0, \u2716=0, error=92]
+Evaluation:  92%|#########2| 92/100 [00:06<00:00, 11.35it/s, \u2713=0, \u2716=0, error=93]
+Evaluation:  93%|#########3| 93/100 [00:06<00:00, 11.87it/s, \u2713=0, \u2716=0, error=93]
+Evaluation:  93%|#########3| 93/100 [00:07<00:00, 11.87it/s, \u2713=0, \u2716=0, error=94]
+Evaluation:  94%|#########3| 94/100 [00:07<00:00, 11.87it/s, \u2713=0, \u2716=0, error=95]
+Evaluation:  95%|#########5| 95/100 [00:07<00:00, 10.93it/s, \u2713=0, \u2716=0, error=95]
+Evaluation:  95%|#########5| 95/100 [00:07<00:00, 10.93it/s, \u2713=0, \u2716=0, error=96]
+Evaluation:  96%|#########6| 96/100 [00:07<00:00, 10.93it/s, \u2713=0, \u2716=0, error=97]
+Evaluation:  97%|#########7| 97/100 [00:07<00:00,  9.39it/s, \u2713=0, \u2716=0, error=97]
+Evaluation:  97%|#########7| 97/100 [00:07<00:00,  9.39it/s, \u2713=0, \u2716=0, error=98]
+Evaluation:  98%|#########8| 98/100 [00:07<00:00,  9.39it/s, \u2713=0, \u2716=0, error=99]
+Evaluation:  99%|#########9| 99/100 [00:07<00:00,  7.41it/s, \u2713=0, \u2716=0, error=99]
+Evaluation:  99%|#########9| 99/100 [00:27<00:00,  7.41it/s, \u2713=0, \u2716=1, error=99]
+Evaluation: 100%|##########| 100/100 [00:27<00:00,  3.24s/it, \u2713=0, \u2716=1, error=99]
+Evaluation: 100%|##########| 100/100 [00:27<00:00,  3.59it/s, \u2713=0, \u2716=1, error=99]
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 100
+Instances submitted: 100
+Instances completed: 1
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 1
+Instances with empty patches: 0
+Instances with errors: 99
+Unstopped containers: 0
+Unremoved images: 1
+Report written to commscm-vi-b-static_heuristic.vi_b_rescore_part_vi_b_official_static_heuristic.json

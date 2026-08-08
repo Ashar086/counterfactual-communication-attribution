@@ -1,0 +1,37 @@
+2026-08-05 22:02:03,642 - INFO - Creating container for pytest-dev__pytest-7521...
+2026-08-05 22:02:03,877 - INFO - Container for pytest-dev__pytest-7521 created: eabb20d960fbd51c2206eba3bd7a26fb9648225086056bec6851b97b2598b52f
+2026-08-05 22:02:04,600 - INFO - Container for pytest-dev__pytest-7521 started: eabb20d960fbd51c2206eba3bd7a26fb9648225086056bec6851b97b2598b52f
+2026-08-05 22:02:04,602 - INFO - Intermediate patch for pytest-dev__pytest-7521 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\pytest-dev__pytest-7521\patch.diff, now applying to container...
+2026-08-05 22:02:05,085 - INFO - >>>>> Applied Patch:
+Checking patch src/_pytest/capture.py...
+Applied patch src/_pytest/capture.py cleanly.
+
+2026-08-05 22:02:05,428 - INFO - Git diff before:
+diff --git a/src/_pytest/capture.py b/src/_pytest/capture.py
+index 3f9c60fb9..f538b67ec 100644
+--- a/src/_pytest/capture.py
++++ b/src/_pytest/capture.py
+@@ -388,6 +388,7 @@ class FDCaptureBinary:
+                 TemporaryFile(buffering=0),  # type: ignore[arg-type]
+                 encoding="utf-8",
+                 errors="replace",
++                newline="",
+                 write_through=True,
+             )
+             if targetfd in patchsysdict:
+2026-08-05 22:02:05,430 - INFO - Eval script for pytest-dev__pytest-7521 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\pytest-dev__pytest-7521\eval.sh; copying to container...
+2026-08-05 22:02:35,625 - INFO - Test runtime: 29.88 seconds
+2026-08-05 22:02:35,628 - ERROR - Error in evaluating model for pytest-dev__pytest-7521: 'charmap' codec can't encode characters in position 17927-17928: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Temp\SWE-bench-src\swebench\harness\run_evaluation.py", line 213, in run_instance
+    f.write(test_output)
+    ~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 17927-17928: character maps to <undefined>
+
+Check (logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\pytest-dev__pytest-7521\run_instance.log) for more information.
+2026-08-05 22:02:35,628 - INFO - Attempting to stop container sweb.eval.pytest-dev__pytest-7521.oracle_gold_full_n100_lf...
+2026-08-05 22:02:51,160 - INFO - Attempting to remove container sweb.eval.pytest-dev__pytest-7521.oracle_gold_full_n100_lf...
+2026-08-05 22:02:51,267 - INFO - Container sweb.eval.pytest-dev__pytest-7521.oracle_gold_full_n100_lf removed.

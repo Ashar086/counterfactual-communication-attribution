@@ -1,0 +1,35 @@
+{
+    "total_instances": 6,
+    "submitted_instances": 6,
+    "completed_instances": 2,
+    "resolved_instances": 0,
+    "unresolved_instances": 2,
+    "empty_patch_instances": 0,
+    "error_instances": 4,
+    "completed_ids": [
+        "scikit-learn__scikit-learn-14710",
+        "scikit-learn__scikit-learn-14894"
+    ],
+    "incomplete_ids": [],
+    "empty_patch_ids": [],
+    "submitted_ids": [
+        "scikit-learn__scikit-learn-14710",
+        "scikit-learn__scikit-learn-14894",
+        "sympy__sympy-13974",
+        "sympy__sympy-14248",
+        "sympy__sympy-15976",
+        "sympy__sympy-17655"
+    ],
+    "resolved_ids": [],
+    "unresolved_ids": [
+        "scikit-learn__scikit-learn-14710",
+        "scikit-learn__scikit-learn-14894"
+    ],
+    "error_ids": [
+        "sympy__sympy-13974",
+        "sympy__sympy-14248",
+        "sympy__sympy-15976",
+        "sympy__sympy-17655"
+    ],
+    "schema_version": 2
+}

@@ -1,0 +1,41 @@
+2026-08-05 18:00:20,132 - INFO - Creating container for django__django-13023...
+2026-08-05 18:00:20,564 - INFO - Container for django__django-13023 created: 4e0ba12918b4bf6b7efb552725fa4d12f20402f240b02e2dd8ab399e0de408cc
+2026-08-05 18:00:21,302 - INFO - Container for django__django-13023 started: 4e0ba12918b4bf6b7efb552725fa4d12f20402f240b02e2dd8ab399e0de408cc
+2026-08-05 18:00:21,304 - INFO - Intermediate patch for django__django-13023 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\django__django-13023\patch.diff, now applying to container...
+2026-08-05 18:00:21,703 - INFO - >>>>> Applied Patch:
+Checking patch django/db/models/fields/__init__.py...
+Applied patch django/db/models/fields/__init__.py cleanly.
+
+2026-08-05 18:00:26,874 - INFO - Git diff before:
+diff --git a/django/db/models/fields/__init__.py b/django/db/models/fields/__init__.py
+index 0fd69059ee..28374272f4 100644
+--- a/django/db/models/fields/__init__.py
++++ b/django/db/models/fields/__init__.py
+@@ -1501,7 +1501,7 @@ class DecimalField(Field):
+             return self.context.create_decimal_from_float(value)
+         try:
+             return decimal.Decimal(value)
+-        except decimal.InvalidOperation:
++        except (decimal.InvalidOperation, TypeError, ValueError):
+             raise exceptions.ValidationError(
+                 self.error_messages['invalid'],
+                 code='invalid',
+2026-08-05 18:00:26,876 - INFO - Eval script for django__django-13023 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\django__django-13023\eval.sh; copying to container...
+2026-08-05 18:00:48,988 - ERROR - Error in evaluating model for django__django-13023: 'utf-8' codec can't decode byte 0x93 in position 13243: invalid start byte
+Traceback (most recent call last):
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Temp\SWE-bench-src\swebench\harness\run_evaluation.py", line 207, in run_instance
+    test_output, timed_out, total_runtime = exec_run_with_timeout(
+                                            ~~~~~~~~~~~~~~~~~~~~~^
+        container, "/bin/bash /eval.sh", timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Temp\SWE-bench-src\swebench\harness\docker_utils.py", line 217, in exec_run_with_timeout
+    return exec_result.decode(), timed_out, end_time - start_time
+           ~~~~~~~~~~~~~~~~~~^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x93 in position 13243: invalid start byte
+
+Check (logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\django__django-13023\run_instance.log) for more information.
+2026-08-05 18:00:48,988 - INFO - Attempting to stop container sweb.eval.django__django-13023.oracle_gold_full_n100_lf...
+2026-08-05 18:01:04,881 - INFO - Attempting to remove container sweb.eval.django__django-13023.oracle_gold_full_n100_lf...
+2026-08-05 18:01:04,960 - INFO - Container sweb.eval.django__django-13023.oracle_gold_full_n100_lf removed.

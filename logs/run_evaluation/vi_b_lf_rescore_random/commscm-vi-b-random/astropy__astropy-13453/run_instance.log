@@ -1,0 +1,51 @@
+2026-08-05 18:12:45,909 - INFO - Creating container for astropy__astropy-13453...
+2026-08-05 18:12:46,089 - INFO - Container for astropy__astropy-13453 created: 6989051d248c1fe9c50d922724c2901e57d26686e11e6abbb36cf2d0cbe59228
+2026-08-05 18:12:47,131 - INFO - Container for astropy__astropy-13453 started: 6989051d248c1fe9c50d922724c2901e57d26686e11e6abbb36cf2d0cbe59228
+2026-08-05 18:12:47,135 - INFO - Intermediate patch for astropy__astropy-13453 written to logs\run_evaluation\vi_b_lf_rescore_random\commscm-vi-b-random\astropy__astropy-13453\patch.diff, now applying to container...
+2026-08-05 18:12:48,119 - INFO - Failed to apply patch to container: git apply --verbose
+2026-08-05 18:12:49,458 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2026-08-05 18:12:49,714 - INFO - >>>>> Applied Patch:
+patching file astropy/io/ascii/html.py
+Hunk #1 succeeded at 339 with fuzz 3.
+
+2026-08-05 18:12:52,284 - INFO - Git diff before:
+diff --git a/astropy/io/ascii/html.py b/astropy/io/ascii/html.py
+index 266cf229c..a163dbd7d 100644
+--- a/astropy/io/ascii/html.py
++++ b/astropy/io/ascii/html.py
+@@ -339,6 +339,10 @@ class HTML(core.BaseReader):
+         self.outputter = HTMLOutputter()
+         return super().read(table)
+ 
++        if col.name in formats:
++            col.info.format = formats[col.name]
++
++    # Apply formatting to the data
+     def write(self, table):
+         """
+         Return data in ``table`` converted to HTML as a list of strings.
+2026-08-05 18:12:52,288 - INFO - Eval script for astropy__astropy-13453 written to logs\run_evaluation\vi_b_lf_rescore_random\commscm-vi-b-random\astropy__astropy-13453\eval.sh; copying to container...
+2026-08-05 18:17:22,694 - INFO - Test runtime: 269.89 seconds
+2026-08-05 18:17:22,703 - INFO - Test output for astropy__astropy-13453 written to logs\run_evaluation\vi_b_lf_rescore_random\commscm-vi-b-random\astropy__astropy-13453\test_output.txt
+2026-08-05 18:17:23,007 - INFO - Git diff after:
+diff --git a/astropy/io/ascii/html.py b/astropy/io/ascii/html.py
+index 266cf229c..a163dbd7d 100644
+--- a/astropy/io/ascii/html.py
++++ b/astropy/io/ascii/html.py
+@@ -339,6 +339,10 @@ class HTML(core.BaseReader):
+         self.outputter = HTMLOutputter()
+         return super().read(table)
+ 
++        if col.name in formats:
++            col.info.format = formats[col.name]
++
++    # Apply formatting to the data
+     def write(self, table):
+         """
+         Return data in ``table`` converted to HTML as a list of strings.
+2026-08-05 18:17:23,007 - INFO - Grading answer for astropy__astropy-13453...
+2026-08-05 18:17:23,104 - INFO - report: {'astropy__astropy-13453': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': False, 'tests_status': {'FAIL_TO_PASS': {'success': [], 'failure': ['astropy/io/ascii/tests/test_html.py::test_write_table_formatted_columns']}, 'PASS_TO_PASS': {'success': ['astropy/io/ascii/tests/test_html.py::test_listwriter', 'astropy/io/ascii/tests/test_html.py::test_htmlinputter_no_bs4', 'astropy/io/ascii/tests/test_html.py::test_multicolumn_write', 'astropy/io/ascii/tests/test_html.py::test_write_no_multicols', 'astropy/io/ascii/tests/test_html.py::test_write_table_html_fill_values', 'astropy/io/ascii/tests/test_html.py::test_write_table_html_fill_values_optional_columns', 'astropy/io/ascii/tests/test_html.py::test_write_table_html_fill_values_masked', 'astropy/io/ascii/tests/test_html.py::test_multicolumn_table_html_fill_values', 'astropy/io/ascii/tests/test_html.py::test_multi_column_write_table_html_fill_values_masked'], 'failure': []}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for astropy__astropy-13453: resolved: False
+2026-08-05 18:17:23,107 - INFO - Attempting to stop container sweb.eval.astropy__astropy-13453.vi_b_lf_rescore_random...
+2026-08-05 18:17:38,704 - INFO - Attempting to remove container sweb.eval.astropy__astropy-13453.vi_b_lf_rescore_random...
+2026-08-05 18:17:38,798 - INFO - Container sweb.eval.astropy__astropy-13453.vi_b_lf_rescore_random removed.

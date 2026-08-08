@@ -1,0 +1,11 @@
+--- a/django/db/models/fields/__init__.py
++++ b/django/db/models/fields/__init__.py
+@@ -1234,7 +1234,7 @@
+         super().__init__(*args, **kwargs)
+         if self.max_length is not None:
+-            self.validators.append(validators.MaxLengthValidator(self.max_length))
++            if self.max_length is not None:
++                self.validators.append(validators.MaxLengthValidator(self.max_length))
+
+# The following function definition is commented out due to a syntax error.
+# def solve(  # missing closing paren and body

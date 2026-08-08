@@ -1,0 +1,13 @@
+--- a/django/db/models/options.py
++++ b/django/db/models/options.py
+@@ -1234,7 +1234,7 @@
+                     field.remote_field.model._meta.object_name,
+                     field.name,
+                     field.remote_field.model._meta.db_table,
+-                    field.remote_field.field_name,
++                    field.remote_field.field_name if field.remote_field.field_name in target_fields else field.name,
+                     )
+ 
+                 # Add the foreign key field to the model
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

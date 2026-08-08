@@ -1,0 +1,10 @@
+--- a/django/db/models/functions.py
++++ b/django/db/models/functions.py
+@@ -123,7 +123,7 @@
+         # Adjust the timezone name for the query
+         if tzname.startswith('Etc/GMT'):
+-            return tzname.replace('Etc/GMT', '').replace('+', '-')
++            return tzname.replace('Etc/GMT', '').replace('+', '-').replace('-', '+', 1)
+         return tzname
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

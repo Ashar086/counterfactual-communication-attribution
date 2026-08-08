@@ -1,0 +1,8 @@
+--- a/models.py
++++ b/models.py
+@@ -6,6 +6,7 @@
+     f = models.BooleanField(default=False)
+     def reset(self):
+         self.uid = None
++        self.pk = None
+         self.f = False

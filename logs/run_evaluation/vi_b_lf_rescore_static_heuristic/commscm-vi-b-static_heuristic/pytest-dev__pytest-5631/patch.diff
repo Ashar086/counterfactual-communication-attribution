@@ -1,0 +1,7 @@
+--- a/compat.py
++++ b/compat.py
+@@ -91,7 +91,7 @@
+         return len([p for p in patchings
+             if not p.attribute_name and (p.new in sentinels or (isinstance(p.new, np.ndarray) and p.new.size == 0))])
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

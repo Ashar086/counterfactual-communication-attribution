@@ -1,0 +1,20 @@
+{
+    "astropy__astropy-13453": {
+        "patch_is_None": false,
+        "patch_exists": true,
+        "patch_successfully_applied": false,
+        "resolved": false,
+        "tests_status": {
+            "FAIL_TO_PASS": {
+                "success": [],
+                "failure": []
+            },
+            "PASS_TO_PASS": {
+                "success": [],
+                "failure": []
+            }
+        },
+        "commscm_skip_stub": true,
+        "commscm_note": "stub so resume skips prior patch-apply error"
+    }
+}

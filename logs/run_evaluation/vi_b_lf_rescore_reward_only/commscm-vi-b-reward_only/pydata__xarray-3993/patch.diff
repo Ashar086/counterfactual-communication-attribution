@@ -1,0 +1,13 @@
+--- a/xarray/core/dataarray.py
++++ b/xarray/core/dataarray.py
+@@ -1234,7 +1234,7 @@
+         return self._reduce(np.sum, dim=dim, **kwargs)
+ 
+     def integrate(self, dim=None, **kwargs):
+-        return self._integrate(dim=dim, **kwargs)
++        return self._integrate(coord=dim, **kwargs)
+ 
+     def differentiate(self, dim=None, **kwargs):
+         return self._differentiate(coord=dim, **kwargs)
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

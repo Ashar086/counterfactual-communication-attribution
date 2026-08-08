@@ -1,0 +1,14 @@
+--- a/django/db/models/options.py
++++ b/django/db/models/options.py
+@@ -1234,7 +1234,8 @@
+                     field.remote_field.model._meta.object_name,
+                     field.column,
+                     field.remote_field.model._meta.pk.name,
+                 )
+-                field.remote_field.model = related_model
++                field.remote_field.model = related_model if related_field is None else related_model
++                field.remote_field.field_name = related_field.name if related_field else related_model._meta.pk.name
+
+ # Ensure that the function definitions are complete and valid
+ def solve():  # Placeholder for the function body
+     pass  # Implement the function logic here

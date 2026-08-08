@@ -1,0 +1,12 @@
+--- a/django/db/models/query_utils.py
++++ b/django/db/models/query_utils.py
+@@ -209,6 +209,7 @@
+         # Unregister the lookup
+         del self._lookups[lookup_name]
+ 
++        self._lookup_cache.clear()
+ 
+     def register_lookup(self, lookup_name, lookup_class):
+         ...
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

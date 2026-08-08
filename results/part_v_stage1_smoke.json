@@ -1,0 +1,12 @@
+{
+  "stage": 1,
+  "framework": "autogen_agentchat",
+  "task_id": "return_ok",
+  "y": 0.1,
+  "gold": "C1",
+  "cr_top1": "C1",
+  "cr_hit": true,
+  "n_events": 6,
+  "architecture_id": "autogen_planner_coder_reviewer_reviser_executor_v0",
+  "core_invariance": "adapter_only"
+}

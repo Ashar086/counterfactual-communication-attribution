@@ -1,0 +1,15 @@
+--- a/django/db/backends/postgres/client.py
++++ b/django/db/backends/postgres/client.py
+@@ -1,6 +1,7 @@
+ import os
++import subprocess
+ 
+ class DatabaseClient:
+ 
+     def _execute(self, command):
+-        os.system(command)
++        env = os.environ.copy()
++        env['PGPASSWORD'] = self.settings_dict['PASSWORD']
++        subprocess.run(command, env=env, check=True)
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

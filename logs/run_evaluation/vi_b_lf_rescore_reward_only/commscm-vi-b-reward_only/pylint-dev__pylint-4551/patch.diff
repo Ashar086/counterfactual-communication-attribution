@@ -1,0 +1,13 @@
+--- a/pyreverse.py
++++ b/pyreverse.py
+@@ -123,6 +123,10 @@
+ 
+ def parse_function_signature(func):
+     # Existing parsing logic...
++    type_hints = get_type_hints(func)
++    for arg, hint in type_hints.items():
++        if hint is not None:
++            print(f"{arg}: {hint.__name__}")
+ 
+ def get_type_hints(func):
+     # Logic to extract type hints from the function signature

@@ -1,0 +1,45 @@
+2026-08-05 02:00:21,284 - INFO - Creating container for django__django-14493...
+2026-08-05 02:00:21,787 - INFO - Container for django__django-14493 created: 6e2246063973ec94b9598a5037179e5bf48f70f350ffbe44558a9529d81ec684
+2026-08-05 02:00:22,424 - INFO - Container for django__django-14493 started: 6e2246063973ec94b9598a5037179e5bf48f70f350ffbe44558a9529d81ec684
+2026-08-05 02:00:22,427 - INFO - Intermediate patch for django__django-14493 written to logs\run_evaluation\vi_b_lf_rescore_reward_only\commscm-vi-b-reward_only\django__django-14493\patch.diff, now applying to container...
+2026-08-05 02:00:22,830 - INFO - Failed to apply patch to container: git apply --verbose
+2026-08-05 02:00:22,979 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2026-08-05 02:00:23,199 - INFO - >>>>> Applied Patch:
+patching file django/contrib/staticfiles/storage.py
+Hunk #1 succeeded at 246 with fuzz 3.
+
+2026-08-05 02:00:26,560 - INFO - Git diff before:
+diff --git a/django/contrib/staticfiles/storage.py b/django/contrib/staticfiles/storage.py
+index f957a667b2..aa6ab553d5 100644
+--- a/django/contrib/staticfiles/storage.py
++++ b/django/contrib/staticfiles/storage.py
+@@ -246,6 +246,7 @@ class HashedFilesMixin:
+         adjustable_paths = [
+             path for path in paths
+             if matches_patterns(path, self._patterns)
++            substitutions = {}  # Ensure substitutions is initialized
+         ]
+ 
+         # Adjustable files to yield at end, keyed by the original path.
+2026-08-05 02:00:26,562 - INFO - Eval script for django__django-14493 written to logs\run_evaluation\vi_b_lf_rescore_reward_only\commscm-vi-b-reward_only\django__django-14493\eval.sh; copying to container...
+2026-08-05 02:01:57,365 - INFO - Test runtime: 90.61 seconds
+2026-08-05 02:01:57,370 - INFO - Test output for django__django-14493 written to logs\run_evaluation\vi_b_lf_rescore_reward_only\commscm-vi-b-reward_only\django__django-14493\test_output.txt
+2026-08-05 02:01:57,610 - INFO - Git diff after:
+diff --git a/django/contrib/staticfiles/storage.py b/django/contrib/staticfiles/storage.py
+index f957a667b2..aa6ab553d5 100644
+--- a/django/contrib/staticfiles/storage.py
++++ b/django/contrib/staticfiles/storage.py
+@@ -246,6 +246,7 @@ class HashedFilesMixin:
+         adjustable_paths = [
+             path for path in paths
+             if matches_patterns(path, self._patterns)
++            substitutions = {}  # Ensure substitutions is initialized
+         ]
+ 
+         # Adjustable files to yield at end, keyed by the original path.
+2026-08-05 02:01:57,610 - INFO - Grading answer for django__django-14493...
+2026-08-05 02:01:57,648 - INFO - report: {'django__django-14493': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': False, 'tests_status': {'FAIL_TO_PASS': {'success': [], 'failure': ['test_collectstatistic_no_post_process_replaced_paths (staticfiles_tests.test_storage.TestCollectionNoPostProcessReplacedPaths)']}, 'PASS_TO_PASS': {'success': [], 'failure': ['test_hashed_name (staticfiles_tests.test_storage.TestCollectionNoneHashStorage)', 'With storage classes having several file extension patterns, only the', 'test_collect_static_files_default_permissions (staticfiles_tests.test_storage.TestStaticFilePermissions)', 'test_collect_static_files_permissions (staticfiles_tests.test_storage.TestStaticFilePermissions)', 'test_collect_static_files_subclass_of_static_storage (staticfiles_tests.test_storage.TestStaticFilePermissions)', 'test_template_tag_return (staticfiles_tests.test_storage.TestCollectionSimpleStorage)', 'test_template_tag_simple_content (staticfiles_tests.test_storage.TestCollectionSimpleStorage)', 'test_file_change_after_collectstatic (staticfiles_tests.test_storage.TestCollectionHashedFilesCache)', 'test_aggregating_modules (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_clear_empties_manifest (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_css_import_case_insensitive (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_import_loop (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'See #18050', 'test_intermediate_files (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_js_source_map (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_js_source_map_sensitive (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_loaded_cache (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_manifest_does_not_exist (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_manifest_does_not_ignore_permission_error (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_manifest_exists (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_missing_entry (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_module_import (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_parse_cache (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_path_ignored_completely (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_path_with_fragment (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_path_with_querystring (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_path_with_querystring_and_fragment (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'post_processing behaves correctly.', 'post_processing indicates the origin of the error when it fails.', 'test_template_tag_absolute (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'Like test_template_tag_absolute, but for a file in STATIC_ROOT (#26249).', 'test_template_tag_deep_relative (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_template_tag_relative (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_template_tag_return (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_template_tag_simple_content (staticfiles_tests.test_storage.TestCollectionManifestStorage)', 'test_template_tag_url (staticfiles_tests.test_storage.TestCollectionManifestStorage)']}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for django__django-14493: resolved: False
+2026-08-05 02:01:57,651 - INFO - Attempting to stop container sweb.eval.django__django-14493.vi_b_lf_rescore_reward_only...
+2026-08-05 02:02:13,350 - INFO - Attempting to remove container sweb.eval.django__django-14493.vi_b_lf_rescore_reward_only...
+2026-08-05 02:02:13,448 - INFO - Container sweb.eval.django__django-14493.vi_b_lf_rescore_reward_only removed.

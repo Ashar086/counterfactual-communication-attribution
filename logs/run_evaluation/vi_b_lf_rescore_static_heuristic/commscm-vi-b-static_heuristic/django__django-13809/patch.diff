@@ -1,0 +1,14 @@
+diff --git a/django/core/management/commands/runserver.py b/django/core/management/commands/runserver.py
+index 1234567..89abcde 100644
+--- a/django/core/management/commands/runserver.py
++++ b/django/core/management/commands/runserver.py
+@@ -20,6 +20,7 @@ from django.core.management.base import BaseCommand
+ from django.core.management.commands.runserver import Command as RunserverCommand
+ 
+ class Command(RunserverCommand):
++    def add_arguments(self, parser):
++        parser.add_argument('--skip-checks', action='store_true', help='Skip system checks.')
+ 
+     def check(self, **kwargs):
+         if not kwargs.get('skip_checks', False):
++            # Additional logic for checks can be added here

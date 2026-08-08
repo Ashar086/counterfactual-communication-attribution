@@ -1,0 +1,10 @@
+--- a/models.py
++++ b/models.py
+@@ -6,6 +6,7 @@
+     def reset(self):
+         self.uid = None
+         self.f = False
++        self.pk = None
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

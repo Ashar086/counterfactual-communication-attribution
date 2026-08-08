@@ -1,0 +1,21 @@
+--- a/fix.py
++++ b/fix.py
+@@ -1,3 +1,7 @@
+ def apply_patch():
+     return 'ok'
+ 
++class Point:
++    def __init__(self, x, y):
++        self.x = x
++        self.y = y
++
++    def __mul__(self, other):
++        if isinstance(other, (int, float)):
++            return Point(self.x * other, self.y * other)
++        return NotImplemented
++
++    def __rmul__(self, other):
++        return self.__mul__(other)
++
++def solve():
++    pass  # Placeholder for the solve function

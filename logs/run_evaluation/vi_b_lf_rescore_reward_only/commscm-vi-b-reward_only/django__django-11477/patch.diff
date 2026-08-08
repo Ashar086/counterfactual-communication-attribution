@@ -1,0 +1,9 @@
+--- a/django/urls/resolvers.py
++++ b/django/urls/resolvers.py
+@@ -123,7 +123,7 @@
+     def _reverse_with_prefix(viewname, args=None, kwargs=None, current_app=None):
+         ...
+         # Existing logic
+-        kwargs = {k: v for k, v in kwargs.items()}  # This line may convert None to 'None'
++        kwargs = {k: v for k, v in kwargs.items() if v is not None}  # Discard None values
+         ...

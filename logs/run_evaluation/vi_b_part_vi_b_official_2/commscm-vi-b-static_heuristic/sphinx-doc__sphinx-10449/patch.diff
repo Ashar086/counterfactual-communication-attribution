@@ -1,0 +1,11 @@
+--- docs/conf.py
++++ docs/conf.py
+@@ -15,7 +15,7 @@
+ # -- Extension configuration -------------------------------------------------
+ 
+ autodoc_typehints = "description"
+-autodoc_typehints_description_target = "documented"
++autodoc_typehints_description_target = "none"
+
++def solve():  # Added missing closing parenthesis and body
++    pass  # Placeholder for function body

@@ -1,0 +1,54 @@
+2026-08-04 12:18:06,574 - INFO - Creating container for astropy__astropy-13453...
+2026-08-04 12:18:07,948 - INFO - Container for astropy__astropy-13453 created: 915feca0157865629d718d3182e6b959a6e4684f16ea3214139cf261da84ca0d
+2026-08-04 12:18:08,730 - INFO - Container for astropy__astropy-13453 started: 915feca0157865629d718d3182e6b959a6e4684f16ea3214139cf261da84ca0d
+2026-08-04 12:18:08,732 - INFO - Intermediate patch for astropy__astropy-13453 written to logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\astropy__astropy-13453\patch.diff, now applying to container...
+2026-08-04 12:18:09,225 - INFO - Failed to apply patch to container: git apply --verbose
+2026-08-04 12:18:09,503 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2026-08-04 12:18:09,966 - INFO - >>>>> Applied Patch:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file astropy/io/ascii/html.py
+Hunk #1 succeeded at 339 with fuzz 3.
+
+2026-08-04 12:18:11,997 - INFO - Git diff before:
+diff --git a/astropy/io/ascii/html.py b/astropy/io/ascii/html.py
+index 266cf229c..a163dbd7d 100644
+--- a/astropy/io/ascii/html.py
++++ b/astropy/io/ascii/html.py
+@@ -339,6 +339,10 @@ class HTML(core.BaseReader):
+         self.outputter = HTMLOutputter()
+         return super().read(table)
+ 
++        if col.name in formats:
++            col.info.format = formats[col.name]
++
++    # Apply formatting to the data
+     def write(self, table):
+         """
+         Return data in ``table`` converted to HTML as a list of strings.
+2026-08-04 12:18:11,998 - INFO - Eval script for astropy__astropy-13453 written to logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\astropy__astropy-13453\eval.sh; copying to container...
+2026-08-04 12:18:20,637 - INFO - Test runtime: 8.24 seconds
+2026-08-04 12:18:20,639 - INFO - Test output for astropy__astropy-13453 written to logs\run_evaluation\vi_b_rescore_part_vi_b_official_random\commscm-vi-b-random\astropy__astropy-13453\test_output.txt
+2026-08-04 12:18:21,072 - INFO - Git diff after:
+diff --git a/astropy/io/ascii/html.py b/astropy/io/ascii/html.py
+index 266cf229c..a163dbd7d 100644
+--- a/astropy/io/ascii/html.py
++++ b/astropy/io/ascii/html.py
+@@ -339,6 +339,10 @@ class HTML(core.BaseReader):
+         self.outputter = HTMLOutputter()
+         return super().read(table)
+ 
++        if col.name in formats:
++            col.info.format = formats[col.name]
++
++    # Apply formatting to the data
+     def write(self, table):
+         """
+         Return data in ``table`` converted to HTML as a list of strings.
+2026-08-04 12:18:21,073 - INFO - Grading answer for astropy__astropy-13453...
+2026-08-04 12:18:21,135 - INFO - report: {'astropy__astropy-13453': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': False, 'tests_status': {'FAIL_TO_PASS': {'success': [], 'failure': ['astropy/io/ascii/tests/test_html.py::test_write_table_formatted_columns']}, 'PASS_TO_PASS': {'success': [], 'failure': ['astropy/io/ascii/tests/test_html.py::test_listwriter', 'astropy/io/ascii/tests/test_html.py::test_htmlinputter_no_bs4', 'astropy/io/ascii/tests/test_html.py::test_multicolumn_write', 'astropy/io/ascii/tests/test_html.py::test_write_no_multicols', 'astropy/io/ascii/tests/test_html.py::test_write_table_html_fill_values', 'astropy/io/ascii/tests/test_html.py::test_write_table_html_fill_values_optional_columns', 'astropy/io/ascii/tests/test_html.py::test_write_table_html_fill_values_masked', 'astropy/io/ascii/tests/test_html.py::test_multicolumn_table_html_fill_values', 'astropy/io/ascii/tests/test_html.py::test_multi_column_write_table_html_fill_values_masked']}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for astropy__astropy-13453: resolved: False
+2026-08-04 12:18:21,137 - INFO - Attempting to stop container sweb.eval.astropy__astropy-13453.vi_b_rescore_part_vi_b_official_random...
+2026-08-04 12:18:36,908 - INFO - Attempting to remove container sweb.eval.astropy__astropy-13453.vi_b_rescore_part_vi_b_official_random...
+2026-08-04 12:18:36,959 - INFO - Container sweb.eval.astropy__astropy-13453.vi_b_rescore_part_vi_b_official_random removed.
+2026-08-04 12:18:36,959 - INFO - Attempting to remove image swebench/sweb.eval.x86_64.astropy_1776_astropy-13453:latest...
+2026-08-04 12:18:38,655 - INFO - Image swebench/sweb.eval.x86_64.astropy_1776_astropy-13453:latest removed.

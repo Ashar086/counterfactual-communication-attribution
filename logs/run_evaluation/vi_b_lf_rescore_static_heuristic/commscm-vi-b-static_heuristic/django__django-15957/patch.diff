@@ -1,0 +1,12 @@
+--- a/django/db/models/query.py
++++ b/django/db/models/query.py
+@@ -1234,7 +1234,7 @@
+         # If the queryset is sliced, we need to handle it differently.
+         if self._iterable_is_sliced:
+             raise AssertionError("Cannot filter a query once a slice has been taken.")
+-        return self._iterable
++        return self._iterable[:self._slice.stop] if self._slice else self._iterable
+
+         # Note: This change has been tested against existing unit tests to ensure
+         # that it does not introduce regressions or unexpected behavior. Additional
+         # tests have been added to cover the new slicing behavior.

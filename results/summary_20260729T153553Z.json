@@ -1,0 +1,64 @@
+{
+  "overall": {
+    "n": 100,
+    "failure_rate": 0.5,
+    "precision_at_1": 0.58,
+    "mean_reward": 0.525
+  },
+  "poisoned_only": {
+    "n": 75,
+    "precision_at_1": 0.44,
+    "failure_rate": 0.6666666666666666
+  },
+  "by_mode": {
+    "POISON_PLANNER": {
+      "n": 25,
+      "failure_rate": 1.0,
+      "precision_at_1": 0.32,
+      "mean_reward": 0.1,
+      "blame_counts": {
+        "planner": 8,
+        "executor": 11,
+        "none": 1,
+        "coder": 5
+      }
+    },
+    "POISON_CODER": {
+      "n": 25,
+      "failure_rate": 1.0,
+      "precision_at_1": 1.0,
+      "mean_reward": 0.0,
+      "blame_counts": {
+        "coder": 25
+      }
+    },
+    "POISON_REVIEWER": {
+      "n": 25,
+      "failure_rate": 0.0,
+      "precision_at_1": 0.0,
+      "mean_reward": 1.0,
+      "blame_counts": {
+        "none": 25
+      }
+    },
+    "NONE": {
+      "n": 25,
+      "failure_rate": 0.0,
+      "precision_at_1": 1.0,
+      "mean_reward": 1.0,
+      "blame_counts": {
+        "none": 25
+      }
+    }
+  },
+  "modes_requested": [
+    "POISON_PLANNER",
+    "POISON_CODER",
+    "POISON_REVIEWER",
+    "NONE"
+  ],
+  "jsonl_path": "results\\runs_20260729T153553Z.jsonl",
+  "n_runs": 100,
+  "seed": 42,
+  "mock_llm": false
+}

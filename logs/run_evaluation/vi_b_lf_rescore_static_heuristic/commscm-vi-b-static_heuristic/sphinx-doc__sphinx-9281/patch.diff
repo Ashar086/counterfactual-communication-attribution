@@ -1,0 +1,17 @@
+--- a/original.py
++++ b/fixed.py
+@@ -1,5 +1,12 @@
+ import enum
+ 
+ class MyEnum(enum.Enum):
+     ValueA = 10
+     ValueB = 20
++
++    def __repr__(self):
++        return self.__class__.__name__ + "." + self.name
++
++def ugly_enum_func(e: MyEnum = MyEnum.ValueA) -> None:
++    pass
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

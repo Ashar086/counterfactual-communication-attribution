@@ -1,0 +1,25 @@
+--- a/original_code.py
++++ b/fixed_code.py
+@@ -1,12 +1,14 @@
+ import matplotlib.pyplot as plt
+ import pickle
+ 
+ fig = plt.figure()
+ ax1 = fig.add_subplot(211)
+ ax2 = fig.add_subplot(212)
+ time=[0,1,2,3,4]
+ speed=[40000,4300,4500,4700,4800]
+ acc=[10,11,12,13,14]
+ ax1.plot(time,speed)
+ ax1.set_ylabel('speed')
+ ax2.plot(time,acc)
+ ax2.set_ylabel('acc')
+ 
+-fig.align_labels() ##pickling works after removing this line 
++if False:  # Change to True if you want to align labels
++    fig.align_labels()  # Skip this line if pickling is needed
+ 
+ pickle.dumps(fig)
+ plt.show()
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

@@ -1,0 +1,11 @@
+--- a/xarray/core/dataarray.py
++++ b/xarray/core/dataarray.py
+@@ -1234,7 +1234,7 @@
+         return self._reduce(np.trapz, dim=dim, **kwargs)
+ 
+     def integrate(self, dim=None, **kwargs):
+-        return self._reduce(np.trapz, dim=dim, **kwargs)
++        return self._reduce(np.trapz, coord=dim, **kwargs)
+
++    def solve(self):  # Added missing closing paren and body
++        pass  # Placeholder for the function body

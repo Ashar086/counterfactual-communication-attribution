@@ -1,0 +1,14 @@
+--- a/django/db/models/sql/query.py
++++ b/django/db/models/sql/query.py
+@@ -404,6 +404,9 @@
+         # Remove unused annotations for count queries
+         if self.is_count_query() or self.is_exists_query():
+             if hasattr(self, '_used_annotations') and self._used_annotations:
+                 self.annotations = {
+                     key: value for key, value in self.annotations.items() 
+                     if key in self._used_annotations
+                 }
+             else:
+                 self.annotations = {}  # Clear annotations if _used_annotations is empty or not defined
+ 
+         # Continue with the existing logic

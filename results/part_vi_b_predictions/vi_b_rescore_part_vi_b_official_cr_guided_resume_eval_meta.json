@@ -1,0 +1,48 @@
+{
+  "returncode": 0,
+  "stdout_tail": "d\"\n2026-08-04 07:31:57,606 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py \"HTTP/1.1 404 Not Found\"\n2026-08-04 07:31:57,883 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml \"HTTP/1.1 404 Not Found\"\n2026-08-04 07:31:58,159 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified \"HTTP/1.1 200 OK\"\n2026-08-04 07:31:58,433 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json \"HTTP/1.1 404 Not Found\"\nRunning 6 instances...\n\nEvaluation:   0%|          | 0/6 [00:00<?, ?it/s, error=0, \\u2713=0, \\u2716=0]\nEvaluation:   0%|          | 0/6 [07:05<?, ?it/s, \\u2713=0, \\u2716=0, error=1]\nEvaluation:  17%|#6        | 1/6 [07:05<35:29, 425.81s/it, \\u2713=0, \\u2716=0, error=1]\nEvaluation:  17%|#6        | 1/6 [07:22<35:29, 425.81s/it, \\u2713=0, \\u2716=0, error=2]\nEvaluation:  33%|###3      | 2/6 [07:22<12:21, 185.43s/it, \\u2713=0, \\u2716=0, error=2]\nEvaluation:  33%|###3      | 2/6 [07:29<12:21, 185.43s/it, \\u2713=0, \\u2716=0, error=3]\nEvaluation:  50%|#####     | 3/6 [07:29<05:11, 103.97s/it, \\u2713=0, \\u2716=0, error=3]\nEvaluation:  50%|#####     | 3/6 [07:46<05:11, 103.97s/it, \\u2713=0, \\u2716=0, error=4]\nEvaluation:  67%|######6   | 4/6 [07:46<02:19, 69.51s/it, \\u2713=0, \\u2716=0, error=4] \nEvaluation:  67%|######6   | 4/6 [12:13<02:19, 69.51s/it, \\u2713=0, \\u2716=1, error=4]\nEvaluation:  83%|########3 | 5/6 [12:13<02:20, 140.83s/it, \\u2713=0, \\u2716=1, error=4]\nEvaluation:  83%|########3 | 5/6 [12:17<02:20, 140.83s/it, \\u2713=0, \\u2716=2, error=4]\nEvaluation: 100%|##########| 6/6 [12:17<00:00, 94.05s/it, \\u2713=0, \\u2716=2, error=4] \nEvaluation: 100%|##########| 6/6 [12:17<00:00, 122.87s/it, \\u2713=0, \\u2716=2, error=4]\nsympy__sympy-13974: >>>>> Patch Apply Failed:\n(Stripping trailing CRs from patch; use --binary to disable.)\npatch: **** malformed patch at line 19:      return expr\n\npatching file sympy/physics/quantum/tensorproduct.py\n\nCheck (logs\\run_evaluation\\vi_b_rescore_part_vi_b_official_cr_guided\\commscm-vi-b-cr_guided\\sympy__sympy-13974\\run_instance.log) for more information.\nsympy__sympy-14248: >>>>> Patch Apply Failed:\n(Stripping trailing CRs from patch; use --binary to disable.)\npatching file sympy/matrices/matrices.py\nHunk #1 FAILED at 1234.\n1 out of 1 hunk FAILED -- saving rejects to file sympy/matrices/matrices.py.rej\n\nCheck (logs\\run_evaluation\\vi_b_rescore_part_vi_b_official_cr_guided\\commscm-vi-b-cr_guided\\sympy__sympy-14248\\run_instance.log) for more information.\nsympy__sympy-15976: >>>>> Patch Apply Failed:\npatch: **** Only garbage was found in the patch input.\n\nCheck (logs\\run_evaluation\\vi_b_rescore_part_vi_b_official_cr_guided\\commscm-vi-b-cr_guided\\sympy__sympy-15976\\run_instance.log) for more information.\nsympy__sympy-17655: >>>>> Patch Apply Failed:\n(Stripping trailing CRs from patch; use --binary to disable.)\ncan't find file to patch at input line 3\nPerhaps you used the wrong -p or --strip option?\nThe text leading up to this was:\n--------------------------\n|--- a/fix.py\n\n|+++ b/fix.py\n\n--------------------------\nNo file to patch.  Skipping patch.\n1 out of 1 hunk ignored\n\nCheck (logs\\run_evaluation\\vi_b_rescore_part_vi_b_official_cr_guided\\commscm-vi-b-cr_guided\\sympy__sympy-17655\\run_instance.log) for more information.\nAll instances run.\nCleaning cached images...\nRemoved 0 images.\nTotal instances: 6\nInstances submitted: 6\nInstances completed: 2\nInstances incomplete: 0\nInstances resolved: 0\nInstances unresolved: 2\nInstances with empty patches: 0\nInstances with errors: 4\nUnstopped containers: 0\nUnremoved images: 0\nReport written to commscm-vi-b-cr_guided.vi_b_rescore_part_vi_b_official_cr_guided.json\n",
+  "stderr_tail": "",
+  "harness_log": "results\\part_vi_b_predictions\\vi_b_rescore_part_vi_b_official_cr_guided_harness.log",
+  "run_id": "vi_b_rescore_part_vi_b_official_cr_guided",
+  "predictions_path": "C:\\Users\\BEST BUY COMPUTERS\\OneDrive\\Desktop\\meta ai agent workshop\\results\\part_vi_b_predictions\\vi_b_rescore_part_vi_b_official_cr_guided_resume.jsonl",
+  "artifact_candidates": [
+    "commscm-vi-b-cr_guided.vi_b_rescore_part_vi_b_official_cr_guided.json",
+    "results\\part_vi_b_predictions\\vi_b_rescore_part_vi_b_official_cr_guided_eval_meta.json",
+    "logs\\run_evaluation\\vi_b_rescore_part_vi_b_official_cr_guided"
+  ],
+  "report": {
+    "total_instances": 6,
+    "submitted_instances": 6,
+    "completed_instances": 2,
+    "resolved_instances": 0,
+    "unresolved_instances": 2,
+    "empty_patch_instances": 0,
+    "error_instances": 4,
+    "completed_ids": [
+      "scikit-learn__scikit-learn-14710",
+      "scikit-learn__scikit-learn-14894"
+    ],
+    "incomplete_ids": [],
+    "empty_patch_ids": [],
+    "submitted_ids": [
+      "scikit-learn__scikit-learn-14710",
+      "scikit-learn__scikit-learn-14894",
+      "sympy__sympy-13974",
+      "sympy__sympy-14248",
+      "sympy__sympy-15976",
+      "sympy__sympy-17655"
+    ],
+    "resolved_ids": [],
+    "unresolved_ids": [
+      "scikit-learn__scikit-learn-14710",
+      "scikit-learn__scikit-learn-14894"
+    ],
+    "error_ids": [
+      "sympy__sympy-13974",
+      "sympy__sympy-14248",
+      "sympy__sympy-15976",
+      "sympy__sympy-17655"
+    ],
+    "schema_version": 2
+  }
+}

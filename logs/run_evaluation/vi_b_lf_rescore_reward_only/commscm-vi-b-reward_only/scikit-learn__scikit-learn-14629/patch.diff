@@ -1,0 +1,11 @@
+--- a/sklearn/model_selection/_validation.py
++++ b/sklearn/model_selection/_validation.py
+@@ -857,7 +857,7 @@
+                 # Get the classes for each output
+                 if hasattr(estimator, "classes_"):
+                     classes = estimator.classes_
+-                else:
++                elif hasattr(estimator, "estimators_"):
+                     classes = estimator.estimators_[i].classes_
+ 
+                 # Compute the probabilities

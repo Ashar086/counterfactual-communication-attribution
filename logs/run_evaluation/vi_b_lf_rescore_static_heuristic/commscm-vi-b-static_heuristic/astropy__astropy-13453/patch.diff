@@ -1,0 +1,8 @@
+--- a/astropy/io/ascii/html.py
++++ b/astropy/io/ascii/html.py
+@@ -339,6 +339,7 @@
+ 
+         # Convert the table to HTML
+         for col in table.columns:
++            col.info.format = formats.get(col.name, col.info.format)
+             # ... existing code ...

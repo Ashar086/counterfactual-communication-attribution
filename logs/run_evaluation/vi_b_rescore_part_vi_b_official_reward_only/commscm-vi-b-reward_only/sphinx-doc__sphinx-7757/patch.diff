@@ -1,0 +1,11 @@
+--- a/sphinx/ext/autodoc.py
++++ b/sphinx/ext/autodoc.py
+@@ -1234,7 +1234,7 @@
+         if param.default is not param.empty:
+             default_value = f"={param.default}" if param.default is not None else "=None"
+             signature += f" {param.name}{default_value}"
+         else:
+-            signature += f" {param.name}"
++            signature += f" {param.name}" if param.kind != inspect.Parameter.POSITIONAL_ONLY else f" {param.name}={param.default}"
+ 
+     return signature

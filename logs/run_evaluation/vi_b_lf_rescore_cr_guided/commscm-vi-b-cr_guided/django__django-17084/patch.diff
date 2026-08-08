@@ -1,0 +1,16 @@
+--- a/original.py
++++ b/fixed.py
+@@ -1,6 +1,6 @@
+ from django.db.models import Sum, F, Window, Value
+ from django.db.models.functions import Coalesce
+ from myapp.models import MyModel
+ 
+-queryset = queryset.annotate(
+-    cumul_DJR=Coalesce(Window(Sum("DJR"), order_by=F("date").asc()), 0.0)
+-)
++queryset = queryset.annotate(cumul_DJR=Coalesce(Sum("DJR"), 0.0))
+ 
+ aggregate = queryset.aggregate(
+     DJR_total=Sum("DJR"),
+     cumul_DJR_total=Sum("cumul_DJR")
+ )

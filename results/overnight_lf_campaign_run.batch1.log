@@ -1,0 +1,522 @@
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\langchain_core\_api\deprecation.py:25: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1.fields import FieldInfo as FieldInfoV1
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.2) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+
+#### CAMPAIGN ATTEMPT 1/50 ####
+
+=== BATCHED CAMPAIGN n=100 batch_size=8 workers=1 ===
+
+=== BATCH 1/13 ids=django__django-14672..django__django-15916 (8) ===
+  [oracle_gold] evaluating 2/8 (free_gb=44.8)
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\langchain_core\_api\deprecation.py:25: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1.fields import FieldInfo as FieldInfoV1
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.2) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-08-05 01:29:56,108 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-05 01:29:56,172 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-05 01:29:56,463 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 01:29:57,183 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 01:29:57,499 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-08-05 01:29:57,791 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-05 01:29:58,159 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-05 01:29:58,454 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-08-05 01:29:58,741 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-08-05 01:29:59,076 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-08-05 01:30:00,366 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-05 01:30:00,435 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-05 01:30:00,740 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 01:30:00,963 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 01:30:01,296 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-05 01:30:01,573 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-05 01:30:01,943 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Running 2 instances...
+
+Evaluation:   0%|          | 0/2 [00:00<?, ?it/s, error=0, \u2713=0, \u2716=0]
+Evaluation:   0%|          | 0/2 [17:54<?, ?it/s, \u2713=1, \u2716=0, error=0]
+Evaluation:  50%|#####     | 1/2 [17:54<17:54, 1074.41s/it, \u2713=1, \u2716=0, error=0]
+Evaluation:  50%|#####     | 1/2 [22:51<17:54, 1074.41s/it, \u2713=2, \u2716=0, error=0]
+Evaluation: 100%|##########| 2/2 [22:51<00:00, 617.02s/it, \u2713=2, \u2716=0, error=0] 
+Evaluation: 100%|##########| 2/2 [22:51<00:00, 685.63s/it, \u2713=2, \u2716=0, error=0]
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 2
+Instances submitted: 2
+Instances completed: 2
+Instances incomplete: 0
+Instances resolved: 2
+Instances unresolved: 0
+Instances with empty patches: 0
+Instances with errors: 0
+Unstopped containers: 0
+Unremoved images: 2
+Report written to commscm-oracle-gold.oracle_gold_full_n100_lf.json
+  [oracle_gold] harness rc=0 free_gb=44.8
+  [cr_guided] evaluating 8/8 (free_gb=44.8)
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\langchain_core\_api\deprecation.py:25: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1.fields import FieldInfo as FieldInfoV1
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.2) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-08-05 01:53:25,677 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-05 01:53:25,735 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-05 01:53:26,060 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 01:53:26,813 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 01:53:27,120 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-08-05 01:53:27,389 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-05 01:53:27,887 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-05 01:53:28,172 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-08-05 01:53:28,442 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-08-05 01:53:28,755 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-08-05 01:53:30,111 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-05 01:53:30,159 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-05 01:53:30,462 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 01:53:30,764 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 01:53:31,076 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-05 01:53:31,351 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-05 01:53:31,691 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Found 8 existing instance images. Will reuse them.
+Running 8 instances...
+
+Evaluation:   0%|          | 0/8 [00:00<?, ?it/s, error=0, \u2713=0, \u2716=0]
+Evaluation:   0%|          | 0/8 [00:18<?, ?it/s, \u2713=0, \u2716=0, error=1]
+Evaluation:  12%|#2        | 1/8 [00:18<02:06, 18.12s/it, \u2713=0, \u2716=0, error=1]
+Evaluation:  12%|#2        | 1/8 [00:37<02:06, 18.12s/it, \u2713=0, \u2716=0, error=2]
+Evaluation:  25%|##5       | 2/8 [00:37<01:52, 18.72s/it, \u2713=0, \u2716=0, error=2]
+Evaluation:  25%|##5       | 2/8 [01:28<01:52, 18.72s/it, \u2713=1, \u2716=0, error=2]
+Evaluation:  38%|###7      | 3/8 [01:28<02:47, 33.59s/it, \u2713=1, \u2716=0, error=2]
+Evaluation:  38%|###7      | 3/8 [01:46<02:47, 33.59s/it, \u2713=1, \u2716=0, error=3]
+Evaluation:  50%|#####     | 4/8 [01:46<01:49, 27.42s/it, \u2713=1, \u2716=0, error=3]
+Evaluation:  50%|#####     | 4/8 [02:39<01:49, 27.42s/it, \u2713=1, \u2716=1, error=3]
+Evaluation:  62%|######2   | 5/8 [02:39<01:50, 36.81s/it, \u2713=1, \u2716=1, error=3]
+Evaluation:  62%|######2   | 5/8 [02:58<01:50, 36.81s/it, \u2713=1, \u2716=1, error=4]
+Evaluation:  75%|#######5  | 6/8 [02:58<01:00, 30.45s/it, \u2713=1, \u2716=1, error=4]
+Evaluation:  75%|#######5  | 6/8 [03:16<01:00, 30.45s/it, \u2713=1, \u2716=1, error=5]
+Evaluation:  88%|########7 | 7/8 [03:16<00:26, 26.39s/it, \u2713=1, \u2716=1, error=5]
+Evaluation:  88%|########7 | 7/8 [03:34<00:26, 26.39s/it, \u2713=1, \u2716=1, error=6]
+Evaluation: 100%|##########| 8/8 [03:34<00:00, 23.91s/it, \u2713=1, \u2716=1, error=6]
+Evaluation: 100%|##########| 8/8 [03:34<00:00, 26.84s/it, \u2713=1, \u2716=1, error=6]
+django__django-11299: >>>>> Patch Apply Failed:
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/original_file.py
+|+++ b/fixed_file.py
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_lf_rescore_cr_guided\commscm-vi-b-cr_guided\django__django-11299\run_instance.log) for more information.
+django__django-11551: >>>>> Patch Apply Failed:
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/django/admin/contrib/checks.py
+|+++ b/django/admin/contrib/checks.py
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_lf_rescore_cr_guided\commscm-vi-b-cr_guided\django__django-11551\run_instance.log) for more information.
+django__django-14493: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 10:  
+
+patching file django/contrib/staticfiles/storage.py
+
+Check (logs\run_evaluation\vi_b_lf_rescore_cr_guided\commscm-vi-b-cr_guided\django__django-14493\run_instance.log) for more information.
+django__django-15916: >>>>> Patch Apply Failed:
+patching file django/forms/models.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file django/forms/models.py.rej
+
+Check (logs\run_evaluation\vi_b_lf_rescore_cr_guided\commscm-vi-b-cr_guided\django__django-15916\run_instance.log) for more information.
+pydata__xarray-6938: >>>>> Patch Apply Failed:
+patching file xarray/core/dataset.py
+Hunk #1 FAILED at 1234.
+1 out of 1 hunk FAILED -- saving rejects to file xarray/core/dataset.py.rej
+
+Check (logs\run_evaluation\vi_b_lf_rescore_cr_guided\commscm-vi-b-cr_guided\pydata__xarray-6938\run_instance.log) for more information.
+sphinx-doc__sphinx-10449: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\vi_b_lf_rescore_cr_guided\commscm-vi-b-cr_guided\sphinx-doc__sphinx-10449\run_instance.log) for more information.
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 8
+Instances submitted: 8
+Instances completed: 2
+Instances incomplete: 0
+Instances resolved: 1
+Instances unresolved: 1
+Instances with empty patches: 0
+Instances with errors: 6
+Unstopped containers: 0
+Unremoved images: 8
+Report written to commscm-vi-b-cr_guided.vi_b_lf_rescore_cr_guided.json
+  [cr_guided] harness rc=0 free_gb=44.8
+  [reward_only] evaluating 8/8 (free_gb=44.8)
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\langchain_core\_api\deprecation.py:25: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1.fields import FieldInfo as FieldInfoV1
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.2) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-08-05 01:57:40,517 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-05 01:57:40,581 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-05 01:57:40,928 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 01:57:41,656 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 01:57:41,961 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-08-05 01:57:42,264 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-05 01:57:42,715 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-05 01:57:43,084 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-08-05 01:57:43,386 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-08-05 01:57:43,751 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-08-05 01:57:45,321 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-05 01:57:45,387 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-05 01:57:45,746 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 01:57:45,979 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 01:57:46,307 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-05 01:57:46,589 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-05 01:57:46,924 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Found 8 existing instance images. Will reuse them.
+Running 8 instances...
+
+Evaluation:   0%|          | 0/8 [00:00<?, ?it/s, error=0, \u2713=0, \u2716=0]
+Evaluation:   0%|          | 0/8 [00:55<?, ?it/s, \u2713=0, \u2716=1, error=0]
+Evaluation:  12%|#2        | 1/8 [00:55<06:31, 55.86s/it, \u2713=0, \u2716=1, error=0]
+Evaluation:  12%|#2        | 1/8 [01:14<06:31, 55.86s/it, \u2713=0, \u2716=1, error=1]
+Evaluation:  25%|##5       | 2/8 [01:14<03:22, 33.69s/it, \u2713=0, \u2716=1, error=1]
+Evaluation:  25%|##5       | 2/8 [02:27<03:22, 33.69s/it, \u2713=1, \u2716=1, error=1]
+Evaluation:  38%|###7      | 3/8 [02:27<04:19, 51.97s/it, \u2713=1, \u2716=1, error=1]
+Evaluation:  38%|###7      | 3/8 [04:20<04:19, 51.97s/it, \u2713=1, \u2716=2, error=1]
+Evaluation:  50%|#####     | 4/8 [04:20<05:03, 75.80s/it, \u2713=1, \u2716=2, error=1]
+Evaluation:  50%|#####     | 4/8 [05:53<05:03, 75.80s/it, \u2713=1, \u2716=2, error=2]
+Evaluation:  62%|######2   | 5/8 [05:53<04:06, 82.14s/it, \u2713=1, \u2716=2, error=2]
+Evaluation:  62%|######2   | 5/8 [06:11<04:06, 82.14s/it, \u2713=1, \u2716=2, error=3]
+Evaluation:  75%|#######5  | 6/8 [06:11<02:00, 60.30s/it, \u2713=1, \u2716=2, error=3]
+Evaluation:  75%|#######5  | 6/8 [08:40<02:00, 60.30s/it, \u2713=1, \u2716=3, error=3]
+Evaluation:  88%|########7 | 7/8 [08:40<01:29, 89.44s/it, \u2713=1, \u2716=3, error=3]
+Evaluation:  88%|########7 | 7/8 [08:58<01:29, 89.44s/it, \u2713=1, \u2716=3, error=4]
+Evaluation: 100%|##########| 8/8 [08:58<00:00, 66.69s/it, \u2713=1, \u2716=3, error=4]
+Evaluation: 100%|##########| 8/8 [08:58<00:00, 67.35s/it, \u2713=1, \u2716=3, error=4]
+django__django-11551: >>>>> Patch Apply Failed:
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/django/admin/contrib/checks.py
+|+++ b/django/admin/contrib/checks.py
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_lf_rescore_reward_only\commscm-vi-b-reward_only\django__django-11551\run_instance.log) for more information.
+django__django-15916: >>>>> Patch Apply Failed:
+patching file django/forms/models.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file django/forms/models.py.rej
+
+Check (logs\run_evaluation\vi_b_lf_rescore_reward_only\commscm-vi-b-reward_only\django__django-15916\run_instance.log) for more information.
+sphinx-doc__sphinx-10449: >>>>> Patch Apply Failed:
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/sphinx/ext/autodoc.py
+|+++ b/sphinx/ext/autodoc.py
+--------------------------
+No file to patch.  Skipping patch.
+2 out of 2 hunks ignored
+
+Check (logs\run_evaluation\vi_b_lf_rescore_reward_only\commscm-vi-b-reward_only\sphinx-doc__sphinx-10449\run_instance.log) for more information.
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 8
+Instances submitted: 8
+Instances completed: 4
+Instances incomplete: 0
+Instances resolved: 1
+Instances unresolved: 3
+Instances with empty patches: 0
+Instances with errors: 4
+Unstopped containers: 0
+Unremoved images: 8
+Report written to commscm-vi-b-reward_only.vi_b_lf_rescore_reward_only.json
+  [reward_only] harness rc=0 free_gb=44.8
+  [random] evaluating 8/8 (free_gb=44.8)
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\langchain_core\_api\deprecation.py:25: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1.fields import FieldInfo as FieldInfoV1
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.2) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-08-05 02:07:22,059 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-05 02:07:22,126 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-05 02:07:22,463 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 02:07:23,348 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 02:07:23,689 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-08-05 02:07:24,002 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-05 02:07:24,422 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-05 02:07:24,721 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-08-05 02:07:25,003 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-08-05 02:07:25,330 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-08-05 02:07:26,825 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-05 02:07:26,892 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-05 02:07:27,224 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 02:07:27,477 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 02:07:27,792 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-05 02:07:28,094 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-05 02:07:28,602 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Found 8 existing instance images. Will reuse them.
+Running 8 instances...
+
+Evaluation:   0%|          | 0/8 [00:00<?, ?it/s, error=0, \u2713=0, \u2716=0]
+Evaluation:   0%|          | 0/8 [00:17<?, ?it/s, \u2713=0, \u2716=0, error=1]
+Evaluation:  12%|#2        | 1/8 [00:17<02:05, 17.94s/it, \u2713=0, \u2716=0, error=1]
+Evaluation:  12%|#2        | 1/8 [00:35<02:05, 17.94s/it, \u2713=0, \u2716=0, error=2]
+Evaluation:  25%|##5       | 2/8 [00:35<01:47, 17.95s/it, \u2713=0, \u2716=0, error=2]
+Evaluation:  25%|##5       | 2/8 [01:25<01:47, 17.95s/it, \u2713=1, \u2716=0, error=2]
+Evaluation:  38%|###7      | 3/8 [01:25<02:41, 32.27s/it, \u2713=1, \u2716=0, error=2]
+Evaluation:  38%|###7      | 3/8 [02:46<02:41, 32.27s/it, \u2713=1, \u2716=1, error=2]
+Evaluation:  50%|#####     | 4/8 [02:46<03:25, 51.43s/it, \u2713=1, \u2716=1, error=2]
+Evaluation:  50%|#####     | 4/8 [03:48<03:25, 51.43s/it, \u2713=1, \u2716=1, error=3]
+Evaluation:  62%|######2   | 5/8 [03:48<02:46, 55.57s/it, \u2713=1, \u2716=1, error=3]
+Evaluation:  62%|######2   | 5/8 [04:06<02:46, 55.57s/it, \u2713=1, \u2716=1, error=4]
+Evaluation:  75%|#######5  | 6/8 [04:06<01:25, 42.74s/it, \u2713=1, \u2716=1, error=4]
+Evaluation:  75%|#######5  | 6/8 [04:25<01:25, 42.74s/it, \u2713=1, \u2716=1, error=5]
+Evaluation:  88%|########7 | 7/8 [04:25<00:34, 34.77s/it, \u2713=1, \u2716=1, error=5]
+Evaluation:  88%|########7 | 7/8 [04:43<00:34, 34.77s/it, \u2713=1, \u2716=1, error=6]
+Evaluation: 100%|##########| 8/8 [04:43<00:00, 29.42s/it, \u2713=1, \u2716=1, error=6]
+Evaluation: 100%|##########| 8/8 [04:43<00:00, 35.38s/it, \u2713=1, \u2716=1, error=6]
+django__django-11299: >>>>> Patch Apply Failed:
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/original_file.py
+|+++ b/fixed_file.py
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_lf_rescore_random\commscm-vi-b-random\django__django-11299\run_instance.log) for more information.
+django__django-11551: >>>>> Patch Apply Failed:
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/django/admin/contrib/checks.py
+|+++ b/django/admin/contrib/checks.py
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_lf_rescore_random\commscm-vi-b-random\django__django-11551\run_instance.log) for more information.
+django__django-15916: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\vi_b_lf_rescore_random\commscm-vi-b-random\django__django-15916\run_instance.log) for more information.
+pydata__xarray-6938: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs\run_evaluation\vi_b_lf_rescore_random\commscm-vi-b-random\pydata__xarray-6938\run_instance.log) for more information.
+sphinx-doc__sphinx-10449: >>>>> Patch Apply Failed:
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/sphinx/ext/autodoc.py
+|+++ b/sphinx/ext/autodoc.py
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_lf_rescore_random\commscm-vi-b-random\sphinx-doc__sphinx-10449\run_instance.log) for more information.
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 8
+Instances submitted: 8
+Instances completed: 2
+Instances incomplete: 0
+Instances resolved: 1
+Instances unresolved: 1
+Instances with empty patches: 0
+Instances with errors: 6
+Unstopped containers: 0
+Unremoved images: 8
+Report written to commscm-vi-b-random.vi_b_lf_rescore_random.json
+  [random] harness rc=0 free_gb=44.8
+  [static_heuristic] evaluating 8/8 (free_gb=44.8)
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\langchain_core\_api\deprecation.py:25: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1.fields import FieldInfo as FieldInfoV1
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.2) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-08-05 02:12:46,578 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-05 02:12:46,650 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-05 02:12:46,973 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 02:12:47,838 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 02:12:48,172 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-08-05 02:12:48,471 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-05 02:12:49,024 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-05 02:12:49,336 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-08-05 02:12:49,629 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-08-05 02:12:49,961 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-08-05 02:12:51,688 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-05 02:12:51,764 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-05 02:12:52,076 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 02:12:52,316 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 02:12:52,707 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-05 02:12:52,991 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-05 02:12:53,327 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Found 8 existing instance images. Will reuse them.
+Running 8 instances...
+
+Evaluation:   0%|          | 0/8 [00:00<?, ?it/s, error=0, \u2713=0, \u2716=0]
+Evaluation:   0%|          | 0/8 [00:18<?, ?it/s, \u2713=0, \u2716=0, error=1]
+Evaluation:  12%|#2        | 1/8 [00:18<02:06, 18.04s/it, \u2713=0, \u2716=0, error=1]
+Evaluation:  12%|#2        | 1/8 [00:36<02:06, 18.04s/it, \u2713=0, \u2716=0, error=2]
+Evaluation:  25%|##5       | 2/8 [00:36<01:48, 18.10s/it, \u2713=0, \u2716=0, error=2]
+Evaluation:  25%|##5       | 2/8 [01:30<01:48, 18.10s/it, \u2713=1, \u2716=0, error=2]
+Evaluation:  38%|###7      | 3/8 [01:30<02:53, 34.72s/it, \u2713=1, \u2716=0, error=2]
+Evaluation:  38%|###7      | 3/8 [01:48<02:53, 34.72s/it, \u2713=1, \u2716=0, error=3]
+Evaluation:  50%|#####     | 4/8 [01:48<01:52, 28.13s/it, \u2713=1, \u2716=0, error=3]
+Evaluation:  50%|#####     | 4/8 [02:35<01:52, 28.13s/it, \u2713=1, \u2716=1, error=3]
+Evaluation:  62%|######2   | 5/8 [02:35<01:44, 34.76s/it, \u2713=1, \u2716=1, error=3]
+Evaluation:  62%|######2   | 5/8 [02:53<01:44, 34.76s/it, \u2713=1, \u2716=1, error=4]
+Evaluation:  75%|#######5  | 6/8 [02:53<00:58, 29.07s/it, \u2713=1, \u2716=1, error=4]
+Evaluation:  75%|#######5  | 6/8 [03:11<00:58, 29.07s/it, \u2713=1, \u2716=1, error=5]
+Evaluation:  88%|########7 | 7/8 [03:11<00:25, 25.46s/it, \u2713=1, \u2716=1, error=5]
+Evaluation:  88%|########7 | 7/8 [03:29<00:25, 25.46s/it, \u2713=1, \u2716=1, error=6]
+Evaluation: 100%|##########| 8/8 [03:29<00:00, 23.25s/it, \u2713=1, \u2716=1, error=6]
+Evaluation: 100%|##########| 8/8 [03:29<00:00, 26.22s/it, \u2713=1, \u2716=1, error=6]
+django__django-11299: >>>>> Patch Apply Failed:
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/original_file.py
+|+++ b/fixed_file.py
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_lf_rescore_static_heuristic\commscm-vi-b-static_heuristic\django__django-11299\run_instance.log) for more information.
+django__django-11551: >>>>> Patch Apply Failed:
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/django/admin/contrib/checks.py
+|+++ b/django/admin/contrib/checks.py
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 14:                  field = getattr(obj.model, item)
+
+
+Check (logs\run_evaluation\vi_b_lf_rescore_static_heuristic\commscm-vi-b-static_heuristic\django__django-11551\run_instance.log) for more information.
+django__django-14493: >>>>> Patch Apply Failed:
+patching file django/contrib/staticfiles/storage.py
+Hunk #1 FAILED at 246.
+1 out of 1 hunk FAILED -- saving rejects to file django/contrib/staticfiles/storage.py.rej
+
+Check (logs\run_evaluation\vi_b_lf_rescore_static_heuristic\commscm-vi-b-static_heuristic\django__django-14493\run_instance.log) for more information.
+django__django-15916: >>>>> Patch Apply Failed:
+patching file django/forms/models.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file django/forms/models.py.rej
+
+Check (logs\run_evaluation\vi_b_lf_rescore_static_heuristic\commscm-vi-b-static_heuristic\django__django-15916\run_instance.log) for more information.
+pydata__xarray-6938: >>>>> Patch Apply Failed:
+patching file xarray/core/dataset.py
+Hunk #1 FAILED at 1234.
+1 out of 1 hunk FAILED -- saving rejects to file xarray/core/dataset.py.rej
+
+Check (logs\run_evaluation\vi_b_lf_rescore_static_heuristic\commscm-vi-b-static_heuristic\pydata__xarray-6938\run_instance.log) for more information.
+sphinx-doc__sphinx-10449: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 11:  
+
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/docs/conf.py
+|+++ b/docs/conf.py
+--------------------------
+No file to patch.  Skipping patch.
+
+Check (logs\run_evaluation\vi_b_lf_rescore_static_heuristic\commscm-vi-b-static_heuristic\sphinx-doc__sphinx-10449\run_instance.log) for more information.
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 8
+Instances submitted: 8
+Instances completed: 2
+Instances incomplete: 0
+Instances resolved: 1
+Instances unresolved: 1
+Instances with empty patches: 0
+Instances with errors: 6
+Unstopped containers: 0
+Unremoved images: 8
+Report written to commscm-vi-b-static_heuristic.vi_b_lf_rescore_static_heuristic.json
+  [static_heuristic] harness rc=0 free_gb=44.8
+[disk] before prune free_gb=44.8
+[disk] removed 12 sweb.eval images; free_gb=44.8
+BATCH 1 done; gold_partial={'resolve_at_1_mean': 1.0, 'counts': {'resolved': 8, 'unresolved': 0, 'error': 0, 'missing': 92, 'scored': 8}}
+
+=== BATCH 2/13 ids=django__django-12193..django__django-11749 (8) ===
+  [oracle_gold] evaluating 8/8 (free_gb=44.8)
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\langchain_core\_api\deprecation.py:25: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1.fields import FieldInfo as FieldInfoV1
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.2) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-08-05 02:17:45,884 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-05 02:17:45,934 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-05 02:17:46,216 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 02:17:47,002 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 02:17:47,296 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-08-05 02:17:47,564 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-05 02:17:48,142 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-05 02:17:48,452 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-08-05 02:17:48,716 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-08-05 02:17:49,105 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-08-05 02:17:50,777 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-05 02:17:50,823 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-05 02:17:51,097 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 02:17:51,327 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-05 02:17:51,608 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-05 02:17:51,922 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-05 02:17:52,216 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Running 8 instances...
+

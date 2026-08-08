@@ -1,0 +1,32 @@
+{
+    "total_instances": 4,
+    "submitted_instances": 4,
+    "completed_instances": 4,
+    "resolved_instances": 4,
+    "unresolved_instances": 0,
+    "empty_patch_instances": 0,
+    "error_instances": 0,
+    "completed_ids": [
+        "django__django-13128",
+        "django__django-14434",
+        "sphinx-doc__sphinx-7757",
+        "sphinx-doc__sphinx-9591"
+    ],
+    "incomplete_ids": [],
+    "empty_patch_ids": [],
+    "submitted_ids": [
+        "django__django-13128",
+        "django__django-14434",
+        "sphinx-doc__sphinx-7757",
+        "sphinx-doc__sphinx-9591"
+    ],
+    "resolved_ids": [
+        "django__django-13128",
+        "django__django-14434",
+        "sphinx-doc__sphinx-7757",
+        "sphinx-doc__sphinx-9591"
+    ],
+    "unresolved_ids": [],
+    "error_ids": [],
+    "schema_version": 2
+}

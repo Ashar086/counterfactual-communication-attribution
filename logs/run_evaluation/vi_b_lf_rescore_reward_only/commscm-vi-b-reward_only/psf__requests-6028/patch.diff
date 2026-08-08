@@ -1,0 +1,11 @@
+--- a/requests/adapters.py
++++ b/requests/adapters.py
+@@ -100,7 +100,7 @@
+         # Handle proxy URLs
+         if proxy_url:
+             proxy = parse_url(proxy_url)
+-            if proxy.scheme not in ['http', 'https']:
++            if proxy.scheme not in ['http', 'https'] and proxy.scheme != 'socks5':
+                 raise InvalidProxyURL(f"Invalid proxy URL scheme: {proxy.scheme}")
+ 
+             # Add authentication if provided

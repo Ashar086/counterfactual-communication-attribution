@@ -1,0 +1,14 @@
+--- a/pylint/lint/run.py
++++ b/pylint/lint/run.py
+@@ -57,7 +57,7 @@
+     cpu_count = int(cpu_shares / 1024)
+     return cpu_count
+ 
+-def _query_cpu():
++def _query_cpu() -> int:
+     ...
+     cpu_count = _calculate_cpu_count()
+-    return cpu_count
++    return cpu_count or 1
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

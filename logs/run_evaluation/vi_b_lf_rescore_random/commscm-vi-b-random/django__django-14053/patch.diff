@@ -1,0 +1,16 @@
+--- a/django/contrib/staticfiles/storage.py
++++ b/django/contrib/staticfiles/storage.py
+@@ -123,6 +123,7 @@
+         for file in files:
+             # Process the file...
+             yield processed_file
++            processed_files.add(original_file)  # Track processed files
+         # Additional processing...
+ 
+     def post_process(self, paths, dry_run=False, **options):
+         processed_files = set()  # Track already yielded files
+         for original_file in paths:
+             if original_file in processed_files:
+                 continue  # Skip already processed files
+             for processed_file in self._post_process_file(original_file, dry_run, **options):
+                 yield processed_file

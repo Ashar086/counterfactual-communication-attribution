@@ -1,0 +1,30 @@
+--- a/django/core/management/commands/runserver.py
++++ b/django/core/management/commands/runserver.py
+@@ -20,6 +20,7 @@
+ from django.core.management.base import BaseCommand
+ from django.core.management import CommandError
+ from django.core.management import execute_from_command_line
++from django.core.management import system_check
+ from django.utils import autoreload
+ 
+ class Command(BaseCommand):
+@@ -30,6 +31,7 @@
+     help = 'Starts a lightweight Web server for development.'
+ 
+     def add_arguments(self, parser):
++        parser.add_argument('--skip-checks', action='store_true', help='Skip system checks.')
+         parser.add_argument('addrport', nargs='?', default='127.0.0.1:8000', help='Optional port number or ipaddr:port.')
+ 
+     def handle(self, *args, **options):
+@@ -37,6 +39
+         addrport = options['addrport']
++        skip_checks = options['skip_checks']
+ 
+         if not skip_checks:
+             # Run system checks
+             system_check.check()
+ 
+         # Start the server
+         self.stdout.write(f'Serving on {addrport}...')
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

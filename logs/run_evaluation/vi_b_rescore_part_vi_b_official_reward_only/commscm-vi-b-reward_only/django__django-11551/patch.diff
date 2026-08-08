@@ -1,0 +1,15 @@
+--- a/django/admin/contrib/checks.py
++++ b/django/admin/contrib/checks.py
+@@ -123,10 +123,8 @@
+ def _check_list_display_item(self, obj, item, label):
+     if callable(item):
+         return []
+-    elif hasattr(obj, item):
+-        return []
+     else:
+         try:
+-            field = obj.model._meta.get_field(item)
++            field = obj.model._meta.get_field(item)  # Attempt to get field directly
+         except FieldDoesNotExist:
+             try:
+                 field = getattr(obj.model, item)

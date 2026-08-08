@@ -1,0 +1,11 @@
+--- a/astropy/io/ascii/html.py
++++ b/astropy/io/ascii/html.py
+@@ -339,6 +339,9 @@
+ 
+         # Convert the table to HTML
+         for col in table.columns:
++            if formats is not None and col.name in formats:
++                col.info.format = formats[col.name]
++            else:
++                col.info.format = col.info.format  # Ensure format is retained if not in formats
+             # ... existing code ...

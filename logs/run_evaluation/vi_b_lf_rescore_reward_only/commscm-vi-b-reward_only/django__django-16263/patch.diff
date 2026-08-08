@@ -1,0 +1,13 @@
+--- a/django/db/models/sql/query.py
++++ b/django/db/models/sql/query.py
+@@ -404,6 +404,12 @@
+         # existing logic...
+ 
++        # Strip unused annotations for count queries
++        if self.is_count_query:
++            self.annotations = {
++                key: value for key, value in self.annotations.items() 
++                if key in self._used_annotations
++            }
++
+         # existing logic...

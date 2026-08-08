@@ -1,0 +1,13 @@
+--- a/django/core/management/base.py
++++ b/django/core/management/base.py
+@@ -1234,6 +1234,10 @@
+                     'required': opt.required,
+                 }
+ 
++                # Check if the option is part of a required mutually exclusive group
++                if hasattr(opt, 'group') and opt.group and opt.group.required:
++                    required_options.add(opt.dest)
++
+                 if opt.required and opt.dest in options:
+                     parse_args += [
+                         '{}={}'.format(min(opt.option_strings), arg_options[opt.dest])

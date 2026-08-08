@@ -1,0 +1,9 @@
+--- a/_pytest/capture.py
++++ b/_pytest/capture.py
+@@ -123,7 +123,7 @@
+         # Read the output from the file
+         output = self._read_from_file(self._stdout)
+         if self._is_text:
+-            output = output.replace("\n", "\r\n")
++            output = output.replace("\n", "\r\n").replace("\r\n", "\r")
+         return output, self._read_from_file(self._stderr)

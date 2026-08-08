@@ -1,0 +1,22 @@
+--- a/django/db/models/functions.py
++++ b/django/db/models/functions.py
+@@ -123,7 +123,7 @@
+ 
+ class Trunc(TimeZoneMixin, Func):
+     function = 'DATE_TRUNC'
+-    template = '%(function)s(%(kind)s, %(expressions)s AT TIME ZONE %(tzname)s)'
++    template = '%(function)s(%(kind)s, %(expressions)s AT TIME ZONE %(adjusted_tzname)s)'
+ 
+     def __init__(self, expression, kind, tzinfo=None, **extra):
+         super().__init__(expression, kind=kind, **extra)
+@@ -130,6 +130,10 @@
+         self.tzinfo = tzinfo
+ 
+     def as_sql(self, compiler, connection):
++        if self.tzinfo and isinstance(self.tzinfo, str) and self.tzinfo.startswith("Etc/GMT"):
++            adjusted_tzname = self.tzinfo.replace("Etc/GMT", "").replace("-", "+").replace("+", "-")
++        else:
++            adjusted_tzname = self.tzinfo
+         return super().as_sql(compiler, connection, tzname=adjusted_tzname)
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

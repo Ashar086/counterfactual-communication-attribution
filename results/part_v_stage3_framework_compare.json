@@ -1,0 +1,511 @@
+{
+  "experiment": "part_v_stage3_framework_compare",
+  "hypothesis": "Same communication structure \u2192 same CR attribution across frameworks",
+  "summary": {
+    "n_pairs": 15,
+    "top1_agreement": 1.0,
+    "mean_kendall_tau": 1.0,
+    "langgraph_gold_hit": 1.0,
+    "autogen_gold_hit": 1.0,
+    "both_gold_hit": 1.0,
+    "stage3_gate_pass": true,
+    "core_unchanged": true
+  },
+  "rows": [
+    {
+      "pair_idx": 0,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_PLANNER",
+      "gold": "C1",
+      "langgraph": {
+        "y": 0.1,
+        "cr_top1": "C1",
+        "cr_ranking": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "autogen": {
+        "y": 0.1,
+        "cr_top1": "C1",
+        "cr_ranking": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "top1_agree": true,
+      "kendall_tau": 1.0,
+      "both_gold_hit": true
+    },
+    {
+      "pair_idx": 1,
+      "task_id": "add_two",
+      "poison_mode": "POISON_CODER",
+      "gold": "C2",
+      "langgraph": {
+        "y": 0.0,
+        "cr_top1": "C2",
+        "cr_ranking": [
+          "C2",
+          "C1",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "autogen": {
+        "y": 0.0,
+        "cr_top1": "C2",
+        "cr_ranking": [
+          "C2",
+          "C1",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "top1_agree": true,
+      "kendall_tau": 1.0,
+      "both_gold_hit": true
+    },
+    {
+      "pair_idx": 2,
+      "task_id": "is_even",
+      "poison_mode": "POISON_REVIEWER",
+      "gold": "C3",
+      "langgraph": {
+        "y": 0.0,
+        "cr_top1": "C3",
+        "cr_ranking": [
+          "C3",
+          "C1",
+          "C2",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "autogen": {
+        "y": 0.0,
+        "cr_top1": "C3",
+        "cr_ranking": [
+          "C3",
+          "C1",
+          "C2",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "top1_agree": true,
+      "kendall_tau": 1.0,
+      "both_gold_hit": true
+    },
+    {
+      "pair_idx": 3,
+      "task_id": "factorial",
+      "poison_mode": "POISON_PLANNER",
+      "gold": "C1",
+      "langgraph": {
+        "y": 0.1,
+        "cr_top1": "C1",
+        "cr_ranking": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "autogen": {
+        "y": 0.1,
+        "cr_top1": "C1",
+        "cr_ranking": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "top1_agree": true,
+      "kendall_tau": 1.0,
+      "both_gold_hit": true
+    },
+    {
+      "pair_idx": 4,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_CODER",
+      "gold": "C2",
+      "langgraph": {
+        "y": 0.0,
+        "cr_top1": "C2",
+        "cr_ranking": [
+          "C2",
+          "C1",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "autogen": {
+        "y": 0.0,
+        "cr_top1": "C2",
+        "cr_ranking": [
+          "C2",
+          "C1",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "top1_agree": true,
+      "kendall_tau": 1.0,
+      "both_gold_hit": true
+    },
+    {
+      "pair_idx": 5,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_REVIEWER",
+      "gold": "C3",
+      "langgraph": {
+        "y": 0.0,
+        "cr_top1": "C3",
+        "cr_ranking": [
+          "C3",
+          "C1",
+          "C2",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "autogen": {
+        "y": 0.0,
+        "cr_top1": "C3",
+        "cr_ranking": [
+          "C3",
+          "C1",
+          "C2",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "top1_agree": true,
+      "kendall_tau": 1.0,
+      "both_gold_hit": true
+    },
+    {
+      "pair_idx": 6,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_PLANNER",
+      "gold": "C1",
+      "langgraph": {
+        "y": 0.1,
+        "cr_top1": "C1",
+        "cr_ranking": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "autogen": {
+        "y": 0.1,
+        "cr_top1": "C1",
+        "cr_ranking": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "top1_agree": true,
+      "kendall_tau": 1.0,
+      "both_gold_hit": true
+    },
+    {
+      "pair_idx": 7,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_CODER",
+      "gold": "C2",
+      "langgraph": {
+        "y": 0.0,
+        "cr_top1": "C2",
+        "cr_ranking": [
+          "C2",
+          "C1",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "autogen": {
+        "y": 0.0,
+        "cr_top1": "C2",
+        "cr_ranking": [
+          "C2",
+          "C1",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "top1_agree": true,
+      "kendall_tau": 1.0,
+      "both_gold_hit": true
+    },
+    {
+      "pair_idx": 8,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_REVIEWER",
+      "gold": "C3",
+      "langgraph": {
+        "y": 0.0,
+        "cr_top1": "C3",
+        "cr_ranking": [
+          "C3",
+          "C1",
+          "C2",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "autogen": {
+        "y": 0.0,
+        "cr_top1": "C3",
+        "cr_ranking": [
+          "C3",
+          "C1",
+          "C2",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "top1_agree": true,
+      "kendall_tau": 1.0,
+      "both_gold_hit": true
+    },
+    {
+      "pair_idx": 9,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_PLANNER",
+      "gold": "C1",
+      "langgraph": {
+        "y": 0.1,
+        "cr_top1": "C1",
+        "cr_ranking": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "autogen": {
+        "y": 0.1,
+        "cr_top1": "C1",
+        "cr_ranking": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "top1_agree": true,
+      "kendall_tau": 1.0,
+      "both_gold_hit": true
+    },
+    {
+      "pair_idx": 10,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_CODER",
+      "gold": "C2",
+      "langgraph": {
+        "y": 0.0,
+        "cr_top1": "C2",
+        "cr_ranking": [
+          "C2",
+          "C1",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "autogen": {
+        "y": 0.0,
+        "cr_top1": "C2",
+        "cr_ranking": [
+          "C2",
+          "C1",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "top1_agree": true,
+      "kendall_tau": 1.0,
+      "both_gold_hit": true
+    },
+    {
+      "pair_idx": 11,
+      "task_id": "add_two",
+      "poison_mode": "POISON_REVIEWER",
+      "gold": "C3",
+      "langgraph": {
+        "y": 0.0,
+        "cr_top1": "C3",
+        "cr_ranking": [
+          "C3",
+          "C1",
+          "C2",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "autogen": {
+        "y": 0.0,
+        "cr_top1": "C3",
+        "cr_ranking": [
+          "C3",
+          "C1",
+          "C2",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "top1_agree": true,
+      "kendall_tau": 1.0,
+      "both_gold_hit": true
+    },
+    {
+      "pair_idx": 12,
+      "task_id": "is_even",
+      "poison_mode": "POISON_PLANNER",
+      "gold": "C1",
+      "langgraph": {
+        "y": 0.1,
+        "cr_top1": "C1",
+        "cr_ranking": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "autogen": {
+        "y": 0.1,
+        "cr_top1": "C1",
+        "cr_ranking": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "top1_agree": true,
+      "kendall_tau": 1.0,
+      "both_gold_hit": true
+    },
+    {
+      "pair_idx": 13,
+      "task_id": "factorial",
+      "poison_mode": "POISON_CODER",
+      "gold": "C2",
+      "langgraph": {
+        "y": 0.0,
+        "cr_top1": "C2",
+        "cr_ranking": [
+          "C2",
+          "C1",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "autogen": {
+        "y": 1.0,
+        "cr_top1": "C2",
+        "cr_ranking": [
+          "C2",
+          "C1",
+          "C3",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "top1_agree": true,
+      "kendall_tau": 1.0,
+      "both_gold_hit": true
+    },
+    {
+      "pair_idx": 14,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_REVIEWER",
+      "gold": "C3",
+      "langgraph": {
+        "y": 0.0,
+        "cr_top1": "C3",
+        "cr_ranking": [
+          "C3",
+          "C1",
+          "C2",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "autogen": {
+        "y": 0.0,
+        "cr_top1": "C3",
+        "cr_ranking": [
+          "C3",
+          "C1",
+          "C2",
+          "C4",
+          "C5"
+        ],
+        "cr_hit": true
+      },
+      "top1_agree": true,
+      "kendall_tau": 1.0,
+      "both_gold_hit": true
+    }
+  ]
+}

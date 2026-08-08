@@ -1,0 +1,18 @@
+--- a/django/contrib/auth/checks.py
++++ b/django/contrib/auth/checks.py
+@@ -123,6 +123,10 @@
+ 
+ def check_user_model(app_configs, **kwargs):
+     errors = []
++    user_model = get_user_model()
++    username_field = user_model.USERNAME_FIELD
++
++    if not hasattr(user_model, username_field):
++        errors.append(f"The user model does not have a field named '{username_field}'.")
+ 
+     for constraint in user_model._meta.constraints:
+         if isinstance(constraint, UniqueConstraint) and constraint.fields == [username_field]:
+             return errors  # Skip check if USERNAME_FIELD has a UniqueConstraint
+ 
+     if not user_model._meta.get_field(username_field).unique:
+         errors.append(

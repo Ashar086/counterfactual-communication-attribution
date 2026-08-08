@@ -1,0 +1,11 @@
+--- a/fix.py
++++ b/fix.py
+@@ -1,3 +1,5 @@
++from some_module import saferepr  # Added import statement for saferepr
++
+ def apply_patch():
+     return 'ok'
+ 
+ def _show_fixture_action(cached_param):
+-    print(cached_param)
++    print(saferepr(cached_param))  # Modified to use saferepr for safer representation

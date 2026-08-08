@@ -1,0 +1,11 @@
+--- a/sympy/matrices/matrices.py
++++ b/sympy/matrices/matrices.py
+@@ -1234,7 +1234,7 @@
+         return self._add(*args)
+ 
+     def __sub__(self, other):
+-        return self + (-1)*other
++        return self + -other
+ 
+     def __rsub__(self, other):
+         return -self + other

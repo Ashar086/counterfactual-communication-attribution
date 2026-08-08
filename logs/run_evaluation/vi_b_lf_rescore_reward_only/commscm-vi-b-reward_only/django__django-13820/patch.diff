@@ -1,0 +1,10 @@
+--- a/django/db/migrations/loader.py
++++ b/django/db/migrations/loader.py
+@@ -123,7 +123,7 @@
+         for app in self.app_store:
+             m = import_module(app)
+             if getattr(m, '__file__, None) is False:
+-                continue
++                if not isinstance(m.__path__, list):
++                    continue
+             # Existing logic to load migrations...

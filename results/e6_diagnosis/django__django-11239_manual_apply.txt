@@ -1,0 +1,3 @@
+Checking patch django/db/backends/postgresql/client.py...
+Applied patch django/db/backends/postgresql/client.py cleanly.
+EXIT:0

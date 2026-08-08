@@ -1,0 +1,10 @@
+--- a/django/urls/resolvers.py
++++ b/django/urls/resolvers.py
+@@ -123,7 +123,7 @@
+     def _reverse_with_prefix(viewname, urlconf=None, args=None, kwargs=None, current_app=None):
+         ...
+         # Filter out any key-value pairs in kwargs where the value is None
+         kwargs = {k: v for k, v in (kwargs or {}).items() if v is not None}
+         ...
+ 
++        # Additional test cases should be added to validate the handling of optional arguments.

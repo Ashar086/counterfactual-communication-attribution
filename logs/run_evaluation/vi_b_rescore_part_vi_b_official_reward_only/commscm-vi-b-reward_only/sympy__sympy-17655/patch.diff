@@ -1,0 +1,15 @@
+--- a/sympy/geometry/point.py
++++ b/sympy/geometry/point.py
+@@ -128,6 +128,12 @@
+         return super(Point, cls).__new__(cls, *args, **kwargs)
+ 
+     def __mul__(self, other):
++        if isinstance(other, (int, float, sympy.Basic)):
++            return Point(self.x * other, self.y * other)
++        return NotImplemented
++
++    def __rmul__(self, other):
++        return self.__mul__(other)
+         # existing implementation...
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

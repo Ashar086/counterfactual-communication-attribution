@@ -1,0 +1,18 @@
+--- a/django/db/models/query.py
++++ b/django/db/models/query.py
+@@ -565,6 +565,12 @@
+     # ... existing code ...
+ 
+     for obj in objs:
++        # Initialize a counter for matched rows
++        matched_rows = 0
++
+         # Call update for each object
+         matched_rows += queryset.filter(pk=obj.pk).update(**{field.name: getattr(obj, field.name)}) or 0
+ 
++    # Return a named tuple with the number of matched rows
++    from collections import namedtuple
++    BulkUpdateResult = namedtuple('BulkUpdateResult', ['matched'])
++    return BulkUpdateResult(matched=matched_rows)
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

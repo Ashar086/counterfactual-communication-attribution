@@ -1,0 +1,12 @@
+--- a/django/core/management/base.py
++++ b/django/core/management/base.py
+@@ -72,6 +72,10 @@
+         # Add subparsers
+         subparsers = parser.add_subparsers(required=True)
+         for action in parser._actions:
++            if isinstance(action, argparse._SubParsersAction):
++                action.required = True
++                # Copy relevant error formatting arguments to subparsers
++                for subparser_name, subparser in action.choices.items():
++                    subparser.error_formatter = parser.error_formatter
+         return subparsers

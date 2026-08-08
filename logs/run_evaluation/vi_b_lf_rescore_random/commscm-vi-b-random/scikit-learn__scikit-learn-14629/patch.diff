@@ -1,0 +1,13 @@
+--- a/sklearn/model_selection/_validation.py
++++ b/sklearn/model_selection/_validation.py
+@@ -857,7 +857,9 @@
+         if method == "predict_proba":
+             # Check if estimator has classes_ attribute
+             if hasattr(estimator, "classes_"):
+-                classes = estimator.classes_
++                if isinstance(estimator, MultiOutputClassifier):
++                    classes = [estimator.estimators_[i].classes_ for i in range(len(estimator.estimators_))]
++                else:
++                    classes = estimator.classes_
+             else:
+                 raise ValueError("The estimator does not have a classes_ attribute.")

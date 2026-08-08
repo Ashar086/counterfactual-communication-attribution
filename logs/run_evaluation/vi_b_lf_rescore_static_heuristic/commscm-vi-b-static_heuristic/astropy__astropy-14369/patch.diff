@@ -1,0 +1,10 @@
+--- a/astropy/table/ascii/cds.py
++++ b/astropy/table/ascii/cds.py
+@@ -123,7 +123,7 @@
+ 
+     def _parse_units(self, unit_str):
+         # Correctly parse the units according to the CDS standard
+-        return u.Unit(unit_str.replace('/', ' / ').replace('^', '**'))
++        return u.Unit(unit_str.replace('/', ' / ').replace('^', '**').replace('+', 'e+').replace('-', 'e-'))
+
+ # Note: Ensure that all functions are properly defined and closed to avoid syntax errors.

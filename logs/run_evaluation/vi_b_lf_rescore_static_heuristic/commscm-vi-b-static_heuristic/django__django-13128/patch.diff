@@ -1,0 +1,19 @@
+--- a/models.py
++++ b/models.py
+@@ -1,5 +1,5 @@
+ from django.db import models
+ from django.db.models import F, Value
+ from django.db.models.fields import DurationField
+ import datetime
+ 
+ class Experiment(models.Model):
+     start = models.DateTimeField()
+     end = models.DateTimeField()
+-Experiment.objects.annotate(
+-    delta=F('end') - F('start') + Value(datetime.timedelta(), output_field=DurationField())
++Experiment.objects.annotate(
++    delta=F('end') - F('start')
+ )
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

@@ -1,0 +1,10 @@
+--- a/django/db/models/sql/expressions.py
++++ b/django/db/models/sql/expressions.py
+@@ -1234,7 +1234,7 @@
+         # other code...
+         if isinstance(references, Table):
+-            references = references.name
++            references = references._meta.db_table
+         # other code...
+ 
+ # Note: Ensure that there are no syntax errors in the surrounding code.

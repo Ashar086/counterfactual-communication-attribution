@@ -1,0 +1,78 @@
+/eval.sh: line 2: set: pipefail: invalid option name
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 3: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ cd $'/testbed\r'
+/eval.sh: line 5: cd: $'/testbed\r': No such file or directory
++ git config --global --add safe.directory $'/testbed\r'
++ cd $'/testbed\r'
+/eval.sh: line 7: cd: $'/testbed\r': No such file or directory
++ git $'status\r'
+git: 'status' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
++ git $'show\r'
+git: 'show' is not a git command. See 'git --help'.
+
+The most similar command is
+	show
++ git -c core.fileMode=false diff $'5250b2442501e6c671c6b380536f1edb352602d1\r'
+fatal: ambiguous argument '5250b2442501e6c671c6b380536f1edb352602d1?': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 11: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ python -m pip install -e '.[test]' $'--verbose\r'
+
+Usage:   
+  /opt/miniconda3/bin/python -m pip install [options] <requirement specifier> [package-index-options] ...
+  /opt/miniconda3/bin/python -m pip install [options] -r <requirements file> [package-index-options] ...
+  /opt/miniconda3/bin/python -m pip install [options] [-e] <vcs project url> ...
+  /opt/miniconda3/bin/python -m pip install [options] [-e] <local project path> ...
+  /opt/miniconda3/bin/python -m pip install [options] <archive url/path> ...
+
+no such option: --verbose
++ git checkout 5250b2442501e6c671c6b380536f1edb352602d1 astropy/units/tests/test_quantity.py $'astropy/units/tests/test_quantity_ufuncs.py\r'
+error: pathspec 'astropy/units/tests/test_quantity_ufuncs.py?' did not match any file(s) known to git
++ git apply -v -
+Checking patch astropy/units/tests/test_quantity.py...
+error: while searching for:
+?
+    def test_non_number_type(self):?
+        q1 = u.Quantity(11.412, unit=u.meter)?
+        with pytest.raises(TypeError) as exc:?
+            q1 + {"a": 1}?
+        assert exc.value.args[0].startswith(?
+            "Unsupported operand type(s) for ufunc add:"?
+        )?
+?
+        with pytest.raises(TypeError):?
+            q1 + u.meter?
+
+error: patch failed: astropy/units/tests/test_quantity.py:505
+error: astropy/units/tests/test_quantity.py: patch does not apply
+Checking patch astropy/units/tests/test_quantity_ufuncs.py...
+error: while searching for:
+# returns quantities with the right units, or raises exceptions.?
+?
+import concurrent.futures?
+import warnings?
+from collections import namedtuple?
+?
+
+error: patch failed: astropy/units/tests/test_quantity_ufuncs.py:2
+error: astropy/units/tests/test_quantity_ufuncs.py: patch does not apply
++ : '>>>>> Start Test Output'
++ pytest -rA astropy/units/tests/test_quantity.py $'astropy/units/tests/test_quantity_ufuncs.py\r'
+/eval.sh: line 174: pytest: command not found
++ : '>>>>> End Test Output'
++ git checkout 5250b2442501e6c671c6b380536f1edb352602d1 astropy/units/tests/test_quantity.py $'astropy/units/tests/test_quantity_ufuncs.py\r'
+error: pathspec 'astropy/units/tests/test_quantity_ufuncs.py?' did not match any file(s) known to git

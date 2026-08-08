@@ -1,0 +1,38 @@
+{
+  "env": {
+    "webarena_root": "D:\\WebArena\\webarena",
+    "env_vars_set": false,
+    "missing_vars": [
+      "SHOPPING",
+      "SHOPPING_ADMIN",
+      "REDDIT",
+      "GITLAB",
+      "MAP",
+      "WIKIPEDIA",
+      "HOMEPAGE"
+    ],
+    "reachable": {},
+    "configs_generated": false,
+    "ready_for_official": false,
+    "blockage": "env_vars_missing:SHOPPING,SHOPPING_ADMIN,REDDIT,GITLAB,MAP,WIKIPEDIA,HOMEPAGE"
+  },
+  "capacity": {
+    "images_bytes": {
+      "shopping_final_0712.tar": 67575898112,
+      "shopping_admin_final_0719.tar": 9640032256,
+      "postmill-populated-exposed-withimg.tar": 53435097088,
+      "gitlab-populated-final-port8023.tar": 77755595776,
+      "wikipedia_en_all_maxi_2022-05.zim": 95199730590
+    },
+    "images_gb_approx": {
+      "shopping_final_0712.tar": 67.6,
+      "shopping_admin_final_0719.tar": 9.6,
+      "postmill-populated-exposed-withimg.tar": 53.4,
+      "gitlab-populated-final-port8023.tar": 77.8,
+      "wikipedia_en_all_maxi_2022-05.zim": 95.2
+    },
+    "total_compressed_gb_approx": 303.6,
+    "recommendation": "Use AWS AMI ami-08a862bf98e3bd7aa (us-east-2) per upstream README, or attach \u2265400GB free disk before local docker load of all sites."
+  },
+  "note": "ready_for_official=false blocks part_vi_c_official_runner from claiming WebArena Success. Smoke fixtures are not official."
+}

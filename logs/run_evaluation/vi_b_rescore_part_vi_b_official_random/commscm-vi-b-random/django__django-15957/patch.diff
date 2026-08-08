@@ -1,0 +1,27 @@
+--- a/django/db/models/query.py
++++ b/django/db/models/query.py
+@@ -1234,7 +1234,7 @@
+         # If the queryset is sliced, we cannot filter it anymore.
+         if self._iterable_is_sliced:
+             raise AssertionError("Cannot filter a query once a slice has been taken.")
+-        
++
+         # Apply the prefetching logic here
+         # Implement logic to handle prefetching with sliced querysets
+         if self._iterable_is_sliced and hasattr(self, 'prefetch_related_lookups'):
+             # Logic to handle prefetching with sliced querysets
+             pass
+ 
+--- a/django/db/models/fields/related.py
++++ b/django/db/models/fields/related.py
+@@ -456,7 +456,7 @@
+         # Modify the queryset to allow slicing
+         if hasattr(queryset, 'query'):
+             queryset = queryset.all()  # Ensure we have a full queryset
+-        
++
+         # Apply the prefetching logic here
+         # Implement logic to handle prefetching with sliced querysets
+         if hasattr(queryset, 'prefetch_related_lookups'):
+             # Logic to handle prefetching with sliced querysets
+             pass

@@ -1,0 +1,9 @@
+--- a/models.py
++++ b/models.py
+@@ -6,6 +6,8 @@
+     f = models.BooleanField(default=False)
+     def reset(self):
+         self.uid = None
++        if isinstance(self, Derived):
++            self.item_ptr = None
+         self.f = False

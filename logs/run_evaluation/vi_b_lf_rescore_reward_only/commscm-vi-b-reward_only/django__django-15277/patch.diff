@@ -1,0 +1,10 @@
+--- a/django/db/models/fields/char.py
++++ b/django/db/models/fields/char.py
+@@ -123,7 +123,7 @@
+         super().__init__(*args, **kwargs)
+         if self.max_length is not None:
+-            self.validators.append(validators.MaxLengthValidator(self.max_length))
++            if self.max_length is not None:
++                self.validators.append(validators.MaxLengthValidator(self.max_length))
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

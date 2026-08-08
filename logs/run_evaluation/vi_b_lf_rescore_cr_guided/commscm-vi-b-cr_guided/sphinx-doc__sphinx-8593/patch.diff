@@ -1,0 +1,13 @@
+--- a/sphinx/ext/autodoc.py
++++ b/sphinx/ext/autodoc.py
+@@ -1234,7 +1234,7 @@
+ 
+     def _is_public(self, name):
+         # Check if the variable is marked as public
+-        return not name.startswith('_')
++        return not name.startswith('_') or self._is_meta_public(name)
+ 
+     def _is_meta_public(self, name):
+         # Check if the variable has :meta public: in its docstring
+         obj = self.get_object(name)
+         return obj and ':meta public:' in (obj.__doc__ or '')

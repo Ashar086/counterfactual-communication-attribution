@@ -1,0 +1,110 @@
+{
+  "experiment": "cr_guided_sample_lf_rescore",
+  "note": "VI.B CR-guided synthesized patches rescored with LF-fixed eval.sh",
+  "n": 10,
+  "sample_seed_from_gold": 7,
+  "instance_ids": [
+    "django__django-11239",
+    "sympy__sympy-17655",
+    "django__django-14434",
+    "sphinx-doc__sphinx-7910",
+    "django__django-15987",
+    "astropy__astropy-13977",
+    "pylint-dev__pylint-4551",
+    "django__django-15851",
+    "sympy__sympy-13974",
+    "sphinx-doc__sphinx-10449"
+  ],
+  "run_id": "cr_guided_sample_n10_s7_lf",
+  "elapsed_s": 2143.1,
+  "harness_returncode": 0,
+  "counts": {
+    "resolved": 0,
+    "unresolved": 0,
+    "error": 10,
+    "missing": 0
+  },
+  "resolve_at_1_mean": 0.0,
+  "per_instance": [
+    {
+      "instance_id": "django__django-11239",
+      "status": "error",
+      "resolve_at_1": 0.0,
+      "hit_gold_edge": true,
+      "edit_key": "prune_edge:C1->C2",
+      "patch_len": 904
+    },
+    {
+      "instance_id": "sympy__sympy-17655",
+      "status": "error",
+      "resolve_at_1": 0.0,
+      "hit_gold_edge": true,
+      "edit_key": "prune_edge:C2->C4",
+      "patch_len": 467
+    },
+    {
+      "instance_id": "django__django-14434",
+      "status": "error",
+      "resolve_at_1": 0.0,
+      "hit_gold_edge": true,
+      "edit_key": "prune_edge:C2->C4",
+      "patch_len": 66
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-7910",
+      "status": "error",
+      "resolve_at_1": 0.0,
+      "hit_gold_edge": true,
+      "edit_key": "prune_edge:C3->C4",
+      "patch_len": 501
+    },
+    {
+      "instance_id": "django__django-15987",
+      "status": "error",
+      "resolve_at_1": 0.0,
+      "hit_gold_edge": true,
+      "edit_key": "prune_edge:C1->C2",
+      "patch_len": 433
+    },
+    {
+      "instance_id": "astropy__astropy-13977",
+      "status": "error",
+      "resolve_at_1": 0.0,
+      "hit_gold_edge": true,
+      "edit_key": "prune_edge:C3->C4",
+      "patch_len": 569
+    },
+    {
+      "instance_id": "pylint-dev__pylint-4551",
+      "status": "error",
+      "resolve_at_1": 0.0,
+      "hit_gold_edge": true,
+      "edit_key": "prune_edge:C1->C2",
+      "patch_len": 910
+    },
+    {
+      "instance_id": "django__django-15851",
+      "status": "error",
+      "resolve_at_1": 0.0,
+      "hit_gold_edge": true,
+      "edit_key": "prune_edge:C1->C2",
+      "patch_len": 465
+    },
+    {
+      "instance_id": "sympy__sympy-13974",
+      "status": "error",
+      "resolve_at_1": 0.0,
+      "hit_gold_edge": true,
+      "edit_key": "prune_edge:C3->C4",
+      "patch_len": 524
+    },
+    {
+      "instance_id": "sphinx-doc__sphinx-10449",
+      "status": "error",
+      "resolve_at_1": 0.0,
+      "hit_gold_edge": true,
+      "edit_key": "prune_edge:C2->C4",
+      "patch_len": 66
+    }
+  ]
+}

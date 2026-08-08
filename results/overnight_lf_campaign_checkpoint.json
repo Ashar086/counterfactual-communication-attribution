@@ -1,0 +1,66 @@
+{
+  "started_at": 1785901137.5487828,
+  "n": 100,
+  "batch_size": 8,
+  "batches_total": 13,
+  "batches_done": 13,
+  "last_batch_ids": [
+    "django__django-13128",
+    "sphinx-doc__sphinx-9591",
+    "sphinx-doc__sphinx-7757",
+    "django__django-14434"
+  ],
+  "free_gb": 40.6,
+  "oracle_gold_partial": {
+    "resolve_at_1_mean": 0.89,
+    "counts": {
+      "resolved": 89,
+      "unresolved": 2,
+      "error": 9,
+      "missing": 0,
+      "scored": 100
+    }
+  },
+  "vi_b_partial": {
+    "cr_guided": {
+      "resolve_at_1_mean": 0.02,
+      "counts": {
+        "resolved": 2,
+        "unresolved": 6,
+        "error": 92,
+        "missing": 0,
+        "scored": 100
+      }
+    },
+    "reward_only": {
+      "resolve_at_1_mean": 0.04,
+      "counts": {
+        "resolved": 4,
+        "unresolved": 15,
+        "error": 81,
+        "missing": 0,
+        "scored": 100
+      }
+    },
+    "random": {
+      "resolve_at_1_mean": 0.03,
+      "counts": {
+        "resolved": 3,
+        "unresolved": 16,
+        "error": 81,
+        "missing": 0,
+        "scored": 100
+      }
+    },
+    "static_heuristic": {
+      "resolve_at_1_mean": 0.03,
+      "counts": {
+        "resolved": 3,
+        "unresolved": 16,
+        "error": 81,
+        "missing": 0,
+        "scored": 100
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+--- a/original_code.py
++++ b/fixed_code.py
+@@ -1,6 +1,6 @@
+ queryset = queryset.annotate(
+-    cumul_DJR=Coalesce(Window(Sum("DJR"), order_by=F("date").asc()), 0.0)
++    cumul_DJR=Coalesce(Sum("DJR"), 0.0)
+ )
+ aggregate = queryset.aggregate(
+     DJR_total=Sum("DJR"),
+-    cumul_DJR_total=Sum("cumul_DJR")
++    cumul_DJR_total=Sum("cumul_DJR", distinct=True)
+ )

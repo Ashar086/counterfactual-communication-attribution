@@ -1,0 +1,65 @@
+/eval.sh: line 2: set: pipefail: invalid option name
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 3: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ cd $'/testbed\r'
+/eval.sh: line 5: cd: $'/testbed\r': No such file or directory
++ git config --global --add safe.directory $'/testbed\r'
++ cd $'/testbed\r'
+/eval.sh: line 7: cd: $'/testbed\r': No such file or directory
++ git $'status\r'
+git: 'status' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
++ git $'show\r'
+git: 'show' is not a git command. See 'git --help'.
+
+The most similar command is
+	show
++ git -c core.fileMode=false diff $'27ac10de04697e2372d31db5548e56a7c6d9265d\r'
+fatal: ambiguous argument '27ac10de04697e2372d31db5548e56a7c6d9265d?': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 11: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ python -m pip install -e '.[test]'
+ERROR: .[test] is not a valid editable requirement. It should either be a path to a local project or a VCS URL (beginning with bzr+http, bzr+https, bzr+ssh, bzr+sftp, bzr+ftp, bzr+lp, bzr+file, git+http, git+https, git+ssh, git+git, git+file, hg+file, hg+http, hg+https, hg+ssh, hg+static-http, svn+ssh, svn+http, svn+https, svn+svn, svn+file).
++ git checkout 27ac10de04697e2372d31db5548e56a7c6d9265d sphinx/testing/util.py $'tests/test_ext_napoleon.py\r'
+error: pathspec 'tests/test_ext_napoleon.py?' did not match any file(s) known to git
++ git apply -v -
+Checking patch sphinx/testing/util.py...
+error: while searching for:
+    :copyright: Copyright 2007-2020 by the Sphinx team, see AUTHORS.?
+    :license: BSD, see LICENSE for details.?
+"""?
+import os?
+import re?
+import sys?
+
+error: patch failed: sphinx/testing/util.py:7
+error: sphinx/testing/util.py: patch does not apply
+Checking patch tests/test_ext_napoleon.py...
+error: while searching for:
+from unittest import TestCase, mock?
+?
+from sphinx.application import Sphinx?
+from sphinx.ext.napoleon import _process_docstring, _skip_member, Config, setup?
+?
+?
+
+error: patch failed: tests/test_ext_napoleon.py:14
+error: tests/test_ext_napoleon.py: patch does not apply
++ : '>>>>> Start Test Output'
++ tox --current-env -epy39 -v -- sphinx/testing/util.py $'tests/test_ext_napoleon.py\r'
+/eval.sh: line 90: tox: command not found
++ : '>>>>> End Test Output'
++ git checkout 27ac10de04697e2372d31db5548e56a7c6d9265d sphinx/testing/util.py $'tests/test_ext_napoleon.py\r'
+error: pathspec 'tests/test_ext_napoleon.py?' did not match any file(s) known to git

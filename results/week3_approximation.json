@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "ExactReplayOracle": {
+      "p_at_1": 1.0,
+      "mrr": 1.0,
+      "kendall_tau": 1.0,
+      "spearman_rho": 1.0,
+      "runtime_ms": 40.9788875,
+      "speedup_vs_oracle": 1.0
+    },
+    "DescendantReplayEstimator": {
+      "p_at_1": 1.0,
+      "mrr": 1.0,
+      "kendall_tau": 1.0,
+      "spearman_rho": 1.0,
+      "runtime_ms": 40.3725,
+      "speedup_vs_oracle": 1.01501981546845
+    },
+    "CachedReplayEstimator": {
+      "p_at_1": 1.0,
+      "mrr": 1.0,
+      "kendall_tau": 1.0,
+      "spearman_rho": 1.0,
+      "runtime_ms": 20.5486375,
+      "speedup_vs_oracle": 1.9942386691088396
+    }
+  },
+  "failures": {
+    "DescendantReplayEstimator": {
+      "counts": {},
+      "examples": []
+    },
+    "CachedReplayEstimator": {
+      "counts": {},
+      "examples": []
+    }
+  }
+}

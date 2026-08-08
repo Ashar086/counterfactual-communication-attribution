@@ -1,0 +1,1029 @@
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.2) or chardet (7.4.3)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.WindowsSelectorEventLoopPolicy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\site-packages\modal\_utils\async_utils.py:42: DeprecationWarning: 'asyncio.set_event_loop_policy' is deprecated and slated for removal in Python 3.16
+  asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-08-04 07:44:31,992 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 07:44:32,033 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-04 07:44:32,288 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 07:44:33,038 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 07:44:33,306 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-08-04 07:44:33,565 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-04 07:44:34,119 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-04 07:44:34,391 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-08-04 07:44:34,659 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-08-04 07:44:34,948 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-08-04 07:44:35,678 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-04 07:44:35,722 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-08-04 07:44:36,074 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 07:44:36,311 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-08-04 07:44:36,582 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-08-04 07:44:36,855 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-08-04 07:44:37,129 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Found 1 existing instance images. Will reuse them.
+Running 100 instances...
+
+Evaluation:   0%|          | 0/100 [00:00<?, ?it/s, error=0, \u2713=0, \u2716=0]
+Evaluation:   0%|          | 0/100 [08:57<?, ?it/s, \u2713=0, \u2716=0, error=1]
+Evaluation:   1%|1         | 1/100 [08:57<14:46:22, 537.20s/it, \u2713=0, \u2716=0, error=1]
+Evaluation:   1%|1         | 1/100 [10:15<14:46:22, 537.20s/it, \u2713=0, \u2716=0, error=2]
+Evaluation:   2%|2         | 2/100 [10:15<7:16:18, 267.12s/it, \u2713=0, \u2716=0, error=2] 
+Evaluation:   2%|2         | 2/100 [10:15<7:16:18, 267.12s/it, \u2713=0, \u2716=0, error=3]
+Evaluation:   3%|3         | 3/100 [10:15<3:55:09, 145.46s/it, \u2713=0, \u2716=0, error=3]
+Evaluation:   3%|3         | 3/100 [10:17<3:55:09, 145.46s/it, \u2713=0, \u2716=0, error=4]
+Evaluation:   4%|4         | 4/100 [10:17<2:22:06, 88.82s/it, \u2713=0, \u2716=0, error=4] 
+Evaluation:   4%|4         | 4/100 [18:51<2:22:06, 88.82s/it, \u2713=0, \u2716=0, error=5]
+Evaluation:   5%|5         | 5/100 [18:51<6:22:58, 241.88s/it, \u2713=0, \u2716=0, error=5]
+Evaluation:   5%|5         | 5/100 [18:54<6:22:58, 241.88s/it, \u2713=0, \u2716=0, error=6]
+Evaluation:   6%|6         | 6/100 [18:54<4:11:51, 160.76s/it, \u2713=0, \u2716=0, error=6]
+Evaluation:   6%|6         | 6/100 [18:54<4:11:51, 160.76s/it, \u2713=0, \u2716=0, error=7]
+Evaluation:   7%|7         | 7/100 [19:42<4:09:10, 160.76s/it, \u2713=0, \u2716=0, error=8]
+Evaluation:   8%|8         | 8/100 [19:42<2:23:11, 93.38s/it, \u2713=0, \u2716=0, error=8] 
+Evaluation:   8%|8         | 8/100 [25:59<2:23:11, 93.38s/it, \u2713=0, \u2716=0, error=9]
+Evaluation:   9%|9         | 9/100 [25:59<4:13:27, 167.12s/it, \u2713=0, \u2716=0, error=9]
+Evaluation:   9%|9         | 9/100 [26:00<4:13:27, 167.12s/it, \u2713=0, \u2716=0, error=10]
+Evaluation:  10%|#         | 10/100 [26:00<3:03:06, 122.07s/it, \u2713=0, \u2716=0, error=10]
+Evaluation:  10%|#         | 10/100 [26:04<3:03:06, 122.07s/it, \u2713=0, \u2716=1, error=10]
+Evaluation:  11%|#1        | 11/100 [26:04<2:12:29, 89.33s/it, \u2713=0, \u2716=1, error=10] 
+Evaluation:  11%|#1        | 11/100 [26:05<2:12:29, 89.33s/it, \u2713=0, \u2716=2, error=10]
+Evaluation:  12%|#2        | 12/100 [26:05<1:34:06, 64.17s/it, \u2713=0, \u2716=2, error=10]
+Evaluation:  12%|#2        | 12/100 [27:28<1:34:06, 64.17s/it, \u2713=0, \u2716=2, error=11]
+Evaluation:  13%|#3        | 13/100 [27:28<1:40:42, 69.45s/it, \u2713=0, \u2716=2, error=11]
+Evaluation:  13%|#3        | 13/100 [29:29<1:40:42, 69.45s/it, \u2713=0, \u2716=2, error=12]
+Evaluation:  14%|#4        | 14/100 [29:29<2:01:20, 84.66s/it, \u2713=0, \u2716=2, error=12]
+Evaluation:  14%|#4        | 14/100 [29:46<2:01:20, 84.66s/it, \u2713=0, \u2716=2, error=13]
+Evaluation:  15%|#5        | 15/100 [29:46<1:31:31, 64.61s/it, \u2713=0, \u2716=2, error=13]
+Evaluation:  15%|#5        | 15/100 [30:57<1:31:31, 64.61s/it, \u2713=0, \u2716=3, error=13]
+Evaluation:  16%|#6        | 16/100 [30:57<1:32:57, 66.40s/it, \u2713=0, \u2716=3, error=13]
+Evaluation:  16%|#6        | 16/100 [33:35<1:32:57, 66.40s/it, \u2713=0, \u2716=3, error=14]
+Evaluation:  17%|#7        | 17/100 [33:35<2:09:49, 93.85s/it, \u2713=0, \u2716=3, error=14]
+Evaluation:  17%|#7        | 17/100 [37:06<2:09:49, 93.85s/it, \u2713=0, \u2716=4, error=14]
+Evaluation:  18%|#8        | 18/100 [37:06<2:55:53, 128.70s/it, \u2713=0, \u2716=4, error=14]
+Evaluation:  18%|#8        | 18/100 [37:07<2:55:53, 128.70s/it, \u2713=0, \u2716=4, error=15]
+Evaluation:  19%|#9        | 19/100 [37:07<2:02:20, 90.62s/it, \u2713=0, \u2716=4, error=15] 
+Evaluation:  19%|#9        | 19/100 [37:08<2:02:20, 90.62s/it, \u2713=0, \u2716=5, error=15]
+Evaluation:  20%|##        | 20/100 [37:08<1:24:59, 63.74s/it, \u2713=0, \u2716=5, error=15]
+Evaluation:  20%|##        | 20/100 [37:09<1:24:59, 63.74s/it, \u2713=0, \u2716=6, error=15]
+Evaluation:  21%|##1       | 21/100 [37:09<59:22, 45.10s/it, \u2713=0, \u2716=6, error=15]  
+Evaluation:  21%|##1       | 21/100 [44:32<59:22, 45.10s/it, \u2713=0, \u2716=6, error=16]
+Evaluation:  22%|##2       | 22/100 [44:32<3:33:21, 164.13s/it, \u2713=0, \u2716=6, error=16]
+Evaluation:  22%|##2       | 22/100 [44:33<3:33:21, 164.13s/it, \u2713=0, \u2716=6, error=17]
+Evaluation:  23%|##3       | 23/100 [44:33<2:27:51, 115.22s/it, \u2713=0, \u2716=6, error=17]
+Evaluation:  23%|##3       | 23/100 [44:34<2:27:51, 115.22s/it, \u2713=0, \u2716=6, error=18]
+Evaluation:  24%|##4       | 24/100 [44:34<1:42:28, 80.90s/it, \u2713=0, \u2716=6, error=18] 
+Evaluation:  24%|##4       | 24/100 [44:38<1:42:28, 80.90s/it, \u2713=0, \u2716=7, error=18]
+Evaluation:  25%|##5       | 25/100 [44:38<1:12:22, 57.91s/it, \u2713=0, \u2716=7, error=18]
+Evaluation:  25%|##5       | 25/100 [46:21<1:12:22, 57.91s/it, \u2713=0, \u2716=7, error=19]
+Evaluation:  26%|##6       | 26/100 [46:21<1:27:59, 71.34s/it, \u2713=0, \u2716=7, error=19]
+Evaluation:  26%|##6       | 26/100 [47:53<1:27:59, 71.34s/it, \u2713=0, \u2716=7, error=20]
+Evaluation:  27%|##7       | 27/100 [47:53<1:34:30, 77.68s/it, \u2713=0, \u2716=7, error=20]
+Evaluation:  27%|##7       | 27/100 [48:03<1:34:30, 77.68s/it, \u2713=0, \u2716=7, error=21]
+Evaluation:  28%|##8       | 28/100 [48:03<1:08:52, 57.40s/it, \u2713=0, \u2716=7, error=21]
+Evaluation:  28%|##8       | 28/100 [49:16<1:08:52, 57.40s/it, \u2713=0, \u2716=8, error=21]
+Evaluation:  29%|##9       | 29/100 [49:16<1:13:21, 61.99s/it, \u2713=0, \u2716=8, error=21]
+Evaluation:  29%|##9       | 29/100 [49:21<1:13:21, 61.99s/it, \u2713=0, \u2716=8, error=22]
+Evaluation:  30%|###       | 30/100 [49:21<52:32, 45.04s/it, \u2713=0, \u2716=8, error=22]  
+Evaluation:  30%|###       | 30/100 [50:42<52:32, 45.04s/it, \u2713=0, \u2716=8, error=23]
+Evaluation:  31%|###1      | 31/100 [50:42<1:03:58, 55.63s/it, \u2713=0, \u2716=8, error=23]
+Evaluation:  31%|###1      | 31/100 [51:06<1:03:58, 55.63s/it, \u2713=0, \u2716=8, error=24]
+Evaluation:  32%|###2      | 32/100 [51:06<52:32, 46.36s/it, \u2713=0, \u2716=8, error=24]  
+Evaluation:  32%|###2      | 32/100 [53:26<52:32, 46.36s/it, \u2713=0, \u2716=8, error=25]
+Evaluation:  33%|###3      | 33/100 [53:26<1:23:00, 74.34s/it, \u2713=0, \u2716=8, error=25]
+Evaluation:  33%|###3      | 33/100 [53:33<1:23:00, 74.34s/it, \u2713=0, \u2716=9, error=25]
+Evaluation:  34%|###4      | 34/100 [53:33<59:37, 54.20s/it, \u2713=0, \u2716=9, error=25]  
+Evaluation:  34%|###4      | 34/100 [53:59<59:37, 54.20s/it, \u2713=0, \u2716=9, error=26]
+Evaluation:  35%|###5      | 35/100 [53:59<49:37, 45.81s/it, \u2713=0, \u2716=9, error=26]
+Evaluation:  35%|###5      | 35/100 [54:03<49:37, 45.81s/it, \u2713=0, \u2716=10, error=26]
+Evaluation:  36%|###6      | 36/100 [54:03<35:21, 33.15s/it, \u2713=0, \u2716=10, error=26]
+Evaluation:  36%|###6      | 36/100 [54:57<35:21, 33.15s/it, \u2713=0, \u2716=11, error=26]
+Evaluation:  37%|###7      | 37/100 [54:57<41:29, 39.52s/it, \u2713=0, \u2716=11, error=26]
+Evaluation:  37%|###7      | 37/100 [56:09<41:29, 39.52s/it, \u2713=0, \u2716=11, error=27]
+Evaluation:  38%|###8      | 38/100 [56:09<50:50, 49.20s/it, \u2713=0, \u2716=11, error=27]
+Evaluation:  38%|###8      | 38/100 [1:00:21<50:50, 49.20s/it, \u2713=0, \u2716=11, error=28]
+Evaluation:  39%|###9      | 39/100 [1:00:21<1:51:54, 110.08s/it, \u2713=0, \u2716=11, error=28]
+Evaluation:  39%|###9      | 39/100 [1:04:10<1:51:54, 110.08s/it, \u2713=0, \u2716=11, error=29]
+Evaluation:  40%|####      | 40/100 [1:04:10<2:25:40, 145.68s/it, \u2713=0, \u2716=11, error=29]
+Evaluation:  40%|####      | 40/100 [1:04:11<2:25:40, 145.68s/it, \u2713=0, \u2716=11, error=30]
+Evaluation:  41%|####1     | 41/100 [1:04:11<1:40:35, 102.30s/it, \u2713=0, \u2716=11, error=30]
+Evaluation:  41%|####1     | 41/100 [1:04:12<1:40:35, 102.30s/it, \u2713=0, \u2716=11, error=31]
+Evaluation:  42%|####2     | 42/100 [1:04:12<1:09:24, 71.80s/it, \u2713=0, \u2716=11, error=31] 
+Evaluation:  42%|####2     | 42/100 [1:04:16<1:09:24, 71.80s/it, \u2713=0, \u2716=12, error=31]
+Evaluation:  43%|####3     | 43/100 [1:04:16<49:03, 51.64s/it, \u2713=0, \u2716=12, error=31]  
+Evaluation:  43%|####3     | 43/100 [1:07:29<49:03, 51.64s/it, \u2713=0, \u2716=12, error=32]
+Evaluation:  44%|####4     | 44/100 [1:07:29<1:27:36, 93.87s/it, \u2713=0, \u2716=12, error=32]
+Evaluation:  44%|####4     | 44/100 [1:07:41<1:27:36, 93.87s/it, \u2713=0, \u2716=12, error=33]
+Evaluation:  45%|####5     | 45/100 [1:07:41<1:03:36, 69.39s/it, \u2713=0, \u2716=12, error=33]
+Evaluation:  45%|####5     | 45/100 [1:07:45<1:03:36, 69.39s/it, \u2713=0, \u2716=12, error=34]
+Evaluation:  46%|####6     | 46/100 [1:07:45<44:44, 49.72s/it, \u2713=0, \u2716=12, error=34]  
+Evaluation:  46%|####6     | 46/100 [1:08:16<44:44, 49.72s/it, \u2713=0, \u2716=13, error=34]
+Evaluation:  47%|####6     | 47/100 [1:08:16<38:54, 44.05s/it, \u2713=0, \u2716=13, error=34]
+Evaluation:  47%|####6     | 47/100 [1:10:26<38:54, 44.05s/it, \u2713=0, \u2716=13, error=35]
+Evaluation:  48%|####8     | 48/100 [1:10:26<1:00:30, 69.82s/it, \u2713=0, \u2716=13, error=35]
+Evaluation:  48%|####8     | 48/100 [1:11:21<1:00:30, 69.82s/it, \u2713=0, \u2716=13, error=36]
+Evaluation:  49%|####9     | 49/100 [1:11:21<55:31, 65.33s/it, \u2713=0, \u2716=13, error=36]  
+Evaluation:  49%|####9     | 49/100 [1:11:58<55:31, 65.33s/it, \u2713=0, \u2716=13, error=37]
+Evaluation:  50%|#####     | 50/100 [1:11:58<47:27, 56.96s/it, \u2713=0, \u2716=13, error=37]
+Evaluation:  50%|#####     | 50/100 [1:12:12<47:27, 56.96s/it, \u2713=0, \u2716=13, error=38]
+Evaluation:  51%|#####1    | 51/100 [1:12:12<36:02, 44.12s/it, \u2713=0, \u2716=13, error=38]
+Evaluation:  51%|#####1    | 51/100 [1:12:24<36:02, 44.12s/it, \u2713=0, \u2716=13, error=39]
+Evaluation:  52%|#####2    | 52/100 [1:12:24<27:33, 34.44s/it, \u2713=0, \u2716=13, error=39]
+Evaluation:  52%|#####2    | 52/100 [1:12:59<27:33, 34.44s/it, \u2713=0, \u2716=13, error=40]
+Evaluation:  53%|#####3    | 53/100 [1:12:59<27:10, 34.69s/it, \u2713=0, \u2716=13, error=40]
+Evaluation:  53%|#####3    | 53/100 [1:15:53<27:10, 34.69s/it, \u2713=0, \u2716=13, error=41]
+Evaluation:  54%|#####4    | 54/100 [1:15:53<58:32, 76.35s/it, \u2713=0, \u2716=13, error=41]
+Evaluation:  54%|#####4    | 54/100 [1:17:25<58:32, 76.35s/it, \u2713=0, \u2716=14, error=41]
+Evaluation:  55%|#####5    | 55/100 [1:17:25<1:00:53, 81.20s/it, \u2713=0, \u2716=14, error=41]
+Evaluation:  55%|#####5    | 55/100 [1:22:44<1:00:53, 81.20s/it, \u2713=0, \u2716=14, error=42]
+Evaluation:  56%|#####6    | 56/100 [1:22:44<1:51:47, 152.45s/it, \u2713=0, \u2716=14, error=42]
+Evaluation:  56%|#####6    | 56/100 [1:22:45<1:51:47, 152.45s/it, \u2713=0, \u2716=14, error=43]
+Evaluation:  57%|#####6    | 57/100 [1:22:45<1:16:42, 107.02s/it, \u2713=0, \u2716=14, error=43]
+Evaluation:  57%|#####6    | 57/100 [1:22:46<1:16:42, 107.02s/it, \u2713=0, \u2716=14, error=44]
+Evaluation:  58%|#####8    | 58/100 [1:22:46<52:34, 75.12s/it, \u2713=0, \u2716=14, error=44]   
+Evaluation:  58%|#####8    | 58/100 [1:22:48<52:34, 75.12s/it, \u2713=0, \u2716=14, error=45]
+Evaluation:  59%|#####8    | 59/100 [1:22:48<36:27, 53.35s/it, \u2713=0, \u2716=14, error=45]
+Evaluation:  59%|#####8    | 59/100 [1:42:59<36:27, 53.35s/it, \u2713=0, \u2716=14, error=46]
+Evaluation:  60%|######    | 60/100 [1:42:59<4:27:01, 400.54s/it, \u2713=0, \u2716=14, error=46]
+Evaluation:  60%|######    | 60/100 [1:43:36<4:27:01, 400.54s/it, \u2713=0, \u2716=14, error=47]
+Evaluation:  61%|######1   | 61/100 [1:43:36<3:09:32, 291.60s/it, \u2713=0, \u2716=14, error=47]
+Evaluation:  61%|######1   | 61/100 [2:13:21<3:09:32, 291.60s/it, \u2713=0, \u2716=14, error=48]
+Evaluation:  62%|######2   | 62/100 [2:13:21<7:48:18, 739.43s/it, \u2713=0, \u2716=14, error=48]
+Evaluation:  62%|######2   | 62/100 [2:22:39<7:48:18, 739.43s/it, \u2713=0, \u2716=14, error=49]
+Evaluation:  63%|######3   | 63/100 [2:22:39<7:02:32, 685.20s/it, \u2713=0, \u2716=14, error=49]
+Evaluation:  63%|######3   | 63/100 [2:28:16<7:02:32, 685.20s/it, \u2713=0, \u2716=14, error=50]
+Evaluation:  64%|######4   | 64/100 [2:28:16<5:48:24, 580.69s/it, \u2713=0, \u2716=14, error=50]
+Evaluation:  64%|######4   | 64/100 [2:50:14<5:48:24, 580.69s/it, \u2713=0, \u2716=14, error=51]
+Evaluation:  65%|######5   | 65/100 [2:50:14<7:47:46, 801.89s/it, \u2713=0, \u2716=14, error=51]
+Evaluation:  65%|######5   | 65/100 [2:51:12<7:47:46, 801.89s/it, \u2713=0, \u2716=14, error=52]
+Evaluation:  66%|######6   | 66/100 [2:51:12<5:27:56, 578.72s/it, \u2713=0, \u2716=14, error=52]
+Evaluation:  66%|######6   | 66/100 [3:05:59<5:27:56, 578.72s/it, \u2713=0, \u2716=14, error=53]
+Evaluation:  67%|######7   | 67/100 [3:05:59<6:09:09, 671.19s/it, \u2713=0, \u2716=14, error=53]
+Evaluation:  67%|######7   | 67/100 [3:06:10<6:09:09, 671.19s/it, \u2713=0, \u2716=14, error=54]
+Evaluation:  68%|######8   | 68/100 [3:06:10<4:12:20, 473.15s/it, \u2713=0, \u2716=14, error=54]
+Evaluation:  68%|######8   | 68/100 [3:07:10<4:12:20, 473.15s/it, \u2713=0, \u2716=14, error=55]
+Evaluation:  69%|######9   | 69/100 [3:07:10<3:00:24, 349.18s/it, \u2713=0, \u2716=14, error=55]
+Evaluation:  69%|######9   | 69/100 [3:19:11<3:00:24, 349.18s/it, \u2713=0, \u2716=14, error=56]
+Evaluation:  70%|#######   | 70/100 [3:19:11<3:50:20, 460.69s/it, \u2713=0, \u2716=14, error=56]
+Evaluation:  70%|#######   | 70/100 [3:19:46<3:50:20, 460.69s/it, \u2713=0, \u2716=14, error=57]
+Evaluation:  71%|#######1  | 71/100 [3:19:46<2:40:59, 333.09s/it, \u2713=0, \u2716=14, error=57]
+Evaluation:  71%|#######1  | 71/100 [3:20:03<2:40:59, 333.09s/it, \u2713=0, \u2716=14, error=58]
+Evaluation:  72%|#######2  | 72/100 [3:20:03<1:51:12, 238.30s/it, \u2713=0, \u2716=14, error=58]
+Evaluation:  72%|#######2  | 72/100 [3:21:57<1:51:12, 238.30s/it, \u2713=0, \u2716=15, error=58]
+Evaluation:  73%|#######3  | 73/100 [3:21:57<1:30:19, 200.73s/it, \u2713=0, \u2716=15, error=58]
+Evaluation:  73%|#######3  | 73/100 [3:30:08<1:30:19, 200.73s/it, \u2713=0, \u2716=16, error=58]
+Evaluation:  74%|#######4  | 74/100 [3:30:08<2:04:46, 287.94s/it, \u2713=0, \u2716=16, error=58]
+Evaluation:  74%|#######4  | 74/100 [3:36:31<2:04:46, 287.94s/it, \u2713=0, \u2716=16, error=59]
+Evaluation:  75%|#######5  | 75/100 [3:36:31<2:11:50, 316.41s/it, \u2713=0, \u2716=16, error=59]
+Evaluation:  75%|#######5  | 75/100 [3:43:47<2:11:50, 316.41s/it, \u2713=0, \u2716=17, error=59]
+Evaluation:  76%|#######6  | 76/100 [3:43:47<2:20:55, 352.33s/it, \u2713=0, \u2716=17, error=59]
+Evaluation:  76%|#######6  | 76/100 [3:44:08<2:20:55, 352.33s/it, \u2713=0, \u2716=18, error=59]
+Evaluation:  77%|#######7  | 77/100 [3:44:08<1:36:54, 252.81s/it, \u2713=0, \u2716=18, error=59]
+Evaluation:  77%|#######7  | 77/100 [3:44:09<1:36:54, 252.81s/it, \u2713=0, \u2716=19, error=59]
+Evaluation:  78%|#######8  | 78/100 [3:44:09<1:05:05, 177.54s/it, \u2713=0, \u2716=19, error=59]
+Evaluation:  78%|#######8  | 78/100 [3:44:14<1:05:05, 177.54s/it, \u2713=0, \u2716=20, error=59]
+Evaluation:  79%|#######9  | 79/100 [3:44:14<44:00, 125.76s/it, \u2713=0, \u2716=20, error=59]  
+Evaluation:  79%|#######9  | 79/100 [3:56:34<44:00, 125.76s/it, \u2713=0, \u2716=20, error=60]
+Evaluation:  80%|########  | 80/100 [3:56:34<1:43:18, 309.92s/it, \u2713=0, \u2716=20, error=60]
+Evaluation:  80%|########  | 80/100 [3:56:37<1:43:18, 309.92s/it, \u2713=0, \u2716=20, error=61]
+Evaluation:  81%|########1 | 81/100 [3:56:37<1:08:58, 217.80s/it, \u2713=0, \u2716=20, error=61]
+Evaluation:  81%|########1 | 81/100 [4:00:13<1:08:58, 217.80s/it, \u2713=0, \u2716=20, error=62]
+Evaluation:  82%|########2 | 82/100 [4:00:13<1:05:12, 217.38s/it, \u2713=0, \u2716=20, error=62]
+Evaluation:  82%|########2 | 82/100 [4:04:26<1:05:12, 217.38s/it, \u2713=0, \u2716=20, error=63]
+Evaluation:  83%|########2 | 83/100 [4:04:26<1:04:37, 228.11s/it, \u2713=0, \u2716=20, error=63]
+Evaluation:  83%|########2 | 83/100 [4:04:27<1:04:37, 228.11s/it, \u2713=0, \u2716=20, error=64]
+Evaluation:  84%|########4 | 84/100 [4:04:27<42:37, 159.84s/it, \u2713=0, \u2716=20, error=64]  
+Evaluation:  84%|########4 | 84/100 [4:04:31<42:37, 159.84s/it, \u2713=0, \u2716=20, error=65]
+Evaluation:  85%|########5 | 85/100 [4:04:31<28:14, 112.96s/it, \u2713=0, \u2716=20, error=65]
+Evaluation:  85%|########5 | 85/100 [4:14:01<28:14, 112.96s/it, \u2713=0, \u2716=20, error=66]
+Evaluation:  86%|########6 | 86/100 [4:14:01<58:21, 250.13s/it, \u2713=0, \u2716=20, error=66]
+Evaluation:  86%|########6 | 86/100 [4:17:07<58:21, 250.13s/it, \u2713=0, \u2716=20, error=67]
+Evaluation:  87%|########7 | 87/100 [4:17:07<50:04, 231.09s/it, \u2713=0, \u2716=20, error=67]
+Evaluation:  87%|########7 | 87/100 [4:17:11<50:04, 231.09s/it, \u2713=0, \u2716=20, error=68]
+Evaluation:  88%|########8 | 88/100 [4:17:11<32:33, 162.77s/it, \u2713=0, \u2716=20, error=68]
+Evaluation:  88%|########8 | 88/100 [4:18:25<32:33, 162.77s/it, \u2713=0, \u2716=20, error=69]
+Evaluation:  89%|########9 | 89/100 [4:18:25<24:59, 136.35s/it, \u2713=0, \u2716=20, error=69]
+Evaluation:  89%|########9 | 89/100 [4:18:41<24:59, 136.35s/it, \u2713=0, \u2716=20, error=70]
+Evaluation:  90%|######### | 90/100 [4:18:41<16:42, 100.24s/it, \u2713=0, \u2716=20, error=70]
+Evaluation:  90%|######### | 90/100 [4:19:47<16:42, 100.24s/it, \u2713=0, \u2716=20, error=71]
+Evaluation:  91%|#########1| 91/100 [4:19:47<13:27, 89.70s/it, \u2713=0, \u2716=20, error=71] 
+Evaluation:  91%|#########1| 91/100 [4:20:08<13:27, 89.70s/it, \u2713=0, \u2716=20, error=72]
+Evaluation:  92%|#########2| 92/100 [4:20:08<09:13, 69.24s/it, \u2713=0, \u2716=20, error=72]
+Evaluation:  92%|#########2| 92/100 [4:20:29<09:13, 69.24s/it, \u2713=0, \u2716=20, error=73]
+Evaluation:  93%|#########3| 93/100 [4:20:29<06:22, 54.64s/it, \u2713=0, \u2716=20, error=73]
+Evaluation:  93%|#########3| 93/100 [4:20:50<06:22, 54.64s/it, \u2713=0, \u2716=20, error=74]
+Evaluation:  94%|#########3| 94/100 [4:20:50<04:28, 44.73s/it, \u2713=0, \u2716=20, error=74]
+Evaluation:  94%|#########3| 94/100 [4:20:54<04:28, 44.73s/it, \u2713=0, \u2716=20, error=75]
+Evaluation:  95%|#########5| 95/100 [4:20:54<02:42, 32.41s/it, \u2713=0, \u2716=20, error=75]
+Evaluation:  95%|#########5| 95/100 [4:21:12<02:42, 32.41s/it, \u2713=0, \u2716=20, error=76]
+Evaluation:  96%|#########6| 96/100 [4:21:12<01:52, 28.17s/it, \u2713=0, \u2716=20, error=76]
+Evaluation:  96%|#########6| 96/100 [4:21:26<01:52, 28.17s/it, \u2713=0, \u2716=20, error=77]
+Evaluation:  97%|#########7| 97/100 [4:21:26<01:11, 23.94s/it, \u2713=0, \u2716=20, error=77]
+Evaluation:  97%|#########7| 97/100 [4:22:06<01:11, 23.94s/it, \u2713=0, \u2716=20, error=78]
+Evaluation:  98%|#########8| 98/100 [4:22:06<00:57, 28.66s/it, \u2713=0, \u2716=20, error=78]
+Evaluation:  98%|#########8| 98/100 [4:22:14<00:57, 28.66s/it, \u2713=0, \u2716=20, error=79]
+Evaluation:  99%|#########9| 99/100 [4:22:14<00:22, 22.57s/it, \u2713=0, \u2716=20, error=79]
+Evaluation:  99%|#########9| 99/100 [4:22:54<00:22, 22.57s/it, \u2713=0, \u2716=20, error=80]
+Evaluation: 100%|##########| 100/100 [4:22:54<00:00, 27.77s/it, \u2713=0, \u2716=20, error=80]
+Evaluation: 100%|##########| 100/100 [4:22:54<00:00, 157.75s/it, \u2713=0, \u2716=20, error=80]
+astropy__astropy-13453: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file astropy/io/ascii/html.py
+Hunk #1 succeeded at 339 with fuzz 3.
+patch: **** malformed patch at line 11: @@ -346,7 +347
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\astropy__astropy-13453\run_instance.log) for more information.
+astropy__astropy-14369: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/astropy/table/format/ascii.py
+
+|+++ b/astropy/table/format/ascii.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\astropy__astropy-14369\run_instance.log) for more information.
+astropy__astropy-13977: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file astropy/units/quantity.py
+Hunk #1 FAILED at 617.
+1 out of 1 hunk FAILED -- saving rejects to file astropy/units/quantity.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\astropy__astropy-13977\run_instance.log) for more information.
+astropy__astropy-14096: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/original.py
+
+|+++ b/modified.py
+
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 9:      def prop(self):
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\astropy__astropy-14096\run_instance.log) for more information.
+django__django-10973: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/django/db/backends/postgres/client.py
+
+|+++ b/django/db/backends/postgres/client.py
+
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 11: -        os.system('psql -h {} -U {} -d {}'.format(
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-10973\run_instance.log) for more information.
+django__django-11163: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/fields/__init__.py
+patch: **** malformed patch at line 14:          if exclude and f.name in exclude:
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-11163\run_instance.log) for more information.
+django__django-11239: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/django/dbshell.py
+
+|+++ b/django/dbshell.py
+
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 10:          'port': '5432',
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-11239\run_instance.log) for more information.
+astropy__astropy-8872: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file astropy/units/quantity.py
+Hunk #1 FAILED at 296.
+1 out of 1 hunk FAILED -- saving rejects to file astropy/units/quantity.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\astropy__astropy-8872\run_instance.log) for more information.
+django__django-11551: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/django/admin/contrib/checks.py
+
+|+++ b/django/admin/contrib/checks.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-11551\run_instance.log) for more information.
+django__django-11477: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/urls/resolvers.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file django/urls/resolvers.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-11477\run_instance.log) for more information.
+django__django-11999: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/base.py
+Hunk #1 FAILED at 1234.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/models/base.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-11999\run_instance.log) for more information.
+django__django-12273: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/models.py
+
+|+++ b/models.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-12273\run_instance.log) for more information.
+django__django-12193: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/forms/widgets.py
+Hunk #1 FAILED at 524.
+1 out of 1 hunk FAILED -- saving rejects to file django/forms/widgets.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-12193\run_instance.log) for more information.
+django__django-12774: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/query.py
+Hunk #1 FAILED at 677.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/models/query.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-12774\run_instance.log) for more information.
+django__django-13033: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/sql/compiler.py
+Hunk #1 FAILED at 727.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/models/sql/compiler.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-13033\run_instance.log) for more information.
+django__django-13568: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/contrib/auth/checks.py
+patch: **** malformed patch at line 13:              checks.Error(
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-13568\run_instance.log) for more information.
+django__django-13128: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/models.py
+
+|+++ b/models.py
+
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 7:  
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-13128\run_instance.log) for more information.
+django__django-13809: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patch: **** malformed patch at line 19: @@ -37,6 +39
+
+patching file django/core/management/commands/runserver.py
+Hunk #1 succeeded at 20 with fuzz 3.
+Hunk #2 succeeded at 31 with fuzz 3.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-13809\run_instance.log) for more information.
+django__django-14017: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patch: **** unexpected end of file in patch
+patching file django/db/models/expressions.py
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-14017\run_instance.log) for more information.
+django__django-13820: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patch: **** malformed patch at line 10:  
+
+patching file django/db/migrations/loader.py
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-13820\run_instance.log) for more information.
+django__django-13794: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/template/defaulttags.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file django/template/defaulttags.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-13794\run_instance.log) for more information.
+django__django-14404: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patch: **** unexpected end of file in patch
+patching file django/views/defaults.py
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-14404\run_instance.log) for more information.
+django__django-14351: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/sql/query.py
+Hunk #1 FAILED at 230.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/models/sql/query.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-14351\run_instance.log) for more information.
+django__django-14434: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/path/to/your/file.py
+
+|+++ b/path/to/your/file.py
+
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 9: @@@ SYNTAX_ERROR: def solve(  # missing closing paren and body
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-14434\run_instance.log) for more information.
+django__django-14559: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/query.py
+Hunk #1 FAILED at 565.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/models/query.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-14559\run_instance.log) for more information.
+django__django-14631: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/forms/forms.py
+patch: **** malformed patch at line 23:  
+
+Hunk #1 FAILED at 1234.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-14631\run_instance.log) for more information.
+django__django-14792: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/django/db/models/functions.py
+
+|+++ b/django/db/models/functions.py
+
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 22: @@@ SYNTAX_ERROR: def solve(  # missing closing paren and body
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-14792\run_instance.log) for more information.
+django__django-15037: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/options.py
+Hunk #1 FAILED at 1234.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/models/options.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-15037\run_instance.log) for more information.
+django__django-15103: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/utils/safestring.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file django/utils/safestring.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-15103\run_instance.log) for more information.
+django__django-15252: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patch: **** malformed patch at line 12:  
+
+patching file django/db/migrations/recorder.py
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-15252\run_instance.log) for more information.
+django__django-15368: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/query.py
+Hunk #1 FAILED at 670.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/models/query.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-15368\run_instance.log) for more information.
+django__django-15315: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/fields/__init__.py
+Hunk #1 FAILED at 1234.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/models/fields/__init__.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-15315\run_instance.log) for more information.
+django__django-15277: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 10: @@@ SYNTAX_ERROR: def solve(  # missing closing paren and body
+
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/django/db/models/fields/char.py
+
+|+++ b/django/db/models/fields/char.py
+
+--------------------------
+No file to patch.  Skipping patch.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-15277\run_instance.log) for more information.
+django__django-15851: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/core/management/commands/dbshell.py
+Hunk #1 FAILED at 45.
+1 out of 1 hunk FAILED -- saving rejects to file django/core/management/commands/dbshell.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-15851\run_instance.log) for more information.
+django__django-15957: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/models/fields/related.py
+Hunk #1 FAILED at 1234.
+1 out of 1 hunk FAILED -- saving rejects to file django/db/models/fields/related.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-15957\run_instance.log) for more information.
+django__django-15916: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/forms/models.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file django/forms/models.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-15916\run_instance.log) for more information.
+django__django-15930: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/path/to/your/file.py
+
+|+++ b/path/to/your/file.py
+
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 14: -            When(~Q(pk__in=[]), then=Value(True)),
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-15930\run_instance.log) for more information.
+django__django-15987: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/core/management/commands/loaddata.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file django/core/management/commands/loaddata.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-15987\run_instance.log) for more information.
+django__django-16116: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/core/management/commands/makemigrations.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file django/core/management/commands/makemigrations.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-16116\run_instance.log) for more information.
+django__django-16901: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/django/db/models/q.py
+
+|+++ b/django/db/models/q.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-16901\run_instance.log) for more information.
+django__django-16454: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/core/management/base.py
+patch: **** malformed patch at line 11:          for action in subparsers._actions:
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-16454\run_instance.log) for more information.
+django__django-16938: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/core/serializers/python.py
+Hunk #1 FAILED at 81.
+1 out of 1 hunk FAILED -- saving rejects to file django/core/serializers/python.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-16938\run_instance.log) for more information.
+django__django-16485: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/template/defaultfilters.py
+Hunk #1 FAILED at 1234.
+1 out of 1 hunk FAILED -- saving rejects to file django/template/defaultfilters.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-16485\run_instance.log) for more information.
+django__django-7530: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/django/db/migrations/operations/registry.py
+
+|+++ b/django/db/migrations/operations/registry.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-7530\run_instance.log) for more information.
+django__django-17084: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/original.py
+
+|+++ b/fixed.py
+
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 14:  ).aggregate(
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\django__django-17084\run_instance.log) for more information.
+psf__requests-1766: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file requests/auth.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file requests/auth.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\psf__requests-1766\run_instance.log) for more information.
+pallets__flask-5014: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/flask/blueprints.py
+
+|+++ b/flask/blueprints.py
+
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 13: 
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\pallets__flask-5014\run_instance.log) for more information.
+psf__requests-6028: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file requests/adapters.py
+Hunk #1 FAILED at 100.
+1 out of 1 hunk FAILED -- saving rejects to file requests/adapters.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\psf__requests-6028\run_instance.log) for more information.
+matplotlib__matplotlib-25332: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/original_code.py
+
+|+++ b/fixed_code.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\matplotlib__matplotlib-25332\run_instance.log) for more information.
+matplotlib__matplotlib-22871: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/matplotlib/dates.py
+
+|+++ b/matplotlib/dates.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\matplotlib__matplotlib-22871\run_instance.log) for more information.
+pydata__xarray-4075: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file xarray/core/weighted.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file xarray/core/weighted.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\pydata__xarray-4075\run_instance.log) for more information.
+pydata__xarray-3993: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file xarray/core/dataarray.py
+Hunk #1 FAILED at 1234.
+1 out of 1 hunk FAILED -- saving rejects to file xarray/core/dataarray.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\pydata__xarray-3993\run_instance.log) for more information.
+pylint-dev__pylint-4551: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/pyreverse.py
+
+|+++ b/pyreverse.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\pylint-dev__pylint-4551\run_instance.log) for more information.
+pytest-dev__pytest-5631: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 14: @@@ SYNTAX_ERROR: def solve(  # missing closing paren and body
+
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/_pytest/compat.py
+
+|+++ b/_pytest/compat.py
+
+--------------------------
+No file to patch.  Skipping patch.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\pytest-dev__pytest-5631\run_instance.log) for more information.
+pylint-dev__pylint-6903: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file pylint/lint/run.py
+patch: **** malformed patch at line 9: @@@ SYNTAX_ERROR: def solve(  # missing closing paren and body
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\pylint-dev__pylint-6903\run_instance.log) for more information.
+pytest-dev__pytest-5262: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file src/_pytest/capture.py
+Hunk #1 FAILED at 450.
+1 out of 1 hunk FAILED -- saving rejects to file src/_pytest/capture.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\pytest-dev__pytest-5262\run_instance.log) for more information.
+pytest-dev__pytest-7521: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/_pytest/capture.py
+
+|+++ b/_pytest/capture.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\pytest-dev__pytest-7521\run_instance.log) for more information.
+sphinx-doc__sphinx-7757: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/sphinx/ext/autodoc.py
+
+|+++ b/sphinx/ext/autodoc.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sphinx-doc__sphinx-7757\run_instance.log) for more information.
+sphinx-doc__sphinx-7440: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file doc/glossary.rst
+patch: **** malformed patch at line 11: @@@ SYNTAX_ERROR: def solve(  # missing closing paren and body
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sphinx-doc__sphinx-7440\run_instance.log) for more information.
+sphinx-doc__sphinx-10449: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/sphinx/ext/autodoc.py
+
+|+++ b/sphinx/ext/autodoc.py
+
+--------------------------
+No file to patch.  Skipping patch.
+2 out of 2 hunks ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sphinx-doc__sphinx-10449\run_instance.log) for more information.
+sphinx-doc__sphinx-7910: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file sphinx/ext/napoleon/docstring.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file sphinx/ext/napoleon/docstring.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sphinx-doc__sphinx-7910\run_instance.log) for more information.
+sphinx-doc__sphinx-7985: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file sphinx/builders/linkcheck.py
+patch: **** malformed patch at line 14:                  self.report_broken_link(link)
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sphinx-doc__sphinx-7985\run_instance.log) for more information.
+sphinx-doc__sphinx-8459: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/sphinx/ext/autodoc.py
+
+|+++ b/sphinx/ext/autodoc.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sphinx-doc__sphinx-8459\run_instance.log) for more information.
+sphinx-doc__sphinx-9281: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/original_file.py
+
+|+++ b/modified_file.py
+
+--------------------------
+No file to patch.  Skipping patch.
+patch: **** malformed patch at line 13:  def ugly_enum_func(e: MyEnum = MyEnum.ValueA) -> None:
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sphinx-doc__sphinx-9281\run_instance.log) for more information.
+sphinx-doc__sphinx-8593: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/sphinx/ext/autodoc.py
+
+|+++ b/sphinx/ext/autodoc.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sphinx-doc__sphinx-8593\run_instance.log) for more information.
+sphinx-doc__sphinx-8595: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/sphinx/ext/autodoc.py
+
+|+++ b/sphinx/ext/autodoc.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sphinx-doc__sphinx-8595\run_instance.log) for more information.
+scikit-learn__scikit-learn-25232: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file sklearn/impute/_iterative.py
+Hunk #1 succeeded at 123 with fuzz 3.
+Hunk #2 succeeded at 131 with fuzz 3.
+patch: **** malformed patch at line 29: @@@ SYNTAX_ERROR: def solve(  # missing closing paren and body
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\scikit-learn__scikit-learn-25232\run_instance.log) for more information.
+sympy__sympy-12096: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file sympy/core/function.py
+patch: **** malformed patch at line 11: @@@ SYNTAX_ERROR: def solve(  # missing closing paren and body
+
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sympy__sympy-12096\run_instance.log) for more information.
+sympy__sympy-11618: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file sympy/geometry/point.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file sympy/geometry/point.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sympy__sympy-11618\run_instance.log) for more information.
+sympy__sympy-13974: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file sympy/physics/quantum/tensorproduct.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file sympy/physics/quantum/tensorproduct.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sympy__sympy-13974\run_instance.log) for more information.
+sympy__sympy-14248: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file sympy/matrices/matrices.py
+Hunk #1 FAILED at 1234.
+1 out of 1 hunk FAILED -- saving rejects to file sympy/matrices/matrices.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sympy__sympy-14248\run_instance.log) for more information.
+sympy__sympy-15976: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file sympy/printing/mathml.py
+Hunk #1 FAILED at 123.
+1 out of 1 hunk FAILED -- saving rejects to file sympy/printing/mathml.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sympy__sympy-15976\run_instance.log) for more information.
+sympy__sympy-13551: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file sympy/concrete/products.py
+Hunk #1 FAILED at 283.
+1 out of 1 hunk FAILED -- saving rejects to file sympy/concrete/products.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sympy__sympy-13551\run_instance.log) for more information.
+sympy__sympy-17655: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patch: **** malformed patch at line 15: @@@ SYNTAX_ERROR: def solve(  # missing closing paren and body
+
+patching file sympy/geometry/point.py
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sympy__sympy-17655\run_instance.log) for more information.
+sympy__sympy-13852: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/sympy/functions/elementary/analytic.py
+
+|+++ b/sympy/functions/elementary/analytic.py
+
+--------------------------
+No file to patch.  Skipping patch.
+1 out of 1 hunk ignored
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sympy__sympy-13852\run_instance.log) for more information.
+sphinx-doc__sphinx-9591: >>>>> Patch Apply Failed:
+patch: **** malformed patch at line 9:      A class representing a point.
+
+(Stripping trailing CRs from patch; use --binary to disable.)
+can't find file to patch at input line 3
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|--- a/original.py
+
+|+++ b/fixed.py
+
+--------------------------
+No file to patch.  Skipping patch.
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sphinx-doc__sphinx-9591\run_instance.log) for more information.
+sympy__sympy-19040: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file sympy/polys/factortools.py
+Hunk #1 FAILED at 1147.
+1 out of 1 hunk FAILED -- saving rejects to file sympy/polys/factortools.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sympy__sympy-19040\run_instance.log) for more information.
+sympy__sympy-20916: >>>>> Patch Apply Failed:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file sympy/printing/conventions.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file sympy/printing/conventions.py.rej
+
+Check (logs\run_evaluation\vi_b_rescore_part_vi_b_official_reward_only\commscm-vi-b-reward_only\sympy__sympy-20916\run_instance.log) for more information.
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 100
+Instances submitted: 100
+Instances completed: 20
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 20
+Instances with empty patches: 0
+Instances with errors: 80
+Unstopped containers: 0
+Unremoved images: 1
+Report written to commscm-vi-b-reward_only.vi_b_rescore_part_vi_b_official_reward_only.json

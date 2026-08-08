@@ -1,0 +1,11 @@
+--- a/django/db/models/fields/__init__.py
++++ b/django/db/models/fields/__init__.py
+@@ -1234,7 +1234,7 @@
+         return self._hash
+ 
+     def __hash__(self):
+-        return hash((self.__class__, self.name, self.model))
++        return hash((self.__class__, self.name))
+ 
+     def __eq__(self, other):
+         return isinstance(other, Field) and self.name == other.name and self.__class__ == other.__class__

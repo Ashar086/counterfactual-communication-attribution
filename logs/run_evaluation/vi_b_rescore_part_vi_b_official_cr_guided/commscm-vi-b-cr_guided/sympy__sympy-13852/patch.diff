@@ -1,0 +1,15 @@
+--- a/sympy/functions/elementary/analytic.py
++++ b/sympy/functions/elementary/analytic.py
+@@ -1234,7 +1234,7 @@
+ 
+ def expand_func(expr):
+     if isinstance(expr, PolyLog) and expr.args[0] == 1:
+-        return -log(1 - expr.args[1])
++        return -log(1 - expr.args[1])  # Remove exp_polar term
+ 
+     # Existing logic for other cases...
+ 
++    if isinstance(expr, PolyLog) and expr.args[0] == 2 and expr.args[1] == Rational(1, 2):
++        return -log(2)**2/2 + pi**2/12  # Add evaluation for polylog(2, 1/2)
+ 
+     return expr

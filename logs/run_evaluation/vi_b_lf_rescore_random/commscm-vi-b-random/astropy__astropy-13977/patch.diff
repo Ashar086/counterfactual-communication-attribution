@@ -1,0 +1,19 @@
+--- a/astropy/units/quantity.py
++++ b/astropy/units/quantity.py
+@@ -617,6 +617,12 @@
+         inputs = [inp.ndarray if isinstance(inp, DuckArray) else inp for inp in inputs]
+ 
+         try:
++            if not all(isinstance(inp, (Quantity, np.ndarray, Column)) for inp in inputs):
++                return NotImplemented
++
+             for inp in inputs:
+                 if isinstance(inp, np.ndarray):
+                     result = inp.__array_ufunc__(function, method, *inputs, **kwargs)
+                     if result is not NotImplemented:
+                         return DuckArray(result)
+ 
+         except ValueError:
+             return NotImplemented
+         
+         return NotImplemented

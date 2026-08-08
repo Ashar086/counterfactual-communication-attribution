@@ -1,0 +1,7 @@
+{
+  "locked_at": "2026-08-02",
+  "files": {
+    "commscm/adapters/swebench/pipeline.py": "8a378519f27ca874ef261cfab4d75fd497e417814f900728f34a983f8ee9682f"
+  },
+  "note": "VI.B prompt/template hash at prereg sign. Recompute at run start; abort if changed without amendment."
+}

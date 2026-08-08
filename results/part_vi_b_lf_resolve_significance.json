@@ -1,0 +1,148 @@
+{
+  "experiment": "part_vi_b_lf_resolve_significance",
+  "source": "results/part_vi_b_lf_rescore_summary.json / overnight_lf_campaign_final.json",
+  "n": 100,
+  "selection_seed": 42,
+  "outcome": "Resolve@1 (resolved vs not-resolved; errors+unresolved counted as not resolved)",
+  "methods": [
+    {
+      "method_key": "cr_guided",
+      "method": "CR-guided",
+      "resolved": 2,
+      "n": 100,
+      "rate": 0.02,
+      "wilson_95ci": [
+        0.00550196755016235,
+        0.07001179072854391
+      ],
+      "clopper_pearson_95ci": [
+        0.0024313368239425423,
+        0.07038393247107011
+      ]
+    },
+    {
+      "method_key": "reward_only",
+      "method": "Reward-only",
+      "resolved": 4,
+      "n": 100,
+      "rate": 0.04,
+      "wilson_95ci": [
+        0.015663303991547604,
+        0.09837071435887923
+      ],
+      "clopper_pearson_95ci": [
+        0.011004493986188198,
+        0.09925715671265997
+      ]
+    },
+    {
+      "method_key": "random",
+      "method": "Random",
+      "resolved": 3,
+      "n": 100,
+      "rate": 0.03,
+      "wilson_95ci": [
+        0.01025452402403891,
+        0.08451936429052763
+      ],
+      "clopper_pearson_95ci": [
+        0.006229971538306395,
+        0.08517605297428
+      ]
+    },
+    {
+      "method_key": "static_heuristic",
+      "method": "Static",
+      "resolved": 3,
+      "n": 100,
+      "rate": 0.03,
+      "wilson_95ci": [
+        0.01025452402403891,
+        0.08451936429052763
+      ],
+      "clopper_pearson_95ci": [
+        0.006229971538306395,
+        0.08517605297428
+      ]
+    }
+  ],
+  "pairwise_vs_cr_guided": {
+    "reward_only": {
+      "comparison": "CR-guided vs Reward-only",
+      "table": [
+        [
+          2,
+          98
+        ],
+        [
+          4,
+          96
+        ]
+      ],
+      "odds_ratio": 0.4897959183673469,
+      "p_value": 0.6827165895859618,
+      "test": "Fisher exact (two-sided)"
+    },
+    "random": {
+      "comparison": "CR-guided vs Random",
+      "table": [
+        [
+          2,
+          98
+        ],
+        [
+          3,
+          97
+        ]
+      ],
+      "odds_ratio": 0.6598639455782312,
+      "p_value": 1.0,
+      "test": "Fisher exact (two-sided)"
+    },
+    "static_heuristic": {
+      "comparison": "CR-guided vs Static",
+      "table": [
+        [
+          2,
+          98
+        ],
+        [
+          3,
+          97
+        ]
+      ],
+      "odds_ratio": 0.6598639455782312,
+      "p_value": 1.0,
+      "test": "Fisher exact (two-sided)"
+    }
+  },
+  "overall_4x2": {
+    "test": "Freeman-Halton-style Monte Carlo (fixed margins; chi2 ranking)",
+    "statistic_chi2_obs": 0.6872852233676976,
+    "df": 3,
+    "expected": [
+      [
+        3.0,
+        97.0
+      ],
+      [
+        3.0,
+        97.0
+      ],
+      [
+        3.0,
+        97.0
+      ],
+      [
+        3.0,
+        97.0
+      ]
+    ],
+    "p_value_chi2_asymptotic": 0.8761904400374348,
+    "p_value_monte_carlo": 0.9775951120244398,
+    "monte_carlo_reps": 200000,
+    "note": "Asymptotic chi-square may be unreliable: several expected cell counts < 5. Prefer Monte Carlo p-value for the overall test."
+  },
+  "decision_rule": "Fisher exact preferred for pairwise 2\u00d72 with expected counts < 5; Wilson CI primary for rates; Clopper\u2013Pearson reported as sensitivity.",
+  "paper_table_md": "Table. VI.B LF-rescored Resolve@1 with 95% Wilson CIs and pairwise Fisher exact tests vs CR-guided (n=100).\n\n| Method | Resolved/n | Rate | 95% Wilson CI | p vs CR-guided (Fisher exact) |\n|---|---:|---:|---|---:|\n| CR-guided | 2/100 | 0.02 | [0.006, 0.070] | \u2014 |\n| Reward-only | 4/100 | 0.04 | [0.016, 0.098] | 0.6827 |\n| Random | 3/100 | 0.03 | [0.010, 0.085] | 1 |\n| Static | 3/100 | 0.03 | [0.010, 0.085] | 1 |\n\nOverall (4\u00d72) asymptotic \u03c7\u00b2 p = 0.8762 (df=3); Monte Carlo exact-style p = 0.9776 (200,000 reps). Prefer MC given sparse cells.\n\nClopper\u2013Pearson 95% CIs (supplement):\n- CR-guided: [0.002, 0.070]\n- Reward-only: [0.011, 0.099]\n- Random: [0.006, 0.085]\n- Static: [0.006, 0.085]"
+}

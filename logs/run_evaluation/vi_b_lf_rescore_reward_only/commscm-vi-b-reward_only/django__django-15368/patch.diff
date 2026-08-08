@@ -1,0 +1,11 @@
+--- a/django/db/models/query.py
++++ b/django/db/models/query.py
+@@ -670,7 +670,7 @@
+                 # If the attribute is not a field, we can't update it.
+                 if not isinstance(attr, (Field, str)):
+                     raise ValueError("Cannot update field '%s' on model '%s'" % (field_name, self.model._meta.label))
+-                if not isinstance(attr, Expression):
++                if not isinstance(attr, (Expression, F)):
+                     raise ValueError("Cannot update field '%s' on model '%s'" % (field_name, self.model._meta.label))
+ 
+                 # If the attribute is an F expression, we can use it directly.

@@ -1,0 +1,97 @@
+2026-08-04 21:05:08,740 - INFO - Creating container for sphinx-doc__sphinx-10449...
+2026-08-04 21:05:09,559 - INFO - Container for sphinx-doc__sphinx-10449 created: 6b22ba6e6108df2ca2bfc8dd0e8e9e995d86e4421a56f283484571fd2bc2c240
+2026-08-04 21:05:09,987 - INFO - Container for sphinx-doc__sphinx-10449 started: 6b22ba6e6108df2ca2bfc8dd0e8e9e995d86e4421a56f283484571fd2bc2c240
+2026-08-04 21:05:09,989 - INFO - Intermediate patch for sphinx-doc__sphinx-10449 written to logs\run_evaluation\oracle_gold_sample_n10_s7\commscm-oracle-gold\sphinx-doc__sphinx-10449\patch.diff, now applying to container...
+2026-08-04 21:05:10,303 - INFO - Failed to apply patch to container: git apply --verbose
+2026-08-04 21:05:10,458 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2026-08-04 21:05:10,602 - INFO - >>>>> Applied Patch:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file sphinx/ext/autodoc/typehints.py
+
+2026-08-04 21:05:11,372 - INFO - Git diff before:
+diff --git a/sphinx/ext/autodoc/typehints.py b/sphinx/ext/autodoc/typehints.py
+index 06768168e..d912cd7d5 100644
+--- a/sphinx/ext/autodoc/typehints.py
++++ b/sphinx/ext/autodoc/typehints.py
+@@ -59,7 +59,10 @@ def merge_typehints(app: Sphinx, domain: str, objtype: str, contentnode: Element
+ 
+         for field_list in field_lists:
+             if app.config.autodoc_typehints_description_target == "all":
+-                modify_field_list(field_list, annotations[fullname])
++                if objtype == 'class':
++                    modify_field_list(field_list, annotations[fullname], suppress_rtype=True)
++                else:
++                    modify_field_list(field_list, annotations[fullname])
+             elif app.config.autodoc_typehints_description_target == "documented_params":
+                 augment_descriptions_with_types(
+                     field_list, annotations[fullname], force_rtype=True
+@@ -83,7 +86,8 @@ def insert_field_list(node: Element) -> nodes.field_list:
+     return field_list
+ 
+ 
+-def modify_field_list(node: nodes.field_list, annotations: Dict[str, str]) -> None:
++def modify_field_list(node: nodes.field_list, annotations: Dict[str, str],
++                      suppress_rtype: bool = False) -> None:
+     arguments: Dict[str, Dict[str, bool]] = {}
+     fields = cast(Iterable[nodes.field], node)
+     for field in fields:
+@@ -124,6 +128,10 @@ def modify_field_list(node: nodes.field_list, annotations: Dict[str, str]) -> No
+             node += field
+ 
+     if 'return' in annotations and 'return' not in arguments:
++        annotation = annotations['return']
++        if annotation == 'None' and suppress_rtype:
++            return
++
+         field = nodes.field()
+         field += nodes.field_name('', 'rtype')
+         field += nodes.field_body('', nodes.paragraph('', annotation))
+2026-08-04 21:05:11,373 - INFO - Eval script for sphinx-doc__sphinx-10449 written to logs\run_evaluation\oracle_gold_sample_n10_s7\commscm-oracle-gold\sphinx-doc__sphinx-10449\eval.sh; copying to container...
+2026-08-04 21:05:19,700 - INFO - Test runtime: 8.04 seconds
+2026-08-04 21:05:19,702 - INFO - Test output for sphinx-doc__sphinx-10449 written to logs\run_evaluation\oracle_gold_sample_n10_s7\commscm-oracle-gold\sphinx-doc__sphinx-10449\test_output.txt
+2026-08-04 21:05:19,919 - INFO - Git diff after:
+diff --git a/sphinx/ext/autodoc/typehints.py b/sphinx/ext/autodoc/typehints.py
+index 06768168e..d912cd7d5 100644
+--- a/sphinx/ext/autodoc/typehints.py
++++ b/sphinx/ext/autodoc/typehints.py
+@@ -59,7 +59,10 @@ def merge_typehints(app: Sphinx, domain: str, objtype: str, contentnode: Element
+ 
+         for field_list in field_lists:
+             if app.config.autodoc_typehints_description_target == "all":
+-                modify_field_list(field_list, annotations[fullname])
++                if objtype == 'class':
++                    modify_field_list(field_list, annotations[fullname], suppress_rtype=True)
++                else:
++                    modify_field_list(field_list, annotations[fullname])
+             elif app.config.autodoc_typehints_description_target == "documented_params":
+                 augment_descriptions_with_types(
+                     field_list, annotations[fullname], force_rtype=True
+@@ -83,7 +86,8 @@ def insert_field_list(node: Element) -> nodes.field_list:
+     return field_list
+ 
+ 
+-def modify_field_list(node: nodes.field_list, annotations: Dict[str, str]) -> None:
++def modify_field_list(node: nodes.field_list, annotations: Dict[str, str],
++                      suppress_rtype: bool = False) -> None:
+     arguments: Dict[str, Dict[str, bool]] = {}
+     fields = cast(Iterable[nodes.field], node)
+     for field in fields:
+@@ -124,6 +128,10 @@ def modify_field_list(node: nodes.field_list, annotations: Dict[str, str]) -> No
+             node += field
+ 
+     if 'return' in annotations and 'return' not in arguments:
++        annotation = annotations['return']
++        if annotation == 'None' and suppress_rtype:
++            return
++
+         field = nodes.field()
+         field += nodes.field_name('', 'rtype')
+         field += nodes.field_body('', nodes.paragraph('', annotation))
+2026-08-04 21:05:19,919 - INFO - Grading answer for sphinx-doc__sphinx-10449...
+2026-08-04 21:05:19,968 - INFO - report: {'sphinx-doc__sphinx-10449': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': False, 'tests_status': {'FAIL_TO_PASS': {'success': [], 'failure': ['tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description_with_documented_init']}, 'PASS_TO_PASS': {'success': [], 'failure': ['tests/test_ext_autodoc_configs.py::test_autoclass_content_class', 'tests/test_ext_autodoc_configs.py::test_autoclass_content_init', 'tests/test_ext_autodoc_configs.py::test_autodoc_class_signature_mixed', 'tests/test_ext_autodoc_configs.py::test_autodoc_class_signature_separated_init', 'tests/test_ext_autodoc_configs.py::test_autodoc_class_signature_separated_new', 'tests/test_ext_autodoc_configs.py::test_autoclass_content_both', 'tests/test_ext_autodoc_configs.py::test_autodoc_inherit_docstrings', 'tests/test_ext_autodoc_configs.py::test_autodoc_docstring_signature', 'tests/test_ext_autodoc_configs.py::test_autoclass_content_and_docstring_signature_class', 'tests/test_ext_autodoc_configs.py::test_autoclass_content_and_docstring_signature_init', 'tests/test_ext_autodoc_configs.py::test_autoclass_content_and_docstring_signature_both', 'tests/test_ext_autodoc_configs.py::test_mocked_module_imports', 'tests/test_ext_autodoc_configs.py::test_autodoc_typehints_signature', 'tests/test_ext_autodoc_configs.py::test_autodoc_typehints_none', 'tests/test_ext_autodoc_configs.py::test_autodoc_typehints_none_for_overload', 'tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description', 'tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description_no_undoc', 'tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description_no_undoc_doc_rtype', 'tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description_with_documented_init_no_undoc', 'tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description_with_documented_init_no_undoc_doc_rtype', 'tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description_for_invalid_node', 'tests/test_ext_autodoc_configs.py::test_autodoc_typehints_both', 'tests/test_ext_autodoc_configs.py::test_autodoc_type_aliases', 'tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description_and_type_aliases', 'tests/test_ext_autodoc_configs.py::test_autodoc_typehints_format_fully_qualified', 'tests/test_ext_autodoc_configs.py::test_autodoc_typehints_format_fully_qualified_for_class_alias', 'tests/test_ext_autodoc_configs.py::test_autodoc_typehints_format_fully_qualified_for_generic_alias', 'tests/test_ext_autodoc_configs.py::test_autodoc_typehints_format_fully_qualified_for_newtype_alias', 'tests/test_ext_autodoc_configs.py::test_autodoc_default_options', 'tests/test_ext_autodoc_configs.py::test_autodoc_default_options_with_values']}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for sphinx-doc__sphinx-10449: resolved: False
+2026-08-04 21:05:19,969 - INFO - Attempting to stop container sweb.eval.sphinx-doc__sphinx-10449.oracle_gold_sample_n10_s7...
+2026-08-04 21:05:35,477 - INFO - Attempting to remove container sweb.eval.sphinx-doc__sphinx-10449.oracle_gold_sample_n10_s7...
+2026-08-04 21:05:35,532 - INFO - Container sweb.eval.sphinx-doc__sphinx-10449.oracle_gold_sample_n10_s7 removed.
+2026-08-04 21:05:35,533 - INFO - Attempting to remove image swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10449:latest...
+2026-08-04 21:05:36,804 - INFO - Image swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10449:latest removed.

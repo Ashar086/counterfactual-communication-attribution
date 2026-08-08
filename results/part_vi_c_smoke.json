@@ -1,0 +1,24 @@
+{
+  "stage": "vi_c_smoke",
+  "benchmark": "WebArena",
+  "prereg": "PART_VI_C_PREREGISTRATION.md",
+  "core_invariance": "adapter_only",
+  "instance_source": "offline_fixture",
+  "task_id": "743",
+  "y_proxy": 0.0,
+  "official_success": null,
+  "gold": "C1",
+  "gold_edge": [
+    "C1",
+    "C2"
+  ],
+  "cr_top1": "C1",
+  "cr_hit": true,
+  "n_events": 6,
+  "architecture_id": "webarena_planner_navigator_critic_reviser_executor_v0",
+  "prompt_hashes": {
+    "pipeline.py": "585b87fcb00dd2ea439f20f66f3dceba9864d75ab85e3a82856167fbdb525272"
+  },
+  "env_mode": "offline_fixture",
+  "scope_note": "Smoke validates RunTrace extraction + CR localization under poison; not the full n=100 official Success evaluation"
+}

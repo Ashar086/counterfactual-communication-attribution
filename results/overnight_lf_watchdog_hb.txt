@@ -1,0 +1,18 @@
+[2026-08-06 00:28:07] WATCHDOG START maxHours=16 silentMin=45
+[2026-08-06 00:28:09] alive=True pid=16460 log_age_min=10 batches=12/13 gold_r1=0.8854166666666666 free=37.6GB
+[2026-08-06 00:31:10] alive=True pid=16460 log_age_min=13 batches=12/13 gold_r1=0.8854166666666666 free=37.7GB
+[2026-08-06 00:34:10] alive=True pid=16460 log_age_min=16 batches=12/13 gold_r1=0.8854166666666666 free=37.8GB
+[2026-08-06 00:37:10] alive=True pid=16460 log_age_min=19 batches=12/13 gold_r1=0.8854166666666666 free=37.8GB
+[2026-08-06 00:40:11] alive=True pid=16460 log_age_min=22 batches=12/13 gold_r1=0.8854166666666666 free=37.8GB
+[2026-08-06 00:43:11] alive=True pid=16460 log_age_min=2.4 batches=12/13 gold_r1=0.8854166666666666 free=37.7GB
+[2026-08-06 00:46:11] alive=True pid=16460 log_age_min=5.4 batches=12/13 gold_r1=0.8854166666666666 free=37.8GB
+[2026-08-06 00:49:11] alive=True pid=16460 log_age_min=0.6 batches=12/13 gold_r1=0.8854166666666666 free=37.8GB
+[2026-08-06 00:52:12] alive=True pid=16460 log_age_min=3.6 batches=12/13 gold_r1=0.8854166666666666 free=37.8GB
+[2026-08-06 00:55:12] alive=True pid=16460 log_age_min=6.6 batches=12/13 gold_r1=0.8854166666666666 free=37.8GB
+[2026-08-06 00:58:12] alive=True pid=16460 log_age_min=1.9 batches=12/13 gold_r1=0.8854166666666666 free=37.8GB
+[2026-08-06 01:01:13] alive=True pid=16460 log_age_min=4.9 batches=12/13 gold_r1=0.8854166666666666 free=37.8GB
+[2026-08-06 01:04:13] alive=True pid=16460 log_age_min=7.9 batches=12/13 gold_r1=0.8854166666666666 free=37.8GB
+[2026-08-06 01:07:13] alive=True pid=16460 log_age_min=0.6 batches=12/13 gold_r1=0.8854166666666666 free=37.8GB
+[2026-08-06 01:10:13] alive=True pid=16460 log_age_min=0.2 batches=12/13 gold_r1=0.8854166666666666 free=37.8GB
+[2026-08-06 01:13:14] alive=True pid=16460 log_age_min=0.1 batches=12/13 gold_r1=0.8854166666666666 free=37.8GB
+[2026-08-06 01:16:14] DONE final exists

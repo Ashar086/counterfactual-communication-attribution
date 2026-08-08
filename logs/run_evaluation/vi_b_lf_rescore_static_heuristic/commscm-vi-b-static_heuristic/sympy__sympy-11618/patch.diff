@@ -1,0 +1,8 @@
+--- a/sympy/geometry/point.py
++++ b/sympy/geometry/point.py
+@@ -123,7 +123,7 @@
+         return sqrt(sum((a - b)**2 for a, b in zip(self.args, other.args)))
+ 
+     def distance(self, other):
+-        return sqrt(sum((a - b)**2 for a, b in zip(self.args, other.args)))
++        return sqrt(sum((self.args[i] - other.args[i])**2 for i in range(len(self.args))))

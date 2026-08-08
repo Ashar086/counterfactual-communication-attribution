@@ -1,0 +1,10 @@
+--- a/matplotlib/dates.py
++++ b/matplotlib/dates.py
+@@ -1234,7 +1234,7 @@
+         if self._max - self._min < timedelta(days=365):
+             # Show year if the range is less than 12 months but spans years
+-            if self._min.year != self._max.year:
++            if self._min.year != self._max.year or self._min.month != 1:
+                 return f"{self._min.year}"
+ 
+         return ""

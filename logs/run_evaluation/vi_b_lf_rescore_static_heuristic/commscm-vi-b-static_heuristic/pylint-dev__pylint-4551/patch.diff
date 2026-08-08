@@ -1,0 +1,36 @@
+--- a/pyreverse.py
++++ b/pyreverse.py
+@@ -123,6 +123,7 @@
+ 
+ def parse_type_hints(node):
+     """Parse type hints from function definitions."""
++    import typing
+     hints = {}
+     for arg in node.args.args:
+         if arg.annotation:
+@@ -130,6 +131
+             hints[arg.arg] = arg.annotation.id if isinstance(arg.annotation, typing.Name) else str(arg.annotation)
+     return hints
+
++def test_parse_type_hints():
++    """Test the parse_type_hints function."""
++    from ast import parse, FunctionDef, arguments, Name
++    
++    # Create a mock function definition with type hints
++    func_def = FunctionDef(
++        name='example',
++        args=arguments(
++            args=[Name(id='x', ctx=None, annotation=Name(id='int', ctx=None)), 
++                  Name(id='y', ctx=None, annotation=Name(id='str', ctx=None))],
++            vararg=None,
++            kwonlyargs=[],
++            kw_defaults=[],
++            kwarg=None,
++            defaults=[]
++        ),
++        body=[],
++        decorator_list=[]
++    )
++    
++    hints = parse_type_hints(func_def)
++    assert hints == {'x': 'int', 'y': 'str'}, "Type hints were not parsed correctly."

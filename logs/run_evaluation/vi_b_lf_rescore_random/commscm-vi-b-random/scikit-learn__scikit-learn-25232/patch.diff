@@ -1,0 +1,26 @@
+--- a/sklearn/impute/_iterative.py
++++ b/sklearn/impute/_iterative.py
+@@ -123,6 +123,7 @@
+     def __init__(self, estimator=None, max_iter=10, tol=1e-3,
+                  n_nearest_features=None, skip_complete=False,
+                  initial_strategy='mean', impute_strategy='mean',
++                 fill_value=None,
+                  sample_posterior=False, min_value=None, max_value=None,
+                  random_state=None):
+         self.estimator = estimator
+@@ -130,6 +131,7 @@
+         self.initial_strategy = initial_strategy
+         self.impute_strategy = impute_strategy
+         self.n_nearest_features = n_nearest_features
++        self.fill_value = fill_value
+         self.skip_complete = skip_complete
+         self.sample_posterior = sample_posterior
+         self.min_value = min_value
+@@ -200,6 +202,10 @@
+                 # Handle initial strategy
+                 if self.initial_strategy == 'constant':
+                     X_missing[mask] = self.fill_value
+                 else:
+                     X_missing[mask] = SimpleImputer(strategy=self.initial_strategy).fit_transform(X_missing[mask])
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

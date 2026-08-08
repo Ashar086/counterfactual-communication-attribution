@@ -1,0 +1,9 @@
+--- a/django/views/defaults.py
++++ b/django/views/defaults.py
+@@ -20,7 +20,7 @@
+ def catch_all_view(request):
+     # Redirect to the path with a trailing slash
+     return HttpResponseRedirect('%s/' % request.path)
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

@@ -1,0 +1,10 @@
+--- a/django/db/models/sql/query.py
++++ b/django/db/models/sql/query.py
+@@ -851,6 +851,7 @@
+         # Create a mapping of old aliases to new aliases.
+         change_map = {}
+         for alias in self.alias_map:
++            self.bump_prefix()  # Ensure unique alias prefix for rhs
+             new_alias = self.table_alias(alias)
+             change_map[alias] = new_alias
+         assert not set(change_map.keys()) & set(change_map.values()), (

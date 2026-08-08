@@ -1,0 +1,15 @@
+--- a/django/core/management/base.py
++++ b/django/core/management/base.py
+@@ -1234,6 +1234,12 @@
+                     'required and must be passed to parse_args().'
+                 )
+ 
++            # Check for mutually exclusive groups
++            for group in parser._mutually_exclusive_groups:
++                if any(opt.dest in options for opt in group._group_actions):
++                    break
++            else:
++                continue
+             parse_args += [
+                 '{}={}'.format(min(opt.option_strings), arg_options[opt.dest])
+                 for opt in parser._actions if opt.required and opt.dest in options

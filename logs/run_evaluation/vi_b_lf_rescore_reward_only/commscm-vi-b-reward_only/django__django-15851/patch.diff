@@ -1,0 +1,11 @@
+--- a/django/core/management/commands/dbshell.py
++++ b/django/core/management/commands/dbshell.py
+@@ -45,7 +45,7 @@
+         # Construct the command
+         command = [self.connection.settings_dict['ENGINE']]
+         command += self.connection.settings_dict['OPTIONS'].get('args', [])
+-        command.append(self.connection.settings_dict['NAME'])
++        command.insert(-1, self.connection.settings_dict['NAME'])
+ 
+         # Execute the command
+         subprocess.call(command)

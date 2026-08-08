@@ -1,0 +1,14 @@
+--- a/django/db/migrations/loader.py
++++ b/django/db/migrations/loader.py
+@@ -123,7 +123,7 @@
+                     # Check if the router allows migrations for this app
+                     if not router.allow_migrate(db, app_label):
+                         continue
+-                    for model in self.get_models(app_label):
++                    for model in self.get_models(app_label, include_auto_created=True):
+                         if not router.allow_migrate(db, app_label, model._meta.model_name):
+                             continue
+                         # Perform consistency checks...
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

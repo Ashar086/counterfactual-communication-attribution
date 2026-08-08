@@ -1,0 +1,12 @@
+--- a/django/template/defaultfilters.py
++++ b/django/template/defaultfilters.py
+@@ -1234,7 +1234,7 @@
+ 
+ def floatformat(value, decimal_pos=None):
+     if decimal_pos is not None:
+-        if decimal_pos < 1:
++        if decimal_pos < 0:
+             raise ValueError("valid range for prec is [0, MAX_PREC]")
+         # existing logic...
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

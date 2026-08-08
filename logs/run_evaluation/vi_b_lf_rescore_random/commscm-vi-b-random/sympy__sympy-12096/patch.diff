@@ -1,0 +1,11 @@
+--- a/sympy/core/function.py
++++ b/sympy/core/function.py
+@@ -1234,7 +1234,8 @@
+         if self._imp_ is not None:
+             # Call the implemented function
+             result = self._imp_(*args)
+-            return result
++            return result.evalf(prec) if hasattr(result, 'evalf') else result
+         return self
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

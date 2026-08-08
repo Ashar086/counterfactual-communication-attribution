@@ -1,0 +1,9 @@
+--- a/django/core/management/base.py
++++ b/django/core/management/base.py
+@@ -72,6 +72,7 @@
+         return subparsers
+
++        subparsers.required = self.required
+         for action in subparsers._actions:
+             if isinstance(action, argparse._SubParsersAction):
+                 action.required = self.required

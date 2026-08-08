@@ -1,0 +1,63 @@
+2026-08-04 23:37:12,499 - INFO - Creating container for sphinx-doc__sphinx-7910...
+2026-08-04 23:37:13,269 - INFO - Container for sphinx-doc__sphinx-7910 created: f0a95da6823dd77925fb2219772d326a71a718101d0aa019d5da5eae85b78296
+2026-08-04 23:37:13,619 - INFO - Container for sphinx-doc__sphinx-7910 started: f0a95da6823dd77925fb2219772d326a71a718101d0aa019d5da5eae85b78296
+2026-08-04 23:37:13,621 - INFO - Intermediate patch for sphinx-doc__sphinx-7910 written to logs\run_evaluation\oracle_gold_sample_n10_s7_lf\commscm-oracle-gold\sphinx-doc__sphinx-7910\patch.diff, now applying to container...
+2026-08-04 23:37:13,851 - INFO - >>>>> Applied Patch:
+Checking patch sphinx/ext/napoleon/__init__.py...
+Applied patch sphinx/ext/napoleon/__init__.py cleanly.
+
+2026-08-04 23:37:14,320 - INFO - Git diff before:
+diff --git a/sphinx/ext/napoleon/__init__.py b/sphinx/ext/napoleon/__init__.py
+index 10b1ff3a3..2b1818425 100644
+--- a/sphinx/ext/napoleon/__init__.py
++++ b/sphinx/ext/napoleon/__init__.py
+@@ -13,6 +13,7 @@ from typing import Any, Dict, List
+ from sphinx import __display_version__ as __version__
+ from sphinx.application import Sphinx
+ from sphinx.ext.napoleon.docstring import GoogleDocstring, NumpyDocstring
++from sphinx.util import inspect
+ 
+ 
+ class Config:
+@@ -438,7 +439,7 @@ def _skip_member(app: Sphinx, what: str, name: str, obj: Any,
+                         mod_path = cls_path.split('.')
+                         cls = functools.reduce(getattr, mod_path, mod)
+                     else:
+-                        cls = obj.__globals__[cls_path]
++                        cls = inspect.unwrap(obj).__globals__[cls_path]
+                 except Exception:
+                     cls_is_owner = False
+                 else:
+2026-08-04 23:37:14,322 - INFO - Eval script for sphinx-doc__sphinx-7910 written to logs\run_evaluation\oracle_gold_sample_n10_s7_lf\commscm-oracle-gold\sphinx-doc__sphinx-7910\eval.sh; copying to container...
+2026-08-04 23:37:39,576 - INFO - Test runtime: 25.08 seconds
+2026-08-04 23:37:39,577 - INFO - Test output for sphinx-doc__sphinx-7910 written to logs\run_evaluation\oracle_gold_sample_n10_s7_lf\commscm-oracle-gold\sphinx-doc__sphinx-7910\test_output.txt
+2026-08-04 23:37:39,656 - INFO - Git diff after:
+diff --git a/sphinx/ext/napoleon/__init__.py b/sphinx/ext/napoleon/__init__.py
+index 10b1ff3a3..2b1818425 100644
+--- a/sphinx/ext/napoleon/__init__.py
++++ b/sphinx/ext/napoleon/__init__.py
+@@ -13,6 +13,7 @@ from typing import Any, Dict, List
+ from sphinx import __display_version__ as __version__
+ from sphinx.application import Sphinx
+ from sphinx.ext.napoleon.docstring import GoogleDocstring, NumpyDocstring
++from sphinx.util import inspect
+ 
+ 
+ class Config:
+@@ -438,7 +439,7 @@ def _skip_member(app: Sphinx, what: str, name: str, obj: Any,
+                         mod_path = cls_path.split('.')
+                         cls = functools.reduce(getattr, mod_path, mod)
+                     else:
+-                        cls = obj.__globals__[cls_path]
++                        cls = inspect.unwrap(obj).__globals__[cls_path]
+                 except Exception:
+                     cls_is_owner = False
+                 else:
+2026-08-04 23:37:39,656 - INFO - Grading answer for sphinx-doc__sphinx-7910...
+2026-08-04 23:37:39,681 - INFO - report: {'sphinx-doc__sphinx-7910': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': True, 'tests_status': {'FAIL_TO_PASS': {'success': ['tests/test_ext_napoleon.py::SkipMemberTest::test_class_decorated_doc'], 'failure': []}, 'PASS_TO_PASS': {'success': ['tests/test_ext_napoleon.py::ProcessDocstringTest::test_modify_in_place', 'tests/test_ext_napoleon.py::SetupTest::test_add_config_values', 'tests/test_ext_napoleon.py::SetupTest::test_unknown_app_type', 'tests/test_ext_napoleon.py::SkipMemberTest::test_class_private_doc', 'tests/test_ext_napoleon.py::SkipMemberTest::test_class_private_undoc', 'tests/test_ext_napoleon.py::SkipMemberTest::test_class_special_doc', 'tests/test_ext_napoleon.py::SkipMemberTest::test_class_special_undoc', 'tests/test_ext_napoleon.py::SkipMemberTest::test_exception_private_doc', 'tests/test_ext_napoleon.py::SkipMemberTest::test_exception_private_undoc', 'tests/test_ext_napoleon.py::SkipMemberTest::test_exception_special_doc', 'tests/test_ext_napoleon.py::SkipMemberTest::test_exception_special_undoc', 'tests/test_ext_napoleon.py::SkipMemberTest::test_module_private_doc', 'tests/test_ext_napoleon.py::SkipMemberTest::test_module_private_undoc', 'tests/test_ext_napoleon.py::SkipMemberTest::test_module_special_doc', 'tests/test_ext_napoleon.py::SkipMemberTest::test_module_special_undoc', 'tests/test_ext_napoleon.py::SkipMemberTest::test_namedtuple'], 'failure': []}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for sphinx-doc__sphinx-7910: resolved: True
+2026-08-04 23:37:39,683 - INFO - Attempting to stop container sweb.eval.sphinx-doc__sphinx-7910.oracle_gold_sample_n10_s7_lf...
+2026-08-04 23:37:55,110 - INFO - Attempting to remove container sweb.eval.sphinx-doc__sphinx-7910.oracle_gold_sample_n10_s7_lf...
+2026-08-04 23:37:55,166 - INFO - Container sweb.eval.sphinx-doc__sphinx-7910.oracle_gold_sample_n10_s7_lf removed.
+2026-08-04 23:37:55,166 - INFO - Attempting to remove image swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-7910:latest...
+2026-08-04 23:37:56,176 - INFO - Image swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-7910:latest removed.

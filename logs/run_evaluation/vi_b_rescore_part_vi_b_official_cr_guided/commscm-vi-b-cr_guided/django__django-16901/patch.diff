@@ -1,0 +1,10 @@
+--- a/django/db/models/q.py
++++ b/django/db/models/q.py
+@@ -123,7 +123,7 @@
+         if isinstance(other, Q):
+             return Q(self.children + other.children, self.connector, self.negated)
+         elif isinstance(other, bool):
+-            return Q(self.children, self.connector, self.negated ^ other)
++            return Q(self.children, self.connector, self.negated ^ (other if len(self.children) == 1 else not other))
+         else:
+             return NotImplemented

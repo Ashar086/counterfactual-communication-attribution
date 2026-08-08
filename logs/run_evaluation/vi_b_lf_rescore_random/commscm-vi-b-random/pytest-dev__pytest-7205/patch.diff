@@ -1,0 +1,34 @@
+--- a/src/_pytest/setuponly.py
++++ b/src/_pytest/setuponly.py
+@@ -1,6 +1,7 @@
+ from _pytest.fixtures import FixtureDef
++from _pytest._io import saferepr
+ 
+ def _show_fixture_action(fixturedef, msg):
+     config = fixturedef._fixturemanager.config
+     capman = config.pluginmanager.getplugin("capturemanager")
+     if capman:
+         capman.suspend_global_capture()
+ 
+     tw = config.get_terminal_writer()
+     tw.line()
+     tw.write(" " * 2 * fixturedef.scopenum)
+     tw.write(
+         "{step} {scope} {fixture}".format(
+             step=msg.ljust(8),  # align the output to TEARDOWN
+             scope=fixturedef.scope[0].upper(),
+             fixture=fixturedef.argname,
+         )
+     )
+ 
+     if msg == "SETUP":
+         deps = sorted(arg for arg in fixturedef.argnames if arg != "request")
+         if deps:
+             tw.write(" (fixtures used: {})".format(", ".join(deps)))
+ 
+     if hasattr(fixturedef, "cached_param"):
+-        tw.write("[{}]".format(fixturedef.cached_param))
++        tw.write("[{}]".format(saferepr(fixturedef.cached_param, maxsize=100)))
+ 
++    if isinstance(fixturedef.cached_param, bytes):
++        tw.write(" (BytesWarning: bytes parameter detected)")

@@ -1,0 +1,11 @@
+--- a/sphinx/ext/autodoc.py
++++ b/sphinx/ext/autodoc.py
+@@ -1234,6 +1234,9 @@
+         if hasattr(module, '__all__'):
+             members = [name for name in members if name in module.__all__]
+ 
++        # Respect empty __all__ attribute
++        if not module.__all__:
++            members = []
+ 
+         return members

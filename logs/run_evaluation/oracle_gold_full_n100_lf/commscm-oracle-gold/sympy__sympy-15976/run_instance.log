@@ -1,0 +1,129 @@
+2026-08-05 18:04:37,819 - INFO - Creating container for sympy__sympy-15976...
+2026-08-05 18:04:38,138 - INFO - Container for sympy__sympy-15976 created: 3c5f973d5cd896b22bad16600a16f88e253f05c8028216907c05987e34bb1517
+2026-08-05 18:04:39,204 - INFO - Container for sympy__sympy-15976 started: 3c5f973d5cd896b22bad16600a16f88e253f05c8028216907c05987e34bb1517
+2026-08-05 18:04:39,206 - INFO - Intermediate patch for sympy__sympy-15976 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\sympy__sympy-15976\patch.diff, now applying to container...
+2026-08-05 18:04:40,168 - INFO - >>>>> Applied Patch:
+Checking patch sympy/printing/mathml.py...
+Applied patch sympy/printing/mathml.py cleanly.
+
+2026-08-05 18:04:42,454 - INFO - Git diff before:
+diff --git a/sympy/printing/mathml.py b/sympy/printing/mathml.py
+index 3f8b8d49e..525a3a30d 100644
+--- a/sympy/printing/mathml.py
++++ b/sympy/printing/mathml.py
+@@ -743,11 +743,6 @@ def _print_Sum(self, e):
+         return mrow
+ 
+     def _print_Symbol(self, sym, style='plain'):
+-        x = self.dom.createElement('mi')
+-
+-        if style == 'bold':
+-            x.setAttribute('mathvariant', 'bold')
+-
+         def join(items):
+             if len(items) > 1:
+                 mrow = self.dom.createElement('mrow')
+@@ -781,24 +776,24 @@ def translate(s):
+         mname.appendChild(self.dom.createTextNode(name))
+         if len(supers) == 0:
+             if len(subs) == 0:
+-                x.appendChild(self.dom.createTextNode(name))
++                x = mname
+             else:
+-                msub = self.dom.createElement('msub')
+-                msub.appendChild(mname)
+-                msub.appendChild(join(subs))
+-                x.appendChild(msub)
++                x = self.dom.createElement('msub')
++                x.appendChild(mname)
++                x.appendChild(join(subs))
+         else:
+             if len(subs) == 0:
+-                msup = self.dom.createElement('msup')
+-                msup.appendChild(mname)
+-                msup.appendChild(join(supers))
+-                x.appendChild(msup)
++                x = self.dom.createElement('msup')
++                x.appendChild(mname)
++                x.appendChild(join(supers))
+             else:
+-                msubsup = self.dom.createElement('msubsup')
+-                msubsup.appendChild(mname)
+-                msubsup.appendChild(join(subs))
+-                msubsup.appendChild(join(supers))
+-                x.appendChild(msubsup)
++                x = self.dom.createElement('msubsup')
++                x.appendChild(mname)
++                x.appendChild(join(subs))
++                x.appendChild(join(supers))
++        # Set bold font?
++        if style == 'bold':
++            x.setAttribute('mathvariant', 'bold')
+         return x
+ 
+     def _print_MatrixSymbol(self, sym):
+2026-08-05 18:04:42,456 - INFO - Eval script for sympy__sympy-15976 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\sympy__sympy-15976\eval.sh; copying to container...
+2026-08-05 18:05:01,009 - INFO - Test runtime: 18.02 seconds
+2026-08-05 18:05:01,011 - INFO - Test output for sympy__sympy-15976 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\sympy__sympy-15976\test_output.txt
+2026-08-05 18:05:01,320 - INFO - Git diff after:
+diff --git a/sympy/printing/mathml.py b/sympy/printing/mathml.py
+index 3f8b8d49e..525a3a30d 100644
+--- a/sympy/printing/mathml.py
++++ b/sympy/printing/mathml.py
+@@ -743,11 +743,6 @@ def _print_Sum(self, e):
+         return mrow
+ 
+     def _print_Symbol(self, sym, style='plain'):
+-        x = self.dom.createElement('mi')
+-
+-        if style == 'bold':
+-            x.setAttribute('mathvariant', 'bold')
+-
+         def join(items):
+             if len(items) > 1:
+                 mrow = self.dom.createElement('mrow')
+@@ -781,24 +776,24 @@ def translate(s):
+         mname.appendChild(self.dom.createTextNode(name))
+         if len(supers) == 0:
+             if len(subs) == 0:
+-                x.appendChild(self.dom.createTextNode(name))
++                x = mname
+             else:
+-                msub = self.dom.createElement('msub')
+-                msub.appendChild(mname)
+-                msub.appendChild(join(subs))
+-                x.appendChild(msub)
++                x = self.dom.createElement('msub')
++                x.appendChild(mname)
++                x.appendChild(join(subs))
+         else:
+             if len(subs) == 0:
+-                msup = self.dom.createElement('msup')
+-                msup.appendChild(mname)
+-                msup.appendChild(join(supers))
+-                x.appendChild(msup)
++                x = self.dom.createElement('msup')
++                x.appendChild(mname)
++                x.appendChild(join(supers))
+             else:
+-                msubsup = self.dom.createElement('msubsup')
+-                msubsup.appendChild(mname)
+-                msubsup.appendChild(join(subs))
+-                msubsup.appendChild(join(supers))
+-                x.appendChild(msubsup)
++                x = self.dom.createElement('msubsup')
++                x.appendChild(mname)
++                x.appendChild(join(subs))
++                x.appendChild(join(supers))
++        # Set bold font?
++        if style == 'bold':
++            x.setAttribute('mathvariant', 'bold')
+         return x
+ 
+     def _print_MatrixSymbol(self, sym):
+2026-08-05 18:05:01,321 - INFO - Grading answer for sympy__sympy-15976...
+2026-08-05 18:05:01,372 - INFO - report: {'sympy__sympy-15976': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': True, 'tests_status': {'FAIL_TO_PASS': {'success': ['test_presentation_symbol'], 'failure': []}, 'PASS_TO_PASS': {'success': ['test_mathml_printer', 'test_content_printmethod', 'test_content_mathml_core', 'test_content_mathml_functions', 'test_content_mathml_limits', 'test_content_mathml_integrals', 'test_content_mathml_matrices', 'test_content_mathml_sums', 'test_content_mathml_tuples', 'test_content_mathml_add', 'test_content_mathml_Rational', 'test_content_mathml_constants', 'test_content_mathml_trig', 'test_content_mathml_relational', 'test_content_symbol', 'test_content_mathml_greek', 'test_content_mathml_order', 'test_content_settings', 'test_presentation_printmethod', 'test_presentation_mathml_core', 'test_presentation_mathml_functions', 'test_presentation_mathml_limits', 'test_presentation_mathml_integrals', 'test_presentation_mathml_matrices', 'test_presentation_mathml_sums', 'test_presentation_mathml_add', 'test_presentation_mathml_Rational', 'test_presentation_mathml_constants', 'test_presentation_mathml_trig', 'test_presentation_mathml_relational', 'test_presentation_mathml_greek', 'test_presentation_mathml_order', 'test_presentation_settings', 'test_toprettyxml_hooking', 'test_print_basic', 'test_root_notation_print', 'test_print_matrix_symbol'], 'failure': []}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for sympy__sympy-15976: resolved: True
+2026-08-05 18:05:01,374 - INFO - Attempting to stop container sweb.eval.sympy__sympy-15976.oracle_gold_full_n100_lf...
+2026-08-05 18:05:17,173 - INFO - Attempting to remove container sweb.eval.sympy__sympy-15976.oracle_gold_full_n100_lf...
+2026-08-05 18:05:17,314 - INFO - Container sweb.eval.sympy__sympy-15976.oracle_gold_full_n100_lf removed.

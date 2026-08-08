@@ -1,0 +1,64 @@
+2026-08-05 10:21:30,880 - INFO - Creating container for scikit-learn__scikit-learn-14629...
+2026-08-05 10:21:31,039 - INFO - Container for scikit-learn__scikit-learn-14629 created: 71159065928ec476e01904586ed244c7268f033c61c8e76a1a5832609c0b4045
+2026-08-05 10:21:31,736 - INFO - Container for scikit-learn__scikit-learn-14629 started: 71159065928ec476e01904586ed244c7268f033c61c8e76a1a5832609c0b4045
+2026-08-05 10:21:31,739 - INFO - Intermediate patch for scikit-learn__scikit-learn-14629 written to logs\run_evaluation\vi_b_lf_rescore_static_heuristic\commscm-vi-b-static_heuristic\scikit-learn__scikit-learn-14629\patch.diff, now applying to container...
+2026-08-05 10:21:32,614 - INFO - Failed to apply patch to container: git apply --verbose
+2026-08-05 10:21:32,810 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2026-08-05 10:21:32,975 - INFO - >>>>> Applied Patch:
+patching file sklearn/multioutput.py
+Hunk #1 succeeded at 123 with fuzz 3.
+Hunk #2 succeeded at 172 with fuzz 3 (offset 41 lines).
+
+2026-08-05 10:21:33,826 - INFO - Git diff before:
+diff --git a/sklearn/multioutput.py b/sklearn/multioutput.py
+index 463b72d40..1f53f6593 100644
+--- a/sklearn/multioutput.py
++++ b/sklearn/multioutput.py
+@@ -123,6 +123,7 @@ class MultiOutputEstimator(BaseEstimator, MetaEstimatorMixin,
+ 
+     def fit(self, X, y, sample_weight=None):
+         """ Fit the model to data.
++        self.classes_ = []
+         Fit a separate model for each output variable.
+ 
+         Parameters
+@@ -169,6 +170,8 @@ class MultiOutputEstimator(BaseEstimator, MetaEstimatorMixin,
+                 self.estimator, X, y[:, i], sample_weight)
+             for i in range(y.shape[1]))
+         return self
++        
++        self.classes_ = [estimator.classes_ for estimator in self.estimators_]
+ 
+     def predict(self, X):
+         """Predict multi-output variable using a model
+2026-08-05 10:21:33,829 - INFO - Eval script for scikit-learn__scikit-learn-14629 written to logs\run_evaluation\vi_b_lf_rescore_static_heuristic\commscm-vi-b-static_heuristic\scikit-learn__scikit-learn-14629\eval.sh; copying to container...
+2026-08-05 10:22:14,134 - INFO - Test runtime: 40.08 seconds
+2026-08-05 10:22:14,136 - INFO - Test output for scikit-learn__scikit-learn-14629 written to logs\run_evaluation\vi_b_lf_rescore_static_heuristic\commscm-vi-b-static_heuristic\scikit-learn__scikit-learn-14629\test_output.txt
+2026-08-05 10:22:14,243 - INFO - Git diff after:
+diff --git a/sklearn/multioutput.py b/sklearn/multioutput.py
+index 463b72d40..1f53f6593 100644
+--- a/sklearn/multioutput.py
++++ b/sklearn/multioutput.py
+@@ -123,6 +123,7 @@ class MultiOutputEstimator(BaseEstimator, MetaEstimatorMixin,
+ 
+     def fit(self, X, y, sample_weight=None):
+         """ Fit the model to data.
++        self.classes_ = []
+         Fit a separate model for each output variable.
+ 
+         Parameters
+@@ -169,6 +170,8 @@ class MultiOutputEstimator(BaseEstimator, MetaEstimatorMixin,
+                 self.estimator, X, y[:, i], sample_weight)
+             for i in range(y.shape[1]))
+         return self
++        
++        self.classes_ = [estimator.classes_ for estimator in self.estimators_]
+ 
+     def predict(self, X):
+         """Predict multi-output variable using a model
+2026-08-05 10:22:14,243 - INFO - Grading answer for scikit-learn__scikit-learn-14629...
+2026-08-05 10:22:14,287 - INFO - report: {'scikit-learn__scikit-learn-14629': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': False, 'tests_status': {'FAIL_TO_PASS': {'success': [], 'failure': ['sklearn/tests/test_multioutput.py::test_multi_output_classes_[estimator1]']}, 'PASS_TO_PASS': {'success': ['sklearn/tests/test_multioutput.py::test_multi_target_regression', 'sklearn/tests/test_multioutput.py::test_multi_target_regression_partial_fit', 'sklearn/tests/test_multioutput.py::test_multi_target_regression_one_target', 'sklearn/tests/test_multioutput.py::test_multi_target_sparse_regression', 'sklearn/tests/test_multioutput.py::test_multi_target_sample_weights_api', 'sklearn/tests/test_multioutput.py::test_multi_target_sample_weight_partial_fit', 'sklearn/tests/test_multioutput.py::test_multi_target_sample_weights', 'sklearn/tests/test_multioutput.py::test_multi_output_classification_partial_fit_parallelism', 'sklearn/tests/test_multioutput.py::test_multi_output_predict_proba', 'sklearn/tests/test_multioutput.py::test_multi_output_classification_partial_fit', 'sklearn/tests/test_multioutput.py::test_multi_output_classification_partial_fit_no_first_classes_exception', 'sklearn/tests/test_multioutput.py::test_multi_output_classification', 'sklearn/tests/test_multioutput.py::test_multiclass_multioutput_estimator', 'sklearn/tests/test_multioutput.py::test_multiclass_multioutput_estimator_predict_proba', 'sklearn/tests/test_multioutput.py::test_multi_output_classification_sample_weights', 'sklearn/tests/test_multioutput.py::test_multi_output_classification_partial_fit_sample_weights', 'sklearn/tests/test_multioutput.py::test_multi_output_exceptions', 'sklearn/tests/test_multioutput.py::test_classifier_chain_fit_and_predict_with_linear_svc', 'sklearn/tests/test_multioutput.py::test_classifier_chain_fit_and_predict_with_sparse_data', 'sklearn/tests/test_multioutput.py::test_classifier_chain_vs_independent_models', 'sklearn/tests/test_multioutput.py::test_base_chain_fit_and_predict', 'sklearn/tests/test_multioutput.py::test_base_chain_fit_and_predict_with_sparse_data_and_cv', 'sklearn/tests/test_multioutput.py::test_base_chain_random_order', 'sklearn/tests/test_multioutput.py::test_base_chain_crossval_fit_and_predict', 'sklearn/tests/test_multioutput.py::test_multi_output_classes_[estimator0]', 'sklearn/tests/test_multioutput.py::test_multi_output_classes_[estimator2]'], 'failure': []}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for scikit-learn__scikit-learn-14629: resolved: False
+2026-08-05 10:22:14,289 - INFO - Attempting to stop container sweb.eval.scikit-learn__scikit-learn-14629.vi_b_lf_rescore_static_heuristic...
+2026-08-05 10:22:29,696 - INFO - Attempting to remove container sweb.eval.scikit-learn__scikit-learn-14629.vi_b_lf_rescore_static_heuristic...
+2026-08-05 10:22:29,739 - INFO - Container sweb.eval.scikit-learn__scikit-learn-14629.vi_b_lf_rescore_static_heuristic removed.

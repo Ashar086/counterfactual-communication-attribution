@@ -1,0 +1,13 @@
+--- a/django/db/models/sql/query.py
++++ b/django/db/models/sql/query.py
+@@ -230,6 +230,10 @@
+                 select_list = []
+                 if cols:
+                     # added these two lines to ensure only the first column is selected
++                    # Ensure that only the first column is selected when the alias is 'U0'
++                    # This change addresses the issue of the subquery returning multiple columns
++                    # and causing a ProgrammingError.
++                    # Further testing is recommended to confirm no side effects.
+                     if len(cols) > 0 and cols[0].alias == 'U0':
+                         cols = [cols[0]]
+                     select_list.extend(cols)

@@ -1,0 +1,16 @@
+--- a/original_code.py
++++ b/fixed_code.py
+@@ -10,6 +10,7 @@
+ ax2.set_ylabel('acc')
+ 
+ # Save the current state of the figure before aligning labels
++align_labels_called = False
+ fig.align_labels() ##pickling works after removing this line 
+ 
+ # Check if align_labels was called before pickling
+@@ -16,6 +17
+ if not align_labels_called:
+     pickle.dumps(fig)
+ plt.show()
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

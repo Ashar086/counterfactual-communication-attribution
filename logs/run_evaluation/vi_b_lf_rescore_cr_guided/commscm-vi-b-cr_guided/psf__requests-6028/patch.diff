@@ -1,0 +1,11 @@
+--- a/requests/sessions.py
++++ b/requests/sessions.py
+@@ -1000,7 +1000,7 @@
+         # Handle proxy authentication
+         if self.proxies:
+             for scheme in self.proxies.keys():
+-                if scheme in url:
++                if scheme in url and self.proxies[scheme].get('proxy-authorization'):
+                     auth = self.proxies[scheme].get('proxy-authorization')
+                     if auth:
+                         headers['Proxy-Authorization'] = auth

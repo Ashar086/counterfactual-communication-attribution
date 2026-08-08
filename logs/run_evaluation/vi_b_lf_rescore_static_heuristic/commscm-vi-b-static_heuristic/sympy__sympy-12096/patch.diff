@@ -1,0 +1,14 @@
+--- a/sympy/utilities/lambdify.py
++++ b/sympy/utilities/lambdify.py
+@@ -123,7 +123,7 @@
+         if self._imp_ is not None:
+             return self._imp_(args)
+         return self
+-    
++
+     def _eval_evalf(self, *args, **kwargs):
+         # Call the implemented function and evaluate its result
+         result = self._imp_(*args)
++        return result.evalf(*args, **kwargs)
+
+# Note: Ensure that the 'def solve' function is properly defined elsewhere in the codebase.

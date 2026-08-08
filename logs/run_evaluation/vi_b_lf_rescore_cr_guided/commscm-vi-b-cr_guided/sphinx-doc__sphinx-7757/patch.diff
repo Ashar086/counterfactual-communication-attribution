@@ -1,0 +1,11 @@
+--- a/sphinx/docstring.py
++++ b/sphinx/docstring.py
+@@ -123,7 +123,7 @@
+         if param.default is not param.empty:
+             default_value = f" = {param.default!r}"
+         else:
+-            default_value = " = None"  # or appropriate default representation
++            default_value = ""  # Keep it as an empty string for no default value
+         if param.kind == inspect.Parameter.POSITIONAL_OR_KEYWORD:
+             signature += f"{param.name}{default_value}, "
+         elif param.kind == inspect.Parameter.POSITIONAL_ONLY:

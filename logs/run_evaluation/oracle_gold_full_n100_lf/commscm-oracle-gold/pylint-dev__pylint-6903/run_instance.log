@@ -1,0 +1,52 @@
+2026-08-05 13:28:37,806 - INFO - Creating container for pylint-dev__pylint-6903...
+2026-08-05 13:28:37,929 - INFO - Container for pylint-dev__pylint-6903 created: a19d01f025d07088728d5422066308e573c5c52dd25aa402745d402a66efdd17
+2026-08-05 13:28:38,312 - INFO - Container for pylint-dev__pylint-6903 started: a19d01f025d07088728d5422066308e573c5c52dd25aa402745d402a66efdd17
+2026-08-05 13:28:38,314 - INFO - Intermediate patch for pylint-dev__pylint-6903 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\pylint-dev__pylint-6903\patch.diff, now applying to container...
+2026-08-05 13:28:38,613 - INFO - Failed to apply patch to container: git apply --verbose
+2026-08-05 13:28:38,733 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2026-08-05 13:28:38,864 - INFO - >>>>> Applied Patch:
+patching file pylint/lint/run.py
+
+2026-08-05 13:28:39,464 - INFO - Git diff before:
+diff --git a/pylint/lint/run.py b/pylint/lint/run.py
+index a7e5d557..27a4d9d8 100644
+--- a/pylint/lint/run.py
++++ b/pylint/lint/run.py
+@@ -58,6 +58,13 @@ def _query_cpu() -> int | None:
+             cpu_shares = int(file.read().rstrip())
+         # For AWS, gives correct value * 1024.
+         avail_cpu = int(cpu_shares / 1024)
++
++    # In K8s Pods also a fraction of a single core could be available
++    # As multiprocessing is not able to run only a "fraction" of process
++    # assume we have 1 CPU available
++    if avail_cpu == 0:
++        avail_cpu = 1
++
+     return avail_cpu
+2026-08-05 13:28:39,466 - INFO - Eval script for pylint-dev__pylint-6903 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\pylint-dev__pylint-6903\eval.sh; copying to container...
+2026-08-05 13:29:14,551 - INFO - Test runtime: 34.91 seconds
+2026-08-05 13:29:14,553 - INFO - Test output for pylint-dev__pylint-6903 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\pylint-dev__pylint-6903\test_output.txt
+2026-08-05 13:29:14,635 - INFO - Git diff after:
+diff --git a/pylint/lint/run.py b/pylint/lint/run.py
+index a7e5d557..27a4d9d8 100644
+--- a/pylint/lint/run.py
++++ b/pylint/lint/run.py
+@@ -58,6 +58,13 @@ def _query_cpu() -> int | None:
+             cpu_shares = int(file.read().rstrip())
+         # For AWS, gives correct value * 1024.
+         avail_cpu = int(cpu_shares / 1024)
++
++    # In K8s Pods also a fraction of a single core could be available
++    # As multiprocessing is not able to run only a "fraction" of process
++    # assume we have 1 CPU available
++    if avail_cpu == 0:
++        avail_cpu = 1
++
+     return avail_cpu
+2026-08-05 13:29:14,635 - INFO - Grading answer for pylint-dev__pylint-6903...
+2026-08-05 13:29:14,655 - INFO - report: {'pylint-dev__pylint-6903': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': True, 'tests_status': {'FAIL_TO_PASS': {'success': ['tests/test_pylint_runners.py::test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction'], 'failure': []}, 'PASS_TO_PASS': {'success': ['tests/test_pylint_runners.py::test_runner[run_epylint]', 'tests/test_pylint_runners.py::test_runner[run_pylint]', 'tests/test_pylint_runners.py::test_runner[run_pyreverse]', 'tests/test_pylint_runners.py::test_runner[run_symilar]', 'tests/test_pylint_runners.py::test_runner_with_arguments[run_epylint]', 'tests/test_pylint_runners.py::test_runner_with_arguments[run_pylint]', 'tests/test_pylint_runners.py::test_runner_with_arguments[run_pyreverse]', 'tests/test_pylint_runners.py::test_runner_with_arguments[run_symilar]'], 'failure': []}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for pylint-dev__pylint-6903: resolved: True
+2026-08-05 13:29:14,656 - INFO - Attempting to stop container sweb.eval.pylint-dev__pylint-6903.oracle_gold_full_n100_lf...
+2026-08-05 13:29:30,204 - INFO - Attempting to remove container sweb.eval.pylint-dev__pylint-6903.oracle_gold_full_n100_lf...
+2026-08-05 13:29:30,330 - INFO - Container sweb.eval.pylint-dev__pylint-6903.oracle_gold_full_n100_lf removed.

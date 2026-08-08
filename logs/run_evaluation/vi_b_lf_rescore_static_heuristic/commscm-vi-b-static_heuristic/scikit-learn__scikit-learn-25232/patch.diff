@@ -1,0 +1,29 @@
+--- a/sklearn/impute/_iterative.py
++++ b/sklearn/impute/_iterative.py
+@@ -123,6 +123,7 @@
+     initial_strategy: str, default='mean'
+         The strategy to use for the initial imputation.
+     max_iter: int, default=10
++    fill_value: float, optional
+         The value to use for the `constant` strategy in initial imputation.
+ 
+     Attributes
+     ----------
+@@ -150,6 +151,7 @@
+         self.initial_strategy = initial_strategy
+         self.max_iter = max_iter
+         self.fill_value = fill_value
++        self._validate_parameters()
+ 
+     def _validate_parameters(self):
+         if self.initial_strategy not in ['mean', 'median', 'most_frequent', 'constant']:
+@@ -160,6 +162,7 @@
+             raise ValueError("Invalid initial_strategy. Must be one of: "
+                              "['mean', 'median', 'most_frequent', 'constant']")
+         if self.initial_strategy == 'constant' and self.fill_value is None:
++            raise ValueError("fill_value must be specified when initial_strategy is 'constant'")
+ 
+     def fit(self, X, y=None):
+         # Implementation of the fit method
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

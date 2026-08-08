@@ -1,0 +1,19 @@
+--- a/sympy/physics/quantum/tensorproduct.py
++++ b/sympy/physics/quantum/tensorproduct.py
+@@ -XX,6 +XX,12 @@
+ 
+ def tensor_product_simp(expr):
+     if isinstance(expr, Mul):
+         return tensor_product_simp_Mul(expr)
+-    elif isinstance(expr, Pow):
+-        return expr  # Existing behavior for Pow
++    elif isinstance(expr, Pow):
++        base = expr.base
++        exp = expr.exp
++        if isinstance(base, TensorProduct):
++            return TensorProduct(*(arg**exp for arg in base.args))
++        return expr  # Fallback for other cases
+     return expr
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

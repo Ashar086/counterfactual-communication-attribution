@@ -1,0 +1,9 @@
+--- a/django/db/models/fields/__init__.py
++++ b/django/db/models/fields/__init__.py
+@@ -1234,7 +1234,7 @@
+         # If the field has choices, return the display value.
+         if self.choices:
+             value = getattr(self.model, self.attname)
+-            return dict(self.choices).get(value, value)
++            return dict(self.choices).get(value, self.model.get_foo_bar_display())
+         return value

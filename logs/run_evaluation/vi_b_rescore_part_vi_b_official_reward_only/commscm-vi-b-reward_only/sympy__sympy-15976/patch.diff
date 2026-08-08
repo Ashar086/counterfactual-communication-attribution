@@ -1,0 +1,13 @@
+--- a/sympy/printing/mathml.py
++++ b/sympy/printing/mathml.py
+@@ -123,7 +123,7 @@
+         if isinstance(symbol, Symbol):
+             if symbol.name[-1].isdigit():
+                 # Adjust the MathML output for symbols ending with a number
+-                return f"<mi><msub><mi>{symbol.name[:-1]}</mi><mi>{symbol.name[-1]}</mi></msub></mi>"
++                return f"<msub><mi>{symbol.name[:-1]}</mi><mi>{symbol.name[-1]}</mi></msub>"
+             else:
+                 return f"<mi>{symbol.name}</mi>"
+         # Handle other cases...
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

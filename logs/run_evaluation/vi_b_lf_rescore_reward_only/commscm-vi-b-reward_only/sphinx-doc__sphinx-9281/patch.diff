@@ -1,0 +1,14 @@
+--- a/original_file.py
++++ b/modified_file.py
+@@ -1,5 +1,10 @@
+ import enum
+ 
+ class MyEnum(enum.Enum):
+     ValueA = 10
+     ValueB = 20
++
++    def __repr__(self):
++        return f"{self.__class__.__name__}.{self.name}"
++
+ def ugly_enum_func(e: MyEnum = MyEnum.ValueA) -> None:
+     pass

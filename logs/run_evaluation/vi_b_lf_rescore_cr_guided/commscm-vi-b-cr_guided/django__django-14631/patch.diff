@@ -1,0 +1,27 @@
+--- a/django/forms/forms.py
++++ b/django/forms/forms.py
+@@ -1234,7 +1234,7 @@
+         for name, field in self.fields.items():
+             if name in self._errors:
+                 continue
+-            value = self.cleaned_data.get(name, field.initial)
++            value = self[name].initial
+             if value != field.initial:
+                 changed.append(name)
+         return changed
+@@ -1250,7 +1250,7 @@
+         for name, field in self.fields.items():
+             if name in self._errors:
+                 continue
+-            value = self.cleaned_data.get(name, field.initial)
++            value = self[name].initial
+             if value != field.initial:
+                 changed.append(name)
+         return changed
++
++class BoundField:
++    # Assuming other methods and attributes are defined here
++
++    def did_change(self):
++        # Implementation of the did_change method
++        pass

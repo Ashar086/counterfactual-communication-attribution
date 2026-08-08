@@ -1,0 +1,14 @@
+{
+  "stage": 1,
+  "benchmark": "SWE-bench_Verified_shaped",
+  "instance_source": "huggingface:princeton-nlp/SWE-bench_Verified",
+  "instance_id": "sphinx-doc__sphinx-9602",
+  "y": 0.0,
+  "gold": "C1",
+  "cr_top1": "C1",
+  "cr_hit": true,
+  "n_events": 6,
+  "architecture_id": "swebench_shaped_planner_coder_reviewer_reviser_executor_v0",
+  "core_invariance": "adapter_only",
+  "scope_note": "Problem statements from SWE-bench Verified (or fixtures); not official Docker resolve@1"
+}

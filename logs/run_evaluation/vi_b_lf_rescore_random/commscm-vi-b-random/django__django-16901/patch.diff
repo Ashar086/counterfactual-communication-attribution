@@ -1,0 +1,11 @@
+--- a/django/db/models/q.py
++++ b/django/db/models/q.py
+@@ -123,7 +123,7 @@
+         if len(queries) == 2:
+             return queries[0].combine(queries[1], operator.xor)
+         else:
+-            return reduce(operator.xor, queries)
++            return reduce(operator.add, (q for q in queries if q)).exclude(id__isnull=True).distinct()
+ 
+     def __invert__(self):
+         return self.negate()

@@ -1,0 +1,80 @@
+{
+  "cascade": {
+    "metrics": {
+      "n": 1,
+      "precision_at_1": 1.0,
+      "recall_at_k": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "mrr": 1.0,
+      "mean_replay_ms": 0.347125,
+      "mean_recomputed_events": 3.0
+    },
+    "n": 1,
+    "hit_at_1": true
+  },
+  "noise": {
+    "0.0": {
+      "n": 12,
+      "precision_at_1": 1.0,
+      "recall_at_k": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "mrr": 1.0,
+      "mean_replay_ms": 0.46659375000000014,
+      "mean_recomputed_events": 2.875
+    },
+    "0.05": {
+      "n": 12,
+      "precision_at_1": 1.0,
+      "recall_at_k": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "mrr": 1.0,
+      "mean_replay_ms": 0.6747604166666666,
+      "mean_recomputed_events": 2.875
+    },
+    "0.1": {
+      "n": 12,
+      "precision_at_1": 1.0,
+      "recall_at_k": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "mrr": 1.0,
+      "mean_replay_ms": 0.5886666666666663,
+      "mean_recomputed_events": 2.875
+    },
+    "0.2": {
+      "n": 12,
+      "precision_at_1": 1.0,
+      "recall_at_k": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "mrr": 1.0,
+      "mean_replay_ms": 0.5101041666666669,
+      "mean_recomputed_events": 2.875
+    },
+    "0.3": {
+      "n": 12,
+      "precision_at_1": 1.0,
+      "recall_at_k": {
+        "1": 1.0,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "mrr": 1.0,
+      "mean_replay_ms": 0.41700000000000004,
+      "mean_recomputed_events": 2.875
+    }
+  }
+}

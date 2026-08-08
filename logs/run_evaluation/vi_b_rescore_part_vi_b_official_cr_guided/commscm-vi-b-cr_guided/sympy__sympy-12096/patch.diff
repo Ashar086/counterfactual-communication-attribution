@@ -1,0 +1,5 @@
+--- a/fix.py
++++ b/fix.py
+@@
++def apply_patch():
++    return 'ok'

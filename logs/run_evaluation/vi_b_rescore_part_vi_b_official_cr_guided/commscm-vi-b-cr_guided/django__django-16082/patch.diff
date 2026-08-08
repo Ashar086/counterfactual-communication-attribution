@@ -1,0 +1,13 @@
+--- a/django/db/models/expressions.py
++++ b/django/db/models/expressions.py
+@@ -1234,6 +1234,10 @@
+         # Existing logic for other numeric types
+         if isinstance(lhs.output_field, IntegerField) and isinstance(rhs.output_field, IntegerField):
+             output_field = IntegerField()
++        elif isinstance(lhs.output_field, DecimalField) and isinstance(rhs.output_field, IntegerField):
++            output_field = DecimalField()
++        elif isinstance(lhs.output_field, IntegerField) and isinstance(rhs.output_field, DecimalField):
++            output_field = DecimalField()
+         else:
+             raise ValueError("Cannot infer type of '%%' expression involving these types: "
+                              f"{lhs.output_field.__class__.__name__}, {rhs.output_field.__class__.__name__}")

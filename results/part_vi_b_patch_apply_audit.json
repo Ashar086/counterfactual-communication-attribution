@@ -1,0 +1,306 @@
+{
+  "n_patch_apply_fail_logs": 54,
+  "n_sampled": 20,
+  "category_counts": {
+    "wrong_context_hunk_mismatch": 6,
+    "wrong_file_path": 7,
+    "invalid_unified_diff_syntax": 7
+  },
+  "among_sample_hit_gold_edge": 20,
+  "among_sample_proxy_pass": 20,
+  "case_hint": "If gold_edge high + proxy high but patch apply fails \u2192 Case B/C (attribution OK-ish; patch emission/adapter weak). If gold_edge low \u2192 Case A more plausible.",
+  "details": [
+    {
+      "instance_id": "django__django-15851",
+      "primary": "wrong_context_hunk_mismatch",
+      "reasons": [
+        "invalid_unified_diff_syntax",
+        "wrong_context_hunk_mismatch"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 465,
+      "patch_has_hunk": true,
+      "patch_has_stub": false,
+      "snippet": "Patch Apply Failed: | (Stripping trailing CRs from patch; use --binary to disable.) | patching file django/core/management/commands/dbshell.py | Hunk #1 FAILED at 50. | 1 out of 1 hunk FAILED -- saving rejects to file django/core/management/commands/dbshell.py.rej |  | 2026-08-03 21:54:09,793 - INFO"
+    },
+    {
+      "instance_id": "django__django-11239",
+      "primary": "wrong_file_path",
+      "reasons": [
+        "invalid_unified_diff_syntax",
+        "wrong_file_path"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 904,
+      "patch_has_hunk": true,
+      "patch_has_stub": false,
+      "snippet": "Patch Apply Failed: | (Stripping trailing CRs from patch; use --binary to disable.) | can't find file to patch at input line 3 | Perhaps you used the wrong -p or --strip option? | The text leading up to this was: | -------------------------- | |--- a/django/dbshell.py |  | |+++ b/django/dbshell.py |"
+    },
+    {
+      "instance_id": "astropy__astropy-13977",
+      "primary": "wrong_context_hunk_mismatch",
+      "reasons": [
+        "invalid_unified_diff_syntax",
+        "wrong_context_hunk_mismatch"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 569,
+      "patch_has_hunk": true,
+      "patch_has_stub": false,
+      "snippet": "Patch Apply Failed: | (Stripping trailing CRs from patch; use --binary to disable.) | patching file astropy/units/quantity.py | Hunk #1 FAILED at 617. | 1 out of 1 hunk FAILED -- saving rejects to file astropy/units/quantity.py.rej |  | 2026-08-03 19:29:45,349 - INFO - Traceback (most recent call la"
+    },
+    {
+      "instance_id": "django__django-16485",
+      "primary": "wrong_file_path",
+      "reasons": [
+        "invalid_unified_diff_syntax",
+        "wrong_file_path"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": "F4",
+      "patch_len": 315,
+      "patch_has_hunk": true,
+      "patch_has_stub": true,
+      "snippet": "Patch Apply Failed: | (Stripping trailing CRs from patch; use --binary to disable.) | can't find file to patch at input line 3 | Perhaps you used the wrong -p or --strip option? | The text leading up to this was: | -------------------------- | |--- a/fix.py |  | |+++ b/fix.py |  | ------------------"
+    },
+    {
+      "instance_id": "django__django-13023",
+      "primary": "invalid_unified_diff_syntax",
+      "reasons": [
+        "invalid_unified_diff_syntax"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 66,
+      "patch_has_hunk": true,
+      "patch_has_stub": true,
+      "snippet": "Patch Apply Failed: | patch: **** Only garbage was found in the patch input. |  | 2026-08-03 20:15:25,920 - INFO - Traceback (most recent call last): |   File \"C:\\Users\\BEST BUY COMPUTERS\\AppData\\Local\\Temp\\SWE-bench-src\\swebench\\harness\\run_evaluation.py\", line 182, in run_instance |     raise Eval"
+    },
+    {
+      "instance_id": "django__django-12774",
+      "primary": "wrong_context_hunk_mismatch",
+      "reasons": [
+        "invalid_unified_diff_syntax",
+        "wrong_context_hunk_mismatch"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 756,
+      "patch_has_hunk": true,
+      "patch_has_stub": false,
+      "snippet": "Patch Apply Failed: | (Stripping trailing CRs from patch; use --binary to disable.) | patching file django/db/models/query.py | Hunk #1 FAILED at 677. | 1 out of 1 hunk FAILED -- saving rejects to file django/db/models/query.py.rej |  | 2026-08-03 20:00:23,777 - INFO - Traceback (most recent call la"
+    },
+    {
+      "instance_id": "django__django-12754",
+      "primary": "invalid_unified_diff_syntax",
+      "reasons": [
+        "invalid_unified_diff_syntax"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 66,
+      "patch_has_hunk": true,
+      "patch_has_stub": true,
+      "snippet": "Patch Apply Failed: | patch: **** Only garbage was found in the patch input. |  | 2026-08-03 20:15:25,410 - INFO - Traceback (most recent call last): |   File \"C:\\Users\\BEST BUY COMPUTERS\\AppData\\Local\\Temp\\SWE-bench-src\\swebench\\harness\\run_evaluation.py\", line 182, in run_instance |     raise Eval"
+    },
+    {
+      "instance_id": "django__django-11299",
+      "primary": "wrong_file_path",
+      "reasons": [
+        "invalid_unified_diff_syntax",
+        "wrong_file_path"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 663,
+      "patch_has_hunk": true,
+      "patch_has_stub": false,
+      "snippet": "Patch Apply Failed: | (Stripping trailing CRs from patch; use --binary to disable.) | can't find file to patch at input line 3 | Perhaps you used the wrong -p or --strip option? | The text leading up to this was: | -------------------------- | |--- a/original_file.py |  | |+++ b/fixed_file.py |  | -"
+    },
+    {
+      "instance_id": "django__django-11163",
+      "primary": "invalid_unified_diff_syntax",
+      "reasons": [
+        "invalid_unified_diff_syntax"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": "F4",
+      "patch_len": 66,
+      "patch_has_hunk": true,
+      "patch_has_stub": true,
+      "snippet": "Patch Apply Failed: | patch: **** Only garbage was found in the patch input. |  | 2026-08-03 19:39:08,124 - INFO - Traceback (most recent call last): |   File \"C:\\Users\\BEST BUY COMPUTERS\\AppData\\Local\\Temp\\SWE-bench-src\\swebench\\harness\\run_evaluation.py\", line 182, in run_instance |     raise Eval"
+    },
+    {
+      "instance_id": "django__django-15957",
+      "primary": "wrong_context_hunk_mismatch",
+      "reasons": [
+        "invalid_unified_diff_syntax",
+        "wrong_context_hunk_mismatch"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 623,
+      "patch_has_hunk": true,
+      "patch_has_stub": false,
+      "snippet": "Patch Apply Failed: | (Stripping trailing CRs from patch; use --binary to disable.) | patching file django/db/models/query.py | Hunk #1 FAILED at 1234. | 1 out of 1 hunk FAILED -- saving rejects to file django/db/models/query.py.rej |  | 2026-08-03 22:14:11,426 - INFO - Traceback (most recent call l"
+    },
+    {
+      "instance_id": "django__django-15037",
+      "primary": "invalid_unified_diff_syntax",
+      "reasons": [
+        "invalid_unified_diff_syntax"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 66,
+      "patch_has_hunk": true,
+      "patch_has_stub": true,
+      "snippet": "Patch Apply Failed: | patch: **** Only garbage was found in the patch input. |  | 2026-08-03 21:32:20,679 - INFO - Traceback (most recent call last): |   File \"C:\\Users\\BEST BUY COMPUTERS\\AppData\\Local\\Temp\\SWE-bench-src\\swebench\\harness\\run_evaluation.py\", line 182, in run_instance |     raise Eval"
+    },
+    {
+      "instance_id": "django__django-10973",
+      "primary": "invalid_unified_diff_syntax",
+      "reasons": [
+        "invalid_unified_diff_syntax"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": "F4",
+      "patch_len": 66,
+      "patch_has_hunk": true,
+      "patch_has_stub": true,
+      "snippet": "Patch Apply Failed: | patch: **** Only garbage was found in the patch input. |  | 2026-08-03 19:38:25,348 - INFO - Traceback (most recent call last): |   File \"C:\\Users\\BEST BUY COMPUTERS\\AppData\\Local\\Temp\\SWE-bench-src\\swebench\\harness\\run_evaluation.py\", line 182, in run_instance |     raise Eval"
+    },
+    {
+      "instance_id": "django__django-15315",
+      "primary": "wrong_context_hunk_mismatch",
+      "reasons": [
+        "invalid_unified_diff_syntax",
+        "wrong_context_hunk_mismatch"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 407,
+      "patch_has_hunk": true,
+      "patch_has_stub": false,
+      "snippet": "Patch Apply Failed: | (Stripping trailing CRs from patch; use --binary to disable.) | patching file django/db/models/fields/__init__.py | Hunk #1 FAILED at 1234. | 1 out of 1 hunk FAILED -- saving rejects to file django/db/models/fields/__init__.py.rej |  | 2026-08-03 21:32:20,351 - INFO - Traceback"
+    },
+    {
+      "instance_id": "django__django-14351",
+      "primary": "invalid_unified_diff_syntax",
+      "reasons": [
+        "invalid_unified_diff_syntax"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 519,
+      "patch_has_hunk": true,
+      "patch_has_stub": false,
+      "snippet": "Patch Apply Failed: | (Stripping trailing CRs from patch; use --binary to disable.) | patching file django/db/models/sql/query.py | patch: **** malformed patch at line 11:   |  |  | 2026-08-03 21:00:17,381 - INFO - Traceback (most recent call last): |   File \"C:\\Users\\BEST BUY COMPUTERS\\AppData\\Loca"
+    },
+    {
+      "instance_id": "astropy__astropy-14096",
+      "primary": "wrong_file_path",
+      "reasons": [
+        "invalid_unified_diff_syntax",
+        "wrong_file_path"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 438,
+      "patch_has_hunk": true,
+      "patch_has_stub": false,
+      "snippet": "Patch Apply Failed: | (Stripping trailing CRs from patch; use --binary to disable.) | can't find file to patch at input line 3 | Perhaps you used the wrong -p or --strip option? | The text leading up to this was: | -------------------------- | |--- a/original.py |  | |+++ b/modified.py |  | --------"
+    },
+    {
+      "instance_id": "psf__requests-1766",
+      "primary": "wrong_file_path",
+      "reasons": [
+        "invalid_unified_diff_syntax",
+        "wrong_file_path"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 155,
+      "patch_has_hunk": true,
+      "patch_has_stub": true,
+      "snippet": "Patch Apply Failed: | (Stripping trailing CRs from patch; use --binary to disable.) | can't find file to patch at input line 3 | Perhaps you used the wrong -p or --strip option? | The text leading up to this was: | -------------------------- | |--- a/fix.py |  | |+++ b/fix.py |  | ------------------"
+    },
+    {
+      "instance_id": "django__django-15930",
+      "primary": "wrong_file_path",
+      "reasons": [
+        "invalid_unified_diff_syntax",
+        "wrong_file_path"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 371,
+      "patch_has_hunk": true,
+      "patch_has_stub": false,
+      "snippet": "Patch Apply Failed: | (Stripping trailing CRs from patch; use --binary to disable.) | can't find file to patch at input line 3 | Perhaps you used the wrong -p or --strip option? | The text leading up to this was: | -------------------------- | |--- a/original.py |  | |+++ b/fixed.py |  | -----------"
+    },
+    {
+      "instance_id": "django__django-12273",
+      "primary": "wrong_file_path",
+      "reasons": [
+        "wrong_file_path"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 236,
+      "patch_has_hunk": true,
+      "patch_has_stub": false,
+      "snippet": "Patch Apply Failed: | (Stripping trailing CRs from patch; use --binary to disable.) | can't find file to patch at input line 3 | Perhaps you used the wrong -p or --strip option? | The text leading up to this was: | -------------------------- | |--- a/models.py |  | |+++ b/models.py |  | ------------"
+    },
+    {
+      "instance_id": "pallets__flask-5014",
+      "primary": "invalid_unified_diff_syntax",
+      "reasons": [
+        "invalid_unified_diff_syntax"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 66,
+      "patch_has_hunk": true,
+      "patch_has_stub": true,
+      "snippet": "Patch Apply Failed: | patch: **** Only garbage was found in the patch input. |  | 2026-08-03 17:25:05,394 - INFO - Traceback (most recent call last): |   File \"C:\\Users\\BEST BUY COMPUTERS\\AppData\\Local\\Temp\\SWE-bench-src\\swebench\\harness\\run_evaluation.py\", line 182, in run_instance |     raise Eval"
+    },
+    {
+      "instance_id": "django__django-14631",
+      "primary": "wrong_context_hunk_mismatch",
+      "reasons": [
+        "invalid_unified_diff_syntax",
+        "wrong_context_hunk_mismatch"
+      ],
+      "hit_gold_edge": true,
+      "y_proxy_after": 1.0,
+      "failure_code": null,
+      "patch_len": 911,
+      "patch_has_hunk": true,
+      "patch_has_stub": false,
+      "snippet": "Patch Apply Failed: | (Stripping trailing CRs from patch; use --binary to disable.) | patching file django/forms/forms.py | Hunk #1 FAILED at 1234. | Hunk #2 FAILED at 1250. | 2 out of 2 hunks FAILED -- saving rejects to file django/forms/forms.py.rej |  | 2026-08-03 21:13:42,793 - INFO - Traceback "
+    }
+  ]
+}

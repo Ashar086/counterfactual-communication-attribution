@@ -1,0 +1,17 @@
+--- a/astropy/io/ascii/html.py
++++ b/astropy/io/ascii/html.py
+@@ -339,6 +339,7 @@
+ 
+         # Create the HTML table
+         rows = []
++        formats = self._formats  # Capture formats from the context
+         for row in self.table:
+             row_data = []
+             for col in self.table.columns:
+@@ -346,7 +347
+                 value = row[col]
+-                row_data.append(value)
++                row_data.append(formats[col.name](value) if col.name in formats else value)
+             rows.append(row_data)
+ 
+         # Generate the HTML output

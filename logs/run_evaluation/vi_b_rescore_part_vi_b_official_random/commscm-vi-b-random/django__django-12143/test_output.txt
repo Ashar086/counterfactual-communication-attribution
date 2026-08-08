@@ -1,0 +1,73 @@
+/eval.sh: line 2: set: pipefail: invalid option name
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 3: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ cd $'/testbed\r'
+/eval.sh: line 5: cd: $'/testbed\r': No such file or directory
++ sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen
++ $'locale-gen\r'
+/eval.sh: line 6: $'locale-gen\r': command not found
++ export $'LANG=en_US.UTF-8\r'
++ LANG=$'en_US.UTF-8\r'
++ export $'LANGUAGE=en_US:en\r'
++ LANGUAGE=$'en_US:en\r'
++ export $'LC_ALL=en_US.UTF-8\r'
++ LC_ALL=$'en_US.UTF-8\r'
++ git config --global --add safe.directory $'/testbed\r'
++ cd $'/testbed\r'
+/eval.sh: line 11: cd: $'/testbed\r': No such file or directory
++ git $'status\r'
+git: 'status' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
++ git $'show\r'
+git: 'show' is not a git command. See 'git --help'.
+
+The most similar command is
+	show
++ git -c core.fileMode=false diff $'5573a54d409bb98b5c5acdb308310bed02d392c2\r'
+fatal: ambiguous argument '5573a54d409bb98b5c5acdb308310bed02d392c2?': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 15: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ python -m pip install -e $'.\r'
+ERROR: . is not a valid editable requirement. It should either be a path to a local project or a VCS URL (beginning with bzr+http, bzr+https, bzr+ssh, bzr+sftp, bzr+ftp, bzr+lp, bzr+file, git+http, git+https, git+ssh, git+git, git+file, hg+file, hg+http, hg+https, hg+ssh, hg+static-http, svn+ssh, svn+http, svn+https, svn+svn, svn+file).
++ git checkout 5573a54d409bb98b5c5acdb308310bed02d392c2 $'tests/admin_changelist/tests.py\r'
+error: pathspec 'tests/admin_changelist/tests.py?' did not match any file(s) known to git
++ git apply -v -
+Checking patch tests/admin_changelist/tests.py...
+error: while searching for:
+        queryset = m._get_list_editable_queryset(request, prefix='form')?
+        self.assertEqual(queryset.count(), 2)?
+?
+    def test_changelist_view_list_editable_changed_objects_uses_filter(self):?
+        """list_editable edits use a filtered queryset to limit memory usage."""?
+        a = Swallow.objects.create(origin='Swallow A', load=4, speed=1)?
+
+error: patch failed: tests/admin_changelist/tests.py:844
+error: tests/admin_changelist/tests.py: patch does not apply
++ : '>>>>> Start Test Output'
++ ./tests/runtests.py --verbosity 2 --settings=test_sqlite --parallel 1 $'admin_changelist.tests\r'
+Traceback (most recent call last):
+  File "/testbed/./tests/runtests.py", line 14, in <module>
+    import django
+ModuleNotFoundError: No module named 'django'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/testbed/./tests/runtests.py", line 16, in <module>
+    raise RuntimeError(
+RuntimeError: Django module not found, reference tests/README.rst for instructions.
++ : '>>>>> End Test Output'
++ git checkout 5573a54d409bb98b5c5acdb308310bed02d392c2 $'tests/admin_changelist/tests.py\r'
+error: pathspec 'tests/admin_changelist/tests.py?' did not match any file(s) known to git

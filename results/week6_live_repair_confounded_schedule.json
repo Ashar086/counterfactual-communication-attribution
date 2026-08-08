@@ -1,0 +1,3391 @@
+{
+  "experiment": "week6_live_repair",
+  "research_question": "Can communication attribution improve a real multi-agent system through a single architecture edit?",
+  "claim_note": "Live LangGraph re-run after one prune/weaken. Not SWE-bench/WebArena. No verifiers. Failure taxonomy F1\u2013F6 reported.",
+  "summary": {
+    "n_attempted_rows": 60,
+    "n_skipped_success": 0,
+    "by_method": {
+      "cr_guided": {
+        "n": 20,
+        "n_with_after": 20,
+        "task_success_before": 0.0,
+        "task_success_after": 1.0,
+        "delta_task_success": 1.0,
+        "frac_repaired": 1.0,
+        "frac_success": 1.0,
+        "mean_delta_y": 0.9,
+        "gold_edge_hit_rate": 1.0,
+        "edit_precision": 1.0,
+        "repair_attribution_precision": 1.0,
+        "mean_latency_delta_ms": -438.1318500000001,
+        "failure_taxonomy": {},
+        "pipeline_ok_rate": 1.0
+      },
+      "reward_only": {
+        "n": 20,
+        "n_with_after": 20,
+        "task_success_before": 0.0,
+        "task_success_after": 0.0,
+        "delta_task_success": 0.0,
+        "frac_repaired": 0.0,
+        "frac_success": 1.0,
+        "mean_delta_y": 0.25,
+        "gold_edge_hit_rate": 0.0,
+        "edit_precision": 0.0,
+        "repair_attribution_precision": null,
+        "mean_latency_delta_ms": 198.44914999999997,
+        "failure_taxonomy": {
+          "F3": 20
+        },
+        "pipeline_ok_rate": 1.0
+      },
+      "random": {
+        "n": 20,
+        "n_with_after": 20,
+        "task_success_before": 0.0,
+        "task_success_after": 0.5,
+        "delta_task_success": 0.5,
+        "frac_repaired": 0.5,
+        "frac_success": 0.5,
+        "mean_delta_y": 0.5,
+        "gold_edge_hit_rate": 0.35,
+        "edit_precision": 0.35,
+        "repair_attribution_precision": 0.3,
+        "mean_latency_delta_ms": -2022.8993000000003,
+        "failure_taxonomy": {
+          "F2": 6,
+          "F4": 4
+        },
+        "pipeline_ok_rate": 1.0
+      }
+    },
+    "edit_stability_by_task": [
+      {
+        "task_id": "add_two",
+        "n": 2,
+        "modal_edit": "prune_edge:C1->C2",
+        "agreement": 1.0
+      },
+      {
+        "task_id": "count_vowels",
+        "n": 2,
+        "modal_edit": "prune_edge:C1->C2",
+        "agreement": 1.0
+      },
+      {
+        "task_id": "factorial",
+        "n": 2,
+        "modal_edit": "prune_edge:C1->C2",
+        "agreement": 1.0
+      },
+      {
+        "task_id": "fizzbuzz_one",
+        "n": 2,
+        "modal_edit": "prune_edge:C1->C2",
+        "agreement": 1.0
+      },
+      {
+        "task_id": "is_even",
+        "n": 2,
+        "modal_edit": "prune_edge:C1->C2",
+        "agreement": 1.0
+      },
+      {
+        "task_id": "max_of_three",
+        "n": 2,
+        "modal_edit": "prune_edge:C1->C2",
+        "agreement": 1.0
+      },
+      {
+        "task_id": "palindrome",
+        "n": 2,
+        "modal_edit": "prune_edge:C1->C2",
+        "agreement": 1.0
+      },
+      {
+        "task_id": "return_ok",
+        "n": 2,
+        "modal_edit": "prune_edge:C1->C2",
+        "agreement": 1.0
+      },
+      {
+        "task_id": "reverse_string",
+        "n": 2,
+        "modal_edit": "prune_edge:C1->C2",
+        "agreement": 1.0
+      },
+      {
+        "task_id": "unique_sorted",
+        "n": 2,
+        "modal_edit": "prune_edge:C1->C2",
+        "agreement": 1.0
+      }
+    ],
+    "mean_edit_stability": 1.0,
+    "week6_gate_pass": true
+  },
+  "rows": [
+    {
+      "run_idx": 0,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 5414.447999999999,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 4832.35,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": -582.097999999999,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 18239.6
+    },
+    {
+      "run_idx": 1,
+      "task_id": "add_two",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 8111.295,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 8030.083999999999,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": -81.21100000000115,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 20646.7
+    },
+    {
+      "run_idx": 2,
+      "task_id": "is_even",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 10837.348,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C2",
+        "target_event_id": "C4",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C2->C4",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.0,
+      "latency_after_ms": 10468.469,
+      "sink_valid_after": true,
+      "delta_y": 0.0,
+      "latency_delta_ms": -368.8790000000008,
+      "improved": false,
+      "repaired": false,
+      "success": false,
+      "failure_code": "F2",
+      "elapsed_ms": 27876.9
+    },
+    {
+      "run_idx": 3,
+      "task_id": "factorial",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 7753.906,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 8344.948,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": 591.0420000000004,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 23610.9
+    },
+    {
+      "run_idx": 4,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 7180.653,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 8022.218,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": 841.5649999999996,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 20443.7
+    },
+    {
+      "run_idx": 5,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 11342.998,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C3",
+        "target_event_id": "C4",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C3->C4",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 7469.996000000001,
+      "sink_valid_after": true,
+      "delta_y": 1.0,
+      "latency_delta_ms": -3873.0019999999986,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 25923.6
+    },
+    {
+      "run_idx": 6,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 7663.991,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 6831.446,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": -832.5450000000001,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 19122.0
+    },
+    {
+      "run_idx": 7,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 6284.81,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 7801.397000000001,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": 1516.5870000000004,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 18002.0
+    },
+    {
+      "run_idx": 8,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 9247.846,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C3",
+        "target_event_id": "C4",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C3->C4",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 6536.881000000001,
+      "sink_valid_after": true,
+      "delta_y": 1.0,
+      "latency_delta_ms": -2710.9649999999983,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 21640.4
+    },
+    {
+      "run_idx": 9,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 6363.219999999999,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 6241.671,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": -121.54899999999907,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 20771.7
+    },
+    {
+      "run_idx": 10,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 9587.279000000002,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 7360.214,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": -2227.0650000000023,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 22414.5
+    },
+    {
+      "run_idx": 11,
+      "task_id": "add_two",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 15483.259,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 5.0
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 14386.072,
+      "sink_valid_after": true,
+      "delta_y": 1.0,
+      "latency_delta_ms": -1097.187,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 36393.4
+    },
+    {
+      "run_idx": 12,
+      "task_id": "is_even",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 6518.005,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 5822.099,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": -695.906,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 16302.4
+    },
+    {
+      "run_idx": 13,
+      "task_id": "factorial",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 8857.35,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 10375.493,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": 1518.143,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 23307.0
+    },
+    {
+      "run_idx": 14,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 13344.953000000001,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.0,
+      "latency_after_ms": 8975.962,
+      "sink_valid_after": true,
+      "delta_y": 0.0,
+      "latency_delta_ms": -4368.991000000002,
+      "improved": false,
+      "repaired": false,
+      "success": false,
+      "failure_code": "F2",
+      "elapsed_ms": 27074.3
+    },
+    {
+      "run_idx": 15,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 7517.984,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 7396.146,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": -121.83800000000065,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 19560.8
+    },
+    {
+      "run_idx": 16,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 7478.7609999999995,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 7534.262000000001,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": 55.50100000000111,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 18445.8
+    },
+    {
+      "run_idx": 17,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 12294.220000000001,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C2",
+        "target_event_id": "C3",
+        "channel": null,
+        "params": {
+          "edge_score": 5.0
+        }
+      },
+      "edit_key": "prune_edge:C2->C3",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 0.0,
+      "latency_after_ms": 14424.914999999999,
+      "sink_valid_after": true,
+      "delta_y": 0.0,
+      "latency_delta_ms": 2130.694999999998,
+      "improved": false,
+      "repaired": false,
+      "success": false,
+      "failure_code": "F4",
+      "elapsed_ms": 31329.9
+    },
+    {
+      "run_idx": 18,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 7624.223,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 5599.437999999999,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": -2024.7850000000008,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 16923.2
+    },
+    {
+      "run_idx": 19,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 10109.32,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 9130.593,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": -978.726999999999,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 22794.1
+    },
+    {
+      "run_idx": 20,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 13015.550000000001,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.0,
+      "latency_after_ms": 8627.478,
+      "sink_valid_after": true,
+      "delta_y": 0.0,
+      "latency_delta_ms": -4388.072000000002,
+      "improved": false,
+      "repaired": false,
+      "success": false,
+      "failure_code": "F2",
+      "elapsed_ms": 26809.0
+    },
+    {
+      "run_idx": 21,
+      "task_id": "add_two",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 9893.585000000001,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 6382.221,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": -3511.3640000000014,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 21312.7
+    },
+    {
+      "run_idx": 22,
+      "task_id": "is_even",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 6703.967000000001,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 8271.719,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": 1567.7519999999986,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 18417.8
+    },
+    {
+      "run_idx": 23,
+      "task_id": "factorial",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 13959.140000000001,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C2",
+        "target_event_id": "C3",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C2->C3",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 0.0,
+      "latency_after_ms": 10762.198,
+      "sink_valid_after": true,
+      "delta_y": 0.0,
+      "latency_delta_ms": -3196.942000000001,
+      "improved": false,
+      "repaired": false,
+      "success": false,
+      "failure_code": "F4",
+      "elapsed_ms": 30626.7
+    },
+    {
+      "run_idx": 24,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 6979.351,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 5893.465,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": -1085.8859999999995,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 16560.9
+    },
+    {
+      "run_idx": 25,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 8821.822,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 7894.466,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": -927.3559999999998,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 20853.3
+    },
+    {
+      "run_idx": 26,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 17220.16,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C3",
+        "target_event_id": "C4",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C3->C4",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 10909.606999999998,
+      "sink_valid_after": true,
+      "delta_y": 1.0,
+      "latency_delta_ms": -6310.553000000002,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 32117.6
+    },
+    {
+      "run_idx": 27,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 9469.567000000001,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 13892.740999999998,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": 4423.173999999997,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 26739.9
+    },
+    {
+      "run_idx": 28,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 7162.566,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 7014.392,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": -148.17399999999998,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 18013.5
+    },
+    {
+      "run_idx": 29,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 10948.186000000002,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C2",
+        "target_event_id": "C3",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C2->C3",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 0.0,
+      "latency_after_ms": 9634.75,
+      "sink_valid_after": true,
+      "delta_y": 0.0,
+      "latency_delta_ms": -1313.4360000000015,
+      "improved": false,
+      "repaired": false,
+      "success": false,
+      "failure_code": "F4",
+      "elapsed_ms": 25699.5
+    },
+    {
+      "run_idx": 30,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 5178.607,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 5832.618,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": 654.0110000000004,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 14555.5
+    },
+    {
+      "run_idx": 31,
+      "task_id": "add_two",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 6331.359,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 9197.354,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": 2865.994999999999,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 18880.1
+    },
+    {
+      "run_idx": 32,
+      "task_id": "is_even",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 10852.659999999998,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C2",
+        "target_event_id": "C3",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C2->C3",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 0.0,
+      "latency_after_ms": 10209.065,
+      "sink_valid_after": true,
+      "delta_y": 0.0,
+      "latency_delta_ms": -643.5949999999975,
+      "improved": false,
+      "repaired": false,
+      "success": false,
+      "failure_code": "F4",
+      "elapsed_ms": 26163.0
+    },
+    {
+      "run_idx": 33,
+      "task_id": "factorial",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 9692.746,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 9493.275,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": -199.47099999999955,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 23296.0
+    },
+    {
+      "run_idx": 34,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 7727.174,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 8314.557,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": 587.3830000000007,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 21984.9
+    },
+    {
+      "run_idx": 35,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 12836.179,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 10236.52,
+      "sink_valid_after": true,
+      "delta_y": 1.0,
+      "latency_delta_ms": -2599.6589999999997,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 30916.8
+    },
+    {
+      "run_idx": 36,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 6913.114,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 8973.993999999999,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": 2060.879999999999,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 20456.8
+    },
+    {
+      "run_idx": 37,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 8325.497000000001,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 9619.928,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": 1294.4309999999987,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 22347.4
+    },
+    {
+      "run_idx": 38,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 9448.55,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 9257.224,
+      "sink_valid_after": true,
+      "delta_y": 1.0,
+      "latency_delta_ms": -191.3259999999991,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 24351.2
+    },
+    {
+      "run_idx": 39,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 9433.344000000001,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 6163.371,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": -3269.973000000001,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 20055.2
+    },
+    {
+      "run_idx": 40,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 5212.174,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 5885.657,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": 673.4830000000002,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 15969.3
+    },
+    {
+      "run_idx": 41,
+      "task_id": "add_two",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 12650.929999999998,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C2",
+        "target_event_id": "C4",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C2->C4",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.0,
+      "latency_after_ms": 11188.503999999999,
+      "sink_valid_after": true,
+      "delta_y": 0.0,
+      "latency_delta_ms": -1462.4259999999995,
+      "improved": false,
+      "repaired": false,
+      "success": false,
+      "failure_code": "F2",
+      "elapsed_ms": 29407.0
+    },
+    {
+      "run_idx": 42,
+      "task_id": "is_even",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 6714.496999999999,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 5538.281999999999,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": -1176.2150000000001,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 16838.3
+    },
+    {
+      "run_idx": 43,
+      "task_id": "factorial",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 7790.808,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 9088.719000000001,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": 1297.911000000001,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 20605.1
+    },
+    {
+      "run_idx": 44,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 12038.12,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 7881.902,
+      "sink_valid_after": true,
+      "delta_y": 1.0,
+      "latency_delta_ms": -4156.218000000001,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 24925.0
+    },
+    {
+      "run_idx": 45,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 7415.088999999999,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 5823.031,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": -1592.057999999999,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 17358.9
+    },
+    {
+      "run_idx": 46,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 8395.132999999998,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 6791.317999999999,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": -1603.8149999999987,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 19019.2
+    },
+    {
+      "run_idx": 47,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 12497.363000000001,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 10934.157000000001,
+      "sink_valid_after": true,
+      "delta_y": 1.0,
+      "latency_delta_ms": -1563.2060000000001,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 29030.0
+    },
+    {
+      "run_idx": 48,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 5832.542,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 4721.233,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": -1111.3090000000002,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 16306.7
+    },
+    {
+      "run_idx": 49,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 7885.379,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 6329.505000000001,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": -1555.873999999999,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 17732.1
+    },
+    {
+      "run_idx": 50,
+      "task_id": "return_ok",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 6737.101999999999,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C2",
+        "target_event_id": "C4",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C2->C4",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.0,
+      "latency_after_ms": 7673.879000000001,
+      "sink_valid_after": true,
+      "delta_y": 0.0,
+      "latency_delta_ms": 936.7770000000019,
+      "improved": false,
+      "repaired": false,
+      "success": false,
+      "failure_code": "F2",
+      "elapsed_ms": 20267.2
+    },
+    {
+      "run_idx": 51,
+      "task_id": "add_two",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 4349.683,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 5194.922,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": 845.2389999999996,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 13236.2
+    },
+    {
+      "run_idx": 52,
+      "task_id": "is_even",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 6046.24,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 6834.233,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": 787.9930000000004,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 16568.0
+    },
+    {
+      "run_idx": 53,
+      "task_id": "factorial",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 10192.541000000001,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 8556.361,
+      "sink_valid_after": true,
+      "delta_y": 1.0,
+      "latency_delta_ms": -1636.1800000000003,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 23418.4
+    },
+    {
+      "run_idx": 54,
+      "task_id": "reverse_string",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 6385.513999999999,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 5456.818,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": -928.695999999999,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 15238.3
+    },
+    {
+      "run_idx": 55,
+      "task_id": "max_of_three",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 7998.725,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 6974.974,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": -1023.7510000000002,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 18803.8
+    },
+    {
+      "run_idx": 56,
+      "task_id": "count_vowels",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 11657.573,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 5.0
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 9110.477,
+      "sink_valid_after": true,
+      "delta_y": 1.0,
+      "latency_delta_ms": -2547.0959999999995,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 25294.0
+    },
+    {
+      "run_idx": 57,
+      "task_id": "fizzbuzz_one",
+      "poison_mode": "POISON_PLANNER",
+      "method": "cr_guided",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.1,
+      "latency_before_ms": 6989.255999999999,
+      "sink_valid_before": true,
+      "gold": "C1",
+      "gold_edges": [
+        [
+          "C0",
+          "C1"
+        ],
+        [
+          "C1",
+          "C2"
+        ]
+      ],
+      "cr_top1": "C1",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C1",
+        "target_event_id": "C2",
+        "channel": null,
+        "params": {
+          "edge_score": 1.0
+        }
+      },
+      "edit_key": "prune_edge:C1->C2",
+      "hit_gold_edge": true,
+      "edit_supported": true,
+      "y_after": 1.0,
+      "latency_after_ms": 6905.966,
+      "sink_valid_after": true,
+      "delta_y": 0.9,
+      "latency_delta_ms": -83.28999999999905,
+      "improved": true,
+      "repaired": true,
+      "success": true,
+      "failure_code": null,
+      "elapsed_ms": 17644.8
+    },
+    {
+      "run_idx": 58,
+      "task_id": "unique_sorted",
+      "poison_mode": "POISON_CODER",
+      "method": "reward_only",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 6216.428000000001,
+      "sink_valid_before": true,
+      "gold": "C2",
+      "gold_edges": [
+        [
+          "C1",
+          "C2"
+        ],
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C2",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C2",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C4",
+        "target_event_id": "C5",
+        "channel": null,
+        "params": {
+          "edge_score": 1.5
+        }
+      },
+      "edit_key": "prune_edge:C4->C5",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.25,
+      "latency_after_ms": 5724.64,
+      "sink_valid_after": true,
+      "delta_y": 0.25,
+      "latency_delta_ms": -491.78800000000047,
+      "improved": true,
+      "repaired": false,
+      "success": true,
+      "failure_code": "F3",
+      "elapsed_ms": 15389.3
+    },
+    {
+      "run_idx": 59,
+      "task_id": "palindrome",
+      "poison_mode": "POISON_REVIEWER",
+      "method": "random",
+      "temperature": 0.0,
+      "seed": null,
+      "n_edits": 1,
+      "pipeline_ok": true,
+      "extract_ok": true,
+      "attribution_ok": true,
+      "repair_pipeline_ok": true,
+      "failures": [],
+      "y_before": 0.0,
+      "latency_before_ms": 9898.297999999999,
+      "sink_valid_before": true,
+      "gold": "C3",
+      "gold_edges": [
+        [
+          "C2",
+          "C3"
+        ],
+        [
+          "C3",
+          "C4"
+        ]
+      ],
+      "cr_top1": "C3",
+      "attribution_correct": true,
+      "factual_reward": 0.0,
+      "edit": {
+        "kind": "prune_edge",
+        "source_event_id": "C2",
+        "target_event_id": "C4",
+        "channel": null,
+        "params": {
+          "edge_score": 6.0
+        }
+      },
+      "edit_key": "prune_edge:C2->C4",
+      "hit_gold_edge": false,
+      "edit_supported": true,
+      "y_after": 0.0,
+      "latency_after_ms": 8800.573,
+      "sink_valid_after": true,
+      "delta_y": 0.0,
+      "latency_delta_ms": -1097.7249999999985,
+      "improved": false,
+      "repaired": false,
+      "success": false,
+      "failure_code": "F2",
+      "elapsed_ms": 23112.1
+    }
+  ],
+  "partial": false
+}

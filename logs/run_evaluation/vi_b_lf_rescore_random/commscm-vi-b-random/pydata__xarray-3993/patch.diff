@@ -1,0 +1,12 @@
+--- a/xarray/core/dataarray.py
++++ b/xarray/core/dataarray.py
+@@ -1234,7 +1234,7 @@
+         return self._reduce(np.sum, dim=dim, **kwargs)
+ 
+     def integrate(self, dim=None, **kwargs):
+-        """Integrate this DataArray along the given dimension(s)."""
++        """Integrate this DataArray along the given coordinate(s)."""
+         # Implementation details...
+         pass
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

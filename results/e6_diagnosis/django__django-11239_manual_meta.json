@@ -1,0 +1,19 @@
+{
+  "instance_id": "django__django-11239",
+  "image": "swebench/sweb.eval.x86_64.django_1776_django-11239:latest",
+  "apply_exit": 0,
+  "eval_exit": 0,
+  "has_crlf_artifact_in_original_eval": true,
+  "manual_output": "results\\e6_diagnosis\\django__django-11239_manual_lf_test_output.txt",
+  "contains_ModuleNotFoundError": false,
+  "contains_pipefail_cr": false,
+  "ok_lines": [
+    "test_accent (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase) ... ok",
+    "test_basic (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase) ... ok",
+    "test_column (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase) ... ok",
+    "test_nopass (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase) ... ok",
+    "SIGINT is ignored in Python and passed to psql to abort quries. ... ok",
+    "test_ssl_certificate (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase) ... ok"
+  ],
+  "fail_lines": []
+}

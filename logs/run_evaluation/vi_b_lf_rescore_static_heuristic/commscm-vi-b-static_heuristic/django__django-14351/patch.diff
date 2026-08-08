@@ -1,0 +1,13 @@
+--- a/django/db/models/sql/query.py
++++ b/django/db/models/sql/query.py
+@@ -230,6 +230,10 @@
+                 select_list = []
+                 if cols:
+                     # added these two lines to ensure only the first column is selected
++                    # This check ensures that when the alias is 'U0', 
++                    # we only select the first column to prevent 
++                    # ProgrammingError caused by subqueries returning multiple columns.
++                    # It is important to ensure that this does not affect other usages of 'cols'.
+                     if len(cols) > 0 and cols[0].alias == 'U0':
+                         cols = [cols[0]]
+                     select_list.extend(cols)

@@ -1,0 +1,62 @@
+{
+  "returncode": 0,
+  "stdout_tail": ".co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json \"HTTP/1.1 404 Not Found\"\n2026-08-04 22:20:57,175 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md \"HTTP/1.1 307 Temporary Redirect\"\n2026-08-04 22:20:57,218 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md \"HTTP/1.1 200 OK\"\n2026-08-04 22:20:57,481 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py \"HTTP/1.1 404 Not Found\"\n2026-08-04 22:20:57,702 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py \"HTTP/1.1 404 Not Found\"\n2026-08-04 22:20:57,974 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml \"HTTP/1.1 404 Not Found\"\n2026-08-04 22:20:58,434 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified \"HTTP/1.1 200 OK\"\n2026-08-04 22:20:58,708 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json \"HTTP/1.1 404 Not Found\"\nFound 2 existing instance images. Will reuse them.\nRunning 10 instances...\n\nEvaluation:   0%|          | 0/10 [00:00<?, ?it/s, error=0, \\u2713=0, \\u2716=0]\nEvaluation:   0%|          | 0/10 [00:41<?, ?it/s, \\u2713=1, \\u2716=0, error=0]\nEvaluation:  10%|#         | 1/10 [00:41<06:17, 41.92s/it, \\u2713=1, \\u2716=0, error=0]\nEvaluation:  10%|#         | 1/10 [23:32<06:17, 41.92s/it, \\u2713=2, \\u2716=0, error=0]\nEvaluation:  20%|##        | 2/10 [23:32<1:49:48, 823.56s/it, \\u2713=2, \\u2716=0, error=0]\nEvaluation:  20%|##        | 2/10 [24:48<1:49:48, 823.56s/it, \\u2713=3, \\u2716=0, error=0]\nEvaluation:  30%|###       | 3/10 [24:48<56:15, 482.15s/it, \\u2713=3, \\u2716=0, error=0]  \nEvaluation:  30%|###       | 3/10 [39:11<56:15, 482.15s/it, \\u2713=4, \\u2716=0, error=0]\nEvaluation:  40%|####      | 4/10 [39:11<1:03:15, 632.55s/it, \\u2713=4, \\u2716=0, error=0]\nEvaluation:  40%|####      | 4/10 [39:14<1:03:15, 632.55s/it, \\u2713=5, \\u2716=0, error=0]\nEvaluation:  50%|#####     | 5/10 [39:14<33:48, 405.64s/it, \\u2713=5, \\u2716=0, error=0]  \nEvaluation:  50%|#####     | 5/10 [1:00:59<33:48, 405.64s/it, \\u2713=6, \\u2716=0, error=0]\nEvaluation:  60%|######    | 6/10 [1:00:59<47:24, 711.24s/it, \\u2713=6, \\u2716=0, error=0]\nEvaluation:  60%|######    | 6/10 [1:03:30<47:24, 711.24s/it, \\u2713=7, \\u2716=0, error=0]\nEvaluation:  70%|#######   | 7/10 [1:03:30<26:24, 528.12s/it, \\u2713=7, \\u2716=0, error=0]\nEvaluation:  70%|#######   | 7/10 [1:14:06<26:24, 528.12s/it, \\u2713=8, \\u2716=0, error=0]\nEvaluation:  80%|########  | 8/10 [1:14:06<18:45, 562.57s/it, \\u2713=8, \\u2716=0, error=0]\nEvaluation:  80%|########  | 8/10 [1:15:18<18:45, 562.57s/it, \\u2713=9, \\u2716=0, error=0]\nEvaluation:  90%|######### | 9/10 [1:15:18<06:49, 409.18s/it, \\u2713=9, \\u2716=0, error=0]\nEvaluation:  90%|######### | 9/10 [1:16:54<06:49, 409.18s/it, \\u2713=10, \\u2716=0, error=0]\nEvaluation: 100%|##########| 10/10 [1:16:54<00:00, 312.55s/it, \\u2713=10, \\u2716=0, error=0]\nEvaluation: 100%|##########| 10/10 [1:16:54<00:00, 461.49s/it, \\u2713=10, \\u2716=0, error=0]\nAll instances run.\nCleaning cached images...\nRemoved 0 images.\nTotal instances: 10\nInstances submitted: 10\nInstances completed: 10\nInstances incomplete: 0\nInstances resolved: 10\nInstances unresolved: 0\nInstances with empty patches: 0\nInstances with errors: 0\nUnstopped containers: 0\nUnremoved images: 2\nReport written to commscm-oracle-gold.oracle_gold_sample_n10_s7_lf.json\n",
+  "stderr_tail": "",
+  "harness_log": "results\\part_vi_b_predictions\\oracle_gold_sample_n10_s7_lf_harness.log",
+  "run_id": "oracle_gold_sample_n10_s7_lf",
+  "predictions_path": "results\\oracle_gold_predictions\\oracle_gold_sample_n10_s7_lf.jsonl",
+  "artifact_candidates": [
+    "commscm-oracle-gold.oracle_gold_sample_n10_s7_lf.json",
+    "logs\\run_evaluation\\oracle_gold_sample_n10_s7_lf"
+  ],
+  "report": {
+    "total_instances": 10,
+    "submitted_instances": 10,
+    "completed_instances": 10,
+    "resolved_instances": 10,
+    "unresolved_instances": 0,
+    "empty_patch_instances": 0,
+    "error_instances": 0,
+    "completed_ids": [
+      "astropy__astropy-13977",
+      "django__django-11239",
+      "django__django-14434",
+      "django__django-15851",
+      "django__django-15987",
+      "pylint-dev__pylint-4551",
+      "sphinx-doc__sphinx-10449",
+      "sphinx-doc__sphinx-7910",
+      "sympy__sympy-13974",
+      "sympy__sympy-17655"
+    ],
+    "incomplete_ids": [],
+    "empty_patch_ids": [],
+    "submitted_ids": [
+      "astropy__astropy-13977",
+      "django__django-11239",
+      "django__django-14434",
+      "django__django-15851",
+      "django__django-15987",
+      "pylint-dev__pylint-4551",
+      "sphinx-doc__sphinx-10449",
+      "sphinx-doc__sphinx-7910",
+      "sympy__sympy-13974",
+      "sympy__sympy-17655"
+    ],
+    "resolved_ids": [
+      "astropy__astropy-13977",
+      "django__django-11239",
+      "django__django-14434",
+      "django__django-15851",
+      "django__django-15987",
+      "pylint-dev__pylint-4551",
+      "sphinx-doc__sphinx-10449",
+      "sphinx-doc__sphinx-7910",
+      "sympy__sympy-13974",
+      "sympy__sympy-17655"
+    ],
+    "unresolved_ids": [],
+    "error_ids": [],
+    "schema_version": 2
+  }
+}

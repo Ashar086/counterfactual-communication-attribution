@@ -1,0 +1,11 @@
+--- a/doc/glossary.rst
++++ b/doc/glossary.rst
+@@ -234,7 +234,7 @@
+ MySQL
+    A popular open-source relational database management system.
+ 
+-mysql
++mysql (lowercase)
+    A common term used to refer to the MySQL database in a general context.
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

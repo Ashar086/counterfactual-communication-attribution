@@ -1,0 +1,11 @@
+--- a/django/db/models/base.py
++++ b/django/db/models/base.py
+@@ -1234,7 +1234,7 @@ class ModelBase(type):
+         # Create the model class.
+         cls = super(ModelBase, meta).__new__(meta, name, bases, attrs)
+ 
+-        # Ensure that the get_FIELD_display methods are created.
++        # Ensure that the get_FIELD_display methods are created, allowing overrides.
+         for field in cls._meta.fields:
+             if field.choices:
+                 setattr(cls, 'get_%s_display' % field.name,

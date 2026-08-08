@@ -1,0 +1,45 @@
+2026-08-05 18:18:14,697 - INFO - Creating container for astropy__astropy-13453...
+2026-08-05 18:18:14,882 - INFO - Container for astropy__astropy-13453 created: 87f85de56e734d533787cdb619751d35666b914401a0ae825313442a2a11cd85
+2026-08-05 18:18:15,666 - INFO - Container for astropy__astropy-13453 started: 87f85de56e734d533787cdb619751d35666b914401a0ae825313442a2a11cd85
+2026-08-05 18:18:15,669 - INFO - Intermediate patch for astropy__astropy-13453 written to logs\run_evaluation\vi_b_lf_rescore_static_heuristic\commscm-vi-b-static_heuristic\astropy__astropy-13453\patch.diff, now applying to container...
+2026-08-05 18:18:16,298 - INFO - Failed to apply patch to container: git apply --verbose
+2026-08-05 18:18:16,481 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2026-08-05 18:18:16,679 - INFO - >>>>> Applied Patch:
+patching file astropy/io/ascii/html.py
+Hunk #1 succeeded at 339 with fuzz 3.
+
+2026-08-05 18:18:17,909 - INFO - Git diff before:
+diff --git a/astropy/io/ascii/html.py b/astropy/io/ascii/html.py
+index 266cf229c..9f4237376 100644
+--- a/astropy/io/ascii/html.py
++++ b/astropy/io/ascii/html.py
+@@ -339,6 +339,7 @@ class HTML(core.BaseReader):
+         self.outputter = HTMLOutputter()
+         return super().read(table)
+ 
++            col.info.format = formats.get(col.name, col.info.format)
+     def write(self, table):
+         """
+         Return data in ``table`` converted to HTML as a list of strings.
+2026-08-05 18:18:17,911 - INFO - Eval script for astropy__astropy-13453 written to logs\run_evaluation\vi_b_lf_rescore_static_heuristic\commscm-vi-b-static_heuristic\astropy__astropy-13453\eval.sh; copying to container...
+2026-08-05 18:22:52,937 - INFO - Test runtime: 274.83 seconds
+2026-08-05 18:22:52,948 - INFO - Test output for astropy__astropy-13453 written to logs\run_evaluation\vi_b_lf_rescore_static_heuristic\commscm-vi-b-static_heuristic\astropy__astropy-13453\test_output.txt
+2026-08-05 18:22:53,249 - INFO - Git diff after:
+diff --git a/astropy/io/ascii/html.py b/astropy/io/ascii/html.py
+index 266cf229c..9f4237376 100644
+--- a/astropy/io/ascii/html.py
++++ b/astropy/io/ascii/html.py
+@@ -339,6 +339,7 @@ class HTML(core.BaseReader):
+         self.outputter = HTMLOutputter()
+         return super().read(table)
+ 
++            col.info.format = formats.get(col.name, col.info.format)
+     def write(self, table):
+         """
+         Return data in ``table`` converted to HTML as a list of strings.
+2026-08-05 18:22:53,250 - INFO - Grading answer for astropy__astropy-13453...
+2026-08-05 18:22:53,506 - INFO - report: {'astropy__astropy-13453': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': False, 'tests_status': {'FAIL_TO_PASS': {'success': [], 'failure': ['astropy/io/ascii/tests/test_html.py::test_write_table_formatted_columns']}, 'PASS_TO_PASS': {'success': [], 'failure': ['astropy/io/ascii/tests/test_html.py::test_listwriter', 'astropy/io/ascii/tests/test_html.py::test_htmlinputter_no_bs4', 'astropy/io/ascii/tests/test_html.py::test_multicolumn_write', 'astropy/io/ascii/tests/test_html.py::test_write_no_multicols', 'astropy/io/ascii/tests/test_html.py::test_write_table_html_fill_values', 'astropy/io/ascii/tests/test_html.py::test_write_table_html_fill_values_optional_columns', 'astropy/io/ascii/tests/test_html.py::test_write_table_html_fill_values_masked', 'astropy/io/ascii/tests/test_html.py::test_multicolumn_table_html_fill_values', 'astropy/io/ascii/tests/test_html.py::test_multi_column_write_table_html_fill_values_masked']}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for astropy__astropy-13453: resolved: False
+2026-08-05 18:22:53,509 - INFO - Attempting to stop container sweb.eval.astropy__astropy-13453.vi_b_lf_rescore_static_heuristic...
+2026-08-05 18:23:09,775 - INFO - Attempting to remove container sweb.eval.astropy__astropy-13453.vi_b_lf_rescore_static_heuristic...
+2026-08-05 18:23:10,023 - INFO - Container sweb.eval.astropy__astropy-13453.vi_b_lf_rescore_static_heuristic removed.

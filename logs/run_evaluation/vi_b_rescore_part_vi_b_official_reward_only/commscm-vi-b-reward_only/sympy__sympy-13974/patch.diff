@@ -1,0 +1,19 @@
+--- a/sympy/physics/quantum/tensorproduct.py
++++ b/sympy/physics/quantum/tensorproduct.py
+@@ -123,6 +123,14 @@
+     return result
+ 
+ 
++def tensor_product_simp_Pow(expr):
++    base, exp = expr.args
++    if isinstance(base, TensorProduct):
++        return TensorProduct(*(arg**exp for arg in base.args))
++    return expr
++
++
+ def tensor_product_simp(expr):
+     if isinstance(expr, Mul):
+         return tensor_product_simp_Mul(expr)
++    elif isinstance(expr, Pow):
++        return tensor_product_simp_Pow(expr)
+     return expr

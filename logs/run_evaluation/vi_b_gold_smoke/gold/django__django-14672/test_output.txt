@@ -1,0 +1,88 @@
+/eval.sh: line 2: set: pipefail: invalid option name
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 3: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ cd $'/testbed\r'
+/eval.sh: line 5: cd: $'/testbed\r': No such file or directory
++ git config --global --add safe.directory $'/testbed\r'
++ cd $'/testbed\r'
+/eval.sh: line 7: cd: $'/testbed\r': No such file or directory
++ git $'status\r'
+git: 'status' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
++ git $'show\r'
+git: 'show' is not a git command. See 'git --help'.
+
+The most similar command is
+	show
++ git -c core.fileMode=false diff $'00ea883ef56fb5e092cbe4a6f7ff2e7470886ac4\r'
+fatal: ambiguous argument '00ea883ef56fb5e092cbe4a6f7ff2e7470886ac4?': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 11: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ python -m pip install -e $'.\r'
+ERROR: . is not a valid editable requirement. It should either be a path to a local project or a VCS URL (beginning with bzr+http, bzr+https, bzr+ssh, bzr+sftp, bzr+ftp, bzr+lp, bzr+file, git+http, git+https, git+ssh, git+git, git+file, hg+file, hg+http, hg+https, hg+ssh, hg+static-http, svn+ssh, svn+http, svn+https, svn+svn, svn+file).
++ git checkout 00ea883ef56fb5e092cbe4a6f7ff2e7470886ac4 tests/invalid_models_tests/test_models.py tests/m2m_through/models.py $'tests/m2m_through/tests.py\r'
+error: pathspec 'tests/m2m_through/tests.py?' did not match any file(s) known to git
++ git apply -v -
+Checking patch tests/invalid_models_tests/test_models.py...
+error: while searching for:
+            )?
+        ])?
+?
+    def test_multiinheritance_clash(self):?
+        class Mother(models.Model):?
+            clash = models.IntegerField()?
+
+error: patch failed: tests/invalid_models_tests/test_models.py:821
+error: tests/invalid_models_tests/test_models.py: patch does not apply
+Checking patch tests/m2m_through/models.py...
+error: while searching for:
+        ordering = ('name',)?
+?
+?
+class Group(models.Model):?
+    name = models.CharField(max_length=128)?
+    members = models.ManyToManyField(Person, through='Membership')?
+
+error: patch failed: tests/m2m_through/models.py:11
+error: tests/m2m_through/models.py: patch does not apply
+Checking patch tests/m2m_through/tests.py...
+error: while searching for:
+?
+from .models import (?
+    CustomMembership, Employee, Event, Friendship, Group, Ingredient,?
+    Invitation, Membership, Person, PersonSelfRefM2M, Recipe, RecipeIngredient,?
+    Relationship, SymmetricalFriendship,?
+)?
+?
+?
+
+error: patch failed: tests/m2m_through/tests.py:6
+error: tests/m2m_through/tests.py: patch does not apply
++ : '>>>>> Start Test Output'
++ ./tests/runtests.py --verbosity 2 --settings=test_sqlite --parallel 1 invalid_models_tests.test_models m2m_through.models $'m2m_through.tests\r'
+Traceback (most recent call last):
+  File "/testbed/./tests/runtests.py", line 16, in <module>
+    import django
+ModuleNotFoundError: No module named 'django'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/testbed/./tests/runtests.py", line 18, in <module>
+    raise RuntimeError(
+RuntimeError: Django module not found, reference tests/README.rst for instructions.
++ : '>>>>> End Test Output'
++ git checkout 00ea883ef56fb5e092cbe4a6f7ff2e7470886ac4 tests/invalid_models_tests/test_models.py tests/m2m_through/models.py $'tests/m2m_through/tests.py\r'
+error: pathspec 'tests/m2m_through/tests.py?' did not match any file(s) known to git

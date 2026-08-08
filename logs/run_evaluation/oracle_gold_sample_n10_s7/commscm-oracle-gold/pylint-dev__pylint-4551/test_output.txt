@@ -1,0 +1,60 @@
+/eval.sh: line 2: set: pipefail: invalid option name
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 3: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ cd $'/testbed\r'
+/eval.sh: line 5: cd: $'/testbed\r': No such file or directory
++ git config --global --add safe.directory $'/testbed\r'
++ cd $'/testbed\r'
+/eval.sh: line 7: cd: $'/testbed\r': No such file or directory
++ git $'status\r'
+git: 'status' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
++ git $'show\r'
+git: 'show' is not a git command. See 'git --help'.
+
+The most similar command is
+	show
++ git -c core.fileMode=false diff $'99589b08de8c5a2c6cc61e13a37420a868c80599\r'
+fatal: ambiguous argument '99589b08de8c5a2c6cc61e13a37420a868c80599?': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 11: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ python -m pip install -e $'.\r'
+ERROR: . is not a valid editable requirement. It should either be a path to a local project or a VCS URL (beginning with bzr+http, bzr+https, bzr+ssh, bzr+sftp, bzr+ftp, bzr+lp, bzr+file, git+http, git+https, git+ssh, git+git, git+file, hg+file, hg+http, hg+https, hg+ssh, hg+static-http, svn+ssh, svn+http, svn+https, svn+svn, svn+file).
++ git checkout 99589b08de8c5a2c6cc61e13a37420a868c80599 $'tests/unittest_pyreverse_writer.py\r'
+error: pathspec 'tests/unittest_pyreverse_writer.py?' did not match any file(s) known to git
++ git apply -v -
+Checking patch tests/unittest_pyreverse_writer.py...
+error: while searching for:
+import codecs?
+import os?
+from difflib import unified_diff?
+?
+import pytest?
+?
+from pylint.pyreverse.diadefslib import DefaultDiadefGenerator, DiadefsHandler?
+from pylint.pyreverse.inspector import Linker, project_from_files?
+from pylint.pyreverse.utils import get_visibility?
+from pylint.pyreverse.writer import DotWriter?
+?
+_DEFAULTS = {?
+
+error: patch failed: tests/unittest_pyreverse_writer.py:22
+error: tests/unittest_pyreverse_writer.py: patch does not apply
++ : '>>>>> Start Test Output'
++ pytest -rA $'tests/unittest_pyreverse_writer.py\r'
+/eval.sh: line 111: pytest: command not found
++ : '>>>>> End Test Output'
++ git checkout 99589b08de8c5a2c6cc61e13a37420a868c80599 $'tests/unittest_pyreverse_writer.py\r'
+error: pathspec 'tests/unittest_pyreverse_writer.py?' did not match any file(s) known to git

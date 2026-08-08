@@ -1,0 +1,11 @@
+--- a/sphinx/ext/autodoc.py
++++ b/sphinx/ext/autodoc.py
+@@ -1234,6 +1234,9 @@
+         if not self.is_public():
+             return False
+         
++        # Check for :meta public: directive
++        if self.get_docstring() and ':meta public:' in self.get_docstring():
++            return True
+         
+         return False

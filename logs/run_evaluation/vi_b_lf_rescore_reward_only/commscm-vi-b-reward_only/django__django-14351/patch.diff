@@ -1,0 +1,11 @@
+--- a/django/db/models/sql/query.py
++++ b/django/db/models/sql/query.py
+@@ -230,7 +230,9 @@
+                 select_list = []
+                 # added these two lines, just to hack a debug fix
+                 if cols and cols[0].alias == 'U0':
+-                    cols = [cols[0]]
++                    # Ensure only the necessary column is selected
++                    cols = [col for col in cols if col.alias == 'U0' and col.name == 'id']
++                elif not cols:
+                     cols = [cols[0]]

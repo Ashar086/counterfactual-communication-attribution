@@ -1,0 +1,18 @@
+--- a/sphinx/builders/linkcheck.py
++++ b/sphinx/builders/linkcheck.py
+@@ -123,6 +123,10 @@
+ 
+     def check_links(self):
+         # Existing link checking logic...
++        if self.config.check_local_links:
++            self.check_local_links()
++
++    def check_local_links(self):
++        # Logic to check local links
+         for docname in self.env.found_docs:
+             # Check if the link is a local link and validate it
+             local_link = self.resolve_local_link(docname)
+@@ -150,6 +154,10 @@
+ 
+ def setup(app):
+     app.add_config_value('check_local_links', False, 'html')

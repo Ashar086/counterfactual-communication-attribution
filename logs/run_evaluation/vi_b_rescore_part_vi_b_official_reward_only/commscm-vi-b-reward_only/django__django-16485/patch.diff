@@ -1,0 +1,13 @@
+--- a/django/template/defaultfilters.py
++++ b/django/template/defaultfilters.py
+@@ -1234,7 +1234,7 @@
+ 
+     if isinstance(value, str):
+         value = float(value)
+-    if prec < 1 or prec > MAX_PREC:
++    if (prec < 0 or prec > MAX_PREC) and value != 0:
+         raise ValueError("valid range for prec is [1, MAX_PREC]")
+ 
+     # existing floatformat logic...
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

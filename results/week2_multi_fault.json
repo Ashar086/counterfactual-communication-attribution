@@ -1,0 +1,313 @@
+{
+  "metrics": {
+    "n": 3,
+    "recall_at_2": 1.0,
+    "recall_at_k": {
+      "2": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "ndcg_at_2": 1.0,
+    "ndcg_at_k": {
+      "2": 1.0,
+      "3": 1.0,
+      "5": 1.0
+    },
+    "mean_kendall_tau": 1.0,
+    "mean_spearman": 1.0000000000000002,
+    "mean_replay_ms": 0.24812500000000004
+  },
+  "cases": [
+    {
+      "trace": "M1_tool_memory",
+      "true_events": [
+        "C2",
+        "C3"
+      ],
+      "ranking": [
+        {
+          "rank": 1,
+          "event_id": "C2",
+          "channel": "tool",
+          "cr": -0.5,
+          "delta_y": 0.5,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.5,
+          "recomputed_count": 4,
+          "runtime_ms": 0.228
+        },
+        {
+          "rank": 2,
+          "event_id": "C3",
+          "channel": "memory",
+          "cr": -0.5,
+          "delta_y": 0.5,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.5,
+          "recomputed_count": 4,
+          "runtime_ms": 0.279
+        },
+        {
+          "rank": 3,
+          "event_id": "C0",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 1,
+          "runtime_ms": 0.354
+        },
+        {
+          "rank": 4,
+          "event_id": "C1",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.329
+        },
+        {
+          "rank": 5,
+          "event_id": "C4",
+          "channel": "retrieval",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.245
+        },
+        {
+          "rank": 6,
+          "event_id": "C5",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 3,
+          "runtime_ms": 0.22
+        },
+        {
+          "rank": 7,
+          "event_id": "C6",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 2,
+          "runtime_ms": 0.217
+        },
+        {
+          "rank": 8,
+          "event_id": "C7",
+          "channel": "tool",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 1,
+          "runtime_ms": 0.197
+        }
+      ]
+    },
+    {
+      "trace": "M2_memory_retrieval",
+      "true_events": [
+        "C3",
+        "C4"
+      ],
+      "ranking": [
+        {
+          "rank": 1,
+          "event_id": "C3",
+          "channel": "memory",
+          "cr": -0.5,
+          "delta_y": 0.5,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.5,
+          "recomputed_count": 4,
+          "runtime_ms": 0.216
+        },
+        {
+          "rank": 2,
+          "event_id": "C4",
+          "channel": "retrieval",
+          "cr": -0.5,
+          "delta_y": 0.5,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.5,
+          "recomputed_count": 4,
+          "runtime_ms": 0.208
+        },
+        {
+          "rank": 3,
+          "event_id": "C0",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 1,
+          "runtime_ms": 0.207
+        },
+        {
+          "rank": 4,
+          "event_id": "C1",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.227
+        },
+        {
+          "rank": 5,
+          "event_id": "C2",
+          "channel": "tool",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.23
+        },
+        {
+          "rank": 6,
+          "event_id": "C5",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 3,
+          "runtime_ms": 0.209
+        },
+        {
+          "rank": 7,
+          "event_id": "C6",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 2,
+          "runtime_ms": 0.207
+        },
+        {
+          "rank": 8,
+          "event_id": "C7",
+          "channel": "tool",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 1,
+          "runtime_ms": 0.212
+        }
+      ]
+    },
+    {
+      "trace": "M3_text_tool",
+      "true_events": [
+        "C1",
+        "C2"
+      ],
+      "ranking": [
+        {
+          "rank": 1,
+          "event_id": "C1",
+          "channel": "text",
+          "cr": -0.5,
+          "delta_y": 0.5,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.5,
+          "recomputed_count": 4,
+          "runtime_ms": 0.214
+        },
+        {
+          "rank": 2,
+          "event_id": "C2",
+          "channel": "tool",
+          "cr": -0.5,
+          "delta_y": 0.5,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.5,
+          "recomputed_count": 4,
+          "runtime_ms": 0.216
+        },
+        {
+          "rank": 3,
+          "event_id": "C0",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 1,
+          "runtime_ms": 0.198
+        },
+        {
+          "rank": 4,
+          "event_id": "C3",
+          "channel": "memory",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.226
+        },
+        {
+          "rank": 5,
+          "event_id": "C4",
+          "channel": "retrieval",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 4,
+          "runtime_ms": 0.211
+        },
+        {
+          "rank": 6,
+          "event_id": "C5",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 3,
+          "runtime_ms": 0.203
+        },
+        {
+          "rank": 7,
+          "event_id": "C6",
+          "channel": "text",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 2,
+          "runtime_ms": 0.216
+        },
+        {
+          "rank": 8,
+          "event_id": "C7",
+          "channel": "tool",
+          "cr": 0.0,
+          "delta_y": 0.0,
+          "factual_reward": 0.0,
+          "counterfactual_reward": 0.0,
+          "recomputed_count": 1,
+          "runtime_ms": 0.686
+        }
+      ]
+    }
+  ]
+}

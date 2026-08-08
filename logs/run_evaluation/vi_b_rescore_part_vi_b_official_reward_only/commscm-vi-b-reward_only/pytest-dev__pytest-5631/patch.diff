@@ -1,0 +1,14 @@
+--- a/_pytest/compat.py
++++ b/_pytest/compat.py
+@@ -91,7 +91,10 @@
+     return len([p for p in patchings
+                 if not p.attribute_name and p.new in sentinels])
+ 
++    def is_array(value):
++        return isinstance(value, np.ndarray)
++
+     return len([p for p in patchings
+-                if not p.attribute_name and p.new in sentinels])
++                if not p.attribute_name and (is_array(p.new) or p.new in sentinels)])
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

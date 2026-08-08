@@ -1,0 +1,10 @@
+--- a/matplotlib/dates.py
++++ b/matplotlib/dates.py
+@@ -1234,7 +1234,7 @@
+         if self._max - self._min < timedelta(days=365):
+             # Only show the year if the range includes January
+-            if self._min.month == 1 or self._max.month == 1:
++            if self._min.month == 1 or self._max.month == 1 or self._min.year != self._max.year:
+                 self._year_format = '%Y'
+             else:
+                 self._year_format = ''

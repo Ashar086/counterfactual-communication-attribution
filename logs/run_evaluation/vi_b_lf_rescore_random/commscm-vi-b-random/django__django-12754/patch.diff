@@ -1,0 +1,17 @@
+--- a/django/db/migrations/autodetector.py
++++ b/django/db/migrations/autodetector.py
+@@ -123,6 +123,9 @@
+ 
+ def check_dependency(self, model):
+     # Existing dependency checks...
++    if model._meta.parents:
++        for parent in model._meta.parents:
++            self.add_dependency(parent, model)
+ 
+ def generate_created_models(self, changes):
+     # Existing logic...
+     for model in changes['created']:
++        if model._meta.parents:
++            self.add_dependency(model._meta.parents[0], model)
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

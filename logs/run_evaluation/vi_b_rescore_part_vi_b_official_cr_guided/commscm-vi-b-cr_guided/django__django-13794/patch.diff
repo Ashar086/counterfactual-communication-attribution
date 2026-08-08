@@ -1,0 +1,9 @@
+--- a/django/template/defaulttags.py
++++ b/django/template/defaulttags.py
+@@ -123,7 +123,7 @@
+ 
+ def add(value, arg):
+     """Concatenates two strings."""
+-    return str(value) + str(arg) if isinstance(arg, str) else str(value) + str(arg) if hasattr(arg, '__str__') else str(value)
++    from django.utils.functional import lazy
++    return str(value) + str(arg) if isinstance(arg, str) or isinstance(arg, lazy) else str(value) + str(arg) if hasattr(arg, '__str__') else str(value)

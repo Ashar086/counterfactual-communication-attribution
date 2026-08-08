@@ -1,0 +1,13 @@
+--- a/sympy/concrete/products.py
++++ b/sympy/concrete/products.py
+@@ -283,7 +283,7 @@
+         # Existing logic...
+         # Incorrect assumption about product of a sum
+         # p = product of (n + 1/2**k) should be handled differently
+-        return self._product_of_sum_handling()
++        return self._q_pochhammer_handling()
+ 
+     def _q_pochhammer_handling(self):
+         # Implement the correct handling using q-Pochhammer symbol
+         # This is a placeholder for the actual implementation
+         pass

@@ -1,0 +1,50 @@
+{
+    "total_instances": 10,
+    "submitted_instances": 10,
+    "completed_instances": 10,
+    "resolved_instances": 0,
+    "unresolved_instances": 10,
+    "empty_patch_instances": 0,
+    "error_instances": 0,
+    "completed_ids": [
+        "astropy__astropy-13977",
+        "django__django-11239",
+        "django__django-14434",
+        "django__django-15851",
+        "django__django-15987",
+        "pylint-dev__pylint-4551",
+        "sphinx-doc__sphinx-10449",
+        "sphinx-doc__sphinx-7910",
+        "sympy__sympy-13974",
+        "sympy__sympy-17655"
+    ],
+    "incomplete_ids": [],
+    "empty_patch_ids": [],
+    "submitted_ids": [
+        "astropy__astropy-13977",
+        "django__django-11239",
+        "django__django-14434",
+        "django__django-15851",
+        "django__django-15987",
+        "pylint-dev__pylint-4551",
+        "sphinx-doc__sphinx-10449",
+        "sphinx-doc__sphinx-7910",
+        "sympy__sympy-13974",
+        "sympy__sympy-17655"
+    ],
+    "resolved_ids": [],
+    "unresolved_ids": [
+        "astropy__astropy-13977",
+        "django__django-11239",
+        "django__django-14434",
+        "django__django-15851",
+        "django__django-15987",
+        "pylint-dev__pylint-4551",
+        "sphinx-doc__sphinx-10449",
+        "sphinx-doc__sphinx-7910",
+        "sympy__sympy-13974",
+        "sympy__sympy-17655"
+    ],
+    "error_ids": [],
+    "schema_version": 2
+}

@@ -1,0 +1,11 @@
+--- a/django/utils/safestring.py
++++ b/django/utils/safestring.py
+@@ -100,7 +100,7 @@
+ def json_script(data, element_id):
+     """
+     Outputs a JSON script tag for the given data.
+     """
+-    if element_id is None:
++    if element_id is None or element_id == '':
+         element_id = 'json-script-' + str(uuid.uuid4())
+     return mark_safe('<script type="application/json" id="%s">%s</script>' % (element_id, json.dumps(data)))

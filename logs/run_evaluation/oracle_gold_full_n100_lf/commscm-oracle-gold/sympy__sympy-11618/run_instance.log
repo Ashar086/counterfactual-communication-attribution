@@ -1,0 +1,68 @@
+2026-08-05 22:02:51,371 - INFO - Creating container for sympy__sympy-11618...
+2026-08-05 22:02:51,511 - INFO - Container for sympy__sympy-11618 created: 45f6d1f5aba4f177b96cb302abca14000c79328b5b97220f96b4a924960898a8
+2026-08-05 22:02:52,154 - INFO - Container for sympy__sympy-11618 started: 45f6d1f5aba4f177b96cb302abca14000c79328b5b97220f96b4a924960898a8
+2026-08-05 22:02:52,156 - INFO - Intermediate patch for sympy__sympy-11618 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\sympy__sympy-11618\patch.diff, now applying to container...
+2026-08-05 22:02:52,572 - INFO - Failed to apply patch to container: git apply --verbose
+2026-08-05 22:02:52,736 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2026-08-05 22:02:52,878 - INFO - >>>>> Applied Patch:
+patching file sympy/geometry/point.py
+
+2026-08-05 22:02:55,150 - INFO - Git diff before:
+diff --git a/sympy/geometry/point.py b/sympy/geometry/point.py
+index 593048464..5b0c3aafe 100644
+--- a/sympy/geometry/point.py
++++ b/sympy/geometry/point.py
+@@ -266,6 +266,20 @@ def distance(self, p):
+         sqrt(x**2 + y**2)
+ 
+         """
++        if type(p) is not type(self):
++            if len(p) == len(self):
++                return sqrt(sum([(a - b)**2 for a, b in zip(
++                    self.args, p.args if isinstance(p, Point) else p)]))
++            else:
++                p1 = [0] * max(len(p), len(self))
++                p2 = p.args if len(p.args) > len(self.args) else self.args
++
++                for i in range(min(len(p), len(self))):
++                    p1[i] = p.args[i] if len(p) < len(self) else self.args[i]
++
++                return sqrt(sum([(a - b)**2 for a, b in zip(
++                    p1, p2)]))
++
+         return sqrt(sum([(a - b)**2 for a, b in zip(
+             self.args, p.args if isinstance(p, Point) else p)]))
+2026-08-05 22:02:55,152 - INFO - Eval script for sympy__sympy-11618 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\sympy__sympy-11618\eval.sh; copying to container...
+2026-08-05 22:03:09,413 - INFO - Test runtime: 14.08 seconds
+2026-08-05 22:03:09,426 - INFO - Test output for sympy__sympy-11618 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\sympy__sympy-11618\test_output.txt
+2026-08-05 22:03:09,756 - INFO - Git diff after:
+diff --git a/sympy/geometry/point.py b/sympy/geometry/point.py
+index 593048464..5b0c3aafe 100644
+--- a/sympy/geometry/point.py
++++ b/sympy/geometry/point.py
+@@ -266,6 +266,20 @@ def distance(self, p):
+         sqrt(x**2 + y**2)
+ 
+         """
++        if type(p) is not type(self):
++            if len(p) == len(self):
++                return sqrt(sum([(a - b)**2 for a, b in zip(
++                    self.args, p.args if isinstance(p, Point) else p)]))
++            else:
++                p1 = [0] * max(len(p), len(self))
++                p2 = p.args if len(p.args) > len(self.args) else self.args
++
++                for i in range(min(len(p), len(self))):
++                    p1[i] = p.args[i] if len(p) < len(self) else self.args[i]
++
++                return sqrt(sum([(a - b)**2 for a, b in zip(
++                    p1, p2)]))
++
+         return sqrt(sum([(a - b)**2 for a, b in zip(
+             self.args, p.args if isinstance(p, Point) else p)]))
+2026-08-05 22:03:09,756 - INFO - Grading answer for sympy__sympy-11618...
+2026-08-05 22:03:09,879 - INFO - report: {'sympy__sympy-11618': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': True, 'tests_status': {'FAIL_TO_PASS': {'success': ['test_issue_11617'], 'failure': []}, 'PASS_TO_PASS': {'success': ['test_point3D', 'test_Point2D', 'test_issue_9214', 'test_transform'], 'failure': []}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for sympy__sympy-11618: resolved: True
+2026-08-05 22:03:09,881 - INFO - Attempting to stop container sweb.eval.sympy__sympy-11618.oracle_gold_full_n100_lf...
+2026-08-05 22:03:25,505 - INFO - Attempting to remove container sweb.eval.sympy__sympy-11618.oracle_gold_full_n100_lf...
+2026-08-05 22:03:25,640 - INFO - Container sweb.eval.sympy__sympy-11618.oracle_gold_full_n100_lf removed.

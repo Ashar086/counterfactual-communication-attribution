@@ -1,0 +1,11 @@
+--- a/xarray/core/weighted.py
++++ b/xarray/core/weighted.py
+@@ -123,7 +123,7 @@
+         # Calculate the sum of weights
+         sum_of_weights = xr.dot(dta.notnull(), wgt)
+ 
+-        # Original line
++        # Modified line to convert boolean weights to float
+         sum_of_weights = xr.dot(dta.notnull(), wgt.astype(float))
+ 
+         # Continue with the rest of the function

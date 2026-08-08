@@ -1,0 +1,37 @@
+2026-08-05 19:38:54,333 - INFO - Creating container for pytest-dev__pytest-7205...
+2026-08-05 19:38:54,515 - INFO - Container for pytest-dev__pytest-7205 created: 6d9f2c189fb494d5e564e6ab8f116e01508075ef9bb2b1139cfdae84aab34e11
+2026-08-05 19:38:55,374 - INFO - Container for pytest-dev__pytest-7205 started: 6d9f2c189fb494d5e564e6ab8f116e01508075ef9bb2b1139cfdae84aab34e11
+2026-08-05 19:38:55,377 - INFO - Intermediate patch for pytest-dev__pytest-7205 written to logs\run_evaluation\vi_b_lf_rescore_reward_only\commscm-vi-b-reward_only\pytest-dev__pytest-7205\patch.diff, now applying to container...
+2026-08-05 19:38:55,883 - INFO - Failed to apply patch to container: git apply --verbose
+2026-08-05 19:38:56,053 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2026-08-05 19:38:56,214 - INFO - >>>>> Applied Patch:
+patching file src/_pytest/setuponly.py
+Hunk #1 succeeded at 1 with fuzz 5.
+
+2026-08-05 19:38:56,574 - INFO - Git diff before:
+diff --git a/src/_pytest/setuponly.py b/src/_pytest/setuponly.py
+index c9cc589ff..cbd5a4c4f 100644
+--- a/src/_pytest/setuponly.py
++++ b/src/_pytest/setuponly.py
+@@ -1,4 +1,5 @@
+ import pytest
++from _pytest._io import saferepr
+ 
+ 
+ def pytest_addoption(parser):
+2026-08-05 19:38:56,578 - INFO - Eval script for pytest-dev__pytest-7205 written to logs\run_evaluation\vi_b_lf_rescore_reward_only\commscm-vi-b-reward_only\pytest-dev__pytest-7205\eval.sh; copying to container...
+2026-08-05 19:39:28,983 - INFO - Test runtime: 32.22 seconds
+2026-08-05 19:39:29,046 - ERROR - Error in evaluating model for pytest-dev__pytest-7205: 'charmap' codec can't encode character '\u2502' in position 11765: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Temp\SWE-bench-src\swebench\harness\run_evaluation.py", line 213, in run_instance
+    f.write(test_output)
+    ~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\BEST BUY COMPUTERS\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2502' in position 11765: character maps to <undefined>
+
+Check (logs\run_evaluation\vi_b_lf_rescore_reward_only\commscm-vi-b-reward_only\pytest-dev__pytest-7205\run_instance.log) for more information.
+2026-08-05 19:39:29,046 - INFO - Attempting to stop container sweb.eval.pytest-dev__pytest-7205.vi_b_lf_rescore_reward_only...
+2026-08-05 19:39:44,612 - INFO - Attempting to remove container sweb.eval.pytest-dev__pytest-7205.vi_b_lf_rescore_reward_only...
+2026-08-05 19:39:44,708 - INFO - Container sweb.eval.pytest-dev__pytest-7205.vi_b_lf_rescore_reward_only removed.

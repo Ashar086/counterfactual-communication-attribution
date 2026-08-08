@@ -1,0 +1,310 @@
+{
+  "experiment": "week4_phase_d_h2_lite",
+  "phase": "D",
+  "suite": "multipath_fault",
+  "edit_budget": 4,
+  "summary": {
+    "random": {
+      "n": 30,
+      "success_rate": 0.9666666666666667,
+      "success_at_1": 0.0,
+      "success_at_2": 0.6666666666666666,
+      "mean_edits_all": 2.433333333333333,
+      "mean_edits_on_success": 2.3793103448275863,
+      "mean_gold_edges_hit": 0.5,
+      "mean_y_final": 0.9666666666666667
+    },
+    "reward_only": {
+      "n": 30,
+      "success_rate": 1.0,
+      "success_at_1": 0.0,
+      "success_at_2": 1.0,
+      "mean_edits_all": 2.0,
+      "mean_edits_on_success": 2.0,
+      "mean_gold_edges_hit": 0.0,
+      "mean_y_final": 1.0
+    },
+    "cr_guided": {
+      "n": 30,
+      "success_rate": 1.0,
+      "success_at_1": 0.0,
+      "success_at_2": 1.0,
+      "mean_edits_all": 2.0,
+      "mean_edits_on_success": 2.0,
+      "mean_gold_edges_hit": 2.0,
+      "mean_y_final": 1.0
+    }
+  },
+  "examples": {
+    "random": [
+      {
+        "method": "random",
+        "run_id": "multipath_b3_s0",
+        "success": true,
+        "n_edits": 3,
+        "edit_budget": 4,
+        "y_initial": 0.0,
+        "y_final": 1.0,
+        "steps": [
+          {
+            "step": 1,
+            "edit": {
+              "kind": "prune_edge",
+              "source_event_id": "B3",
+              "target_event_id": "M",
+              "channel": null,
+              "params": {
+                "edge_score": 9.0
+              }
+            },
+            "y_before": 0.0,
+            "y_after": 0.0
+          },
+          {
+            "step": 2,
+            "edit": {
+              "kind": "prune_edge",
+              "source_event_id": "E0",
+              "target_event_id": "B1",
+              "channel": null,
+              "params": {
+                "edge_score": 7.0
+              }
+            },
+            "y_before": 0.0,
+            "y_after": 0.0
+          },
+          {
+            "step": 3,
+            "edit": {
+              "kind": "prune_edge",
+              "source_event_id": "A2",
+              "target_event_id": "A3",
+              "channel": null,
+              "params": {
+                "edge_score": 7.0
+              }
+            },
+            "y_before": 0.0,
+            "y_after": 1.0
+          }
+        ],
+        "gold_edges_hit": 1,
+        "gold_edges_total": 2
+      },
+      {
+        "method": "random",
+        "run_id": "multipath_b3_s1",
+        "success": true,
+        "n_edits": 2,
+        "edit_budget": 4,
+        "y_initial": 0.0,
+        "y_final": 1.0,
+        "steps": [
+          {
+            "step": 1,
+            "edit": {
+              "kind": "prune_edge",
+              "source_event_id": "B2",
+              "target_event_id": "B3",
+              "channel": null,
+              "params": {
+                "edge_score": 9.0
+              }
+            },
+            "y_before": 0.0,
+            "y_after": 0.0
+          },
+          {
+            "step": 2,
+            "edit": {
+              "kind": "prune_edge",
+              "source_event_id": "E0",
+              "target_event_id": "A1",
+              "channel": null,
+              "params": {
+                "edge_score": 8.0
+              }
+            },
+            "y_before": 0.0,
+            "y_after": 1.0
+          }
+        ],
+        "gold_edges_hit": 1,
+        "gold_edges_total": 2
+      }
+    ],
+    "reward_only": [
+      {
+        "method": "reward_only",
+        "run_id": "multipath_b3_s0",
+        "success": true,
+        "n_edits": 2,
+        "edit_budget": 4,
+        "y_initial": 0.0,
+        "y_final": 1.0,
+        "steps": [
+          {
+            "step": 1,
+            "edit": {
+              "kind": "prune_edge",
+              "source_event_id": "B3",
+              "target_event_id": "M",
+              "channel": null,
+              "params": {
+                "edge_score": 1.4444444444444444
+              }
+            },
+            "y_before": 0.0,
+            "y_after": 0.0
+          },
+          {
+            "step": 2,
+            "edit": {
+              "kind": "prune_edge",
+              "source_event_id": "A3",
+              "target_event_id": "M",
+              "channel": null,
+              "params": {
+                "edge_score": 1.3333333333333335
+              }
+            },
+            "y_before": 0.0,
+            "y_after": 1.0
+          }
+        ],
+        "gold_edges_hit": 0,
+        "gold_edges_total": 2
+      },
+      {
+        "method": "reward_only",
+        "run_id": "multipath_b3_s1",
+        "success": true,
+        "n_edits": 2,
+        "edit_budget": 4,
+        "y_initial": 0.0,
+        "y_final": 1.0,
+        "steps": [
+          {
+            "step": 1,
+            "edit": {
+              "kind": "prune_edge",
+              "source_event_id": "B3",
+              "target_event_id": "M",
+              "channel": null,
+              "params": {
+                "edge_score": 1.4444444444444444
+              }
+            },
+            "y_before": 0.0,
+            "y_after": 0.0
+          },
+          {
+            "step": 2,
+            "edit": {
+              "kind": "prune_edge",
+              "source_event_id": "A3",
+              "target_event_id": "M",
+              "channel": null,
+              "params": {
+                "edge_score": 1.3333333333333335
+              }
+            },
+            "y_before": 0.0,
+            "y_after": 1.0
+          }
+        ],
+        "gold_edges_hit": 0,
+        "gold_edges_total": 2
+      }
+    ],
+    "cr_guided": [
+      {
+        "method": "cr_guided",
+        "run_id": "multipath_b3_s0",
+        "success": true,
+        "n_edits": 2,
+        "edit_budget": 4,
+        "y_initial": 0.0,
+        "y_final": 1.0,
+        "steps": [
+          {
+            "step": 1,
+            "edit": {
+              "kind": "prune_edge",
+              "source_event_id": "E0",
+              "target_event_id": "A1",
+              "channel": null,
+              "params": {
+                "edge_score": 1.0
+              }
+            },
+            "y_before": 0.0,
+            "y_after": 0.0
+          },
+          {
+            "step": 2,
+            "edit": {
+              "kind": "prune_edge",
+              "source_event_id": "E0",
+              "target_event_id": "B1",
+              "channel": null,
+              "params": {
+                "edge_score": 1.0
+              }
+            },
+            "y_before": 0.0,
+            "y_after": 1.0
+          }
+        ],
+        "gold_edges_hit": 2,
+        "gold_edges_total": 2
+      },
+      {
+        "method": "cr_guided",
+        "run_id": "multipath_b3_s1",
+        "success": true,
+        "n_edits": 2,
+        "edit_budget": 4,
+        "y_initial": 0.0,
+        "y_final": 1.0,
+        "steps": [
+          {
+            "step": 1,
+            "edit": {
+              "kind": "prune_edge",
+              "source_event_id": "E0",
+              "target_event_id": "A1",
+              "channel": null,
+              "params": {
+                "edge_score": 1.0
+              }
+            },
+            "y_before": 0.0,
+            "y_after": 0.0
+          },
+          {
+            "step": 2,
+            "edit": {
+              "kind": "prune_edge",
+              "source_event_id": "E0",
+              "target_event_id": "B1",
+              "channel": null,
+              "params": {
+                "edge_score": 1.0
+              }
+            },
+            "y_before": 0.0,
+            "y_after": 1.0
+          }
+        ],
+        "gold_edges_hit": 2,
+        "gold_edges_total": 2
+      }
+    ]
+  },
+  "verdict": {
+    "h2_lite_pass": true,
+    "rule": "CR-guided must match/beat reward-only and random on success_rate and success_at_2, use fewer or equal edits on success, and hit more gold edges."
+  }
+}

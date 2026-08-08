@@ -1,0 +1,12 @@
+--- a/sphinx/ext/napoleon/docstring.py
++++ b/sphinx/ext/napoleon/docstring.py
+@@ -123,7 +123,9 @@ def _get_class_from_method(obj, cls_path):
+     # Get the class from the method's globals
+     cls = obj.__globals__.get(cls_path)
+ 
+-    if cls is None:
++    if cls is None and hasattr(obj, '__wrapped__'):
++        cls = obj.__wrapped__.__globals__.get(cls_path)
++
+     cls_is_owner = (cls is not None and cls.__name__ == obj.__qualname__.split('.')[0])
+     return cls, cls_is_owner

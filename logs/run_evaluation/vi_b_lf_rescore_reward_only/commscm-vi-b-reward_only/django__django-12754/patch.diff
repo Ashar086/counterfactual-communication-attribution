@@ -1,0 +1,14 @@
+--- a/django/db/migrations/autodetector.py
++++ b/django/db/migrations/autodetector.py
+@@ -123,6 +123,10 @@
+ 
+ def check_dependency(operations):
+     # Existing logic...
++    for operation in operations:
++        if isinstance(operation, RemoveField) and operation.model in base_models:
++            # Ensure removal is prioritized before addition
++            operations.remove(operation)
+ 
+     # Existing logic...
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

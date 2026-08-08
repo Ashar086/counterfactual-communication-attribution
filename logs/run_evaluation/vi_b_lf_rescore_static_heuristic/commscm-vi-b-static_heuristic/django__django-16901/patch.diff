@@ -1,0 +1,14 @@
+--- a/django/db/models/q.py
++++ b/django/db/models/q.py
+@@ -123,7 +123,7 @@
+         if len(queries) == 1:
+             return queries[0]
+         elif len(queries) == 2:
+-            return queries[0] & queries[1]
++            return queries[0] ^ queries[1]
+         else:
+             # For more than two queries, we need to handle parity
+             return reduce(lambda x, y: x ^ y, queries)
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

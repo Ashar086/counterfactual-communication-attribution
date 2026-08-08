@@ -1,0 +1,41 @@
+{
+  "overall": {
+    "n": 4,
+    "failure_rate": 0.5,
+    "precision_at_1": 1.0,
+    "mean_reward": 0.5
+  },
+  "poisoned_only": {
+    "n": 2,
+    "precision_at_1": 1.0,
+    "failure_rate": 1.0
+  },
+  "by_mode": {
+    "POISON_CODER": {
+      "n": 2,
+      "failure_rate": 1.0,
+      "precision_at_1": 1.0,
+      "mean_reward": 0.0,
+      "blame_counts": {
+        "coder": 2
+      }
+    },
+    "NONE": {
+      "n": 2,
+      "failure_rate": 0.0,
+      "precision_at_1": 1.0,
+      "mean_reward": 1.0,
+      "blame_counts": {
+        "none": 2
+      }
+    }
+  },
+  "modes_requested": [
+    "POISON_CODER",
+    "NONE"
+  ],
+  "jsonl_path": "results\\runs_20260729T152708Z.jsonl",
+  "n_runs": 4,
+  "seed": 42,
+  "mock_llm": false
+}

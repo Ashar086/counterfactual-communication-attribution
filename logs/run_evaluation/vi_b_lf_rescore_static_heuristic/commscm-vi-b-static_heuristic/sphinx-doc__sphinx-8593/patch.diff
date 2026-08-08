@@ -1,0 +1,9 @@
+--- a/sphinx/ext/autodoc.py
++++ b/sphinx/ext/autodoc.py
+@@ -1234,7 +1234,7 @@
+ 
+     def should_include(self, obj):
+         if isinstance(obj, Variable):
+-            return not obj.name.startswith('_')
++            return not obj.name.startswith('_') or obj.meta['public']
+         return True

@@ -1,0 +1,13 @@
+--- a/django/contrib/auth/checks.py
++++ b/django/contrib/auth/checks.py
+@@ -123,6 +123,10 @@
+ 
+ def check_user_model(app_configs, **kwargs):
+     errors = []
++    for model in get_user_model()._meta.constraints:
++        if isinstance(model, UniqueConstraint) and model.fields == [get_user_model().USERNAME_FIELD]:
++            return errors  # Skip check if USERNAME_FIELD is in UniqueConstraint
+ 
+     if not get_user_model()._meta.get_field(get_user_model().USERNAME_FIELD).unique:
+         errors.append(
+             checks.Error(

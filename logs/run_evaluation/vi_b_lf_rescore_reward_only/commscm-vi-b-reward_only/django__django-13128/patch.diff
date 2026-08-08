@@ -1,0 +1,12 @@
+--- a/models.py
++++ b/models.py
+@@ -1,4 +1,4 @@
+ from django.db import models
+ from django.db.models import F, DurationField
+ import datetime
+ 
+ class Experiment(models.Model):
+     start = models.DateTimeField()
+     end = models.DateTimeField()
+-    delta = F('end') - F('start') + Value(datetime.timedelta(), output_field=DurationField())
++    delta = F('end') - F('start')

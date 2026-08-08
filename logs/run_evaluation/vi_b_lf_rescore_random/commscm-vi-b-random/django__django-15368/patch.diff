@@ -1,0 +1,14 @@
+--- a/django/db/models/query.py
++++ b/django/db/models/query.py
+@@ -670,7 +670,7 @@
+                 # If the attribute is an expression, we need to resolve it.
+                 if isinstance(attr, Expression):
+                     attr = attr.resolve_expression(self.query)
+-                elif not isinstance(attr, (Expression, str)):
++                elif not isinstance(attr, (Expression, F)):
+                     raise ValueError("Invalid value for bulk_update: %s" % attr)
+ 
+                 # Set the value on the instance.
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

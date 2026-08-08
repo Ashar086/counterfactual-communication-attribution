@@ -1,0 +1,9 @@
+--- a/django/forms/widgets.py
++++ b/django/forms/widgets.py
+@@ -524,7 +524,7 @@
+         if 'value' in attrs:
+             value = attrs['value']
+         else:
+-            attrs['checked'] = value
++            attrs['checked'] = value if value else False
+         return super().get_context(name, value, attrs)

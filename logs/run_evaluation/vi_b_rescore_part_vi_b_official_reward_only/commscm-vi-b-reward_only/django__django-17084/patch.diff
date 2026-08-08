@@ -1,0 +1,17 @@
+--- a/original.py
++++ b/fixed.py
+@@ -1,6 +1,8 @@
+ queryset = queryset.annotate(
+-    cumul_DJR=Coalesce(Window(Sum("DJR"), order_by=F("date").asc()), 0.0)
++    cumul_DJR=Coalesce(Sum("DJR").over(order_by=F("date").asc()), 0.0)
+ )
+-aggregate = queryset.aggregate(
+-    DJR_total=Sum("DJR"),
+-    cumul_DJR_total=Sum("cumul_DJR")
++aggregate = queryset.values('date').annotate(
++    DJR_total=Sum("DJR"),
++    cumul_DJR_total=Max("cumul_DJR")
+ ).aggregate(
++    DJR_total=Sum("DJR"),
++    cumul_DJR_total=Sum("cumul_DJR_total")
+ )

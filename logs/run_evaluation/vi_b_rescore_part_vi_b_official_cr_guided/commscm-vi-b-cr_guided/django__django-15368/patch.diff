@@ -1,0 +1,11 @@
+--- a/django/db/models/query.py
++++ b/django/db/models/query.py
+@@ -670,7 +670,7 @@
+                 # If the attribute is not a field, we can't update it.
+                 if not isinstance(attr, (Field, str)):
+                     return
+-                if not isinstance(attr, Expression):
++                if not isinstance(attr, (Expression, F)):
+                     return
+                 # If the attribute is an F expression, we can proceed.
+                 if isinstance(attr, F):

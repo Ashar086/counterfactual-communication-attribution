@@ -1,0 +1,11 @@
+--- a/django/core/management/commands/dbshell.py
++++ b/django/core/management/commands/dbshell.py
+@@ -45,7 +45,7 @@
+         # Construct the command
+         command = [self.connection.settings_dict['ENGINE']]
+         if options['database']:
+-            command.append(options['database'])
++            command.insert(-1, options['database'])
+         command.extend(args)
+ 
+         # Execute the command

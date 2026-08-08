@@ -1,0 +1,8 @@
+--- a/sympy/geometry/point.py
++++ b/sympy/geometry/point.py
+@@ -123,7 +123,7 @@
+         return sqrt(sum((a - b)**2 for a, b in zip(self.args, other.args)))
+ 
+-        # Original implementation only considers the first two dimensions
++        # Updated implementation correctly accounts for all dimensions
+         return sqrt(sum((a - b)**2 for a, b in zip(self.args, other.args)))

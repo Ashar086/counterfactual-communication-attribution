@@ -1,0 +1,53 @@
+2026-08-05 11:20:41,660 - INFO - Creating container for sympy__sympy-17655...
+2026-08-05 11:20:41,801 - INFO - Container for sympy__sympy-17655 created: 9cfd05650e53f9431c0789b7dace1eaae2bebd0393e06fe28c7b7a70d0ebb4c4
+2026-08-05 11:20:42,381 - INFO - Container for sympy__sympy-17655 started: 9cfd05650e53f9431c0789b7dace1eaae2bebd0393e06fe28c7b7a70d0ebb4c4
+2026-08-05 11:20:42,382 - INFO - Intermediate patch for sympy__sympy-17655 written to logs\run_evaluation\vi_b_lf_rescore_static_heuristic\commscm-vi-b-static_heuristic\sympy__sympy-17655\patch.diff, now applying to container...
+2026-08-05 11:20:42,740 - INFO - Failed to apply patch to container: git apply --verbose
+2026-08-05 11:20:42,894 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2026-08-05 11:20:43,024 - INFO - >>>>> Applied Patch:
+patching file sympy/geometry/point.py
+Hunk #1 succeeded at 126 with fuzz 3.
+
+2026-08-05 11:20:44,291 - INFO - Git diff before:
+diff --git a/sympy/geometry/point.py b/sympy/geometry/point.py
+index 7c978c47be..4f2731a146 100644
+--- a/sympy/geometry/point.py
++++ b/sympy/geometry/point.py
+@@ -126,6 +126,12 @@ def __new__(cls, *args, **kwargs):
+                                        .format(func_name(coords))))
+         # A point where only `dim` is specified is initialized
+         # to zeros.
++        """Define right multiplication for Point with a scalar."""
++        if isinstance(other, (int, float, sympy.Basic)):
++            return Point(self.args[0] * other, self.args[1] * other)
++        return NotImplemented
++
++
+         if len(coords) == 0 and kwargs.get('dim', None):
+             coords = (S.Zero,)*kwargs.get('dim')
+2026-08-05 11:20:44,293 - INFO - Eval script for sympy__sympy-17655 written to logs\run_evaluation\vi_b_lf_rescore_static_heuristic\commscm-vi-b-static_heuristic\sympy__sympy-17655\eval.sh; copying to container...
+2026-08-05 11:20:58,286 - INFO - Test runtime: 13.83 seconds
+2026-08-05 11:20:58,291 - INFO - Test output for sympy__sympy-17655 written to logs\run_evaluation\vi_b_lf_rescore_static_heuristic\commscm-vi-b-static_heuristic\sympy__sympy-17655\test_output.txt
+2026-08-05 11:20:58,465 - INFO - Git diff after:
+diff --git a/sympy/geometry/point.py b/sympy/geometry/point.py
+index 7c978c47be..4f2731a146 100644
+--- a/sympy/geometry/point.py
++++ b/sympy/geometry/point.py
+@@ -126,6 +126,12 @@ def __new__(cls, *args, **kwargs):
+                                        .format(func_name(coords))))
+         # A point where only `dim` is specified is initialized
+         # to zeros.
++        """Define right multiplication for Point with a scalar."""
++        if isinstance(other, (int, float, sympy.Basic)):
++            return Point(self.args[0] * other, self.args[1] * other)
++        return NotImplemented
++
++
+         if len(coords) == 0 and kwargs.get('dim', None):
+             coords = (S.Zero,)*kwargs.get('dim')
+2026-08-05 11:20:58,465 - INFO - Grading answer for sympy__sympy-17655...
+2026-08-05 11:20:58,493 - INFO - report: {'sympy__sympy-17655': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': False, 'tests_status': {'FAIL_TO_PASS': {'success': [], 'failure': ['test_point', 'test_point3D']}, 'PASS_TO_PASS': {'success': [], 'failure': ['test_Point2D', 'test_issue_9214', 'test_issue_11617', 'test_transform', 'test_concyclic_doctest_bug', 'test_arguments', 'test_unit', 'test_dot', 'test__normalize_dimension']}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for sympy__sympy-17655: resolved: False
+2026-08-05 11:20:58,495 - INFO - Attempting to stop container sweb.eval.sympy__sympy-17655.vi_b_lf_rescore_static_heuristic...
+2026-08-05 11:21:14,115 - INFO - Attempting to remove container sweb.eval.sympy__sympy-17655.vi_b_lf_rescore_static_heuristic...
+2026-08-05 11:21:14,208 - INFO - Container sweb.eval.sympy__sympy-17655.vi_b_lf_rescore_static_heuristic removed.

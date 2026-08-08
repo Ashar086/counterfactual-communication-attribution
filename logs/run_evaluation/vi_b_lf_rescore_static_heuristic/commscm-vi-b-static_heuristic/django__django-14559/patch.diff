@@ -1,0 +1,13 @@
+--- a/django/db/models/query.py
++++ b/django/db/models/query.py
+@@ -565,7 +565,8 @@
+         for obj in objs:
+             self.filter(pk=obj.pk).update(**{f: getattr(obj, f) for f in fields})
+ 
+-        return None
++        return len(objs)  # Return the number of rows matched
+ 
+ 
+ class QuerySet(models.QuerySet):
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

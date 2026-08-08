@@ -1,0 +1,14 @@
+--- a/django/db/models/fields/__init__.py
++++ b/django/db/models/fields/__init__.py
+@@ -1230,6 +1230,10 @@
+         if value is None:
+             return None
+         try:
++            if isinstance(value, dict):
++                raise ValidationError(self.error_messages['invalid'], code='invalid')
++
+             value = str(value).strip()
+             if value == '':
+                 return None
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

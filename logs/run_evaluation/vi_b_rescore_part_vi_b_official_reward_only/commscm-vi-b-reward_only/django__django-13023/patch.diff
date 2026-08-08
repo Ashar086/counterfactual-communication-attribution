@@ -1,0 +1,14 @@
+--- a/django/db/models/fields/__init__.py
++++ b/django/db/models/fields/__init__.py
+@@ -1230,6 +1230,10 @@
+         if value is None:
+             return None
+         if isinstance(value, str):
+             return self._parse_decimal(value)
++        if isinstance(value, dict):
++            from django.core.exceptions import ValidationError
++            raise ValidationError("A dictionary is not a valid input for a decimal field.")
++
+         return super().to_python(value)
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

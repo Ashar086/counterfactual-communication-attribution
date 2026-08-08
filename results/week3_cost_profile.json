@@ -1,0 +1,90 @@
+{
+  "objective": "Construct benchmarks that isolate the computational bottlenecks of exact replay.",
+  "suite": "Replay Complexity Suite",
+  "trace": "rc_n250_b4_d40_s25_seed0",
+  "metrics": {
+    "n_events": 250,
+    "branching_factor": 4,
+    "descendant_ratio_target": 0.4,
+    "descendant_ratio_actual": 0.4016,
+    "n_descendants": 100,
+    "n_parallel": 149,
+    "shared_subgraph_frac": 0.25,
+    "shared_nodes": 25
+  },
+  "structural_cost_iters": 5000,
+  "outcome_cost_iters": 50,
+  "paper_figure_hint": {
+    "ExactReplay": [
+      "Structural evaluations",
+      "DAG materialization O(N)",
+      "Replay bookkeeping"
+    ],
+    "DescendantReplay_pre_COW": [
+      "Fewer structural evaluations",
+      "Same DAG materialization O(N)"
+    ],
+    "DescendantReplay_COW": [
+      "Fewer structural evaluations",
+      "Subgraph-only materialization O(|affected|)"
+    ]
+  },
+  "rows": [
+    {
+      "estimator": "Oracle",
+      "intervention_ms": 0.084,
+      "replay_ms": 897.796,
+      "structural_eval_ms": 787.204,
+      "materialization_ms": 22.947,
+      "evaluation_ms": 3.02,
+      "cache_ms": 0.0,
+      "total_ms": 900.857,
+      "structural_evals": 248,
+      "materialized_nodes": 250,
+      "cache_hits": 0,
+      "cache_misses": 0
+    },
+    {
+      "estimator": "Descendant",
+      "intervention_ms": 13.168,
+      "replay_ms": 303.286,
+      "structural_eval_ms": 288.563,
+      "materialization_ms": 10.503,
+      "evaluation_ms": 0.959,
+      "cache_ms": 0.0,
+      "total_ms": 317.371,
+      "structural_evals": 100,
+      "materialized_nodes": 101,
+      "cache_hits": 0,
+      "cache_misses": 0
+    },
+    {
+      "estimator": "Cached",
+      "intervention_ms": 11.276,
+      "replay_ms": 314.721,
+      "structural_eval_ms": 301.686,
+      "materialization_ms": 8.552,
+      "evaluation_ms": 0.966,
+      "cache_ms": 0.099,
+      "total_ms": 327.035,
+      "structural_evals": 100,
+      "materialized_nodes": 101,
+      "cache_hits": 0,
+      "cache_misses": 1
+    },
+    {
+      "estimator": "Cached(warm)",
+      "intervention_ms": 0.0,
+      "replay_ms": 0.0,
+      "structural_eval_ms": 0.0,
+      "materialization_ms": 0.0,
+      "evaluation_ms": 0.0,
+      "cache_ms": 0.021,
+      "total_ms": 0.021,
+      "structural_evals": 0,
+      "materialized_nodes": 0,
+      "cache_hits": 1,
+      "cache_misses": 0
+    }
+  ]
+}

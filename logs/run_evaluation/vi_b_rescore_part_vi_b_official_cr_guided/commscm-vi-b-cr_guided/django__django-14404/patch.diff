@@ -1,0 +1,6 @@
+--- a/django/views.py
++++ b/django/views.py
+@@ -123,7 +123,7 @@
+ def catch_all_view(request):
+     # Existing logic...
+     return redirect('%s/' % request.path)  # Changed from request.path_info to request.path

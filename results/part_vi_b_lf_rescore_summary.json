@@ -1,0 +1,48 @@
+{
+  "experiment": "part_vi_b_lf_rescore_all_methods",
+  "note": "Supersedes CRLF-era VI.B Resolve@1; patches from original LLM run",
+  "n": 100,
+  "selection_seed": 42,
+  "by_method": {
+    "cr_guided": {
+      "resolve_at_1_mean": 0.02,
+      "counts": {
+        "resolved": 2,
+        "unresolved": 6,
+        "error": 92,
+        "missing": 0,
+        "scored": 100
+      }
+    },
+    "reward_only": {
+      "resolve_at_1_mean": 0.04,
+      "counts": {
+        "resolved": 4,
+        "unresolved": 15,
+        "error": 81,
+        "missing": 0,
+        "scored": 100
+      }
+    },
+    "random": {
+      "resolve_at_1_mean": 0.03,
+      "counts": {
+        "resolved": 3,
+        "unresolved": 16,
+        "error": 81,
+        "missing": 0,
+        "scored": 100
+      }
+    },
+    "static_heuristic": {
+      "resolve_at_1_mean": 0.03,
+      "counts": {
+        "resolved": 3,
+        "unresolved": 16,
+        "error": 81,
+        "missing": 0,
+        "scored": 100
+      }
+    }
+  }
+}

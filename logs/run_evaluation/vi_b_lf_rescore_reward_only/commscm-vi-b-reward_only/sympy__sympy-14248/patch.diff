@@ -1,0 +1,9 @@
+--- a/sympy/matrices/matrices.py
++++ b/sympy/matrices/matrices.py
+@@ -1234,7 +1234,7 @@
+ 
+     def _print(self, expr, printer):
+         if isinstance(expr, Add):
+-            return ' + '.join([f'({coeff})*{mat}' for mat, coeff in expr.as_coefficients_dict().items()])
++            return ' + '.join([f'{mat}' if coeff == 1 else f'({coeff})*{mat}' for mat, coeff in expr.as_coefficients_dict().items()])
+         return super()._print(expr, printer)

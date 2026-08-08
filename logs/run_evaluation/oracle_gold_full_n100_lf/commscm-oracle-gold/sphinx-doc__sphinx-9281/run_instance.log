@@ -1,0 +1,81 @@
+2026-08-05 09:16:34,416 - INFO - Creating container for sphinx-doc__sphinx-9281...
+2026-08-05 09:16:34,527 - INFO - Container for sphinx-doc__sphinx-9281 created: 100b6b52b0d4d1e97c499296b20fb54a0d4aa48e8ef42c7ba94e9a47650d3a6e
+2026-08-05 09:16:34,882 - INFO - Container for sphinx-doc__sphinx-9281 started: 100b6b52b0d4d1e97c499296b20fb54a0d4aa48e8ef42c7ba94e9a47650d3a6e
+2026-08-05 09:16:34,884 - INFO - Intermediate patch for sphinx-doc__sphinx-9281 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\sphinx-doc__sphinx-9281\patch.diff, now applying to container...
+2026-08-05 09:16:35,307 - INFO - >>>>> Applied Patch:
+Checking patch sphinx/util/inspect.py...
+Applied patch sphinx/util/inspect.py cleanly.
+
+2026-08-05 09:16:35,941 - INFO - Git diff before:
+diff --git a/sphinx/util/inspect.py b/sphinx/util/inspect.py
+index a415a7074..23dd9e930 100644
+--- a/sphinx/util/inspect.py
++++ b/sphinx/util/inspect.py
+@@ -442,14 +442,14 @@ def object_description(object: Any) -> str:
+                      (object_description(key), object_description(object[key]))
+                      for key in sorted_keys)
+             return "{%s}" % ", ".join(items)
+-    if isinstance(object, set):
++    elif isinstance(object, set):
+         try:
+             sorted_values = sorted(object)
+         except TypeError:
+             pass  # Cannot sort set values, fall back to generic repr
+         else:
+             return "{%s}" % ", ".join(object_description(x) for x in sorted_values)
+-    if isinstance(object, frozenset):
++    elif isinstance(object, frozenset):
+         try:
+             sorted_values = sorted(object)
+         except TypeError:
+@@ -457,6 +457,9 @@ def object_description(object: Any) -> str:
+         else:
+             return "frozenset({%s})" % ", ".join(object_description(x)
+                                                  for x in sorted_values)
++    elif isinstance(object, enum.Enum):
++        return "%s.%s" % (object.__class__.__name__, object.name)
++
+     try:
+         s = repr(object)
+     except Exception as exc:
+2026-08-05 09:16:35,942 - INFO - Eval script for sphinx-doc__sphinx-9281 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\sphinx-doc__sphinx-9281\eval.sh; copying to container...
+2026-08-05 09:16:56,507 - INFO - Test runtime: 20.43 seconds
+2026-08-05 09:16:56,514 - INFO - Test output for sphinx-doc__sphinx-9281 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\sphinx-doc__sphinx-9281\test_output.txt
+2026-08-05 09:16:56,587 - INFO - Git diff after:
+diff --git a/sphinx/util/inspect.py b/sphinx/util/inspect.py
+index a415a7074..23dd9e930 100644
+--- a/sphinx/util/inspect.py
++++ b/sphinx/util/inspect.py
+@@ -442,14 +442,14 @@ def object_description(object: Any) -> str:
+                      (object_description(key), object_description(object[key]))
+                      for key in sorted_keys)
+             return "{%s}" % ", ".join(items)
+-    if isinstance(object, set):
++    elif isinstance(object, set):
+         try:
+             sorted_values = sorted(object)
+         except TypeError:
+             pass  # Cannot sort set values, fall back to generic repr
+         else:
+             return "{%s}" % ", ".join(object_description(x) for x in sorted_values)
+-    if isinstance(object, frozenset):
++    elif isinstance(object, frozenset):
+         try:
+             sorted_values = sorted(object)
+         except TypeError:
+@@ -457,6 +457,9 @@ def object_description(object: Any) -> str:
+         else:
+             return "frozenset({%s})" % ", ".join(object_description(x)
+                                                  for x in sorted_values)
++    elif isinstance(object, enum.Enum):
++        return "%s.%s" % (object.__class__.__name__, object.name)
++
+     try:
+         s = repr(object)
+     except Exception as exc:
+2026-08-05 09:16:56,587 - INFO - Grading answer for sphinx-doc__sphinx-9281...
+2026-08-05 09:16:56,610 - INFO - report: {'sphinx-doc__sphinx-9281': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': True, 'tests_status': {'FAIL_TO_PASS': {'success': ['tests/test_util_inspect.py::test_object_description_enum'], 'failure': []}, 'PASS_TO_PASS': {'success': ['tests/test_util_inspect.py::test_TypeAliasNamespace', 'tests/test_util_inspect.py::test_signature', 'tests/test_util_inspect.py::test_signature_partial', 'tests/test_util_inspect.py::test_signature_methods', 'tests/test_util_inspect.py::test_signature_partialmethod', 'tests/test_util_inspect.py::test_signature_annotations', 'tests/test_util_inspect.py::test_signature_annotations_py38', 'tests/test_util_inspect.py::test_signature_from_str_basic', 'tests/test_util_inspect.py::test_signature_from_str_default_values', 'tests/test_util_inspect.py::test_signature_from_str_annotations', 'tests/test_util_inspect.py::test_signature_from_str_complex_annotations', 'tests/test_util_inspect.py::test_signature_from_str_kwonly_args', 'tests/test_util_inspect.py::test_signature_from_str_positionaly_only_args', 'tests/test_util_inspect.py::test_signature_from_str_invalid', 'tests/test_util_inspect.py::test_signature_from_ast', 'tests/test_util_inspect.py::test_safe_getattr_with_default', 'tests/test_util_inspect.py::test_safe_getattr_with_exception', 'tests/test_util_inspect.py::test_safe_getattr_with_property_exception', 'tests/test_util_inspect.py::test_safe_getattr_with___dict___override', 'tests/test_util_inspect.py::test_dictionary_sorting', 'tests/test_util_inspect.py::test_set_sorting', 'tests/test_util_inspect.py::test_set_sorting_fallback', 'tests/test_util_inspect.py::test_frozenset_sorting', 'tests/test_util_inspect.py::test_frozenset_sorting_fallback', 'tests/test_util_inspect.py::test_dict_customtype', 'tests/test_util_inspect.py::test_getslots', 'tests/test_util_inspect.py::test_isclassmethod', 'tests/test_util_inspect.py::test_isstaticmethod', 'tests/test_util_inspect.py::test_iscoroutinefunction', 'tests/test_util_inspect.py::test_isfunction', 'tests/test_util_inspect.py::test_isbuiltin', 'tests/test_util_inspect.py::test_isdescriptor', 'tests/test_util_inspect.py::test_isattributedescriptor', 'tests/test_util_inspect.py::test_isproperty', 'tests/test_util_inspect.py::test_isgenericalias', 'tests/test_util_inspect.py::test_unpartial', 'tests/test_util_inspect.py::test_getdoc_inherited_decorated_method', 'tests/test_util_inspect.py::test_is_builtin_class_method'], 'failure': []}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for sphinx-doc__sphinx-9281: resolved: True
+2026-08-05 09:16:56,611 - INFO - Attempting to stop container sweb.eval.sphinx-doc__sphinx-9281.oracle_gold_full_n100_lf...
+2026-08-05 09:17:12,009 - INFO - Attempting to remove container sweb.eval.sphinx-doc__sphinx-9281.oracle_gold_full_n100_lf...
+2026-08-05 09:17:12,063 - INFO - Container sweb.eval.sphinx-doc__sphinx-9281.oracle_gold_full_n100_lf removed.

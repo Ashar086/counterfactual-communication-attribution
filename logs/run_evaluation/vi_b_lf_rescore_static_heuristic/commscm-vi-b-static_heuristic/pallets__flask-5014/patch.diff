@@ -1,0 +1,14 @@
+--- a/flask/blueprints.py
++++ b/flask/blueprints.py
+@@ -20,6 +20,9 @@
+ 
+ class Blueprint:
+     def __init__(self, name, import_name, **options):
++        if not name:
++            raise ValueError("Blueprint name must not be empty.")
++
+         self.name = name
+         self.import_name = import_name
+         self.options = options
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

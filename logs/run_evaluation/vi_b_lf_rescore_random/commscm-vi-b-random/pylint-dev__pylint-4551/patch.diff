@@ -1,0 +1,15 @@
+--- a/pyreverse.py
++++ b/pyreverse.py
+@@ -123,6 +123,10 @@
+ 
+     def _parse_init(self, init_node):
+         for arg in init_node.args.args:
++            # Extract type hints
++            if arg.annotation:
++                type_hint = self._get_type_hint(arg.annotation)
++                self.attributes[arg.arg] = type_hint
+             self.attributes[arg.arg] = None  # Default value handling
+ 
+     def _get_type_hint(self, annotation):
+         # Convert annotation to string representation
+         return str(annotation)

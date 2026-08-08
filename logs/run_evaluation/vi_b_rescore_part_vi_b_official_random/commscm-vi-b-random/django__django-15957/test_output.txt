@@ -1,0 +1,61 @@
+/eval.sh: line 2: set: pipefail: invalid option name
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 3: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ cd $'/testbed\r'
+/eval.sh: line 5: cd: $'/testbed\r': No such file or directory
++ git config --global --add safe.directory $'/testbed\r'
++ cd $'/testbed\r'
+/eval.sh: line 7: cd: $'/testbed\r': No such file or directory
++ git $'status\r'
+git: 'status' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
++ git $'show\r'
+git: 'show' is not a git command. See 'git --help'.
+
+The most similar command is
+	show
++ git -c core.fileMode=false diff $'f387d024fc75569d2a4a338bfda76cc2f328f627\r'
+fatal: ambiguous argument 'f387d024fc75569d2a4a338bfda76cc2f328f627?': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 11: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ python -m pip install -e $'.\r'
+ERROR: . is not a valid editable requirement. It should either be a path to a local project or a VCS URL (beginning with bzr+http, bzr+https, bzr+ssh, bzr+sftp, bzr+ftp, bzr+lp, bzr+file, git+http, git+https, git+ssh, git+git, git+file, hg+file, hg+http, hg+https, hg+ssh, hg+static-http, svn+ssh, svn+http, svn+https, svn+svn, svn+file).
++ git checkout f387d024fc75569d2a4a338bfda76cc2f328f627 $'tests/prefetch_related/tests.py\r'
+error: pathspec 'tests/prefetch_related/tests.py?' did not match any file(s) known to git
++ git apply -v -
+Checking patch tests/prefetch_related/tests.py...
+error: while searching for:
+        self.assertIs(Room.house.is_cached(self.room), True)?
+        with self.assertNumQueries(0):?
+            house.rooms.first().house.address?
+
+error: patch failed: tests/prefetch_related/tests.py:1908
+error: tests/prefetch_related/tests.py: patch does not apply
++ : '>>>>> Start Test Output'
++ ./tests/runtests.py --verbosity 2 --settings=test_sqlite --parallel 1 $'prefetch_related.tests\r'
+Traceback (most recent call last):
+  File "/testbed/./tests/runtests.py", line 17, in <module>
+    import django
+ModuleNotFoundError: No module named 'django'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/testbed/./tests/runtests.py", line 19, in <module>
+    raise RuntimeError(
+RuntimeError: Django module not found, reference tests/README.rst for instructions.
++ : '>>>>> End Test Output'
++ git checkout f387d024fc75569d2a4a338bfda76cc2f328f627 $'tests/prefetch_related/tests.py\r'
+error: pathspec 'tests/prefetch_related/tests.py?' did not match any file(s) known to git

@@ -1,0 +1,10 @@
+--- a/django/contrib/staticfiles/storage.py
++++ b/django/contrib/staticfiles/storage.py
+@@ -248,6 +248,7 @@
+         substitutions = {}
+         for pattern in self.patterns:
+             # Process the pattern...
++        if not substitutions:
++            substitutions = {}
+         if substitutions:
+             # Do something with substitutions...

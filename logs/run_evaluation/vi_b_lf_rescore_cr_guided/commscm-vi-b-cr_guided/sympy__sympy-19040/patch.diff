@@ -1,0 +1,10 @@
+--- a/sympy/polys/factortools.py
++++ b/sympy/polys/factortools.py
+@@ -1147,7 +1147,7 @@
+         # existing logic...
+         if extension:
+             # Correct the logic to include the factor (y - 1)
+-            return factor_expr
++            return factor_expr * (y - 1)
+ 
+         return factor_expr

@@ -1,0 +1,76 @@
+/eval.sh: line 2: set: pipefail: invalid option name
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 3: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ cd $'/testbed\r'
+/eval.sh: line 5: cd: $'/testbed\r': No such file or directory
++ git config --global --add safe.directory $'/testbed\r'
++ cd $'/testbed\r'
+/eval.sh: line 7: cd: $'/testbed\r': No such file or directory
++ git $'status\r'
+git: 'status' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
++ git $'show\r'
+git: 'show' is not a git command. See 'git --help'.
+
+The most similar command is
+	show
++ git -c core.fileMode=false diff $'7f33c1e22dbc34a7afae7967783725b10f1f13b1\r'
+fatal: ambiguous argument '7f33c1e22dbc34a7afae7967783725b10f1f13b1?': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 11: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ python -m pip install -e $'.\r'
+ERROR: . is not a valid editable requirement. It should either be a path to a local project or a VCS URL (beginning with bzr+http, bzr+https, bzr+ssh, bzr+sftp, bzr+ftp, bzr+lp, bzr+file, git+http, git+https, git+ssh, git+git, git+file, hg+file, hg+http, hg+https, hg+ssh, hg+static-http, svn+ssh, svn+http, svn+https, svn+svn, svn+file).
++ git checkout 7f33c1e22dbc34a7afae7967783725b10f1f13b1 tests/admin_views/tests.py $'tests/forms_tests/tests/test_formsets.py\r'
+error: pathspec 'tests/forms_tests/tests/test_formsets.py?' did not match any file(s) known to git
++ git apply -v -
+Checking patch tests/admin_views/tests.py...
+error: while searching for:
+        response = self.client.post(reverse('admin:admin_views_person_changelist'), data)?
+        non_form_errors = response.context['cl'].formset.non_form_errors()?
+        self.assertIsInstance(non_form_errors, ErrorList)?
+        self.assertEqual(str(non_form_errors), str(ErrorList(["Grace is not a Zombie"])))?
+?
+    def test_list_editable_ordering(self):?
+        collector = Collector.objects.create(id=1, name="Frederick Clegg")?
+
+error: patch failed: tests/admin_views/tests.py:3348
+error: tests/admin_views/tests.py: patch does not apply
+Checking patch tests/forms_tests/tests/test_formsets.py...
+error: while searching for:
+        formset = ChoiceFormSet(data, auto_id=False, prefix='choices')?
+        self.assertFalse(formset.is_valid())?
+        self.assertEqual(formset.non_form_errors(), ['Please submit at most 1 form.'])?
+?
+    def test_formset_validate_min_flag(self):?
+        """?
+
+error: patch failed: tests/forms_tests/tests/test_formsets.py:337
+error: tests/forms_tests/tests/test_formsets.py: patch does not apply
++ : '>>>>> Start Test Output'
++ ./tests/runtests.py --verbosity 2 --settings=test_sqlite --parallel 1 admin_views.tests $'forms_tests.tests.test_formsets\r'
+Traceback (most recent call last):
+  File "/testbed/./tests/runtests.py", line 16, in <module>
+    import django
+ModuleNotFoundError: No module named 'django'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/testbed/./tests/runtests.py", line 18, in <module>
+    raise RuntimeError(
+RuntimeError: Django module not found, reference tests/README.rst for instructions.
++ : '>>>>> End Test Output'
++ git checkout 7f33c1e22dbc34a7afae7967783725b10f1f13b1 tests/admin_views/tests.py $'tests/forms_tests/tests/test_formsets.py\r'
+error: pathspec 'tests/forms_tests/tests/test_formsets.py?' did not match any file(s) known to git

@@ -1,0 +1,11 @@
+--- a/django/core/management/commands/makemigrations.py
++++ b/django/core/management/commands/makemigrations.py
+@@ -123,7 +123,7 @@
+         if options['check']:
+             # Existing logic for check
+             if not changes:
+-                self.stdout.write(self.style.SUCCESS("No changes detected."))
++                self.stdout.write(self.style.SUCCESS("No changes detected. Exiting without creating migrations."))
+                 return
+             else:
+                 self.stdout.write(self.style.WARNING("Changes detected."))

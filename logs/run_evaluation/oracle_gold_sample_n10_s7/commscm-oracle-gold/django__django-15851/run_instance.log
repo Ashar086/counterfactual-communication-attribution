@@ -1,0 +1,53 @@
+2026-08-04 20:38:41,490 - INFO - Creating container for django__django-15851...
+2026-08-04 20:38:43,692 - INFO - Container for django__django-15851 created: cb58e337f3aad418668d852abe6bf4be8cd4198303154e6ceceb6c70bc939411
+2026-08-04 20:38:44,526 - INFO - Container for django__django-15851 started: cb58e337f3aad418668d852abe6bf4be8cd4198303154e6ceceb6c70bc939411
+2026-08-04 20:38:44,528 - INFO - Intermediate patch for django__django-15851 written to logs\run_evaluation\oracle_gold_sample_n10_s7\commscm-oracle-gold\django__django-15851\patch.diff, now applying to container...
+2026-08-04 20:38:45,075 - INFO - Failed to apply patch to container: git apply --verbose
+2026-08-04 20:38:45,296 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2026-08-04 20:38:45,488 - INFO - >>>>> Applied Patch:
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file django/db/backends/postgresql/client.py
+
+2026-08-04 20:38:48,911 - INFO - Git diff before:
+diff --git a/django/db/backends/postgresql/client.py b/django/db/backends/postgresql/client.py
+index 4c9bd63546..3b5ddafaca 100644
+--- a/django/db/backends/postgresql/client.py
++++ b/django/db/backends/postgresql/client.py
+@@ -32,9 +32,9 @@ class DatabaseClient(BaseDatabaseClient):
+             args += ["-h", host]
+         if port:
+             args += ["-p", str(port)]
++        args.extend(parameters)
+         if dbname:
+             args += [dbname]
+-        args.extend(parameters)
+ 
+         env = {}
+         if passwd:
+2026-08-04 20:38:48,914 - INFO - Eval script for django__django-15851 written to logs\run_evaluation\oracle_gold_sample_n10_s7\commscm-oracle-gold\django__django-15851\eval.sh; copying to container...
+2026-08-04 20:39:06,137 - INFO - Test runtime: 16.98 seconds
+2026-08-04 20:39:06,139 - INFO - Test output for django__django-15851 written to logs\run_evaluation\oracle_gold_sample_n10_s7\commscm-oracle-gold\django__django-15851\test_output.txt
+2026-08-04 20:39:06,320 - INFO - Git diff after:
+diff --git a/django/db/backends/postgresql/client.py b/django/db/backends/postgresql/client.py
+index 4c9bd63546..3b5ddafaca 100644
+--- a/django/db/backends/postgresql/client.py
++++ b/django/db/backends/postgresql/client.py
+@@ -32,9 +32,9 @@ class DatabaseClient(BaseDatabaseClient):
+             args += ["-h", host]
+         if port:
+             args += ["-p", str(port)]
++        args.extend(parameters)
+         if dbname:
+             args += [dbname]
+-        args.extend(parameters)
+ 
+         env = {}
+         if passwd:
+2026-08-04 20:39:06,320 - INFO - Grading answer for django__django-15851...
+2026-08-04 20:39:06,364 - INFO - report: {'django__django-15851': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': False, 'tests_status': {'FAIL_TO_PASS': {'success': [], 'failure': ['test_parameters (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase)']}, 'PASS_TO_PASS': {'success': [], 'failure': ['test_accent (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase)', 'test_basic (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase)', 'test_column (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase)', 'test_crash_password_does_not_leak (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase)', 'test_nopass (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase)', 'test_passfile (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase)', 'test_service (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase)', 'test_ssl_certificate (dbshell.test_postgresql.PostgreSqlDbshellCommandTestCase)']}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for django__django-15851: resolved: False
+2026-08-04 20:39:06,366 - INFO - Attempting to stop container sweb.eval.django__django-15851.oracle_gold_sample_n10_s7...
+2026-08-04 20:39:22,100 - INFO - Attempting to remove container sweb.eval.django__django-15851.oracle_gold_sample_n10_s7...
+2026-08-04 20:39:22,180 - INFO - Container sweb.eval.django__django-15851.oracle_gold_sample_n10_s7 removed.
+2026-08-04 20:39:22,181 - INFO - Attempting to remove image swebench/sweb.eval.x86_64.django_1776_django-15851:latest...
+2026-08-04 20:39:24,991 - INFO - Image swebench/sweb.eval.x86_64.django_1776_django-15851:latest removed.

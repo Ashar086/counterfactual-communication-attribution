@@ -1,0 +1,6 @@
+--- a/django/core/management/base.py
++++ b/django/core/management/base.py
+@@ -72,6 +72,7 @@
+         subparsers = parser.add_subparsers(required=True)
+         create = subparsers.add_parser("create", formatter_class=self.formatter_class)
+         create.add_argument("name")

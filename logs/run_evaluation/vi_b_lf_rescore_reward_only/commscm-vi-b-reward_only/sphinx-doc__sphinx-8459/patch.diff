@@ -1,0 +1,11 @@
+--- a/sphinx/ext/autodoc.py
++++ b/sphinx/ext/autodoc.py
+@@ -1234,7 +1234,7 @@
+ 
+ def resolve_type(type_str: str) -> str:
+     # Existing logic...
+-    if autodoc_typehints == 'description':
++    if autodoc_typehints in ('description', 'both'):
+         # Apply type aliasing for descriptions
+         return autodoc_type_aliases.get(type_str, type_str)
+     # Existing logic...

@@ -1,0 +1,11 @@
+--- a/django/db/models/fields/related.py
++++ b/django/db/models/fields/related.py
+@@ -1234,7 +1234,7 @@
+         if isinstance(queryset, QuerySet):
+             queryset = queryset._chain()  # Ensure we have a fresh queryset
+             if hasattr(queryset, 'query'):
+-                if queryset.query.has_limits:
++                if queryset.query.has_limits and not queryset.query.is_sliced:
+                     raise AssertionError("Cannot filter a query once a slice has been taken.")
+ 
+         self.queryset = queryset

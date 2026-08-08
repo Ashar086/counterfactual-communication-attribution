@@ -1,0 +1,45 @@
+2026-08-05 11:05:50,874 - INFO - Creating container for django__django-16485...
+2026-08-05 11:05:51,041 - INFO - Container for django__django-16485 created: deca63905a3623c208674973df10dffcc2f0043ddedf3703cbee5865b55f3b89
+2026-08-05 11:05:51,535 - INFO - Container for django__django-16485 started: deca63905a3623c208674973df10dffcc2f0043ddedf3703cbee5865b55f3b89
+2026-08-05 11:05:51,537 - INFO - Intermediate patch for django__django-16485 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\django__django-16485\patch.diff, now applying to container...
+2026-08-05 11:05:51,836 - INFO - >>>>> Applied Patch:
+Checking patch django/template/defaultfilters.py...
+Applied patch django/template/defaultfilters.py cleanly.
+
+2026-08-05 11:05:54,874 - INFO - Git diff before:
+diff --git a/django/template/defaultfilters.py b/django/template/defaultfilters.py
+index 23c3a08c67..78881987fc 100644
+--- a/django/template/defaultfilters.py
++++ b/django/template/defaultfilters.py
+@@ -168,7 +168,7 @@ def floatformat(text, arg=-1):
+     except (ValueError, OverflowError, InvalidOperation):
+         return input_val
+ 
+-    if not m and p < 0:
++    if not m and p <= 0:
+         return mark_safe(
+             formats.number_format(
+                 "%d" % (int(d)),
+2026-08-05 11:05:54,876 - INFO - Eval script for django__django-16485 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\django__django-16485\eval.sh; copying to container...
+2026-08-05 11:07:52,198 - INFO - Test runtime: 116.95 seconds
+2026-08-05 11:07:52,203 - INFO - Test output for django__django-16485 written to logs\run_evaluation\oracle_gold_full_n100_lf\commscm-oracle-gold\django__django-16485\test_output.txt
+2026-08-05 11:07:52,568 - INFO - Git diff after:
+diff --git a/django/template/defaultfilters.py b/django/template/defaultfilters.py
+index 23c3a08c67..78881987fc 100644
+--- a/django/template/defaultfilters.py
++++ b/django/template/defaultfilters.py
+@@ -168,7 +168,7 @@ def floatformat(text, arg=-1):
+     except (ValueError, OverflowError, InvalidOperation):
+         return input_val
+ 
+-    if not m and p < 0:
++    if not m and p <= 0:
+         return mark_safe(
+             formats.number_format(
+                 "%d" % (int(d)),
+2026-08-05 11:07:52,568 - INFO - Grading answer for django__django-16485...
+2026-08-05 11:07:52,605 - INFO - report: {'django__django-16485': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': True, 'tests_status': {'FAIL_TO_PASS': {'success': ['test_zero_values (template_tests.filter_tests.test_floatformat.FunctionTests.test_zero_values)'], 'failure': []}, 'PASS_TO_PASS': {'success': ['test_floatformat01 (template_tests.filter_tests.test_floatformat.FloatformatTests.test_floatformat01)', 'test_floatformat02 (template_tests.filter_tests.test_floatformat.FloatformatTests.test_floatformat02)', 'test_float_dunder_method (template_tests.filter_tests.test_floatformat.FunctionTests.test_float_dunder_method)', 'test_force_grouping (template_tests.filter_tests.test_floatformat.FunctionTests.test_force_grouping)', 'test_infinity (template_tests.filter_tests.test_floatformat.FunctionTests.test_infinity)', 'test_inputs (template_tests.filter_tests.test_floatformat.FunctionTests.test_inputs)', '#15789', 'test_negative_zero_values (template_tests.filter_tests.test_floatformat.FunctionTests.test_negative_zero_values)', 'test_unlocalize (template_tests.filter_tests.test_floatformat.FunctionTests.test_unlocalize)'], 'failure': []}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for django__django-16485: resolved: True
+2026-08-05 11:07:52,607 - INFO - Attempting to stop container sweb.eval.django__django-16485.oracle_gold_full_n100_lf...
+2026-08-05 11:08:08,354 - INFO - Attempting to remove container sweb.eval.django__django-16485.oracle_gold_full_n100_lf...
+2026-08-05 11:08:08,432 - INFO - Container sweb.eval.django__django-16485.oracle_gold_full_n100_lf removed.

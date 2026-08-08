@@ -1,0 +1,68 @@
+/eval.sh: line 2: set: pipefail: invalid option name
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 3: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ cd $'/testbed\r'
+/eval.sh: line 5: cd: $'/testbed\r': No such file or directory
++ git config --global --add safe.directory $'/testbed\r'
++ cd $'/testbed\r'
+/eval.sh: line 7: cd: $'/testbed\r': No such file or directory
++ git $'status\r'
+git: 'status' is not a git command. See 'git --help'.
+
+The most similar command is
+	status
++ git $'show\r'
+git: 'show' is not a git command. See 'git --help'.
+
+The most similar command is
+	show
++ git -c core.fileMode=false diff $'84c125972ad535b2dfb245f8d311d347b45e5b8a\r'
+fatal: ambiguous argument '84c125972ad535b2dfb245f8d311d347b45e5b8a?': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
++ source $'/opt/miniconda3/bin/activate\r'
+/eval.sh: line 11: /opt/miniconda3/bin/activate: No such file or directory
++ conda activate $'testbed\r'
+
+CondaError: Run 'conda init' before 'conda activate'
+
++ python -m pip install -e $'.\r'
+ERROR: . is not a valid editable requirement. It should either be a path to a local project or a VCS URL (beginning with bzr+http, bzr+https, bzr+ssh, bzr+sftp, bzr+ftp, bzr+lp, bzr+file, git+http, git+https, git+ssh, git+git, git+file, hg+file, hg+http, hg+https, hg+ssh, hg+static-http, svn+ssh, svn+http, svn+https, svn+svn, svn+file).
++ git checkout 84c125972ad535b2dfb245f8d311d347b45e5b8a $'sympy/physics/quantum/tests/test_tensorproduct.py\r'
+error: pathspec 'sympy/physics/quantum/tests/test_tensorproduct.py?' did not match any file(s) known to git
++ git apply -v -
+Checking patch sympy/physics/quantum/tests/test_tensorproduct.py...
+error: while searching for:
+from sympy.physics.quantum.density import Density?
+from sympy.core.trace import Tr?
+?
+A, B, C = symbols('A,B,C', commutative=False)?
+x = symbols('x')?
+?
+mat1 = Matrix([[1, 2*I], [1 + I, 3]])?
+
+error: patch failed: sympy/physics/quantum/tests/test_tensorproduct.py:10
+error: sympy/physics/quantum/tests/test_tensorproduct.py: patch does not apply
++ : '>>>>> Start Test Output'
++ PYTHONWARNINGS=ignore::UserWarning,ignore::SyntaxWarning
++ bin/test -C --verbose $'sympy/physics/quantum/tests/test_tensorproduct.py\r'
+Traceback (most recent call last):
+  File "/testbed/sympy/__init__.py", line 19, in <module>
+    import mpmath
+ModuleNotFoundError: No module named 'mpmath'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/testbed/bin/test", line 105, in <module>
+    import sympy
+  File "/testbed/sympy/__init__.py", line 21, in <module>
+    raise ImportError("SymPy now depends on mpmath as an external library. "
+ImportError: SymPy now depends on mpmath as an external library. See http://docs.sympy.org/latest/install.html#mpmath for more information.
++ : '>>>>> End Test Output'
++ git checkout 84c125972ad535b2dfb245f8d311d347b45e5b8a $'sympy/physics/quantum/tests/test_tensorproduct.py\r'
+error: pathspec 'sympy/physics/quantum/tests/test_tensorproduct.py?' did not match any file(s) known to git

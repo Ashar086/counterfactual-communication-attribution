@@ -1,0 +1,13 @@
+--- a/original_code.py
++++ b/fixed_code.py
+@@ -8,7 +8,7 @@
+ ax2.plot(time,acc)
+ ax2.set_ylabel('acc')
+ 
+-fig.align_labels() ##pickling works after removing this line 
++## fig.align_labels() ##pickling works after removing this line 
+ 
+ pickle.dumps(fig)
+ plt.show()
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

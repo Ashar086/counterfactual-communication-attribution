@@ -1,0 +1,47 @@
+{
+  "experiment": "week5_langgraph_localize",
+  "summary": {
+    "source": "offline_langgraph",
+    "n": 3,
+    "cr_p_at_1": 1.0,
+    "reward_only_p_at_1": 0.0,
+    "random_p_at_1": 0.3333333333333333,
+    "note": "Attribution only on agent events C1-C5; sticky mechanisms preserve channel-native injections. No CCAS edits. Not full H2.",
+    "week5_gate_pass": true
+  },
+  "rows": [
+    {
+      "run_id": "offline_langgraph_0_POISON_PLANNER",
+      "poison_mode": "POISON_PLANNER",
+      "gold": "C1",
+      "cr_top1": "C1",
+      "reward_only_top1": "C5",
+      "random_top1": "C4",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false
+    },
+    {
+      "run_id": "offline_langgraph_1_POISON_CODER",
+      "poison_mode": "POISON_CODER",
+      "gold": "C2",
+      "cr_top1": "C2",
+      "reward_only_top1": "C5",
+      "random_top1": "C1",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": false
+    },
+    {
+      "run_id": "offline_langgraph_2_POISON_REVIEWER",
+      "poison_mode": "POISON_REVIEWER",
+      "gold": "C3",
+      "cr_top1": "C3",
+      "reward_only_top1": "C5",
+      "random_top1": "C3",
+      "cr_hit": true,
+      "reward_only_hit": false,
+      "random_hit": true
+    }
+  ]
+}

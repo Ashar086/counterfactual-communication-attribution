@@ -1,0 +1,14 @@
+--- a/django/db/models/expressions.py
++++ b/django/db/models/expressions.py
+@@ -1234,6 +1234,10 @@
+         # Existing logic for other operators...
+ 
+     def output_field(self):
++        if isinstance(self.lhs.output_field, DecimalField) or isinstance(self.rhs.output_field, DecimalField):
++            return DecimalField()
++
+         # Existing logic for determining output field...
+         return super().output_field()
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

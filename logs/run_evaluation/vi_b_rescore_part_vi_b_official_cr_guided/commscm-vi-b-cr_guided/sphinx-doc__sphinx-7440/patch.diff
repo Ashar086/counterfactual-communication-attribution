@@ -1,0 +1,7 @@
+--- a/fix.py
++++ b/fix.py
+@@ -1,3 +1,4 @@
+ def apply_patch():
+-    return 'ok'
++    # Updated glossary entry for "mysql" to indicate case insensitivity
++    return 'mysql (case-insensitive)'

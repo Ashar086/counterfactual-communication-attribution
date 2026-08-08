@@ -1,0 +1,13 @@
+diff --git a/src/_pytest/capture.py b/src/_pytest/capture.py
+index 6a43c8c..b1c1e3f 100644
+--- a/src/_pytest/capture.py
++++ b/src/_pytest/capture.py
+@@ -450,7 +450,7 @@ class EncodedFile(object):
+ 
+     @property
+     def mode(self):
+-        return self.buffer.mode
++        return self.buffer.mode.replace('b', '')
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

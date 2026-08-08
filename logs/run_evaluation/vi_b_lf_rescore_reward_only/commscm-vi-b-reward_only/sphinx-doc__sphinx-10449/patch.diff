@@ -1,0 +1,28 @@
+--- a/sphinx/ext/autodoc.py
++++ b/sphinx/ext/autodoc.py
+@@ -1234,7 +1234,7 @@
+ 
+     def _get_typehint(self, obj):
+         if self.config.autodoc_typehints == "description":
+-            return self._get_description_typehint(obj)
++            return self._get_description_typehint(obj, exclude_return=True)
+         elif self.config.autodoc_typehints == "signature":
+             return self._get_signature_typehint(obj)
+         return None
+@@ -1245,7 +1245,7 @@
+ 
+     def _get_description_typehint(self, obj):
+         # existing logic...
+         if isclass(obj):
+-            return self._get_class_typehint(obj)
++            return self._get_class_typehint(obj, exclude_return=True)
+         # existing logic...
+ 
+     def _get_class_typehint(self, cls, exclude_return=False):
+         # existing logic...
+         if exclude_return:
+             # logic to exclude return type from class constructor
+             return typehint_without_return
+         return typehint_with_return
+
+@@@ SYNTAX_ERROR: def solve(  # missing closing paren and body

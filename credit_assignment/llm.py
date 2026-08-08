@@ -142,6 +142,12 @@ def _openai_chat(
             {"role": "user", "content": user},
         ],
     }
+    top_p = os.getenv("OPENAI_TOP_P", "").strip()
+    if top_p:
+        kwargs["top_p"] = float(top_p)
+    max_tokens = os.getenv("OPENAI_MAX_TOKENS", "").strip()
+    if max_tokens:
+        kwargs["max_tokens"] = int(max_tokens)
     if seed is not None:
         kwargs["seed"] = seed
     completion = client.chat.completions.create(**kwargs)

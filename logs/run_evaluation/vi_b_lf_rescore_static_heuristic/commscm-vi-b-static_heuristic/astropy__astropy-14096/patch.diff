@@ -1,0 +1,21 @@
+--- a/original.py
++++ b/fixed.py
+@@ -1,6 +1,10 @@
+ import astropy.coordinates as coord
+ 
+ 
+ class custom_coord(coord.SkyCoord):
+     @property
+     def prop(self):
+-        return self.random_attr
++        try:
++            return self.random_attr
++        except AttributeError as e:
++            raise AttributeError(f"Attribute 'random_attr' does not exist.") from e
+ 
+ 
+ c = custom_coord('00h42m30s', '+41d12m00s', frame='icrs')
+ c.prop
+
+
+# Applied reviewer optimization advice (DESTRUCTIVE_REVIEW_ADVICE)

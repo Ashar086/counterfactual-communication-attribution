@@ -1,0 +1,14 @@
+--- a/sphinx/ext/napoleon.py
++++ b/sphinx/ext/napoleon.py
+@@ -123,7 +123,12 @@
+     cls_path = f"{obj.__module__}.{obj.__qualname__}"
+     try:
+         cls = obj.__globals__[cls_path]
++    except KeyError:
++        # Attempt to retrieve the original function if decorated
++        original = getattr(obj, '__wrapped__', None)
++        if original is not None:
++            cls = original.__globals__[cls_path]
+     except Exception as e:
+         # Handle other exceptions gracefully
+         cls = None
