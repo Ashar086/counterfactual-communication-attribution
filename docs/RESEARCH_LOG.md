@@ -1,4 +1,4 @@
-# RESEARCH_LOG.md
+﻿# docs/RESEARCH_LOG.md
 
 ## Phase
 
@@ -28,7 +28,7 @@
 Evidence ladder + revisit rule: `commscm/FREEZE.md` § Evidence ladder.  
 **Each week produces one of:** validated experiment · falsification report · paper section · reproducibility improvement.
 
-Claims: `commscm/CLAIMS_LEDGER.md` · Decisions: `DECISION_LOG.md` · Reproduce: `REPRODUCIBILITY.md` ·  
+Claims: `docs/CLAIMS_LEDGER.md` · Decisions: `docs/DECISION_LOG.md` · Reproduce: `REPRODUCIBILITY.md` ·  
 Core changes: `commscm/FALSIFICATION_REPORT.md` · Paper: `commscm/PAPER_OUTLINE.md` ·  
 VI.B prereg/results: `PART_VI_B_PREREGISTRATION.md` / `PART_VI_B_RESULTS.md` · VI.C: `PART_VI_C_WEBARENA.md` ·  
 **Repo banner:** `README.md`.  
@@ -38,16 +38,16 @@ VI.B prereg/results: `PART_VI_B_PREREGISTRATION.md` / `PART_VI_B_RESULTS.md` · 
 
 | Phase | Goal | Status |
 |-------|------|--------|
-| Part I | IF-C-SCM + CR | ✅ Frozen |
-| Part II | Replay Engine | ✅ Frozen (`v0.3-replay-engine`) |
-| Part III | CCAS + single-edit repair | ✅ Frozen (`v0.5-ccas-synthetic`) |
-| Part IV | LangGraph external validation | ✅ Validated (`v0.6-live-repair`) |
+| Part I | IF-C-SCM + CR | âœ… Frozen |
+| Part II | Replay Engine | âœ… Frozen (`v0.3-replay-engine`) |
+| Part III | CCAS + single-edit repair | âœ… Frozen (`v0.5-ccas-synthetic`) |
+| Part IV | LangGraph external validation | âœ… Validated (`v0.6-live-repair`) |
 | — | *Evidence gathering below* | — |
-| Part V | **Framework Invariance** (AutoGen) | ✅ **PASS** (Stages 1–4) |
-| Part VI | **SWE-bench Verified–Shaped Pilot** (Stages 1–4) | ✅ **PASS** (adapter-only; not Docker resolve@1) — `PART_VI_BENCHMARKS.md` |
-| Part VI.B | Official SWE-bench Verified (`resolve@1`) | ⏳ **Next** — true external validity |
-| Part VI.C | Official WebArena | ⏳ After VI.B |
-| Part VII | Paper writing | ⏳ Final |
+| Part V | **Framework Invariance** (AutoGen) | âœ… **PASS** (Stages 1–4) |
+| Part VI | **SWE-bench Verified–Shaped Pilot** (Stages 1–4) | âœ… **PASS** (adapter-only; not Docker resolve@1) — `PART_VI_BENCHMARKS.md` |
+| Part VI.B | Official SWE-bench Verified (`resolve@1`) | â³ **Next** — true external validity |
+| Part VI.C | Official WebArena | â³ After VI.B |
+| Part VII | Paper writing | â³ Final |
 
 Threats log: `commscm/THREATS_TO_VALIDITY.md` (Internal / Construct / External / Statistical)  
 Post–Part V summary: `commscm/STATUS_AFTER_PART_V.md`  
@@ -73,7 +73,7 @@ Universal framework independence; architecture-search superiority; theoretical c
 ### H2-lite (not full H2)
 > Several edit policies can achieve task repair, but only CR-guided consistently repairs via the true harmful communication pathways.
 
-### H4 (Part V — Framework Invariance) ✅
+### H4 (Part V — Framework Invariance) âœ…
 > The frozen CommSCM pipeline transfers to an independent framework (AutoGen) using adapter-only changes — no modifications to IF-C-SCM, CR, replay, or CCAS.
 
 ### Week 6 live (conservative paper wording)
@@ -123,8 +123,8 @@ Adapter notes (not Part I/II changes):
 | failure_counts_by_stage | {} |
 | CR P@1 | **1.00** |
 | Reward-only P@1 | 0.00 |
-| Random P@1 | ≈0.20 |
-| mean confidence gap (top1−top2 ΔY) | 1.00 |
+| Random P@1 | â‰ˆ0.20 |
+| mean confidence gap (top1âˆ’top2 Î”Y) | 1.00 |
 | By mode (planner/coder/reviewer) | CR 1.00 each (n=34) |
 
 **Week 5 live gate: PASS** — same claim form as H1 on *live* LLM traces (not offline stubs). Still not SWE-bench/WebArena.
@@ -153,7 +153,7 @@ Same task (`return_ok`) / mode (`POISON_PLANNER`); temps {0.0, 0.3, 0.7} × seed
 |--------|------:|
 | mean top-1 agreement vs mode | **1.00** |
 | mean top-1 pairwise agreement | **1.00** |
-| mean pairwise Kendall τ | **1.00** |
+| mean pairwise Kendall Ï„ | **1.00** |
 | scored / attempted | 50 / 50 |
 
 Encouraging under controlled planner poison — still not evidence for subtle semantic faults.
@@ -164,13 +164,13 @@ Artifact: `results/week6_live_repair.json` (balanced schedule; n=60)
 
 **Frozen RQ:** Can communication attribution improve a real multi-agent system through a single architecture edit?
 
-**Attribution vs action space:** CR may score all events (incl. exogenous C0); live edits apply only to controllable agent↔agent edges, preferring outbound edges of the top-1 attributed event toward the sink.
+**Attribution vs action space:** CR may score all events (incl. exogenous C0); live edits apply only to controllable agentâ†”agent edges, preferring outbound edges of the top-1 attributed event toward the sink.
 
-| Method | Repair Rate | Gold Edge Hit | Repair Attr. Prec. | Edit Stability (by mode) | Avg ΔTask | Avg ΔLatency (ms) |
+| Method | Repair Rate | Gold Edge Hit | Repair Attr. Prec. | Edit Stability (by mode) | Avg Î”Task | Avg Î”Latency (ms) |
 |--------|------------:|--------------:|-------------------:|-------------------------:|----------:|------------------:|
-| Random | 0.25 | 0.45 | 0.60 | — | +0.25 | −575 |
-| Reward-only | 0.30 | 0.00 | 0.00 | — | +0.30 | −159 |
-| CR-guided | **1.00** | **1.00** | **1.00** | **1.00** | **+1.00** | −1670 |
+| Random | 0.25 | 0.45 | 0.60 | — | +0.25 | âˆ’575 |
+| Reward-only | 0.30 | 0.00 | 0.00 | — | +0.30 | âˆ’159 |
+| CR-guided | **1.00** | **1.00** | **1.00** | **1.00** | **+1.00** | âˆ’1670 |
 
 **Headline scientific result (prefer over raw repair rate alone):** Gold Edge Hit = 1.00 and Repair Attribution Precision = 1.00 — attribution identified the causally responsible pathway and the edit used that pathway.
 
@@ -204,10 +204,10 @@ Threats: `commscm/THREATS_TO_VALIDITY.md`
 
 | Stage | Status |
 |-------|--------|
-| 1 Adapter only | ✅ `commscm/adapters/autogen/` |
-| 2 Attribution invariance | ✅ n=30 CR P@1=1.00 vs reward 0 / random ≈0.13 |
-| 3 Same-task LangGraph↔AutoGen | ✅ n=15 Top-1 agree=1.00 Kendall τ=1.00 both gold=1.00 |
-| 4 Single repair | ✅ n=9 CR repair=1.00 gold hit=1.00 RAP=1.00 > reward/random |
+| 1 Adapter only | âœ… `commscm/adapters/autogen/` |
+| 2 Attribution invariance | âœ… n=30 CR P@1=1.00 vs reward 0 / random â‰ˆ0.13 |
+| 3 Same-task LangGraphâ†”AutoGen | âœ… n=15 Top-1 agree=1.00 Kendall Ï„=1.00 both gold=1.00 |
+| 4 Single repair | âœ… n=9 CR repair=1.00 gold hit=1.00 RAP=1.00 > reward/random |
 
 **H4 PASS** — frozen pipeline transferred to AutoGen with adapter-only changes (Core Invariance Principle held).
 
@@ -217,7 +217,7 @@ Threats: `commscm/THREATS_TO_VALIDITY.md`
 |--------|----------:|--------:|
 | Gold Edge Hit | 1.00 | 1.00 |
 | Top-1 agreement (cross-framework) | — | **1.00** |
-| Mean Kendall τ | — | **1.00** |
+| Mean Kendall Ï„ | — | **1.00** |
 
 **Stage 4 (AutoGen repair):**
 
@@ -227,28 +227,28 @@ Threats: `commscm/THREATS_TO_VALIDITY.md`
 | Reward-only | 0.56 | 0.00 | 0.00 |
 | CR-guided | **1.00** | **1.00** | **1.00** |
 
-### Part VI — SWE-bench Verified–Shaped Pilot ✅ PASS
+### Part VI — SWE-bench Verified–Shaped Pilot âœ… PASS
 Plan / results: `commscm/PART_VI_BENCHMARKS.md`
 
 **Verdict:** Frozen CommSCM transfers adapter-only on a SWE-bench-inspired controlled evaluation (Verified *problem statements* + communication poisons; not Docker resolve@1). Treat as **pilot**.
 
 | Stage | Result |
 |-------|--------|
-| 1 Trace | ✅ HF → RunTrace; CR hit gold |
-| 2 Attribution | ✅ n=24 P@1=1.00 MRR=1.00; τ=1.00 |
-| 3 Repair | ✅ n=14 repair=1.00 Gold Hit=1.00 RAP=1.00 |
-| 4 Baselines | ✅ CR gold-hit 1.00 > static/reward/random; arch-search skipped (unfair) |
+| 1 Trace | âœ… HF → RunTrace; CR hit gold |
+| 2 Attribution | âœ… n=24 P@1=1.00 MRR=1.00; Ï„=1.00 |
+| 3 Repair | âœ… n=14 repair=1.00 Gold Hit=1.00 RAP=1.00 |
+| 4 Baselines | âœ… CR gold-hit 1.00 > static/reward/random; arch-search skipped (unfair) |
 
 **Next:** Part VI.B Official SWE-bench Verified → Part VI.C WebArena. Claims matrix frozen in `FREEZE.md`.
 
 ### Paper roadmap
 ```
-Part I–III  Theory / Replay / CCAS              ✅ Frozen
-Part IV     LangGraph                           ✅ Validated
-Part V      Framework Invariance                ✅ PASS (AutoGen)
-Part VI     SWE-bench Verified–Shaped Pilot     ✅ PASS
-Part VI.B   Official SWE-bench Verified         ⏳ Next
-Part VI.C   Official WebArena                   ⏳
+Part I–III  Theory / Replay / CCAS              âœ… Frozen
+Part IV     LangGraph                           âœ… Validated
+Part V      Framework Invariance                âœ… PASS (AutoGen)
+Part VI     SWE-bench Verified–Shaped Pilot     âœ… PASS
+Part VI.B   Official SWE-bench Verified         â³ Next
+Part VI.C   Official WebArena                   â³
 Part VII    Paper (+ Threats to Validity)
 ```
 

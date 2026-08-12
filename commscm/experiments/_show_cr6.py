@@ -12,7 +12,7 @@ ids = [
 root = Path(
     "logs/run_evaluation/vi_b_rescore_part_vi_b_official_cr_guided/commscm-vi-b-cr_guided"
 )
-agg = Path("commscm-vi-b-cr_guided.vi_b_rescore_part_vi_b_official_cr_guided.json")
+agg = Path("results/commscm-vi-b-cr_guided.vi_b_rescore_part_vi_b_official_cr_guided.json")
 if agg.exists():
     r = json.loads(agg.read_text(encoding="utf-8"))
     print("AGGREGATE (resume batch)")

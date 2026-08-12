@@ -1,4 +1,4 @@
-# Falsification Report (template)
+﻿# Falsification Report (template)
 
 **Required before any change to:** IF-C-SCM · Communication Responsibility · Replay engine · Attribution algorithm · CCAS operators.
 
@@ -44,7 +44,7 @@ Describe the smallest core delta. Explicitly list what will **not** change.
 
 ## 6. Impact on claims ledger
 
-Which rows in `CLAIMS_LEDGER.md` flip from Supported → Pilot / Unsupported / revised scope? Abstract checkboxes to revoke?
+Which rows in `docs/CLAIMS_LEDGER.md` flip from Supported → Pilot / Unsupported / revised scope? Abstract checkboxes to revoke?
 
 ## 7. Decision
 

@@ -1,0 +1,1 @@
+if [ "$GIT_AUTHOR_EMAIL" = "cursoragent@cursor.com" ] || [ "$GIT_COMMITTER_EMAIL" = "cursoragent@cursor.com" ]; then export GIT_AUTHOR_NAME="Ashar086"; export GIT_AUTHOR_EMAIL="muhammadasharishfaq.com"; export GIT_COMMITTER_NAME="Ashar086"; export GIT_COMMITTER_EMAIL="muhammadasharishfaq.com"; fi

@@ -31,6 +31,8 @@ for m in ["cr_guided", "reward_only", "random", "static_heuristic"]:
 print("\n=== HARNESS REPORTS (Resolve@1 where Docker finished) ===")
 resolve_by: dict[tuple[str, str], float | None] = {}
 reports = sorted(Path(".").glob("commscm-vi-b-*.vi_b_part_vi_b_official_*.json"))
+if not reports:
+    reports = sorted(Path("results").glob("commscm-vi-b-*.vi_b_part_vi_b_official_*.json"))
 print(f"n_reports={len(reports)}")
 for rp in reports:
     method = rp.name.split(".")[0].replace("commscm-vi-b-", "")

@@ -1,11 +1,11 @@
-# Part VI.B — Official SWE-bench Verified Preregistration
+﻿# Part VI.B — Official SWE-bench Verified Preregistration
 
 **Status:** **EXPERIMENT FROZEN** (signed 2026-08-02). Operational fields locked below. Do not change without a dated amendment + falsification path.  
 **Authority:** This file supersedes the checklist stub in `PART_VI_BENCHMARKS.md`.  
 **Identity:** Counterfactual Communication Attribution (frozen).  
-**Governance:** `FREEZE.md` · `CLAIMS_LEDGER.md` · `FALSIFICATION_REPORT.md`
+**Governance:** `FREEZE.md` · `docs/CLAIMS_LEDGER.md` · `FALSIFICATION_REPORT.md`
 
-**Preregistration philosophy:** Measure reality under a frozen protocol. Do **not** preregister absolute performance floors (e.g. RAP ≥ 0.5). Report estimates with confidence intervals and transparent baseline contrasts.
+**Preregistration philosophy:** Measure reality under a frozen protocol. Do **not** preregister absolute performance floors (e.g. RAP â‰¥ 0.5). Report estimates with confidence intervals and transparent baseline contrasts.
 
 ---
 
@@ -19,7 +19,7 @@
 
 The frozen CommSCM pipeline localizes harmful communication events and improves task outcomes through a **single communication-guided architecture edit** on official SWE-bench Verified tasks.
 
-**Scope note:** H5 is about transfer of the frozen pipeline under the official harness — not SOTA, not architecture-search superiority, not universal framework independence (`CLAIMS_LEDGER.md`).
+**Scope note:** H5 is about transfer of the frozen pipeline under the official harness — not SOTA, not architecture-search superiority, not universal framework independence (`docs/CLAIMS_LEDGER.md`).
 
 ---
 
@@ -33,7 +33,7 @@ The frozen CommSCM pipeline localizes harmful communication events and improves 
 | Attribution algorithm | Yes |
 | CCAS operators (`prune_edge` / `weaken_edge` only) | Yes |
 | Scoring thresholds | Yes |
-| Action space (controllable agent↔agent edges; same exclusions as Part VI shaped) | Yes |
+| Action space (controllable agentâ†”agent edges; same exclusions as Part VI shaped) | Yes |
 
 Any required modification must first be documented in a **`FALSIFICATION_REPORT.md`**.
 
@@ -92,11 +92,11 @@ Same config for factual runs, attribution support paths, and every baseline meth
 | Max context | Provider default for `gpt-4o-mini` (do not truncate Verified problem statements for VI.B — unlike shaped overnight cap) |
 | Random seeds | Selection **42**; baseline RNG seed = `run_idx`; LLM seed env `LLM_SEED=42` when supported; log actual seeds per row |
 | Seed policy | Deterministic selection + temp 0.0; residual API nondeterminism logged; stability subset uses fixed seed list below |
-| Hardware | Windows 10 (build 26200) host; Docker evaluations via **Docker Desktop / WSL2 Linux containers** (or Linux CI with ≥16 GB RAM, ≥120 GB disk per SWE-bench guidance). Record exact host in run log |
+| Hardware | Windows 10 (build 26200) host; Docker evaluations via **Docker Desktop / WSL2 Linux containers** (or Linux CI with â‰¥16â€¯GB RAM, â‰¥120â€¯GB disk per SWE-bench guidance). Record exact host in run log |
 | Prompt template id / path / hash | CommSCM SWE-bench adapter prompts in `commscm/adapters/swebench/pipeline.py` at signed core commit; sha256 recorded in `results/part_vi_b_prompt_hashes.json` at run start |
-| Timeouts | Per-agent LLM call **120 s**; per-task wall-clock **30 min**; Docker eval per instance **1800 s** (harness `--timeout 1800`) |
+| Timeouts | Per-agent LLM call **120â€¯s**; per-task wall-clock **30â€¯min**; Docker eval per instance **1800â€¯s** (harness `--timeout 1800`) |
 | Runs per task | **1** primary Resolve@1 run per (method × instance); methods: CR, reward-only, random, static |
-| Stability reps | **3** reps on first **10** locked instance IDs only; temperature **0.0**; for Kendall τ (secondary) |
+| Stability reps | **3** reps on first **10** locked instance IDs only; temperature **0.0**; for Kendall Ï„ (secondary) |
 
 ---
 
@@ -116,7 +116,7 @@ Same config for factual runs, attribution support paths, and every baseline meth
 |--------|
 | P@1 |
 | MRR |
-| Attribution Stability (Kendall τ) |
+| Attribution Stability (Kendall Ï„) |
 | Runtime |
 | Latency |
 
@@ -154,9 +154,9 @@ Same config for factual runs, attribution support paths, and every baseline meth
 | Location | Mean |
 | Dispersion | Standard deviation |
 | Interval | **95%** CI |
-| CI method | Nonparametric bootstrap **B = 10 000**, paired where methods share instances |
-| Effect size | Paired mean difference Resolve@1 (CR − baseline); Cohen’s dz |
-| Significance (secondary) | Two-sided paired permutation test (Wilcoxon if needed), α = 0.05; **primary contrast: CR vs reward-only Resolve@1** |
+| CI method | Nonparametric bootstrap **B = 10â€¯000**, paired where methods share instances |
+| Effect size | Paired mean difference Resolve@1 (CR âˆ’ baseline); Cohen’s dz |
+| Significance (secondary) | Two-sided paired permutation test (Wilcoxon if needed), Î± = 0.05; **primary contrast: CR vs reward-only Resolve@1** |
 | Multiplicity | random / static = exploratory contrasts |
 
 **Do not change tests after observing results.**
@@ -168,10 +168,10 @@ Same config for factual runs, attribution support paths, and every baseline meth
 | # | Criterion |
 |---|-----------|
 | P0 | Frozen core unchanged; no silent tuning after seeing results |
-| P1 | Pipeline execution success on **≥ 95%** of the locked task set |
+| P1 | Pipeline execution success on **â‰¥ 95%** of the locked task set |
 | P2 | Primary/secondary metrics reported with **95% CIs** + effect sizes for planned contrasts |
 | P3 | Transparent comparison vs preregistered baselines under same single-edit budget |
-| P4 | Honest write-up in `PART_VI_B_RESULTS.md` + `CLAIMS_LEDGER.md` update |
+| P4 | Honest write-up in `PART_VI_B_RESULTS.md` + `docs/CLAIMS_LEDGER.md` update |
 
 Scientific outcomes (who wins on Resolve@1/RAP) are **reported**, not exam gates.
 
@@ -187,7 +187,7 @@ Scientific outcomes (who wins on Resolve@1/RAP) are **reported**, not exam gates
 | F3 | Reproducibility fails: re-scoring same prediction file changes Resolve@1; or temp-0 stability top-1 agreement **< 0.80** on the 10×3 subset |
 | F4 | Cannot report preregistered statistical plan |
 
-Poor Resolve@1 alone ≠ FAIL — it is evidence. File threats / falsification as appropriate.
+Poor Resolve@1 alone â‰  FAIL — it is evidence. File threats / falsification as appropriate.
 
 ---
 

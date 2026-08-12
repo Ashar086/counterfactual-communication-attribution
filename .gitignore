@@ -1,5 +1,7 @@
 # Secrets / environment
 .env
+.env.*
+!.env.example
 .venv/
 venv/
 
@@ -9,10 +11,12 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 
-# OS
+# OS / editor
 .DS_Store
+.idea/
+.vscode/
 
-# Paper / manuscript / venue (excluded from code repo by request)
+# Paper / manuscript / venue (do not publish)
 paper/
 commscm/PAPER_OUTLINE.md
 commscm_overleaf.zip
@@ -21,3 +25,7 @@ commscm_overleaf.zip
 *.bbl
 *.blg
 *.synctex.gz
+*.pdf
+
+# Local junk
+agent-monitor-validity/

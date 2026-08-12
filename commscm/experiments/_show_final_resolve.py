@@ -3,7 +3,7 @@ from pathlib import Path
 from collections import Counter, defaultdict
 
 for m in ["cr_guided", "reward_only", "random", "static_heuristic"]:
-    p = Path(f"commscm-vi-b-{m}.vi_b_rescore_part_vi_b_official_{m}.json")
+    p = Path(f"results/commscm-vi-b-{m}.vi_b_rescore_part_vi_b_official_{m}.json")
     if not p.exists():
         print(m, "NO_REPORT")
         continue

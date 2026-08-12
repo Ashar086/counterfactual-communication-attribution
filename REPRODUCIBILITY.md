@@ -2,7 +2,7 @@
 
 **Purpose:** Make reproduction effortless from a clean checkout. This is not method documentation — it is an experimental record.  
 **Rule:** Every validated experiment must have a row (or subsection) here before it is cited in the paper.  
-**Governance:** `FREEZE.md` · `CLAIMS_LEDGER.md` · `PART_VI_B_PREREGISTRATION.md`
+**Governance:** `FREEZE.md` · [`docs/CLAIMS_LEDGER.md`](docs/CLAIMS_LEDGER.md) · `PART_VI_B_PREREGISTRATION.md`
 
 Update this file when locking VI.B / VI.C runs. Prefer **pinned versions and digests** over floating `>=` ranges for paper-facing runs.
 

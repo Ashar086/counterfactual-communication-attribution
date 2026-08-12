@@ -1,20 +1,20 @@
-# Current Project Status (After Part VI.B)
+﻿# Current Project Status (After Part VI.B)
 
 **Phase:** Evidence accumulation — falsify / validate the frozen artifact; not algorithm development.  
 **Philosophy:** Protect the frozen method. Let the evidence determine the claims.  
 **Reviewer question:** *What can we defend?* — not *Did it pass?*
 
-Canonical claims: **`FREEZE.md`** · **`CLAIMS_LEDGER.md`** · Core change gate: **`FALSIFICATION_REPORT.md`**
+Canonical claims: **`FREEZE.md`** · **`docs/CLAIMS_LEDGER.md`** · Core change gate: **`FALSIFICATION_REPORT.md`**
 
 ### Macro phases
 
 | Phase | Status |
 |-------|--------|
-| I Theory | ✅ Frozen |
-| II Efficient Attribution | ✅ Frozen |
-| III Architecture Optimization | ✅ Frozen |
-| IV External Validation (LG + AutoGen + shaped pilot) | ✅ Frozen |
-| V Scientific Validation (official benches + paper) | 🚧 Current — VI.B ✅ closed; VI.C next |
+| I Theory | âœ… Frozen |
+| II Efficient Attribution | âœ… Frozen |
+| III Architecture Optimization | âœ… Frozen |
+| IV External Validation (LG + AutoGen + shaped pilot) | âœ… Frozen |
+| V Scientific Validation (official benches + paper) | ðŸš§ Current — VI.B âœ… closed; VI.C next |
 
 ---
 
@@ -32,29 +32,29 @@ Canonical claims: **`FREEZE.md`** · **`CLAIMS_LEDGER.md`** · Core change gate:
 
 | Claim | Status |
 |-------|--------|
-| Improves official SWE-bench Resolve@1 | ❌ Unsupported (VI.B = 0.00 all methods) |
-| Communication edits → repository-valid patches | ❌ Not shown (patch apply dominates failures) |
-| Universally effective across arbitrary agent systems | ❌ Unsupported |
+| Improves official SWE-bench Resolve@1 | âŒ Unsupported (VI.B = 0.00 all methods) |
+| Communication edits → repository-valid patches | âŒ Not shown (patch apply dominates failures) |
+| Universally effective across arbitrary agent systems | âŒ Unsupported |
 
 ---
 
 ## Evidence chain
 
 ```
-Synthetic Bench                         ✅
-        ↓
-Replay Scaling                          ✅
-        ↓
-Live LangGraph                          ✅
-        ↓
-Framework Invariance (AutoGen)          ✅
-        ↓
-SWE-bench–inspired controlled pilot     ✅ Part VI
-        ↓
-Official SWE-bench Verified             ✅ Part VI.B CLOSED (partial success)
-        ↓
-Official WebArena                           ⛔ VI.C preregistered, not executed (infra)
-        ↓
+Synthetic Bench                         âœ…
+        â†“
+Replay Scaling                          âœ…
+        â†“
+Live LangGraph                          âœ…
+        â†“
+Framework Invariance (AutoGen)          âœ…
+        â†“
+SWE-bench–inspired controlled pilot     âœ… Part VI
+        â†“
+Official SWE-bench Verified             âœ… Part VI.B CLOSED (partial success)
+        â†“
+Official WebArena                           â›” VI.C preregistered, not executed (infra)
+        â†“
 Hostile review → paper → submit
 ```
 
@@ -81,7 +81,7 @@ Hostile review → paper → submit
 
 | # | Work | Rule |
 |---|------|------|
-| 1 | **Paper writing / polish** | Theory, method, figures, CIs, repro; claims ⊆ ledger |
+| 1 | **Paper writing / polish** | Theory, method, figures, CIs, repro; claims âŠ† ledger |
 | 2 | **Hostile Reviewer #2** | Try to reject the paper |
 | 3 | **Submission** | Honest VI.C limitation; no invented WebArena results |
 | 4 | **VI.C (future)** | Preregistered-not-executed; run only when AMI/~400GB exists |
@@ -105,8 +105,8 @@ Not: “We outperform SWE-bench.”
 
 ## Related
 
-- Freeze / claims: `FREEZE.md` · `CLAIMS_LEDGER.md`  
+- Freeze / claims: `FREEZE.md` · `docs/CLAIMS_LEDGER.md`  
 - VI.B: `PART_VI_B_RESULTS.md` · `PART_VI_B_PREREGISTRATION.md`  
 - VI.C: `PART_VI_C_WEBARENA.md`  
-- Threats: `THREATS_TO_VALIDITY.md` · Decision log: `DECISION_LOG.md`  
+- Threats: `THREATS_TO_VALIDITY.md` · Decision log: `docs/DECISION_LOG.md`  
 - Paper: `PAPER_OUTLINE.md`

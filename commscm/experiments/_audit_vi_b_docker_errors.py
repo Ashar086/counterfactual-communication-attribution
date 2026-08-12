@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def main() -> None:
-    reports = sorted(ROOT.glob("commscm-vi-b-static_heuristic.vi_b_part_vi_b_official_*.json"))
+    reports = sorted((ROOT / "results").glob("commscm-vi-b-static_heuristic.vi_b_part_vi_b_official_*.json"))
     print("n_reports", len(reports))
     tot: Counter[str] = Counter()
     err_ids: list[str] = []

@@ -21,7 +21,7 @@
 | Model / API | `gpt-4o-mini` · temp 0.0 · top_p 1.0 · max_tokens 4096 |
 | Docker / harness | `SWE-bench/SWE-bench@f7bbbb2…` · namespace `swebench` · per-method predictions (last-wins fix) |
 | Primary artifacts | `results/part_vi_b_official.json` · `results/part_vi_b_analysis.json` |
-| Harness reports | `commscm-vi-b-{method}.vi_b_rescore_part_vi_b_official_{method}.json` |
+| Harness reports | `results/commscm-vi-b-{method}.vi_b_rescore_part_vi_b_official_{method}.json` |
 
 ---
 
@@ -110,4 +110,4 @@ Yes: *We introduce a communication-centric causal attribution framework for mult
 
 ## Ledger updates
 
-See `CLAIMS_LEDGER.md`: official Resolve@1 improvement → **Unsupported**; localization under VI.B poison construct → **Supported** (scoped); SOTA / abstract Resolve@1 → still ❌.
+See [`docs/CLAIMS_LEDGER.md`](../docs/CLAIMS_LEDGER.md): official Resolve@1 improvement → **Unsupported**; localization under VI.B poison construct → **Supported** (scoped); SOTA / abstract Resolve@1 → still ❌.

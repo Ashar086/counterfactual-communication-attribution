@@ -1,4 +1,4 @@
-# CommSCM — FREEZE.md
+﻿# CommSCM — FREEZE.md
 
 > **CommSCM is frozen. The remainder of the project is scientific validation, not algorithm development.**
 
@@ -14,7 +14,7 @@
 > **Stop building CommSCM. Start trying to disprove it.**  
 > **Every week answers one scientific question — not one engineering feature.**  
 > **Every commit answers a scientific question or improves reproducibility — never “more clever” CommSCM.**  
-> **Nothing enters the paper unless it appears in `CLAIMS_LEDGER.md`.**
+> **Nothing enters the paper unless it appears in `docs/CLAIMS_LEDGER.md`.**
 
 If the week’s work cannot be stated as a falsifiable question about the frozen method, it is out of scope.
 
@@ -53,16 +53,16 @@ None of the above change IF-C-SCM, CR, Replay, or CCAS without a falsification r
 **You are no longer developing CommSCM. You are trying to falsify it.**
 
 ```
-Frozen Method → Harder Environment → Still Works? → Harder Environment → …
+Frozen Method → Harder Environment → Still Works? → Harder Environment → â€¦
 ```
 
 | Macro phase | Contents | Status |
 |-------------|----------|--------|
-| **Phase I — Theory** | IF-C-SCM; typed events; unified CR (soft interventions); replay semantics | ✅ Frozen |
-| **Phase II — Efficient Attribution** | Exact / Descendant / Cached / COW Replay; scaling validation | ✅ Frozen |
-| **Phase III — Architecture Optimization** | CCAS; single prune/weaken; H1 + H2-lite; no verifier | ✅ Frozen |
-| **Phase IV — External Validation** | Live LangGraph; Framework Invariance (AutoGen); SWE-bench Verified–Shaped Pilot | ✅ Frozen |
-| **Phase V — Scientific Validation** | Part VI.B Official SWE-bench; Part VI.C WebArena; paper writing | 🚧 **Current** |
+| **Phase I — Theory** | IF-C-SCM; typed events; unified CR (soft interventions); replay semantics | âœ… Frozen |
+| **Phase II — Efficient Attribution** | Exact / Descendant / Cached / COW Replay; scaling validation | âœ… Frozen |
+| **Phase III — Architecture Optimization** | CCAS; single prune/weaken; H1 + H2-lite; no verifier | âœ… Frozen |
+| **Phase IV — External Validation** | Live LangGraph; Framework Invariance (AutoGen); SWE-bench Verified–Shaped Pilot | âœ… Frozen |
+| **Phase V — Scientific Validation** | Part VI.B Official SWE-bench; Part VI.C WebArena; paper writing | ðŸš§ **Current** |
 
 No algorithm work remains unless falsified via `FALSIFICATION_REPORT.md`.
 
@@ -70,19 +70,19 @@ No algorithm work remains unless falsified via `FALSIFICATION_REPORT.md`.
 
 | Phase | Goal | Status |
 |-------|------|--------|
-| Part I | Information-Flow SCM + Communication Responsibility | ✅ Frozen |
-| Part II | Replay Engine + Efficient Attribution | ✅ Frozen (`v0.3-replay-engine`) |
-| Part III | CCAS + Single-Edit Repair | ✅ Frozen (`v0.5-ccas-synthetic`) |
-| Part IV | External Validation (LangGraph) | ✅ Validated (`v0.6-live-repair`) |
-| ──────────────────────────────── | **Evidence gathering below** | ──────── |
-| Part V | **Framework Invariance** (AutoGen first instance) | ✅ **PASS** |
-| Part VI | **SWE-bench Verified–Shaped Pilot** | ✅ **PASS** — see `PART_VI_BENCHMARKS.md` |
-| Part VI.B | **Official SWE-bench Verified** (Docker resolve@1) | ⏳ **Next** — true external validity |
-| Part VI.C | WebArena (official) | ⛔ Preregistered, not executed (infra); frozen for later |
-| Part VII | Paper Writing | ⏳ Final |
+| Part I | Information-Flow SCM + Communication Responsibility | âœ… Frozen |
+| Part II | Replay Engine + Efficient Attribution | âœ… Frozen (`v0.3-replay-engine`) |
+| Part III | CCAS + Single-Edit Repair | âœ… Frozen (`v0.5-ccas-synthetic`) |
+| Part IV | External Validation (LangGraph) | âœ… Validated (`v0.6-live-repair`) |
+| â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ | **Evidence gathering below** | â”€â”€â”€â”€â”€â”€â”€â”€ |
+| Part V | **Framework Invariance** (AutoGen first instance) | âœ… **PASS** |
+| Part VI | **SWE-bench Verified–Shaped Pilot** | âœ… **PASS** — see `PART_VI_BENCHMARKS.md` |
+| Part VI.B | **Official SWE-bench Verified** (Docker resolve@1) | â³ **Next** — true external validity |
+| Part VI.C | WebArena (official) | â›” Preregistered, not executed (infra); frozen for later |
+| Part VII | Paper Writing | â³ Final |
 
 Living threats log: **`commscm/THREATS_TO_VALIDITY.md`**.  
-Claims ledger (abstract guard): **`commscm/CLAIMS_LEDGER.md`**.  
+Claims ledger (abstract guard): **`docs/CLAIMS_LEDGER.md`**.  
 Falsification gate: **`commscm/FALSIFICATION_REPORT.md`**.  
 Part V plan: **`commscm/PART_V_FRAMEWORK_INVARIANCE.md`**.  
 Part VI plan: **`commscm/PART_VI_BENCHMARKS.md`**.  
@@ -119,7 +119,7 @@ If an official bench reveals a weakness: **do not fix the core immediately.**
 1. File a falsification report (`FALSIFICATION_REPORT.md` → `falsification_reports/`).  
 2. Name the violated assumption.  
 3. Classify: implementation bug · adapter limitation · genuine CommSCM limitation.  
-4. Only then consider a core change (and update `CLAIMS_LEDGER.md`).
+4. Only then consider a core change (and update `docs/CLAIMS_LEDGER.md`).
 
 Honest FAIL / limitation > silent repair.
 
@@ -159,13 +159,13 @@ Not hardware months for WebArena. **Paper polish** (theory, figures, CIs, repro 
 
 | Level | Status | Purpose |
 |-------|--------|---------|
-| Synthetic oracle | ✅ Complete | Validate causal attribution against known ground truth |
-| Replay scaling | ✅ Complete | Validate computational efficiency under sparse interventions |
-| Live LangGraph | ✅ Complete | Show end-to-end feasibility on a live framework |
-| Framework invariance (AutoGen) | ✅ Complete | Test abstraction independence under adapter-only transfer |
-| SWE-bench Verified–Shaped Pilot | ✅ Complete | Pilot external validity (controlled / inspired — not official) |
-| Official SWE-bench Verified | ✅ Complete (Part VI.B CLOSED — partial: localization ✅, Resolve@1 ❌) | Public benchmark; honest null Resolve@1 |
-| WebArena | ⛔ Preregistered, **not executed** (infra) — protocol frozen for later | Limitation ≠ method failure |
+| Synthetic oracle | âœ… Complete | Validate causal attribution against known ground truth |
+| Replay scaling | âœ… Complete | Validate computational efficiency under sparse interventions |
+| Live LangGraph | âœ… Complete | Show end-to-end feasibility on a live framework |
+| Framework invariance (AutoGen) | âœ… Complete | Test abstraction independence under adapter-only transfer |
+| SWE-bench Verified–Shaped Pilot | âœ… Complete | Pilot external validity (controlled / inspired — not official) |
+| Official SWE-bench Verified | âœ… Complete (Part VI.B CLOSED — partial: localization âœ…, Resolve@1 âŒ) | Public benchmark; honest null Resolve@1 |
+| WebArena | â›” Preregistered, **not executed** (infra) — protocol frozen for later | Limitation â‰  method failure |
 
 ### Ladder revisit rule
 
@@ -196,13 +196,13 @@ Consequences:
 
 If that report cannot be written, **the method stays frozen.**
 
-Every core change must also update **`CLAIMS_LEDGER.md`**.
+Every core change must also update **`docs/CLAIMS_LEDGER.md`**.
 
 ---
 
 ## Claims matrix (frozen for paper + reviewers)
 
-**Authoritative per-claim table for the paper:** `CLAIMS_LEDGER.md` (Claim · Evidence · Status · Abstract?).  
+**Authoritative per-claim table for the paper:** `docs/CLAIMS_LEDGER.md` (Claim · Evidence · Status · Abstract?).  
 Summary MAY / MUST NOT below; ledger wins on conflicts.
 
 Ask: *what can we defend in front of skeptical reviewers?* — not *did it pass?*
@@ -244,23 +244,23 @@ Only the *environment* changes. The methodology stays fixed:
 
 ```
 Trace Extraction
-        ↓
+        â†“
 Counterfactual Attribution
-        ↓
+        â†“
 Single Architecture Edit   (prune_edge | weaken_edge)
-        ↓
+        â†“
 Evaluation
 ```
 
 | Environment | Status |
 |-------------|--------|
-| LangGraph | ✅ Validated |
-| **AutoGen** (Part V — first invariance instance) | ✅ PASS (Stages 1–4) |
-| CrewAI (additional invariance evidence) | ⏳ Optional; after official benches preferred |
-| SWE-bench Verified–**shaped** pilot | ✅ Part VI PASS |
-| Official SWE-bench Verified (resolve@1) | ⏳ Part VI.B |
-| WebArena | ⏳ Part VI.C |
-| Architecture-search baselines | ❌ Unfair under single prune/weaken budget — document skip; compare only same-budget baselines |
+| LangGraph | âœ… Validated |
+| **AutoGen** (Part V — first invariance instance) | âœ… PASS (Stages 1–4) |
+| CrewAI (additional invariance evidence) | â³ Optional; after official benches preferred |
+| SWE-bench Verified–**shaped** pilot | âœ… Part VI PASS |
+| Official SWE-bench Verified (resolve@1) | â³ Part VI.B |
+| WebArena | â³ Part VI.C |
+| Architecture-search baselines | âŒ Unfair under single prune/weaken budget — document skip; compare only same-budget baselines |
 
 ---
 
@@ -327,14 +327,14 @@ If **no** → do not touch it.
 \Delta Y(k) = Y_{\mathrm{counterfactual}} - Y_{\mathrm{factual}}
 \]
 
-Rank by **ΔY descending**.
+Rank by **Î”Y descending**.
 
 ## Attribution space vs action space (Part IV lock)
 
 | Space | Contents | Role |
 |-------|----------|------|
 | Attribution | All events (incl. exogenous roots) | CR may blame a root cause |
-| Action | Controllable agent↔agent edges only | Live prune/weaken |
+| Action | Controllable agentâ†”agent edges only | Live prune/weaken |
 
 ---
 
@@ -350,8 +350,8 @@ Rank by **ΔY descending**.
 
 ## Reference docs
 
-- Claims ledger: `commscm/CLAIMS_LEDGER.md`
-- Decision log: `DECISION_LOG.md`
+- Claims ledger: `docs/CLAIMS_LEDGER.md`
+- Decision log: `docs/DECISION_LOG.md`
 - Reproducibility: `REPRODUCIBILITY.md`
 - Falsification report template: `commscm/FALSIFICATION_REPORT.md`
 - Paper outline: `commscm/PAPER_OUTLINE.md`
@@ -366,5 +366,5 @@ Rank by **ΔY descending**.
 - Status: `commscm/STATUS_AFTER_PART_V.md`
 - Threats: `commscm/THREATS_TO_VALIDITY.md`
 - Replay guarantees: `commscm/REPLAY_ENGINE_GUARANTEES.md`
-- Log: `RESEARCH_LOG.md`
+- Log: `docs/RESEARCH_LOG.md`
 - Repo banner: `README.md`

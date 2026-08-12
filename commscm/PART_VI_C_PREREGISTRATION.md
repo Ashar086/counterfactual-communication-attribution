@@ -1,10 +1,10 @@
-# Part VI.C — Official WebArena Preregistration
+﻿# Part VI.C — Official WebArena Preregistration
 
 **Status:** **EXPERIMENT FROZEN** (signed 2026-08-04). Operational fields locked below. Do not change without a dated amendment + falsification path.  
 **Study type:** **Validation only** — same frozen CommSCM pipeline; adapter/harness only. **No method changes regardless of outcome.**  
 **Authority:** This file supersedes the checklist stub in `PART_VI_C_WEBARENA.md`.  
 **Identity:** Counterfactual Communication Attribution (frozen).  
-**Governance:** `FREEZE.md` · `CLAIMS_LEDGER.md` · `FALSIFICATION_REPORT.md` · VI.B CLOSED (`PART_VI_B_RESULTS.md`)
+**Governance:** `FREEZE.md` · `docs/CLAIMS_LEDGER.md` · `FALSIFICATION_REPORT.md` · VI.B CLOSED (`PART_VI_B_RESULTS.md`)
 
 **Preregistration philosophy:** Measure reality under a frozen protocol. Do **not** preregister absolute performance floors. Report estimates with confidence intervals and transparent baseline contrasts.  
 **Lesson from VI.B:** Null end-to-end success does not automatically falsify attribution if failure modes are documented and localize downstream of CR. Scope claims to the ledger.
@@ -21,7 +21,7 @@
 
 The frozen CommSCM pipeline localizes harmful communication events under a WebArena multi-agent adapter construct and, under a **single communication-guided architecture edit**, improves (or does not degrade relative to same-budget baselines) **official WebArena task success** when that metric is measurable.
 
-**Scope note:** H6 is about **domain transfer** of the frozen pipeline — not SOTA on WebArena, not universal framework independence, not a claim that VI.B Resolve@1 is rescued (`CLAIMS_LEDGER.md`).
+**Scope note:** H6 is about **domain transfer** of the frozen pipeline — not SOTA on WebArena, not universal framework independence, not a claim that VI.B Resolve@1 is rescued (`docs/CLAIMS_LEDGER.md`).
 
 **Split (report both; do not conflate):**
 
@@ -44,7 +44,7 @@ VI.B showed H5a-style localization can hold while H5b fails. Expect the same spl
 | Attribution algorithm | Yes |
 | CCAS operators (`prune_edge` / `weaken_edge` only) | Yes |
 | Scoring thresholds | Yes |
-| Action space | Controllable **agent↔agent** edges only. Browser/DOM/tool observations and environment transitions are **exogenous** (not editable by CCAS). Sink / terminal scorer edges excluded from the edit action space (same spirit as Part VI shaped / VI.B). |
+| Action space | Controllable **agentâ†”agent** edges only. Browser/DOM/tool observations and environment transitions are **exogenous** (not editable by CCAS). Sink / terminal scorer edges excluded from the edit action space (same spirit as Part VI shaped / VI.B). |
 
 Any required core modification must first be documented in a **`FALSIFICATION_REPORT.md`**. Outcome of VI.C — positive, null, or negative — **does not** authorize redesign of IF-C-SCM, CR, Replay, or CCAS.
 
@@ -106,7 +106,7 @@ Adapter/harness only. Core unchanged.
 | Field | Locked value |
 |-------|----------------|
 | n | **100** (largest affordable locked size; full pool 812) |
-| Selection | Deterministic shuffle of **full** pool `{0…811}`, then first 100 |
+| Selection | Deterministic shuffle of **full** pool `{0â€¦811}`, then first 100 |
 | Seed | **42** |
 | Inclusion | All 812 eligible a priori; exclude mid-run **only** if locked Docker env cannot execute that task — list in `results/part_vi_c_exclusions.json` **before** substituting; do **not** prefer “easy” sites |
 | Instance list | `results/part_vi_c_instance_list.json` (**written 2026-08-04**) |
@@ -125,7 +125,7 @@ Adapter/harness only. Core unchanged.
 | Timeouts | Per LLM call **120 s**; per-task wall-clock **30 min**; env reset per upstream guidance between full sweeps |
 | Max browser steps / task | **30** (adapter hard cap; log if hit) |
 | Runs | **1** primary per (method × instance); methods: CR, reward-only, random, static |
-| Stability | **3** reps × first **10** locked IDs; temp **0.0**; Kendall τ secondary |
+| Stability | **3** reps × first **10** locked IDs; temp **0.0**; Kendall Ï„ secondary |
 | Seeds | Selection **42**; baseline RNG = `run_idx`; `LLM_SEED=42` when supported |
 | Hardware | Windows 10 (build 26200) host and/or Linux VM with sufficient RAM/disk for WebArena Docker; record exact host in run log |
 | Core baseline commit | **`3cc07f6a935f9aee819064ef37d26918998363ae`** (same as VI.B; no IF-C-SCM/CR/Replay/CCAS edits) |
@@ -147,7 +147,7 @@ Adapter/harness only. Core unchanged.
 | Metric |
 |--------|
 | P@1, MRR |
-| Attribution Stability (Kendall τ) |
+| Attribution Stability (Kendall Ï„) |
 | Runtime / latency |
 | Failure taxonomy (adapter / browser / action / attribution / edit / evaluator) |
 
@@ -172,8 +172,8 @@ Adapter/harness only. Core unchanged.
 |------|--------|
 | Location / dispersion | Mean / SD |
 | Interval | **95%** CI |
-| CI method | Nonparametric bootstrap **B = 10 000**, paired where methods share instances |
-| Effect size | Paired mean difference Success (CR − baseline); Cohen’s dz |
+| CI method | Nonparametric bootstrap **B = 10â€¯000**, paired where methods share instances |
+| Effect size | Paired mean difference Success (CR âˆ’ baseline); Cohen’s dz |
 | Primary contrast | **CR vs reward-only** on (1) Gold Edge Hit, (2) WebArena Success |
 | Multiplicity | random / static = exploratory |
 
@@ -186,10 +186,10 @@ Adapter/harness only. Core unchanged.
 | # | Criterion |
 |---|-----------|
 | P0 | Frozen core unchanged; no silent tuning after seeing results |
-| P1 | Pipeline execution success on **≥ 95%** of the locked task set (env-up failures listed, not silently dropped) |
+| P1 | Pipeline execution success on **â‰¥ 95%** of the locked task set (env-up failures listed, not silently dropped) |
 | P2 | Primary/secondary metrics with **95% CIs** + effect sizes for planned contrasts |
 | P3 | Transparent comparison vs preregistered baselines under same single-edit budget |
-| P4 | Honest write-up in `PART_VI_C_RESULTS.md` + `CLAIMS_LEDGER.md` update |
+| P4 | Honest write-up in `PART_VI_C_RESULTS.md` + `docs/CLAIMS_LEDGER.md` update |
 
 Scientific win/loss on Success is **reported**, not an exam gate.
 
@@ -205,7 +205,7 @@ Scientific win/loss on Success is **reported**, not an exam gate.
 | F3 | Reproducibility fails (re-score drift / stability top-1 agreement **< 0.80** on 10×3) |
 | F4 | Cannot report preregistered statistical plan |
 
-Poor WebArena Success alone ≠ FAIL — evidence. File threats / falsification as appropriate. **Do not** change CommSCM to chase Success.
+Poor WebArena Success alone â‰  FAIL — evidence. File threats / falsification as appropriate. **Do not** change CommSCM to chase Success.
 
 ---
 
@@ -263,7 +263,7 @@ Lead with estimates + 95% CIs + effect sizes. Never conflate SWE / shaped / VI.B
 | Study type | Validation only — frozen CommSCM; no outcome-contingent method changes |
 | Git commit (core baseline) | **`3cc07f6a935f9aee819064ef37d26918998363ae`** |
 | Repository tag | **`vi-c-prereg-2026-08-04`** (apply when tagging) |
-| Benchmark / harness | Original WebArena · `web-arena-x/webarena@dce04686…` · annotation baseline `v0.2.0` |
+| Benchmark / harness | Original WebArena · `web-arena-x/webarena@dce04686â€¦` · annotation baseline `v0.2.0` |
 | Model | `gpt-4o-mini` · temp 0.0 · top_p 1.0 · max_tokens 4096 |
 | n / seed / instance list | **100** / **42** / `results/part_vi_c_instance_list.json` |
 | Execution lock sheet complete? | **Yes** |
