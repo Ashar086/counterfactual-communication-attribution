@@ -11,7 +11,7 @@ This repository is the code, logs, and results companion to:
 
 Paper link: `[paper link — TBD]` (OpenReview / arXiv once available)
 
-## Key results (honest summary)
+## Key results (summary)
 
 - Across synthetic oracles, live LangGraph, and adapter-only AutoGen transfer, the frozen pipeline localizes **injected** communication faults under a shared single-edit budget.
 - On official SWE-bench Verified (\(n=100\), LF-fixed harness), CR recovers the injected gold edge on every instance (gold-edge hit \(1.00\) vs reward-only \(0.33\); proxy \(0.97\)), but **Resolve@1 does not improve** (CR \(0.02\) vs baselines \(0.03\)–\(0.04\); non-significant).
