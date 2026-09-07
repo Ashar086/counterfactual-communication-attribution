@@ -7,9 +7,6 @@
 This repository is the code, logs, and results companion to:
 
 > **Counterfactual Communication Attribution: Localizing Failures in Multi-Agent LLM Systems**  
-> *Under review at TMLR (Transactions on Machine Learning Research).*
-
-Paper link: `[paper link — TBD]` (OpenReview / arXiv once available)
 
 ## Key results (summary)
 
@@ -56,21 +53,6 @@ Official SWE-bench Verified runs require Docker, the pinned SWE-bench harness, a
 ## License
 
 MIT — see [`LICENSE`](LICENSE).
-
-## Citation
-
-```bibtex
-@article{commscm_tmlr_under_review,
-  title   = {Counterfactual Communication Attribution: Localizing Failures in Multi-Agent LLM Systems},
-  author  = {Ishfaq, Muhammad Ashar and Ishfaq, Muhammad Asad},
-  journal = {Transactions on Machine Learning Research},
-  year    = {TBD},
-  note    = {Under review. [paper link — TBD]}
-}
-```
-
-Update venue/year/URL once the paper is public.
-
 ## Project history
 
 Internal freeze / falsification process notes live under [`docs/`](docs/) (e.g. [`docs/DECISION_LOG.md`](docs/DECISION_LOG.md), [`docs/RESEARCH_LOG.md`](docs/RESEARCH_LOG.md)). They document how the method was locked for evaluation; they are not required to use the code.
